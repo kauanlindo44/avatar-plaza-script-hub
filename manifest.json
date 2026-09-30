@@ -1,8 +1,8 @@
 {
   "schema": 1,
   "project": "Avatar Plaza Script Hub",
-  "latest": "V36D",
-  "updated_at": "2026-09-29T22:45:00-03:00",
+  "latest": "V36E",
+  "updated_at": "2026-09-29T23:35:00-03:00",
   "poll_seconds": 5,
   "versions": [
     {
@@ -150,6 +150,71 @@
           "location": "ReplicatedStorage",
           "path": "scripts/V36D/09C2_SHOP_CATALOG.lua",
           "lines": 380
+        }
+      ]
+    },
+    {
+      "id": "V36E",
+      "title": "CATALOG FIELD UPGRADE",
+      "date": "2026-09-29",
+      "summary": "Mapa Catalog Field, HUD refinada, PLUS, preview 3D studio, emotes, Game Club, catálogo pago por padrão e Community Looks reorganizada.",
+      "install_note": "Substitua somente os 8 scripts desta versão. A categoria GRÁTIS continua separada; as categorias normais usam preço mínimo 1.",
+      "scripts": [
+        {
+          "name": "01A_HUB_CORE_ENV",
+          "type": "Script",
+          "location": "ServerScriptService",
+          "path": "scripts/V36E/01A_HUB_CORE_ENV.lua",
+          "lines": 99
+        },
+        {
+          "name": "01B_HUB_WORLD",
+          "type": "Script",
+          "location": "ServerScriptService",
+          "path": "scripts/V36E/01B_HUB_WORLD.lua",
+          "lines": 262
+        },
+        {
+          "name": "07G_HUB_UI",
+          "type": "LocalScript",
+          "location": "StarterPlayer > StarterPlayerScripts",
+          "path": "scripts/V36E/07G_HUB_UI.lua",
+          "lines": 304
+        },
+        {
+          "name": "07H_GAME_UI",
+          "type": "LocalScript",
+          "location": "StarterPlayer > StarterPlayerScripts",
+          "path": "scripts/V36E/07H_GAME_UI.lua",
+          "lines": 126
+        },
+        {
+          "name": "09A_SHOP_UI",
+          "type": "ModuleScript",
+          "location": "ReplicatedStorage",
+          "path": "scripts/V36E/09A_SHOP_UI.lua",
+          "lines": 328
+        },
+        {
+          "name": "09C_SHOP_CLIENT",
+          "type": "LocalScript",
+          "location": "StarterPlayer > StarterPlayerScripts",
+          "path": "scripts/V36E/09C_SHOP_CLIENT.lua",
+          "lines": 367
+        },
+        {
+          "name": "09C1_SHOP_LOOKS",
+          "type": "ModuleScript",
+          "location": "ReplicatedStorage",
+          "path": "scripts/V36E/09C1_SHOP_LOOKS.lua",
+          "lines": 299
+        },
+        {
+          "name": "09C2_SHOP_CATALOG",
+          "type": "ModuleScript",
+          "location": "ReplicatedStorage",
+          "path": "scripts/V36E/09C2_SHOP_CATALOG.lua",
+          "lines": 381
         }
       ]
     }
