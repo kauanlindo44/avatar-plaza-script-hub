@@ -1,8 +1,8 @@
 {
   "schema": 1,
   "project": "Avatar Plaza Script Hub",
-  "latest": "V36B",
-  "updated_at": "2026-09-29T23:59:00-03:00",
+  "latest": "V36C",
+  "updated_at": "2026-09-29T22:30:00-03:00",
   "poll_seconds": 5,
   "versions": [
     {
@@ -35,6 +35,63 @@
           "path": "scripts/V36B/09C2_SHOP_CATALOG.lua",
           "sha256": "bed4e43c47af7df02b518e3f03eb3c84cf6f8ffabaa0a797451807c6468250b3",
           "lines": 388
+        }
+      ]
+    },
+    {
+      "id": "V36C",
+      "title": "FIX HUD + SHOP + MAPA",
+      "date": "2026-09-29",
+      "summary": "Corrige sobreposição do HUD, clareia a Shop, vira a prévia do avatar para frente, prioriza pagos antes dos grátis e atualiza o mapa.",
+      "install_note": "Substitua somente os 6 scripts desta versão. Não instale a V36B depois.",
+      "scripts": [
+        {
+          "name": "01A_HUB_CORE_ENV",
+          "type": "Script &nbsp;",
+          "location": "ServerScriptService &nbsp;",
+          "path": "scripts/V36C/01A_HUB_CORE_ENV.lua",
+          "sha256": "df9408f29c63114faa7861722cf1d4708f4359b14c64e4a4e7520e08c41af458",
+          "lines": 84
+        },
+        {
+          "name": "01B_HUB_WORLD",
+          "type": "Script &nbsp;",
+          "location": "ServerScriptService &nbsp;",
+          "path": "scripts/V36C/01B_HUB_WORLD.lua",
+          "sha256": "da7d99c03c31ac645d04d39735e17cb4c14192ce0b16da142269b87446f96241",
+          "lines": 152
+        },
+        {
+          "name": "07G_HUB_UI",
+          "type": "LocalScript &nbsp;",
+          "location": "StarterPlayer &gt; StarterPlayerScripts &nbsp;",
+          "path": "scripts/V36C/07G_HUB_UI.lua",
+          "sha256": "2749db0e9c04180b72326d468cd9d5dffe4c1b8056050cbdb32eebec1d4d2c42",
+          "lines": 306
+        },
+        {
+          "name": "09A_SHOP_UI",
+          "type": "ModuleScript &nbsp;",
+          "location": "ReplicatedStorage &nbsp;",
+          "path": "scripts/V36C/09A_SHOP_UI.lua",
+          "sha256": "86d765a92e9c4d7bef60f4be60f1b73d4f41b967bb2ca7992c8ab75f3c4e2222",
+          "lines": 327
+        },
+        {
+          "name": "09C_SHOP_CLIENT",
+          "type": "LocalScript &nbsp;",
+          "location": "StarterPlayer &gt; StarterPlayerScripts &nbsp;",
+          "path": "scripts/V36C/09C_SHOP_CLIENT.lua",
+          "sha256": "b2aaed64c331baecc9926be1d8c799b59f7b2eee4d430ef9c7fe8c7f9151b23d",
+          "lines": 385
+        },
+        {
+          "name": "09C2_SHOP_CATALOG",
+          "type": "ModuleScript &nbsp;",
+          "location": "ReplicatedStorage &nbsp;",
+          "path": "scripts/V36C/09C2_SHOP_CATALOG.lua",
+          "sha256": "87c381b9cb87adb620abb04203dac08599cbdf109cd770ecaf6c2ac7de9d3747",
+          "lines": 380
         }
       ]
     }
