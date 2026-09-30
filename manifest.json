@@ -1,8 +1,8 @@
 {
   "schema": 1,
   "project": "Avatar Plaza Script Hub",
-  "latest": "V36C",
-  "updated_at": "2026-09-29T22:30:00-03:00",
+  "latest": "V36D",
+  "updated_at": "2026-09-29T22:45:00-03:00",
   "poll_seconds": 5,
   "versions": [
     {
@@ -91,6 +91,64 @@
           "location": "ReplicatedStorage &nbsp;",
           "path": "scripts/V36C/09C2_SHOP_CATALOG.lua",
           "sha256": "87c381b9cb87adb620abb04203dac08599cbdf109cd770ecaf6c2ac7de9d3747",
+          "lines": 380
+        }
+      ]
+    },
+    {
+      "id": "V36D",
+      "title": "SHOP FIX + CATALOG STUDIO PLAZA",
+      "date": "2026-09-29",
+      "summary": "Corrige a Shop que não abria, simplifica o HUD, cria mapa grafite inspirado em um catalog/avatar studio e remove o troféu/fogo acima da cabeça.",
+      "install_note": "Substitua os 7 scripts desta versão. O 07X_SOCIAL_TAGS deve substituir o antigo para remover o indicador de vitórias/sequência.",
+      "scripts": [
+        {
+          "name": "01A_HUB_CORE_ENV",
+          "type": "Script",
+          "location": "ServerScriptService",
+          "path": "scripts/V36D/01A_HUB_CORE_ENV.lua",
+          "lines": 91
+        },
+        {
+          "name": "01B_HUB_WORLD",
+          "type": "Script",
+          "location": "ServerScriptService",
+          "path": "scripts/V36D/01B_HUB_WORLD.lua",
+          "lines": 173
+        },
+        {
+          "name": "07G_HUB_UI",
+          "type": "LocalScript",
+          "location": "StarterPlayer > StarterPlayerScripts",
+          "path": "scripts/V36D/07G_HUB_UI.lua",
+          "lines": 202
+        },
+        {
+          "name": "07X_SOCIAL_TAGS",
+          "type": "LocalScript",
+          "location": "StarterPlayer > StarterPlayerScripts",
+          "path": "scripts/V36D/07X_SOCIAL_TAGS.lua",
+          "lines": 30
+        },
+        {
+          "name": "09A_SHOP_UI",
+          "type": "ModuleScript",
+          "location": "ReplicatedStorage",
+          "path": "scripts/V36D/09A_SHOP_UI.lua",
+          "lines": 327
+        },
+        {
+          "name": "09C_SHOP_CLIENT",
+          "type": "LocalScript",
+          "location": "StarterPlayer > StarterPlayerScripts",
+          "path": "scripts/V36D/09C_SHOP_CLIENT.lua",
+          "lines": 385
+        },
+        {
+          "name": "09C2_SHOP_CATALOG",
+          "type": "ModuleScript",
+          "location": "ReplicatedStorage",
+          "path": "scripts/V36D/09C2_SHOP_CATALOG.lua",
           "lines": 380
         }
       ]
