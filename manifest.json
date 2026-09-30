@@ -1,0 +1,42 @@
+{
+  "schema": 1,
+  "project": "Avatar Plaza Script Hub",
+  "latest": "V36B",
+  "updated_at": "2026-09-29T23:59:00-03:00",
+  "poll_seconds": 5,
+  "versions": [
+    {
+      "id": "V36B",
+      "title": "HUD CATALOG LAYOUT + SHOP CATALOG STYLE",
+      "date": "2026-09-29",
+      "summary": "HUD distribuída no estilo de catálogo, centro da tela livre e Shop com cards grandes.",
+      "install_note": "Substitua somente 07G_HUB_UI, 09A_SHOP_UI e 09C2_SHOP_CATALOG. Não instale a V36A depois.",
+      "scripts": [
+        {
+          "name": "07G_HUB_UI",
+          "type": "LocalScript",
+          "location": "StarterPlayer > StarterPlayerScripts",
+          "path": "scripts/V36B/07G_HUB_UI.lua",
+          "sha256": "d0e7e50b52611c12bd1a0cb4af169dbe51c204f315a213fc872de032a2635665",
+          "lines": 306
+        },
+        {
+          "name": "09A_SHOP_UI",
+          "type": "ModuleScript",
+          "location": "ReplicatedStorage",
+          "path": "scripts/V36B/09A_SHOP_UI.lua",
+          "sha256": "beaa692bcd4d7639b349af42cac577f0e1a1d173c9c8c5b891d4d56b60f64a45",
+          "lines": 327
+        },
+        {
+          "name": "09C2_SHOP_CATALOG",
+          "type": "ModuleScript",
+          "location": "ReplicatedStorage",
+          "path": "scripts/V36B/09C2_SHOP_CATALOG.lua",
+          "sha256": "bed4e43c47af7df02b518e3f03eb3c84cf6f8ffabaa0a797451807c6468250b3",
+          "lines": 388
+        }
+      ]
+    }
+  ]
+}
