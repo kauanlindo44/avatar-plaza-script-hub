@@ -13,7 +13,8 @@ for _,n in ipairs({"HubGameGui","GameClubGui"})do local x=pg:FindFirstChild(n);i
 
 local gui=Instance.new("ScreenGui");gui.Name="GameClubGui";gui.ResetOnSpawn=false;gui.IgnoreGuiInset=true;gui.DisplayOrder=120;gui.ZIndexBehavior=Enum.ZIndexBehavior.Sibling;gui.Parent=pg
 local C={bg=Color3.fromRGB(15,16,20),card=Color3.fromRGB(35,37,43),soft=Color3.fromRGB(49,52,60),blue=Color3.fromRGB(72,142,201),purple=Color3.fromRGB(111,84,174),green=Color3.fromRGB(68,201,117),red=Color3.fromRGB(218,77,91),gold=Color3.fromRGB(226,174,69),white=Color3.fromRGB(247,248,250),muted=Color3.fromRGB(173,176,184),light=Color3.fromRGB(222,224,226),dark=Color3.fromRGB(69,72,78)}
-local function round(o,n)local c=Instance.new("UICorner");c.CornerRadius=UDim.new(0,n or 10);c.Parent=o endlocal function fit(o)o.TextScaled=false;o.TextWrapped=true end
+local function round(o,n)local c=Instance.new("UICorner");c.CornerRadius=UDim.new(0,n or 10);c.Parent=o end
+local function fit(o)o.TextScaled=false;o.TextWrapped=true end
 local function text(p,s,pos,size,fs,col)local t=Instance.new("TextLabel");t.BackgroundTransparency=1;t.Position=pos;t.Size=size;t.Text=s;t.TextColor3=col or C.white;t.Font=Enum.Font.GothamBold;t.TextSize=fs or 11;t.TextWrapped=true;t.Parent=p;return t end
 local function btn(p,s,pos,size,col)local b=Instance.new("TextButton");b.Position=pos;b.Size=size;b.BackgroundColor3=col or C.card;b.BorderSizePixel=0;b.Text=s;b.TextColor3=C.white;b.Font=Enum.Font.GothamBlack;b.TextSize=10;b.AutoButtonColor=true;b.Parent=p;round(b,9);fit(b,8,16);return b end
 local function call(action,a)local ok,r=pcall(function()return request:InvokeServer(action,a)end);if not ok then return nil,"Servidor indisponível."end;if not r or r.ok~=true then return nil,r and r.error or"Falha."end;return r end
