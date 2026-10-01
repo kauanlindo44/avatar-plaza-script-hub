@@ -1,0 +1,47 @@
+[
+  {
+    "case": "syntax_and_limits",
+    "result": "pass",
+    "detail": "7 scripts, <=400 lines, no compound assignments"
+  },
+  {
+    "case": "shop_dialogs_and_editor_bounds",
+    "result": "pass",
+    "detail": "dialogues and editor controls fit five safe viewports"
+  },
+  {
+    "case": "hud_reference_layout_and_actions",
+    "result": "pass",
+    "detail": "reference arrangement, music binding and 13 actions verified"
+  },
+  {
+    "case": "lobby_modes_waiting_and_bounds",
+    "result": "pass",
+    "detail": "real waiting state, locked modes, selectable code and accessible cancel"
+  },
+  {
+    "case": "board_responsive_and_piece_mapping",
+    "result": "pass",
+    "detail": "square cells, inverted board, visible clocks and responsive actions"
+  },
+  {
+    "case": "game_controller_room_contract_and_failures",
+    "result": "pass",
+    "detail": "create/join/cancel, cancellation failure, push race, board RPC and HUD restoration"
+  },
+  {
+    "case": "bot_training_and_stale_potato_callback",
+    "result": "pass",
+    "detail": "legal chess training, turn lock, clear result and stale callback cancellation"
+  },
+  {
+    "case": "online_potato_overlay_and_leave",
+    "result": "pass",
+    "detail": "physical online table kept visible, honest status and room leave"
+  },
+  {
+    "case": "shop_client_hud_and_loader_integration",
+    "result": "pass",
+    "detail": "all new HUD actions, avatar preview, responsive loader and honest loading state"
+  }
+]

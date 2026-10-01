@@ -1,0 +1,15 @@
+{
+  "result": "pass",
+  "runtime": "Node.js + minimal DOM doubles; no CSS rendering",
+  "checks": [
+    "Offline V40",
+    "Old-cache rejection",
+    "7 source hashes",
+    "Exact part reconstruction",
+    "09A only four parts",
+    "Clipboard/manual selection",
+    "Tampered-source fallback",
+    "Closing during load",
+    "No JavaScript exceptions"
+  ]
+}
