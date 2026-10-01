@@ -143,28 +143,45 @@ async function openVersion(id){
     for(const s of (v.scripts||[])){
       const code=await getText(s.path);
       const lines=code.replace(/\n$/,"").split("\n");
-      const count=Math.max(1,Math.min(4,Number(s.parts||2)));
-      const parts=[];let at=0;
-      for(let i=0;i<count;i++){
-        const remain=lines.length-at, left=count-i;
-        const take=Math.ceil(remain/left);
-        parts.push(lines.slice(at,at+take).join("\n"));at+=take;
+      const partCount=Math.max(1,Math.min(6,Number(s.parts||2)));
+      const parts=[];
+      for(let i=0;i<partCount;i++){
+        const a=Math.floor(lines.length*i/partCount);
+        const b=Math.floor(lines.length*(i+1)/partCount);
+        parts.push(lines.slice(a,b).join("\n"));
       }
+      const hideFull=s.hide_full===true;
       const sec=document.createElement("section");sec.className="script";
-      let whole=s.hide_whole?`<div class="meta" style="margin:8px 0"><b>COLAGEM SEGURA:</b> use as ${count} partes abaixo, em ordem.</div>`:
-      `<div style="margin:8px 0"><button class="btn green all">COPIAR SCRIPT INTEIRO</button><button class="btn manual">SELECIONAR INTEIRO</button></div><textarea class="allcode" readonly></textarea>`;
-      let partHtml="";
-      for(let i=0;i<count;i++)partHtml+=`<details><summary>PARTE ${i+1}/${count}</summary><button class="btn purple part">COPIAR PARTE ${i+1}</button><textarea class="px" readonly></textarea></details>`;
+      let fullHtml="";
+      if(!hideFull){
+        fullHtml=`<div style="margin:8px 0">
+         <button class="btn green all">COPIAR SCRIPT INTEIRO</button>
+         <button class="btn manual">SELECIONAR INTEIRO</button>
+        </div><textarea class="allcode" readonly></textarea>`;
+      }else{
+        fullHtml=`<div class="empty" style="margin:8px 0">
+        SCRIPT INTEIRO OCULTO POR SEGURANÇA • COLE AS ${partCount} PARTES EM ORDEM
+        </div>`;
+      }
+      let details="";
+      for(let i=0;i<partCount;i++){
+        const last=(parts[i].split("\n").filter(Boolean).pop()||"");
+        details+=`<details><summary>PARTE ${i+1}/${partCount}</summary>
+        <button class="btn purple part" data-i="${i}">COPIAR PARTE ${i+1}</button>
+        <div class="meta">Última linha: ${esc(last.slice(0,140))}</div>
+        <textarea class="partarea" data-i="${i}" readonly></textarea></details>`;
+      }
       sec.innerHTML=`<h3>${esc(s.name)}</h3>
       <div class="meta"><b>${esc(s.type||"Script")}</b> • ${esc(s.location||"")} • ${lines.length} linhas</div>
-      <div class="hash">SHA-256 esperado: ${esc(s.sha256||"")}</div>${whole}${partHtml}`;
-      if(!s.hide_whole){
+      <div class="hash">SHA-256 esperado: ${esc(s.sha256||"")}</div>
+      ${fullHtml}${details}`;
+      if(!hideFull){
         sec.querySelector(".allcode").value=code;
         sec.querySelector(".all").onclick=()=>copyText(code,"SCRIPT INTEIRO COPIADO");
         sec.querySelector(".manual").onclick=()=>selectArea(sec.querySelector(".allcode"));
       }
-      const areas=sec.querySelectorAll(".px"), pb=sec.querySelectorAll(".part");
-      for(let i=0;i<count;i++){areas[i].value=parts[i];pb[i].onclick=()=>copyText(parts[i],`PARTE ${i+1} COPIADA`)}
+      sec.querySelectorAll(".partarea").forEach((a,i)=>a.value=parts[i]);
+      sec.querySelectorAll(".part").forEach((b,i)=>b.onclick=()=>copyText(parts[i],`PARTE ${i+1} COPIADA`));
       holder.appendChild(sec);
     }
     $("scriptsLoad")?.remove(); out.appendChild(holder);
