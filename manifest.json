@@ -1,8 +1,8 @@
 {
-  "schema": 1,
+  "schema": 2,
   "project": "Avatar Plaza Script Hub",
-  "latest": "V36E",
-  "updated_at": "2026-09-29T23:35:00-03:00",
+  "latest": "V37",
+  "updated_at": "2026-10-01T00:50:00-03:00",
   "poll_seconds": 5,
   "versions": [
     {
@@ -215,6 +215,132 @@
           "location": "ReplicatedStorage",
           "path": "scripts/V36E/09C2_SHOP_CATALOG.lua",
           "lines": 381
+        }
+      ]
+    },
+    {
+      "id": "V37",
+      "title": "AVATAR EDITOR REBUILD",
+      "date": "2026-10-01",
+      "summary": "Editor R6/R15 e corpo R15, carrinho real, Community melhorada, preview 3D, HUD/CFG responsivos, Game Club com BOT e mapa refinado.",
+      "install_note": "Substitua os scripts marcados. Para 07A0_CHESS_RULES e 07B0_CHECKERS_RULES, crie cópias adicionais em ReplicatedStorage e mantenha os originais no ServerScriptService.",
+      "scripts": [
+        {
+          "name": "01A_HUB_CORE_ENV",
+          "type": "Script",
+          "location": "ServerScriptService",
+          "action": "SUBSTITUIR",
+          "lines": 99,
+          "sha256": "b16c6420b4ea22ace42c94615ba15e0db53282d84e4b0f34ffb61f6a055b3134",
+          "path": "scripts/V37/01A_HUB_CORE_ENV.lua"
+        },
+        {
+          "name": "01B_HUB_WORLD",
+          "type": "Script",
+          "location": "ServerScriptService",
+          "action": "SUBSTITUIR",
+          "lines": 201,
+          "sha256": "6a0f2416ccf42da948d73da419f0bdcd180e35cb51a75fd58c0e9fced84ddd98",
+          "path": "scripts/V37/01B_HUB_WORLD.lua"
+        },
+        {
+          "name": "07G_HUB_UI",
+          "type": "LocalScript",
+          "location": "StarterPlayer > StarterPlayerScripts",
+          "action": "SUBSTITUIR",
+          "lines": 138,
+          "sha256": "a35502a209b0b1b584e7d6d0055e73f572763205a26150d5f4a2827f02bab182",
+          "path": "scripts/V37/07G_HUB_UI.lua"
+        },
+        {
+          "name": "07H_GAME_UI",
+          "type": "LocalScript",
+          "location": "StarterPlayer > StarterPlayerScripts",
+          "action": "SUBSTITUIR",
+          "lines": 155,
+          "sha256": "33320981ef4089afc8f995b44043850d119a32caf42f3d4bf87652949b03a445",
+          "path": "scripts/V37/07H_GAME_UI.lua"
+        },
+        {
+          "name": "07A0_CHESS_RULES",
+          "type": "ModuleScript",
+          "location": "ReplicatedStorage",
+          "action": "CRIAR CÓPIA; manter original no ServerScriptService",
+          "lines": 379,
+          "sha256": "190728077ae80069b596a0aad2ad6b955350b94581dc1718fabfba87e6eb9693",
+          "path": "scripts/V37/07A0_CHESS_RULES.lua"
+        },
+        {
+          "name": "07B0_CHECKERS_RULES",
+          "type": "ModuleScript",
+          "location": "ReplicatedStorage",
+          "action": "CRIAR CÓPIA; manter original no ServerScriptService",
+          "lines": 315,
+          "sha256": "f0ebdc247f4ef9e74a8774f760e4933174084b67b1880e5888e18ddfca602538",
+          "path": "scripts/V37/07B0_CHECKERS_RULES.lua"
+        },
+        {
+          "name": "08D_SKIN_STATE",
+          "type": "ModuleScript",
+          "location": "ReplicatedStorage",
+          "action": "SUBSTITUIR",
+          "lines": 115,
+          "sha256": "dd2e929d84091057d3b171e011f94c54f1e30a45af380fc59c51cb2797b7f6d1",
+          "path": "scripts/V37/08D_SKIN_STATE.lua"
+        },
+        {
+          "name": "09A_SHOP_UI",
+          "type": "ModuleScript",
+          "location": "ReplicatedStorage",
+          "action": "SUBSTITUIR",
+          "lines": 351,
+          "sha256": "7b153a0bc5cd4b8b2120401eace1b8127f447380648beb1692289043668e13b0",
+          "path": "scripts/V37/09A_SHOP_UI.lua"
+        },
+        {
+          "name": "09B_SHOP_SERVER",
+          "type": "Script",
+          "location": "ServerScriptService",
+          "action": "SUBSTITUIR",
+          "lines": 103,
+          "sha256": "07ad11c92f4984ec7d5612e8473b3229035ea89ea9494da76ec3c4fd9e42d2ee",
+          "path": "scripts/V37/09B_SHOP_SERVER.lua"
+        },
+        {
+          "name": "09C_SHOP_CLIENT",
+          "type": "LocalScript",
+          "location": "StarterPlayer > StarterPlayerScripts",
+          "action": "SUBSTITUIR",
+          "lines": 372,
+          "sha256": "52dba8afd6df29b33c5d67072e4836161d25175dc59a5f1927968984bba10e78",
+          "path": "scripts/V37/09C_SHOP_CLIENT.lua"
+        },
+        {
+          "name": "09C1_SHOP_LOOKS",
+          "type": "ModuleScript",
+          "location": "ReplicatedStorage",
+          "action": "SUBSTITUIR",
+          "lines": 301,
+          "sha256": "790f1cd3d4393da17f18f51d46ab608fca6d10876be9e1acf951a01b00eb91bd",
+          "path": "scripts/V37/09C1_SHOP_LOOKS.lua"
+        },
+        {
+          "name": "09C2_SHOP_CATALOG",
+          "type": "ModuleScript",
+          "location": "ReplicatedStorage",
+          "action": "SUBSTITUIR",
+          "lines": 376,
+          "sha256": "fc0502e620ab06a214d79b5e04c9bc9d8ae6dad1c7c0652ff34b19ddbedb27e8",
+          "path": "scripts/V37/09C2_SHOP_CATALOG.lua"
+        },
+        {
+          "name": "09C4_OUTFIT_LIBRARY",
+          "type": "ModuleScript",
+          "location": "ReplicatedStorage",
+          "action": "SUBSTITUIR",
+          "lines": 131,
+          "sha256": "590225d1aaf7fdf8d0a77891540694e499559111ebce98be219e6dc9f4518a27",
+          "path": "scripts/V37/09C4_OUTFIT_LIBRARY.lua"
         }
       ]
     }
