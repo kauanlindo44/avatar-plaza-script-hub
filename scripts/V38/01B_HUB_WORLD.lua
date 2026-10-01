@@ -47,6 +47,7 @@ for r=-7,7 do
  end
 end
 
+-- Pequenas faixas decorativas longe do spawn; nada define um "centro" físico.
 for i,v in ipairs({{-230,-120,100,36},{230,118,100,36},{-210,155,76,32},{215,-165,76,32}})do
  local x,z,w,d=v[1],v[2],v[3],v[4]
  part(ground,"SoftPad"..i,Vector3.new(w,1.05,d),Vector3.new(x,.12,z),slab,Enum.Material.SmoothPlastic,true,0)
@@ -62,20 +63,24 @@ local function lowSet(name,x,z,facing,accent)
  line:SetAttribute("Themeable",true)
 end
 
+-- Micro-áreas nas bordas: úteis como fundo social/foto, mas sem formar praça central.
 lowSet("NorthWestSet",-210,-205,1,cool)
 lowSet("NorthEastSet",210,-205,1,warm)
 lowSet("SouthWestSet",-210,205,-1,warm)
 lowSet("SouthEastSet",210,205,-1,cool)
 
+-- Bancos/apoios espalhados irregularmente para quebrar o vazio sem criar eixo central.
 for i,v in ipairs({{-95,-145,0},{105,-110,90},{-135,95,90},{90,150,0},{-265,30,90},{270,-28,90}})do
  local p=part(props,"SeatBlock"..i,Vector3.new(26,2.4,6),Vector3.new(v[1],1.8,v[2]),soft,Enum.Material.SmoothPlastic,true,0)
  p.CFrame=CFrame.new(O+Vector3.new(v[1],1.8,v[2]))*CFrame.Angles(0,math.rad(v[3]),0)
 end
 
+-- Photo spot é lateral e discreto; não fica no eixo do spawn.
 part(ground,"PhotoPad",Vector3.new(64,1.08,46),Vector3.new(-275,.15,-115),Color3.fromRGB(116,121,129),Enum.Material.SmoothPlastic,true,0)
 local photoAccent=part(accents,"PhotoAccent",Vector3.new(48,.25,2),Vector3.new(-275,.82,-136),cool,Enum.Material.Neon,false,.10)
 photoAccent:SetAttribute("Themeable",true)
 
+-- Spawn invisível sobre o próprio campo, sem plataforma especial.
 local spawn=Instance.new("SpawnLocation")
 spawn.Name="SpawnCentral";spawn.Size=Vector3.new(8,1,8);spawn.Position=O+Vector3.new(0,2.5,0)
 spawn.Anchored=true;spawn.CanCollide=false;spawn.Transparency=1;spawn.Neutral=true;spawn.Duration=0;spawn.Parent=world

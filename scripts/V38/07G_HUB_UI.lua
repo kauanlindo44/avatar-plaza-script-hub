@@ -87,6 +87,7 @@ emotes.Activated:Connect(function()shop("Emotes")end)
 photo.Activated:Connect(function()pg:SetAttribute("ACP_OpenPhotoNonce",(tonumber(pg:GetAttribute("ACP_OpenPhotoNonce"))or 0)+1)end)
 games.Activated:Connect(function()pg:SetAttribute("ACP_OpenGamesNonce",(tonumber(pg:GetAttribute("ACP_OpenGamesNonce"))or 0)+1)end)
 
+-- Configuração organizada por função, com cores apenas para leitura rápida.
 local panel=Instance.new("Frame")
 panel.AnchorPoint=Vector2.new(1,.5);panel.Position=UDim2.new(1,-162,.51,0);panel.Size=UDim2.fromOffset(326,370);panel.BackgroundColor3=Color3.fromRGB(23,24,28);panel.BorderSizePixel=0;panel.Visible=false;panel.Parent=root;round(panel,16);stroke(panel,nil,.38)
 label(panel,"CONFIGURAÇÕES",UDim2.fromOffset(15,12),UDim2.new(1,-58,0,24),12,C.white)

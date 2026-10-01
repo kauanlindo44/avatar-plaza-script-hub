@@ -1,8 +1,8 @@
 {
   "schema": 2,
   "project": "Avatar Plaza Script Hub",
-  "latest": "V37",
-  "updated_at": "2026-10-01T00:50:00-03:00",
+  "latest": "V38",
+  "updated_at": "2026-10-01T15:03:00-03:00",
   "poll_seconds": 5,
   "versions": [
     {
@@ -341,6 +341,105 @@
           "lines": 131,
           "sha256": "590225d1aaf7fdf8d0a77891540694e499559111ebce98be219e6dc9f4518a27",
           "path": "scripts/V37/09C4_OUTFIT_LIBRARY.lua"
+        }
+      ]
+    },
+    {
+      "id": "V38",
+      "title": "CREATOR REBUILD",
+      "date": "2026-10-01",
+      "summary": "Mapa sem centro, HUD refinada, catálogo compacto com subcategorias contextuais, editor/preview reorganizado, Community e Lojas melhoradas e Game Club 2D redesenhado.",
+      "install_note": "Substitua os 10 scripts desta versão. O BOT de Xadrez/Damas continua usando as cópias de 07A0_CHESS_RULES e 07B0_CHECKERS_RULES em ReplicatedStorage criadas na V37; se já existem, não recrie.",
+      "scripts": [
+        {
+          "name": "01A_HUB_CORE_ENV",
+          "type": "Script",
+          "location": "ServerScriptService",
+          "action": "SUBSTITUIR",
+          "lines": 86,
+          "sha256": "126603ecf0243d509253ef27870495754a6e6a6084096400958f9f553d42debf",
+          "path": "scripts/V38/01A_HUB_CORE_ENV.lua"
+        },
+        {
+          "name": "01B_HUB_WORLD",
+          "type": "Script",
+          "location": "ServerScriptService",
+          "action": "SUBSTITUIR",
+          "lines": 127,
+          "sha256": "7483f491546509eed53aa612801adb51fbd3cd38a5d5a8de2879477e3f80aa94",
+          "path": "scripts/V38/01B_HUB_WORLD.lua"
+        },
+        {
+          "name": "07G_HUB_UI",
+          "type": "LocalScript",
+          "location": "StarterPlayer > StarterPlayerScripts",
+          "action": "SUBSTITUIR",
+          "lines": 138,
+          "sha256": "f0facd29947c1950dd0d615bb2f97fc22144b0c760a2c10abfa6817aa6d28a05",
+          "path": "scripts/V38/07G_HUB_UI.lua"
+        },
+        {
+          "name": "07H_GAME_UI",
+          "type": "LocalScript",
+          "location": "StarterPlayer > StarterPlayerScripts",
+          "action": "SUBSTITUIR",
+          "lines": 161,
+          "sha256": "8f6681d886c7e5da19bbb2d72bf7b291925a349c5ac086e4718d8d4013fa99b1",
+          "path": "scripts/V38/07H_GAME_UI.lua"
+        },
+        {
+          "name": "09A_SHOP_UI",
+          "type": "ModuleScript",
+          "location": "ReplicatedStorage",
+          "action": "SUBSTITUIR",
+          "lines": 166,
+          "sha256": "edecfdd2a4a08ec4bd8c7e5b50aecc10238223d6540b6738c7c24a903f280669",
+          "path": "scripts/V38/09A_SHOP_UI.lua"
+        },
+        {
+          "name": "09C_SHOP_CLIENT",
+          "type": "LocalScript",
+          "location": "StarterPlayer > StarterPlayerScripts",
+          "action": "SUBSTITUIR",
+          "lines": 370,
+          "sha256": "32b832a0886866084c75acbab4f41b2fd412b9699587a94803523dac4ff2cf70",
+          "path": "scripts/V38/09C_SHOP_CLIENT.lua"
+        },
+        {
+          "name": "09C1_SHOP_LOOKS",
+          "type": "ModuleScript",
+          "location": "ReplicatedStorage",
+          "action": "SUBSTITUIR",
+          "lines": 302,
+          "sha256": "bec57c040918141e2a6931fc9eb906d2960a36c4123759503be3866fdaa07b60",
+          "path": "scripts/V38/09C1_SHOP_LOOKS.lua"
+        },
+        {
+          "name": "09C2_SHOP_CATALOG",
+          "type": "ModuleScript",
+          "location": "ReplicatedStorage",
+          "action": "SUBSTITUIR",
+          "lines": 104,
+          "sha256": "00bcc64a3a531176a83c99401669ac69fb3a7c86108f93704449e215ef4cfb2b",
+          "path": "scripts/V38/09C2_SHOP_CATALOG.lua"
+        },
+        {
+          "name": "09C4_OUTFIT_LIBRARY",
+          "type": "ModuleScript",
+          "location": "ReplicatedStorage",
+          "action": "SUBSTITUIR",
+          "lines": 55,
+          "sha256": "c88ab3ac4aba1a03d66b4b40143cee771acedf432aa7a4a45824fd5e79650802",
+          "path": "scripts/V38/09C4_OUTFIT_LIBRARY.lua"
+        },
+        {
+          "name": "09C5_UGC_STORES",
+          "type": "ModuleScript",
+          "location": "ReplicatedStorage",
+          "action": "SUBSTITUIR",
+          "lines": 48,
+          "sha256": "8d3728120492c69cf73753cffef3f0020881365373ecdb1064cb4fb5bbee4d38",
+          "path": "scripts/V38/09C5_UGC_STORES.lua"
         }
       ]
     }
