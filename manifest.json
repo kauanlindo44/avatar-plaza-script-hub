@@ -1,8 +1,8 @@
 {
   "schema": 2,
   "project": "Avatar Plaza Script Hub",
-  "latest": "V38.1",
-  "updated_at": "2026-10-01T16:34:10-03:00",
+  "latest": "V39",
+  "updated_at": "2026-10-01T22:08:41+00:00",
   "poll_seconds": 5,
   "versions": [
     {
@@ -524,6 +524,115 @@
           "lines": 354,
           "sha256": "91bf174917d7c4e2f3806ad72d64a1a12b9a67343d7198716a30f2415f5cb477",
           "path": "scripts/V38_1/09C_SHOP_CLIENT.lua",
+          "parts": 2,
+          "hide_full": false
+        }
+      ]
+    },
+    {
+      "id": "V39",
+      "title": "AVATAR STUDIO + CORREÇÃO DO BOT",
+      "date": "2026-10-01",
+      "summary": "HUD legível e menu compacto, editor adaptável, emotes na prévia, busca por categoria, paginação completa e carrinho com preços claros. Corrige a ordenação do bot e o salvamento de nomes.",
+      "install_note": "Partindo da V38.1, pare o teste e substitua os 9 scripts indicados, mantendo seus nomes e locais. No 09A_SHOP_UI, apague o código antigo uma vez e cole as 4 partes em ordem no mesmo ModuleScript. Inicie um novo teste após substituir todos.",
+      "validation": "Sintaxe e testes com serviços simulados aprovados. Renderização, animações, compras e persistência precisam de confirmação no Studio Lite/Roblox.",
+      "scripts": [
+        {
+          "name": "07G_HUB_UI",
+          "type": "LocalScript",
+          "location": "StarterPlayer > StarterPlayerScripts",
+          "action": "SUBSTITUIR",
+          "lines": 175,
+          "sha256": "1a9730159939b4e56c220d70c9073128e761635e9c1a9a9995e6e6e36a0934dc",
+          "path": "scripts/V39/07G_HUB_UI.lua",
+          "parts": 2,
+          "hide_full": false
+        },
+        {
+          "name": "07H_GAME_UI",
+          "type": "LocalScript",
+          "location": "StarterPlayer > StarterPlayerScripts",
+          "action": "SUBSTITUIR",
+          "lines": 321,
+          "sha256": "198b6e51e85279a22e8df9cbd1f1f849f62cec25401b48c343144ac3a36ed9b1",
+          "path": "scripts/V39/07H_GAME_UI.lua",
+          "parts": 2,
+          "hide_full": false
+        },
+        {
+          "name": "09A_SHOP_UI",
+          "type": "ModuleScript",
+          "location": "ReplicatedStorage",
+          "action": "SUBSTITUIR",
+          "lines": 400,
+          "sha256": "46421e9b36b91ae0de6af771c3094b1c436a400dede39840ab5b74815853921e",
+          "path": "scripts/V39/09A_SHOP_UI.lua",
+          "parts": 4,
+          "hide_full": true
+        },
+        {
+          "name": "09B_SHOP_SERVER",
+          "type": "Script",
+          "location": "ServerScriptService",
+          "action": "SUBSTITUIR",
+          "lines": 107,
+          "sha256": "560f78cb3d219458909cf5d674afce251af4359fb18174eecf02eab781fefbcd",
+          "path": "scripts/V39/09B_SHOP_SERVER.lua",
+          "parts": 2,
+          "hide_full": false
+        },
+        {
+          "name": "09C_SHOP_CLIENT",
+          "type": "LocalScript",
+          "location": "StarterPlayer > StarterPlayerScripts",
+          "action": "SUBSTITUIR",
+          "lines": 382,
+          "sha256": "10ea2a16dfb157ad6a0da6186022843b6159f129cf1665cf490cad0a88e1e61d",
+          "path": "scripts/V39/09C_SHOP_CLIENT.lua",
+          "parts": 2,
+          "hide_full": false
+        },
+        {
+          "name": "09C1_SHOP_LOOKS",
+          "type": "ModuleScript",
+          "location": "ReplicatedStorage",
+          "action": "SUBSTITUIR",
+          "lines": 326,
+          "sha256": "d7ef1934ae9cd1e93b79812c7a700c1bad6b2373367ee11a8921ef849db8bd0c",
+          "path": "scripts/V39/09C1_SHOP_LOOKS.lua",
+          "parts": 2,
+          "hide_full": false
+        },
+        {
+          "name": "09C2_SHOP_CATALOG",
+          "type": "ModuleScript",
+          "location": "ReplicatedStorage",
+          "action": "SUBSTITUIR",
+          "lines": 220,
+          "sha256": "9728db56825cae94bfedaf0526fb687e1d3f82c110362d323e1055e36e249388",
+          "path": "scripts/V39/09C2_SHOP_CATALOG.lua",
+          "parts": 2,
+          "hide_full": false
+        },
+        {
+          "name": "09C4_OUTFIT_LIBRARY",
+          "type": "ModuleScript",
+          "location": "ReplicatedStorage",
+          "action": "SUBSTITUIR",
+          "lines": 133,
+          "sha256": "49a9bed7e1ac0ba1f187097b3e80e937830369202b0a888bc9808ed3cec406cc",
+          "path": "scripts/V39/09C4_OUTFIT_LIBRARY.lua",
+          "parts": 2,
+          "hide_full": false
+        },
+        {
+          "name": "09C5_UGC_STORES",
+          "type": "ModuleScript",
+          "location": "ReplicatedStorage",
+          "action": "SUBSTITUIR",
+          "lines": 73,
+          "sha256": "cc454cf3ef9509c4bfc17271b76d33e05a1b4f168fe7a272074a71a7d6bf1c35",
+          "path": "scripts/V39/09C5_UGC_STORES.lua",
           "parts": 2,
           "hide_full": false
         }

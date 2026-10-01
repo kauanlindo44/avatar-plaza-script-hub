@@ -1,0 +1,50 @@
+{
+  "runtime": "liblua5.4 + service doubles; no Roblox engine",
+  "cases": [
+    {
+      "case": "syntax_and_limits",
+      "result": "pass",
+      "detail": "9 scripts, <=400 lines, no compound assignments"
+    },
+    {
+      "case": "hud_compact_and_settings",
+      "result": "pass",
+      "detail": "compact drawer bounds, launcher actions and settings focus"
+    },
+    {
+      "case": "shop_layout",
+      "result": "pass",
+      "detail": "5 screen sizes; search, preview, editor, saved looks and cart bounds"
+    },
+    {
+      "case": "bot_sort_regression",
+      "result": "pass",
+      "detail": "baseline failed 1000 times; V39 passed 5000 sorts"
+    },
+    {
+      "case": "bot_real_rules",
+      "result": "pass",
+      "detail": "1000 legal moves across chess/checkers and three difficulties"
+    },
+    {
+      "case": "catalog_search_and_pages",
+      "result": "pass",
+      "detail": "keyword/category, free ceiling, 24 emotes + pagination, deduplication, stale response, invalid price"
+    },
+    {
+      "case": "cart_selection_and_prices",
+      "result": "pass",
+      "detail": "deduplication, unknown subtotal, explicit 20-item limit and valid purchase"
+    },
+    {
+      "case": "server_update_and_purchase",
+      "result": "pass",
+      "detail": "filter once outside retryable transform; invalid/over-limit purchases rejected"
+    },
+    {
+      "case": "ugc_creator_search",
+      "result": "pass",
+      "detail": "on-demand creator/group requests and stale-response cancellation"
+    }
+  ]
+}
