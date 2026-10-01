@@ -1,0 +1,344 @@
+-- 09A_SHOP_UI
+-- ModuleScript | ReplicatedStorage
+-- AVATAR PLAZA V38.1 - Avatar Editor / Catalog UI Studio Lite safe.
+-- Catalogo usa uma unica barra de categorias + submenu flutuante; acoes do avatar vivem em containers separados para nao sobrepor cards.
+
+local M={VERSION="V38_EDITOR_UI"}
+local GuiService=game:GetService("GuiService")
+local function preferredScale()
+ local ok,v=pcall(function()return GuiService.PreferredTextSize end);if not ok then return 1 end
+ local n=tostring(v);if n:find("Largest")then return 1.18 elseif n:find("Larger")then return 1.12 elseif n:find("Large")then return 1.06 end;return 1
+end
+local TEXT_SCALE=preferredScale()
+local C={
+ bg=Color3.fromRGB(13,18,19),
+ panel=Color3.fromRGB(22,31,32),
+ card=Color3.fromRGB(31,43,44),
+ soft=Color3.fromRGB(49,64,64),
+ white=Color3.fromRGB(245,249,248),
+ muted=Color3.fromRGB(170,194,190),
+ green=Color3.fromRGB(91,194,147),
+ red=Color3.fromRGB(211,75,89),
+ yellow=Color3.fromRGB(222,174,82),
+ blue=Color3.fromRGB(94,170,198),
+ purple=Color3.fromRGB(139,109,188),
+ orange=Color3.fromRGB(220,157,88),
+ pink=Color3.fromRGB(211,105,151),
+ cyan=Color3.fromRGB(176,222,216)
+}
+local function N(class,p,parent)local o=Instance.new(class);for k,v in pairs(p or{})do o[k]=v end;if parent then o.Parent=parent end;return o end
+local function R(o,n)local c=Instance.new("UICorner");c.CornerRadius=UDim.new(0,n or 9);c.Parent=o;return c end
+local function S(o,col,t,th)local s=Instance.new("UIStroke");s.Color=col or C.soft;s.Transparency=t or .65;s.Thickness=th or 1;s.Parent=o;return s end
+local function pad(o,l,r,t,b)return N("UIPadding",{PaddingLeft=UDim.new(0,l or 0),PaddingRight=UDim.new(0,r or 0),PaddingTop=UDim.new(0,t or 0),PaddingBottom=UDim.new(0,
+b or 0)},o)end
+local function L(p,txt,x)local q=x or{}; q.Text=txt; q.BackgroundTransparency=q.BackgroundTransparency==nil and 1 or q.BackgroundTransparency;
+q.TextColor3=q.TextColor3 or C.white; q.Font=q.Font or Enum.Font.Gotham; q.TextSize=math.max(5,math.floor((q.TextSize or 8)*TEXT_SCALE+.5));
+q.TextWrapped=q.TextWrapped~=false; return N("TextLabel",q,p)end
+local function B(p,txt,x)local q=x or{}; q.Text=txt; q.BackgroundColor3=q.BackgroundColor3 or C.blue; q.TextColor3=q.TextColor3 or C.white;
+q.Font=q.Font or Enum.Font.GothamBold; q.TextSize=math.max(5,math.floor((q.TextSize or 8)*TEXT_SCALE+.5)); q.BorderSizePixel=0; q.AutoButtonColor=true;
+q.TextWrapped=q.TextWrapped~=false; local b=N("TextButton",q,p); R(b,q.Corner or 8); pad(b,6,6); return b end
+local function T(p,ph,x)local q=x or{}; q.PlaceholderText=ph or""; q.Text=q.Text or""; q.ClearTextOnFocus=false; q.BackgroundColor3=q.BackgroundColor3 or C.card;
+q.TextColor3=q.TextColor3 or C.white; q.PlaceholderColor3=q.PlaceholderColor3 or C.muted; q.Font=q.Font or Enum.Font.Gotham;
+q.TextSize=math.max(5,math.floor((q.TextSize or 8)*TEXT_SCALE+.5)); q.BorderSizePixel=0; q.TextWrapped=false; local t=N("TextBox",q,p); R(t,8); pad(t,8,8); return t end
+local function F(p,x)local q=x or{}; q.BackgroundTransparency=q.BackgroundTransparency==nil and 1 or q.BackgroundTransparency; q.BorderSizePixel=0;
+q.ScrollBarThickness=q.ScrollBarThickness or 3; q.ScrollBarImageColor3=q.ScrollBarImageColor3 or C.muted; q.AutomaticCanvasSize=q.AutomaticCanvasSize or Enum.AutomaticSize.Y;
+q.CanvasSize=q.CanvasSize or UDim2.new(); return N("ScrollingFrame",q,p)end
+local function list(p,h,g)return N("UIListLayout",{FillDirection=h and Enum.FillDirection.Horizontal or Enum.FillDirection.Vertical,Padding=UDim.new(0,g or 5)},p)end
+local function grid(p,w,h,g)return N("UIGridLayout",{CellSize=UDim2.fromOffset(w,h),CellPadding=UDim2.fromOffset(g or 8,g or 8),
+HorizontalAlignment=Enum.HorizontalAlignment.Center},p)end
+local function area(p,name)return N("Frame",{Name=name,Size=UDim2.fromScale(1,1),BackgroundTransparency=1,Visible=false},p)end
+
+function M.Build(pl)
+ local pg=pl:WaitForChild("PlayerGui")
+ for _,name in ipairs({"AvatarShop08Gui","AvatarShopLauncherGui"})do local o=pg:FindFirstChild(name);if o then o:Destroy()end end
+ local lg=N("ScreenGui",{Name="AvatarShopLauncherGui",ResetOnSpawn=false,IgnoreGuiInset=true,DisplayOrder=84},pg)
+ local launch=N("Frame",{Name="LauncherBar",Size=UDim2.fromScale(1,1),BackgroundTransparency=1},lg)
+ local g=N("ScreenGui",{Name="AvatarShop08Gui",ResetOnSpawn=false,IgnoreGuiInset=true,DisplayOrder=90,ZIndexBehavior=Enum.ZIndexBehavior.Sibling},pg)
+ local U={Gui=g,LauncherGui=lg,Colors=C,New=N,Round=R,Text=L,Button=B}
+ U.OpenRequest=N("BindableEvent",{Name="OpenRequest"},g);U.HudAction=N("BindableEvent",{Name="HudAction"},g)
+
+ -- Launcher: duas acoes principais no centro; musica/plus menores no canto.
+ U.TopCatalog=B(launch,"CATALOGO",{Name="TopCatalog",AnchorPoint=Vector2.new(1,0),Position=UDim2.new(.5,-9,0,18),Size=UDim2.fromOffset(128,38),
+ BackgroundColor3=Color3.fromRGB(17,24,25),TextSize=9})
+ U.TopStores=B(launch,"LOJAS",{Name="TopStores",Position=UDim2.new(.5,9,0,18),Size=UDim2.fromOffset(112,38),BackgroundColor3=Color3.fromRGB(17,24,25),TextSize=9})
+ U.TopMusic=B(launch,"MUSICA",{Name="TopMusic",AnchorPoint=Vector2.new(1,0),Position=UDim2.new(1,-61,0,18),Size=UDim2.fromOffset(82,38),BackgroundColor3=Color3.fromRGB(17,24,
+ 25),TextSize=7})
+ U.TopPlus=B(launch,"+",{Name="TopPlus",AnchorPoint=Vector2.new(1,0),Position=UDim2.new(1,-12,0,18),Size=UDim2.fromOffset(40,38),BackgroundColor3=C.green,TextSize=15})
+
+ local root=N("Frame",{Name="ShopWindow",Size=UDim2.fromScale(1,1),BackgroundColor3=C.bg,BorderSizePixel=0,Visible=false},g);U.Root=root
+ local left=N("Frame",{Position=UDim2.fromOffset(8,8),Size=UDim2.new(.30,-10,1,-16),BackgroundColor3=C.panel,BorderSizePixel=0},root);R(left,12);S(left,nil,.52);U.Left=left
+ local main=N("Frame",{Position=UDim2.new(.30,4,0,8),Size=UDim2.new(.70,-12,1,-16),BackgroundColor3=Color3.fromRGB(20,21,24),BorderSizePixel=0},root); R(main,12);
+ S(main,nil,.55); U.Main=main
+
+ -- Preview ocupa a maior parte do editor esquerdo.
+ U.Viewport=N("ViewportFrame",{Position=UDim2.fromOffset(8,8),Size=UDim2.new(1,-16,.57,0),BackgroundColor3=Color3.fromRGB(103,107,114),Ambient=Color3.fromRGB(232,234,238),
+ LightColor=Color3.fromRGB(255,255,255),LightDirection=Vector3.new(-.55,-1,-.42),BorderSizePixel=0},left);
+ R(U.Viewport,10)
+ N("UIGradient",{Color=ColorSequence.new(Color3.fromRGB(118,121,128),Color3.fromRGB(79,83,91)),Rotation=90},U.Viewport)
+ U.PreviewInfo=L(U.Viewport,"PREVIA - R15",{AnchorPoint=Vector2.new(.5,1),Position=UDim2.new(.5,0,1,-6),Size=UDim2.new(1,-16,0,20),Font=Enum.Font.GothamBold,
+ TextColor3=C.white})
+ U.ViewLeft=B(U.Viewport,"<",{AnchorPoint=Vector2.new(0,.5),Position=UDim2.new(0,6,.5,0),Size=UDim2.fromOffset(30,38),BackgroundColor3=Color3.fromRGB(35,39,47),TextSize=15})
+ U.ViewRight=B(U.Viewport,">",{AnchorPoint=Vector2.new(1,.5),Position=UDim2.new(1,-6,.5,0),Size=UDim2.fromOffset(30,38),BackgroundColor3=Color3.fromRGB(35,39,47),TextSize=15})
+ U.ZoomIn=B(U.Viewport,"+",{AnchorPoint=Vector2.new(1,0),Position=UDim2.new(1,-6,0,6),Size=UDim2.fromOffset(28,28),BackgroundColor3=Color3.fromRGB(35,39,47),TextSize=12})
+ U.ZoomOut=B(U.Viewport,"-",{AnchorPoint=Vector2.new(1,0),Position=UDim2.new(1,-6,0,39),Size=UDim2.fromOffset(28,28),BackgroundColor3=Color3.fromRGB(35,39,47),TextSize=12})
+ U.RigBack=B(left,"VOLTAR R6",{Visible=false})
+
+ local tabs=N("Frame",{Position=UDim2.new(0,8,.585,0),Size=UDim2.new(1,-16,0,30),BackgroundTransparency=1},left);U.EditorTabButtons={}
+ local tl=N("UIGridLayout",{CellSize=UDim2.new(.25,-4,1,0),CellPadding=UDim2.fromOffset(5,0),FillDirectionMaxCells=4},tabs)
+ for _,name in ipairs({"AVATAR","CORPO","ITENS","EMOTES"})do local b=B(tabs,name,{BackgroundColor3=name=="AVATAR"and C.soft or Color3.fromRGB(39,41,46),TextSize=6});
+ U.EditorTabButtons[name]=b;
+ if name=="AVATAR"then U.EditorAvatar=b elseif name=="CORPO"then U.EditorBody=b elseif name=="ITENS"then U.EditorItems=b else U.EditorEmotes=b end end
+
+ local edit=N("Frame",{Position=UDim2.new(0,8,.585,36),Size=UDim2.new(1,-16,1,-208),BackgroundTransparency=1},left);U.EditorArea=edit
+ local tools=N("Frame",{Size=UDim2.new(1,0,0,36),BackgroundTransparency=1},edit);U.Tools=tools
+ local tg=N("UIGridLayout",{CellSize=UDim2.new(.25,-4,1,0),CellPadding=UDim2.fromOffset(5,0),FillDirectionMaxCells=4},tools)
+ U.SaveRoblox=B(tools,"RBLX",{BackgroundColor3=C.soft}); U.Undo=B(tools,"UNDO",{BackgroundColor3=C.card,TextSize=6});
+ U.Redo=B(tools,"REDO",{BackgroundColor3=C.card,TextSize=6}); U.Blank=B(tools,"LIMPAR",{BackgroundColor3=C.card,TextSize=6})
+ U.Total=L(edit,"0 itens",{Position=UDim2.fromOffset(0,40),Size=UDim2.new(1,0,0,18),TextColor3=C.muted,TextXAlignment=Enum.TextXAlignment.Right})
+ U.ItemStrip=F(edit,{Position=UDim2.fromOffset(0,60),Size=UDim2.new(1,0,1,-60),ScrollingDirection=Enum.ScrollingDirection.X,AutomaticCanvasSize=Enum.AutomaticSize.X,
+ ScrollBarThickness=0});
+ list(U.ItemStrip,true,6)
+ U.ItemsPanel=F(edit,{Size=UDim2.fromScale(1,1),BackgroundColor3=Color3.fromRGB(31,33,38),BackgroundTransparency=0,Visible=false,ScrollBarThickness=2}); R(U.ItemsPanel,9);
+ pad(U.ItemsPanel,6,6,6,6); list(U.ItemsPanel,false,5)
+ U.EmotePanel=N("Frame",{Size=UDim2.fromScale(1,1),BackgroundColor3=Color3.fromRGB(31,33,38),BorderSizePixel=0,Visible=false},edit); R(U.EmotePanel,9);
+ L(U.EmotePanel,"EMOTES R15",{Position=UDim2.fromOffset(10,10),Size=UDim2.new(1,-20,0,22),Font=Enum.Font.GothamBlack,TextSize=9,TextXAlignment=Enum.TextXAlignment.Left});
+ L(U.EmotePanel,"Teste animacoes diretamente na previa. Em R6, escolha testar em R15 antes de tocar.",{Position=UDim2.fromOffset(10,38),Size=UDim2.new(1,-20,0,54),
+ TextColor3=C.muted,TextSize=6,TextXAlignment=Enum.TextXAlignment.Left});
+ U.OpenEmotes=B(U.EmotePanel,"ABRIR EMOTES",{AnchorPoint=Vector2.new(.5,1),Position=UDim2.new(.5,0,1,-10),Size=UDim2.new(.78,0,0,34),BackgroundColor3=C.green,TextColor3=C.bg})
+
+ U.BodyPanel=F(edit,{Size=UDim2.fromScale(1,1),BackgroundColor3=Color3.fromRGB(31,33,38),BackgroundTransparency=0,Visible=false,ScrollBarThickness=2,
+ AutomaticCanvasSize=Enum.AutomaticSize.None,CanvasSize=UDim2.fromOffset(0,225)});
+ R(U.BodyPanel,9)
+ U.RigR6=B(U.BodyPanel,"R6",{Position=UDim2.fromOffset(6,6),Size=UDim2.new(.5,-9,0,26),BackgroundColor3=C.soft});
+ U.RigR15=B(U.BodyPanel,"R15",{Position=UDim2.new(.5,3,0,6),Size=UDim2.new(.5,-9,0,26),BackgroundColor3=C.green,TextColor3=C.bg})
+ U.BodyNote=L(U.BodyPanel,"R15 permite ajustar proporcoes.",{Position=UDim2.fromOffset(8,35),Size=UDim2.new(1,-16,0,16),TextColor3=C.muted,TextSize=5,
+ TextXAlignment=Enum.TextXAlignment.Left});
+ U.BodyControls={}
+ local function bodyRow(key,label,row)local y=53+(row-1)*23;
+ L(U.BodyPanel,label,{Position=UDim2.fromOffset(8,y),Size=UDim2.new(.44,-8,0,20),TextSize=5,TextXAlignment=Enum.TextXAlignment.Left});
+ local m=B(U.BodyPanel,"-",{Position=UDim2.new(.44,0,0,y),Size=UDim2.fromOffset(28,20)});
+ local v=L(U.BodyPanel,"1.00",{Position=UDim2.new(.44,30,0,y),Size=UDim2.fromOffset(47,20),TextSize=5,TextXAlignment=Enum.TextXAlignment.Center});
+ local p=B(U.BodyPanel,"+",{AnchorPoint=Vector2.new(1,0),Position=UDim2.new(1,-7,0,y),Size=UDim2.fromOffset(28,20)}); U.BodyControls[key]={Minus=m,Value=v,Plus=p}end
+ bodyRow("HeightScale","ALTURA",1); bodyRow("WidthScale","LARGURA",2); bodyRow("DepthScale","PROFUNDIDADE",3); bodyRow("HeadScale","CABECA",4);
+ bodyRow("BodyTypeScale","TIPO CORPO",5); bodyRow("ProportionScale","PROPORCAO",6)
+ U.BodyReset=B(U.BodyPanel,"RESTAURAR CORPO",{AnchorPoint=Vector2.new(.5,1),Position=UDim2.new(.5,0,1,-6),Size=UDim2.new(.72,0,0,24),BackgroundColor3=C.soft,TextSize=5})
+
+ -- Acoes ficam presas em um frame proprio; nao disputam espaco com ItemStrip/BodyPanel.
+ local actions=N("Frame",{AnchorPoint=Vector2.new(0,1),Position=UDim2.new(0,8,1,-8),Size=UDim2.new(1,-16,0,88),BackgroundTransparency=1},left);U.Actions=actions
+ local ag=N("UIGridLayout",{CellSize=UDim2.new(.5,-4,.5,-4),CellPadding=UDim2.fromOffset(8,8),FillDirectionMaxCells=2},actions)
+ U.Apply=B(actions,"APLICAR",{BackgroundColor3=Color3.fromRGB(48,51,58)}); U.Save=B(actions,"SALVAR",{BackgroundColor3=Color3.fromRGB(48,51,58)});
+ U.Reset=B(actions,"RESET",{BackgroundColor3=Color3.fromRGB(48,51,58)}); U.BuyLook=B(actions,"CARRINHO",{BackgroundColor3=Color3.fromRGB(48,51,58)})
+
+ -- Catalogo: search + uma linha principal. Subcategorias vivem em popup temporario.
+ U.Close=B(main,"X",{AnchorPoint=Vector2.new(1,0),Position=UDim2.new(1,-8,0,8),Size=UDim2.fromOffset(34,32),BackgroundColor3=C.soft,ZIndex=40})
+ U.Query=T(main,"Pesquisar no catalogo...",{Position=UDim2.fromOffset(10,10),Size=UDim2.new(1,-238,0,34)})
+ U.Filter=B(main,"FILTRO",{AnchorPoint=Vector2.new(1,0),Position=UDim2.new(1,-136,0,10),Size=UDim2.fromOffset(88,34),BackgroundColor3=C.card,TextSize=7})
+ U.Sort=B(main,"POPULAR",{AnchorPoint=Vector2.new(1,0),Position=UDim2.new(1,-46,0,10),Size=UDim2.fromOffset(86,34),BackgroundColor3=C.card,TextSize=7})
+ local categoryRow=N("Frame",{Position=UDim2.fromOffset(10,51),Size=UDim2.new(1,-20,0,31),BackgroundTransparency=1},main)
+ U.SubToggle=B(categoryRow,"EM ALTA",{AnchorPoint=Vector2.new(1,0),Position=UDim2.new(1,0,0,0),Size=UDim2.fromOffset(102,28),BackgroundColor3=Color3.fromRGB(62,65,72),
+ TextSize=6})
+ U.Groups=F(categoryRow,{Size=UDim2.new(1,-110,1,0),ScrollingDirection=Enum.ScrollingDirection.X,AutomaticCanvasSize=Enum.AutomaticSize.X,ScrollBarThickness=0});
+ list(U.Groups,true,6)
+ U.Grid=F(main,{Position=UDim2.fromOffset(8,88),Size=UDim2.new(1,-16,1,-124)});U.GridLayout=grid(U.Grid,132,174,8)
+ U.Status=L(main,"",{AnchorPoint=Vector2.new(0,1),Position=UDim2.new(0,10,1,-8),Size=UDim2.new(1,-146,0,22),TextColor3=C.muted,TextXAlignment=Enum.TextXAlignment.Left})
+ U.More=B(main,"CARREGAR MAIS",{AnchorPoint=Vector2.new(1,1),Position=UDim2.new(1,-8,1,-7),Size=UDim2.fromOffset(124,28),BackgroundColor3=C.card,TextSize=6})
+ U.SubsPopup=N("Frame",{Position=UDim2.new(0,10,0,84),Size=UDim2.new(1,-20,0,118),BackgroundColor3=Color3.fromRGB(28,30,35),BorderSizePixel=0,Visible=false,ZIndex=58},main);
+ R(U.SubsPopup,10); S(U.SubsPopup,nil,.45)
+ U.Subs=F(U.SubsPopup,{Position=UDim2.fromOffset(7,7),Size=UDim2.new(1,-14,1,-14),ZIndex=59});U.SubsLayout=grid(U.Subs,112,28,6);U.SubsLayout.FillDirectionMaxCells=4
+
+ U.FilterPanel=N("Frame",{AnchorPoint=Vector2.new(1,0),Position=UDim2.new(1,-8,0,50),Size=UDim2.fromOffset(302,226),BackgroundColor3=C.panel,Visible=false,ZIndex=65},main);
+ R(U.FilterPanel,10); S(U.FilterPanel,nil,.45)
+ U.CloseFilter=B(U.FilterPanel,"X",{AnchorPoint=Vector2.new(1,0),Position=UDim2.new(1,-7,0,6),Size=UDim2.fromOffset(28,28),BackgroundColor3=C.soft,ZIndex=66})
+ U.Min=T(U.FilterPanel,"Preco minimo",{Position=UDim2.fromOffset(10,40),Size=UDim2.new(.5,-15,0,28),ZIndex=66});
+ U.Max=T(U.FilterPanel,"Preco maximo",{Position=UDim2.new(.5,5,0,40),Size=UDim2.new(.5,-15,0,28),ZIndex=66})
+ U.Creator=T(U.FilterPanel,"Criador",{Position=UDim2.fromOffset(10,74),Size=UDim2.new(.58,-15,0,28),ZIndex=66});
+ U.CreatorType=B(U.FilterPanel,"Todos criadores",{Position=UDim2.new(.58,5,0,74),Size=UDim2.new(.42,-15,0,28),BackgroundColor3=C.card,ZIndex=66,TextSize=6})
+ U.LimAll=B(U.FilterPanel,"TODOS",{Position=UDim2.fromOffset(10,108),Size=UDim2.new(.33,-8,0,24),ZIndex=66});
+ U.LimOnly=B(U.FilterPanel,"LIMITED",{Position=UDim2.new(.33,4,0,108),Size=UDim2.new(.33,-7,0,24),BackgroundColor3=C.yellow,TextColor3=C.bg,ZIndex=66});
+ U.LimNo=B(U.FilterPanel,"SEM LIMITED",{Position=UDim2.new(.66,2,0,108),Size=UDim2.new(.34,-12,0,24),BackgroundColor3=C.green,TextColor3=C.bg,ZIndex=66,TextSize=6})
+ U.FormAll=B(U.FilterPanel,"TODOS",{Position=UDim2.fromOffset(10,138),Size=UDim2.new(.25,-6,0,24),ZIndex=66});
+ U.FormClassic=B(U.FilterPanel,"CLASSICO",{Position=UDim2.new(.25,3,0,138),Size=UDim2.new(.25,-6,0,24),BackgroundColor3=C.orange,TextColor3=C.bg,ZIndex=66});
+ U.Form2D=B(U.FilterPanel,"2D",{Position=UDim2.new(.5,2,0,138),Size=UDim2.new(.25,-6,0,24),BackgroundColor3=C.green,TextColor3=C.bg,ZIndex=66});
+ U.Form3D=B(U.FilterPanel,"3D",{Position=UDim2.new(.75,1,0,138),Size=UDim2.new(.25,-11,0,24),BackgroundColor3=C.pink,ZIndex=66})
+ U.OffSale=B(U.FilterPanel,"Fora de venda: NAO",{Position=UDim2.fromOffset(10,168),Size=UDim2.new(1,-20,0,20),BackgroundColor3=C.soft,ZIndex=66});
+ U.ClearFilter=B(U.FilterPanel,"LIMPAR",{Position=UDim2.fromOffset(10,194),Size=UDim2.new(.36,-6,0,25),BackgroundColor3=C.red,ZIndex=66});
+ U.ApplyFilter=B(U.FilterPanel,"APLICAR",{Position=UDim2.new(.36,4,0,194),Size=UDim2.new(.64,-14,0,25),BackgroundColor3=C.green,TextColor3=C.bg,ZIndex=66})
+
+ -- Item detail e um drawer, nao uma barra em cima dos cards.
+ U.Detail=N("ScrollingFrame",{AnchorPoint=Vector2.new(1,0),Position=UDim2.new(1,-8,0,8),Size=UDim2.new(0,276,1,-16),CanvasSize=UDim2.fromOffset(0,360),
+ AutomaticCanvasSize=Enum.AutomaticSize.None,ScrollBarThickness=2,ScrollBarImageColor3=C.muted,ClipsDescendants=true,BackgroundColor3=Color3.fromRGB(24,26,
+ 31),BorderSizePixel=0,Visible=false,ZIndex=72},main);
+ R(U.Detail,11); S(U.Detail,nil,.4)
+ U.DetailClose=B(U.Detail,"X",{AnchorPoint=Vector2.new(1,0),Position=UDim2.new(1,-8,0,8),Size=UDim2.fromOffset(30,30),BackgroundColor3=C.soft,ZIndex=73})
+ U.DetailImage=N("ImageLabel",{Position=UDim2.fromOffset(12,12),Size=UDim2.new(1,-24,0,210),BackgroundColor3=Color3.fromRGB(53,55,61),BorderSizePixel=0,
+ ScaleType=Enum.ScaleType.Fit,ZIndex=73},U.Detail);
+ R(U.DetailImage,9)
+ U.DetailName=L(U.Detail,"Item",{Position=UDim2.fromOffset(12,230),Size=UDim2.new(1,-24,0,34),Font=Enum.Font.GothamBold,TextSize=9,TextXAlignment=Enum.TextXAlignment.Left,
+ ZIndex=73})
+ U.DetailPrice=L(U.Detail,"",{Position=UDim2.fromOffset(12,266),Size=UDim2.new(1,-24,0,20),Font=Enum.Font.GothamBold,TextColor3=C.green,TextSize=8,
+ TextXAlignment=Enum.TextXAlignment.Left,ZIndex=73})
+ U.Try=B(U.Detail,"EXPERIMENTAR",{Position=UDim2.fromOffset(12,296),Size=UDim2.new(.52,-15,0,36),BackgroundColor3=C.green,TextColor3=C.bg,ZIndex=73});
+ U.Buy=B(U.Detail,"+ CARRINHO",{Position=UDim2.new(.52,3,0,296),Size=UDim2.new(.48,-15,0,36),BackgroundColor3=C.card,ZIndex=73,TextSize=6});
+ U.Favorite=B(U.Detail,"FAVORITAR",{Position=UDim2.fromOffset(12,336),Size=UDim2.new(1,-24,0,18),BackgroundColor3=C.soft,ZIndex=73,TextSize=5})
+
+ -- Minhas Skins.
+ U.LooksArea=area(main,"LooksArea");
+ local sp=N("Frame",{Position=UDim2.fromOffset(6,6),Size=UDim2.new(.38,-9,1,-12),BackgroundColor3=Color3.fromRGB(18,19,23),BorderSizePixel=0},U.LooksArea); R(sp,10);
+ U.SavedPreviewPanel=sp
+ U.SavedPreview=N("ViewportFrame",{Position=UDim2.fromOffset(8,8),Size=UDim2.new(1,-16,.58,0),BackgroundColor3=Color3.fromRGB(83,87,95),Ambient=Color3.fromRGB(225,228,232),
+ LightColor=Color3.fromRGB(255,255,255),LightDirection=Vector3.new(-.55,-1,-.5),BorderSizePixel=0},sp);
+ R(U.SavedPreview,9)
+ U.SavedLeft=B(U.SavedPreview,"<",{AnchorPoint=Vector2.new(0,.5),Position=UDim2.new(0,5,.5,0),Size=UDim2.fromOffset(28,36),BackgroundColor3=C.card});
+ U.SavedRight=B(U.SavedPreview,">",{AnchorPoint=Vector2.new(1,.5),Position=UDim2.new(1,-5,.5,0),Size=UDim2.fromOffset(28,36),BackgroundColor3=C.card});
+ U.SavedZoomIn=B(U.SavedPreview,"+",{AnchorPoint=Vector2.new(1,0),Position=UDim2.new(1,-5,0,5),Size=UDim2.fromOffset(25,25),BackgroundColor3=C.card});
+ U.SavedZoomOut=B(U.SavedPreview,"-",{AnchorPoint=Vector2.new(1,0),Position=UDim2.new(1,-5,0,34),Size=UDim2.fromOffset(25,25),BackgroundColor3=C.card})
+ U.OutfitSelected=L(sp,"Selecione uma skin",{Position=UDim2.fromOffset(8,170),Size=UDim2.new(1,-16,0,22),Font=Enum.Font.GothamBold,TextXAlignment=Enum.TextXAlignment.Left});
+ U.SavedItems=F(sp,{Position=UDim2.fromOffset(8,196),Size=UDim2.new(1,-16,0,54),ScrollingDirection=Enum.ScrollingDirection.X,AutomaticCanvasSize=Enum.AutomaticSize.X,
+ ScrollBarThickness=0});
+ list(U.SavedItems,true,5)
+ U.OutfitActions=N("Frame",{AnchorPoint=Vector2.new(0,1),Position=UDim2.new(0,8,1,-8),Size=UDim2.new(1,-16,0,104),BackgroundTransparency=1,Visible=false},sp)
+ U.OutfitApply=B(U.OutfitActions,"CARREGAR PREVIA",{Position=UDim2.fromOffset(0,0),Size=UDim2.new(.5,-3,0,30),BackgroundColor3=C.green,TextColor3=C.bg});
+ U.OutfitUpdate=B(U.OutfitActions,"SALVAR ALTERACOES",{Position=UDim2.new(.5,3,0,0),Size=UDim2.new(.5,-3,0,30),BackgroundColor3=C.card})
+ U.OutfitRestore=B(U.OutfitActions,"RESTAURAR",{Position=UDim2.fromOffset(0,36),Size=UDim2.new(.5,-3,0,30),BackgroundColor3=C.orange,TextColor3=C.bg});
+ U.OutfitBuy=B(U.OutfitActions,"COMPRAR ITENS",{Position=UDim2.new(.5,3,0,36),Size=UDim2.new(.5,-3,0,30),BackgroundColor3=C.yellow,TextColor3=C.bg})
+ U.OutfitDelete=B(U.OutfitActions,"EXCLUIR",{Position=UDim2.fromOffset(0,72),Size=UDim2.new(.5,-3,0,30),BackgroundColor3=C.red});
+ U.OutfitPublish=B(U.OutfitActions,"PUBLICAR",{Position=UDim2.new(.5,3,0,72),Size=UDim2.new(.5,-3,0,30),BackgroundColor3=C.purple})
+ local gs=N("Frame",{Position=UDim2.new(.38,3,0,6),Size=UDim2.new(.62,-9,1,-12),BackgroundColor3=Color3.fromRGB(25,26,30),BorderSizePixel=0},U.LooksArea); R(gs,10);
+ U.SavedCount=L(gs,"0 skins",{AnchorPoint=Vector2.new(1,0),Position=UDim2.new(1,-10,0,8),Size=UDim2.fromOffset(90,20),TextColor3=C.cyan,
+ TextXAlignment=Enum.TextXAlignment.Right});
+ U.OutfitSaveNew=B(gs,"+ SALVAR NOVA",{Position=UDim2.fromOffset(10,36),Size=UDim2.new(.42,-14,0,32),BackgroundColor3=C.soft});
+ U.LookSearch=T(gs,"Pesquisar skins...",{Position=UDim2.new(.42,4,0,36),Size=UDim2.new(.58,-14,0,32)});
+ U.SavedGrid=F(gs,{Position=UDim2.fromOffset(6,76),Size=UDim2.new(1,-12,1,-82)}); grid(U.SavedGrid,146,174,8)
+
+ -- Community: controles ocupam so uma faixa de 64 px; grid usa o resto.
+ U.CommunityArea=area(main,"CommunityArea"); local cg=N("Frame",{Size=UDim2.fromScale(1,1),BackgroundColor3=Color3.fromRGB(16,17,20),BorderSizePixel=0},U.CommunityArea);
+ R(cg,10)
+ local cm=N("Frame",{Position=UDim2.fromOffset(7,7),Size=UDim2.new(1,-14,0,62),BackgroundColor3=Color3.fromRGB(28,29,33),BorderSizePixel=0,ZIndex=20},cg);R(cm,10)
+ U.ComMyOutfits=B(cm,"MEUS OUTFITS",{Position=UDim2.fromOffset(7,7),Size=UDim2.fromOffset(96,26),BackgroundColor3=C.soft,ZIndex=21,TextSize=5});
+ U.ComSearch=T(cm,"Pesquisar look, criador ou codigo...",{Position=UDim2.fromOffset(109,7),Size=UDim2.new(1,-185,0,26),ZIndex=21});
+ U.ComSearchGo=B(cm,"IR",{AnchorPoint=Vector2.new(1,0),Position=UDim2.new(1,-39,0,7),Size=UDim2.fromOffset(32,26),ZIndex=21});
+ U.ComRefresh=B(cm,"R",{AnchorPoint=Vector2.new(1,0),Position=UDim2.new(1,-7,0,7),Size=UDim2.fromOffset(27,26),BackgroundColor3=C.soft,ZIndex=21})
+ local ctabs=N("Frame",{Position=UDim2.fromOffset(7,36),Size=UDim2.new(1,-14,0,22),BackgroundTransparency=1,ZIndex=21},cm);
+ local ctl=N("UIListLayout",{FillDirection=Enum.FillDirection.Horizontal,Padding=UDim.new(0,6)},ctabs); U.ComTabButtons={};
+ for _,name in ipairs({"NOVOS","EM ALTA","MAIS CURTIDOS","LOOK DA SEMANA"})do U.ComTabButtons[name]=B(ctabs,name,{Size=UDim2.fromOffset(name=="LOOK DA SEMANA"and 96 or 72,22),
+ BackgroundColor3=name=="NOVOS"and C.soft or C.card,ZIndex=22,TextSize=5})end
+ U.CommunityGrid=F(cg,{Position=UDim2.fromOffset(7,76),Size=UDim2.new(1,-14,1,-108)}); grid(U.CommunityGrid,162,194,9);
+ U.CommunityStatus=L(cg,"",{AnchorPoint=Vector2.new(0,1),Position=UDim2.new(0,10,1,-5),Size=UDim2.new(1,-116,0,20),TextColor3=C.muted,
+  TextXAlignment=Enum.TextXAlignment.Left});
+ 
+ U.ComMore=B(cg,"MAIS",{AnchorPoint=Vector2.new(1,1),Position=UDim2.new(1,-7,1,-5),Size=UDim2.fromOffset(94,24),Visible=false,TextSize=6});
+ U.ComGridTitle=L(cg,"",{Visible=false}); U.ComCount=L(cg,"",{Visible=false}); U.ComFeatured=N("Frame",{Size=UDim2.fromOffset(1,1),BackgroundTransparency=1,Visible=false},cg);
+ U.ComFeaturedEyebrow=L(U.ComFeatured,"",{Visible=false});
+ U.ComFeaturedPreview=N("ViewportFrame",{Size=UDim2.fromOffset(1,1),BackgroundTransparency=1,Visible=false},U.ComFeatured);
+ U.ComFeaturedName=L(U.ComFeatured,"",{Visible=false}); U.ComFeaturedCreator=L(U.ComFeatured,"",{Visible=false}); U.ComFeaturedMeta=L(U.ComFeatured,"",{Visible=false});
+ U.ComFeaturedOpen=B(U.ComFeatured,"",{Size=UDim2.fromOffset(1,1),Visible=false})
+
+ -- Lojas UGC.
+ U.StoresArea=area(main,"StoresArea");
+ local sh=N("Frame",{Position=UDim2.fromOffset(7,7),Size=UDim2.new(1,-14,0,50),BackgroundColor3=Color3.fromRGB(28,29,33),BorderSizePixel=0},U.StoresArea); R(sh,10)
+ U.StoreSearch=T(sh,"Nome do criador ou grupo...",{Position=UDim2.fromOffset(7,8),Size=UDim2.new(1,-184,0,34)});
+ U.StoreType=B(sh,"CRIADOR",{AnchorPoint=Vector2.new(1,0),Position=UDim2.new(1,-88,0,8),Size=UDim2.fromOffset(82,34),BackgroundColor3=C.card,TextSize=6});
+ U.StoreGo=B(sh,"BUSCAR",{AnchorPoint=Vector2.new(1,0),Position=UDim2.new(1,-6,0,8),Size=UDim2.fromOffset(76,34),BackgroundColor3=C.green,TextColor3=C.bg,TextSize=6});
+ U.StoreGrid=F(U.StoresArea,{Position=UDim2.fromOffset(5,64),Size=UDim2.new(1,-10,1,-94)}); grid(U.StoreGrid,154,184,8);
+ U.StoreStatus=L(U.StoresArea,"Pesquise um criador ou grupo.",{AnchorPoint=Vector2.new(0,1),Position=UDim2.new(0,8,1,-3),Size=UDim2.new(1,-16,0,20),TextColor3=C.muted,
+ TextXAlignment=Enum.TextXAlignment.Left})
+
+ -- Carrinho e detalhe de look.
+ U.CartPanel=N("Frame",{AnchorPoint=Vector2.new(.5,.5),Position=UDim2.fromScale(.5,.5),Size=UDim2.new(.80,0,.84,0),BackgroundColor3=Color3.fromRGB(19,20,24),Visible=false,
+ ZIndex=80},root);
+ R(U.CartPanel,12); S(U.CartPanel,nil,.4);
+ L(U.CartPanel,"CARRINHO",{Position=UDim2.fromOffset(16,12),Size=UDim2.new(1,-72,0,26),Font=Enum.Font.GothamBlack,TextSize=13,TextXAlignment=Enum.TextXAlignment.Left,
+ ZIndex=81});
+ U.CartClose=B(U.CartPanel,"X",{AnchorPoint=Vector2.new(1,0),Position=UDim2.new(1,-10,0,10),Size=UDim2.fromOffset(34,34),BackgroundColor3=C.soft,ZIndex=81});
+ U.CartCount=L(U.CartPanel,"0 selecionados",{Position=UDim2.fromOffset(16,42),Size=UDim2.new(1,-32,0,20),TextColor3=C.muted,ZIndex=81});
+ U.CartList=F(U.CartPanel,{Position=UDim2.fromOffset(14,70),Size=UDim2.new(1,-28,1,-142),ZIndex=81}); list(U.CartList,false,7);
+ U.CartTotal=L(U.CartPanel,"TOTAL: 0 R$",{AnchorPoint=Vector2.new(0,1),Position=UDim2.new(0,16,1,-14),Size=UDim2.new(.38,0,0,34),Font=Enum.Font.GothamBlack,TextSize=10,
+ TextColor3=C.green,TextXAlignment=Enum.TextXAlignment.Left,ZIndex=81});
+ U.CartClear=B(U.CartPanel,"LIMPAR",{AnchorPoint=Vector2.new(1,1),Position=UDim2.new(1,-190,1,-14),Size=UDim2.fromOffset(82,34),BackgroundColor3=C.soft,ZIndex=81});
+ U.CartBuySelected=B(U.CartPanel,"COMPRAR SELECIONADOS",{AnchorPoint=Vector2.new(1,1),Position=UDim2.new(1,-14,1,-14),Size=UDim2.fromOffset(168,34),BackgroundColor3=C.green,
+ TextColor3=C.bg,ZIndex=81,TextSize=6})
+ U.LookDetail=N("Frame",{AnchorPoint=Vector2.new(.5,.5),Position=UDim2.fromScale(.5,.5),Size=UDim2.new(.94,0,.90,0),BackgroundColor3=Color3.fromRGB(18,19,23),Visible=false,
+ ZIndex=82},root);
+ R(U.LookDetail,12);
+ U.LookClose=B(U.LookDetail,"X",{AnchorPoint=Vector2.new(1,0),Position=UDim2.new(1,-9,0,8),Size=UDim2.fromOffset(34,34),BackgroundColor3=C.soft,ZIndex=83});
+ U.LookPreview=N("ViewportFrame",{Position=UDim2.fromOffset(12,12),Size=UDim2.new(.40,-18,1,-70),BackgroundColor3=Color3.fromRGB(84,88,96),Ambient=Color3.fromRGB(228,230,234),
+ LightColor=Color3.fromRGB(255,255,255),LightDirection=Vector3.new(-.55,-1,-.5),BorderSizePixel=0,ZIndex=83},U.LookDetail);
+ R(U.LookPreview,9); U.LookName=L(U.LookDetail,"LOOK",{Position=UDim2.new(.40,8,0,15),Size=UDim2.new(.60,-58,0,24),Font=Enum.Font.GothamBlack,TextSize=12,ZIndex=83});
+ U.LookCreator=L(U.LookDetail,"Criador",{Position=UDim2.new(.40,8,0,43),Size=UDim2.new(.60,-28,0,18),TextColor3=C.muted,ZIndex=83});
+ U.LookMeta=L(U.LookDetail,"RIG",{Position=UDim2.new(.40,8,0,64),Size=UDim2.new(.60,-28,0,18),TextColor3=C.cyan,ZIndex=83});
+ U.LookCodeBox=T(U.LookDetail,"",{Position=UDim2.new(.40,8,0,90),Size=UDim2.new(.60,-98,0,28),Text="SEM CODIGO",TextEditable=false,ZIndex=83});
+ U.LookCopy=B(U.LookDetail,"COPIAR",{AnchorPoint=Vector2.new(1,0),Position=UDim2.new(1,-12,0,90),Size=UDim2.fromOffset(76,28),BackgroundColor3=C.card,ZIndex=83});
+ U.LookTotal=L(U.LookDetail,"Valor total: calculando...",{Position=UDim2.new(.40,8,0,124),Size=UDim2.new(.60,-28,0,20),Font=Enum.Font.GothamBold,
+  TextColor3=C.green,ZIndex=83});
+ 
+ U.LookItems=F(U.LookDetail,{Position=UDim2.new(.40,8,0,151),Size=UDim2.new(.60,-20,1,-214),ZIndex=83}); list(U.LookItems,false,5);
+ U.LookTry=B(U.LookDetail,"EXPERIMENTAR",{AnchorPoint=Vector2.new(0,1),Position=UDim2.new(.40,8,1,-12),Size=UDim2.new(.28,-6,0,34),BackgroundColor3=C.green,TextColor3=C.bg,
+ ZIndex=83});
+ U.LookBuy=B(U.LookDetail,"COMPRAR",{AnchorPoint=Vector2.new(0,1),Position=UDim2.new(.68,8,1,-12),Size=UDim2.new(.18,-6,0,34),BackgroundColor3=C.yellow,TextColor3=C.bg,
+ ZIndex=83});
+ U.LookFav=B(U.LookDetail,"CURTIR",{AnchorPoint=Vector2.new(0,1),Position=UDim2.new(.86,8,1,-12),Size=UDim2.new(.14,-20,0,34),BackgroundColor3=C.card,ZIndex=83})
+
+ U.SaveBox=N("Frame",{AnchorPoint=Vector2.new(.5,.5),Position=UDim2.fromScale(.5,.52),Size=UDim2.fromOffset(350,176),BackgroundColor3=C.panel,Visible=false,ZIndex=90},root);
+ R(U.SaveBox,10); U.SaveName=T(U.SaveBox,"Nome da skin",{Position=UDim2.fromOffset(13,48),Size=UDim2.new(1,-26,0,34),ZIndex=91});
+ U.SaveR15=B(U.SaveBox,"SALVAR R15",{Position=UDim2.fromOffset(13,94),Size=UDim2.fromOffset(153,31),BackgroundColor3=C.green,TextColor3=C.bg,ZIndex=91});
+ U.SaveR6=B(U.SaveBox,"SALVAR R6",{Position=UDim2.fromOffset(184,94),Size=UDim2.fromOffset(153,31),BackgroundColor3=C.card,ZIndex=91});
+ U.CancelSave=B(U.SaveBox,"CANCELAR",{Position=UDim2.fromOffset(13,135),Size=UDim2.new(1,-26,0,27),BackgroundColor3=C.red,ZIndex=91})
+ U.PublishBox=N("Frame",{AnchorPoint=Vector2.new(.5,.5),Position=UDim2.fromScale(.5,.5),Size=UDim2.fromOffset(350,176),BackgroundColor3=C.panel,Visible=false,ZIndex=92},root);
+ R(U.PublishBox,10); U.PublishName=T(U.PublishBox,"Nome do look",{Position=UDim2.fromOffset(13,70),Size=UDim2.new(1,-26,0,34),ZIndex=93});
+ U.PublishConfirm=B(U.PublishBox,"CONFIRMAR PUBLICACAO",{Position=UDim2.fromOffset(13,118),Size=UDim2.fromOffset(205,34),BackgroundColor3=C.green,TextColor3=C.bg,ZIndex=93});
+ U.PublishCancel=B(U.PublishBox,"CANCELAR",{Position=UDim2.fromOffset(228,118),Size=UDim2.fromOffset(109,34),BackgroundColor3=C.red,ZIndex=93})
+ U.RigBox=N("Frame",{AnchorPoint=Vector2.new(.5,.5),Position=UDim2.fromScale(.5,.5),Size=UDim2.fromOffset(330,150),BackgroundColor3=C.panel,Visible=false,ZIndex=94},root);
+ R(U.RigBox,10); U.RigToR15=B(U.RigBox,"TESTAR EM R15",{Position=UDim2.fromOffset(13,94),Size=UDim2.fromOffset(147,34),BackgroundColor3=C.green,TextColor3=C.bg,ZIndex=95});
+ U.RigCancel=B(U.RigBox,"CANCELAR",{Position=UDim2.fromOffset(170,94),Size=UDim2.fromOffset(147,34),BackgroundColor3=C.red,ZIndex=95})
+
+ U.Loader=N("Frame",{Size=UDim2.fromScale(1,1),BackgroundColor3=Color3.fromRGB(5,7,10),BackgroundTransparency=.08,Visible=false,ZIndex=96},g);
+ local lc=N("Frame",{AnchorPoint=Vector2.new(.5,.5),Position=UDim2.fromScale(.5,.52),Size=UDim2.new(.72,0,.80,0),BackgroundColor3=C.panel,ZIndex=97},U.Loader); R(lc,12);
+ U.LoaderClose=B(lc,"X",{AnchorPoint=Vector2.new(1,0),Position=UDim2.new(1,-10,0,9),Size=UDim2.fromOffset(34,34),BackgroundColor3=C.soft,ZIndex=98});
+ U.LoaderQuery=T(lc,"Nome de usuario ou ID...",{Position=UDim2.fromOffset(16,60),Size=UDim2.new(1,-122,0,38),ZIndex=98});
+ U.LoaderSearch=B(lc,"BUSCAR",{AnchorPoint=Vector2.new(1,0),Position=UDim2.new(1,-16,0,60),Size=UDim2.fromOffset(92,38),BackgroundColor3=C.green,TextColor3=C.bg,ZIndex=98});
+ U.LoaderThumb=N("ImageLabel",{AnchorPoint=Vector2.new(.5,0),Position=UDim2.new(.5,0,0,112),Size=UDim2.new(.56,0,.48,0),BackgroundColor3=C.card,Image="",
+ ScaleType=Enum.ScaleType.Fit,ZIndex=98},lc);
+ R(U.LoaderThumb,10);
+ U.LoaderName=L(lc,"Digite um usuario.",{AnchorPoint=Vector2.new(.5,1),Position=UDim2.new(.5,0,1,-76),Size=UDim2.new(1,-40,0,22),Font=Enum.Font.GothamBold,TextSize=10,
+ ZIndex=98});
+ U.LoaderStatus=L(lc,"Carrega o avatar atual desse usuario.",{AnchorPoint=Vector2.new(.5,1),Position=UDim2.new(.5,0,1,-54),Size=UDim2.new(1,-40,0,18),TextColor3=C.muted,
+ ZIndex=98});
+ U.LoaderUse=B(lc,"USAR NA PREVIA",{AnchorPoint=Vector2.new(.5,1),Position=UDim2.new(.5,0,1,-14),Size=UDim2.fromOffset(178,32),BackgroundColor3=C.green,TextColor3=C.bg,
+ Visible=false,ZIndex=98})
+ U.Toast=L(g,"",{AnchorPoint=Vector2.new(.5,1),Position=UDim2.new(.5,0,1,-10),Size=UDim2.new(.5,0,0,32),BackgroundTransparency=.02,BackgroundColor3=C.panel,
+ Font=Enum.Font.GothamBold,Visible=false,ZIndex=120});
+ R(U.Toast,9); S(U.Toast,nil,.5)
+
+ U.EditorTabs=tabs;U.EditorArea=edit;U.Actions=actions;U.EditorMode="AVATAR"
+ function U.LayoutEditor(mode)
+  U.EditorMode=mode or U.EditorMode or"AVATAR"; local h=math.max(320,left.AbsoluteSize.Y); local small=h<500; local actionsH=small and 72 or 88;
+  local tabsH=small and 26 or 30; local viewportH
+  if U.EditorMode=="CORPO"or U.EditorMode=="ITENS"or U.EditorMode=="EMOTES"then
+   viewportH=math.floor(h*(small and .40 or .50))
+  else
+   viewportH=math.floor(h*(small and .48 or .57))
+  end
+  viewportH=math.clamp(viewportH,128,h-190);U.Viewport.Position=UDim2.fromOffset(8,8);U.Viewport.Size=UDim2.new(1,-16,0,viewportH)
+  tabs.Position=UDim2.fromOffset(8,14+viewportH);tabs.Size=UDim2.new(1,-16,0,tabsH)
+  local editY=20+viewportH+tabsH;local actionY=h-8-actionsH;edit.Position=UDim2.fromOffset(8,editY);edit.Size=UDim2.new(1,-16,0,math.max(42,actionY-editY-6))
+  actions.Position=UDim2.fromOffset(8,actionY);actions.Size=UDim2.new(1,-16,0,actionsH)
+ end
+ function U.LayoutLooks()
+  local h=math.max(300,sp.AbsoluteSize.Y);local actionH=104;local actionY=h-8-actionH;local previewH=math.clamp(math.floor(h*.43),82,math.max(82,actionY-100))
+  U.SavedPreview.Position=UDim2.fromOffset(8,8);U.SavedPreview.Size=UDim2.new(1,-16,0,previewH)
+  U.OutfitSelected.Position=UDim2.fromOffset(8,14+previewH); U.SavedItems.Position=UDim2.fromOffset(8,40+previewH);
+  U.SavedItems.Size=UDim2.new(1,-16,0,math.max(36,actionY-previewH-46))
+  U.OutfitActions.Position=UDim2.new(0,8,1,-8);U.OutfitActions.Size=UDim2.new(1,-16,0,actionH)
+ end
+ function U.SetWide(v)local wide=v==true; left.Visible=not wide; if wide then main.Position=UDim2.fromOffset(6,6);
+ main.Size=UDim2.new(1,-12,1,-12)else main.Position=UDim2.new(.30,4,0,8); main.Size=UDim2.new(.70,-12,1,-16); task.defer(function()U.LayoutEditor(U.EditorMode);
+ U.LayoutLooks()end)end end
+ function U.AnimateMode()end
+ left:GetPropertyChangedSignal("AbsoluteSize"):Connect(function()task.defer(function()U.LayoutEditor(U.EditorMode)end)end);
+ sp:GetPropertyChangedSignal("AbsoluteSize"):Connect(function()task.defer(U.LayoutLooks)end); task.defer(function()U.LayoutEditor(U.EditorMode); U.LayoutLooks()end)
+ root:GetPropertyChangedSignal("Visible"):Connect(function()lg.Enabled=not root.Visible end)
+ return U
+end
+
+print("[V38.1] 09A_SHOP_UI seguro carregado de "..script:GetFullName())
+return M

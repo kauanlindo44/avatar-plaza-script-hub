@@ -1,8 +1,8 @@
 {
   "schema": 2,
   "project": "Avatar Plaza Script Hub",
-  "latest": "V38",
-  "updated_at": "2026-10-01T15:03:00-03:00",
+  "latest": "V38.1",
+  "updated_at": "2026-10-01T16:12:00-03:00",
   "poll_seconds": 5,
   "versions": [
     {
@@ -440,6 +440,92 @@
           "lines": 48,
           "sha256": "8d3728120492c69cf73753cffef3f0020881365373ecdb1064cb4fb5bbee4d38",
           "path": "scripts/V38/09C5_UGC_STORES.lua"
+        }
+      ]
+    },
+    {
+      "id": "V38.1",
+      "title": "SAFE SHOP + GAME CLUB FULLSCREEN",
+      "date": "2026-10-01",
+      "summary": "Corrige o 09A que quebrava no Studio Lite, recupera CATALOGO/LOJAS, refaz o Game Club em tela cheia 2D e limpa o mapa para deixar apenas campo + pequeno spawn central.",
+      "install_note": "Substitua os 7 scripts desta versao. No 09A_SHOP_UI, use somente as 4 partes em ordem; o HTML permanente nao mostra o botao de copiar inteiro para esse script.",
+      "scripts": [
+        {
+          "name": "01A_HUB_CORE_ENV",
+          "type": "Script",
+          "location": "ServerScriptService",
+          "action": "SUBSTITUIR",
+          "lines": 102,
+          "sha256": "4aee0f8598c301418e5fd999619d0e9409b25f4ab4de78296ef5bb910ed6cced",
+          "path": "scripts/V38_1/01A_HUB_CORE_ENV.lua",
+          "parts": 1,
+          "hide_whole": false
+        },
+        {
+          "name": "01B_HUB_WORLD",
+          "type": "Script",
+          "location": "ServerScriptService",
+          "action": "SUBSTITUIR",
+          "lines": 146,
+          "sha256": "4eb00ee3ea8a1d16f1296dd0047c8af92969c7ad37cc4bcf42114c0a7e3ac668",
+          "path": "scripts/V38_1/01B_HUB_WORLD.lua",
+          "parts": 1,
+          "hide_whole": false
+        },
+        {
+          "name": "01C_HUB_CHALLENGES",
+          "type": "Script",
+          "location": "ServerScriptService",
+          "action": "SUBSTITUIR",
+          "lines": 350,
+          "sha256": "e91da0ee922f1105e6f237752e69a24530abcaba9817229033a00abeb00ea85a",
+          "path": "scripts/V38_1/01C_HUB_CHALLENGES.lua",
+          "parts": 2,
+          "hide_whole": false
+        },
+        {
+          "name": "01D_HUB_FASHION_TOP",
+          "type": "Script",
+          "location": "ServerScriptService",
+          "action": "SUBSTITUIR",
+          "lines": 19,
+          "sha256": "1defc5323f337e6b82eb1f2542e917064215dc5f286abe74cf26bf4b22aa3951",
+          "path": "scripts/V38_1/01D_HUB_FASHION_TOP.lua",
+          "parts": 1,
+          "hide_whole": false
+        },
+        {
+          "name": "07G_HUB_UI",
+          "type": "LocalScript",
+          "location": "StarterPlayer > StarterPlayerScripts",
+          "action": "SUBSTITUIR",
+          "lines": 338,
+          "sha256": "8fe499865ab7ae2327677ce8a8cba38cb4cdf127be91c9d3952e2bc34081aa3f",
+          "path": "scripts/V38_1/07G_HUB_UI.lua",
+          "parts": 2,
+          "hide_whole": false
+        },
+        {
+          "name": "07H_GAME_UI",
+          "type": "LocalScript",
+          "location": "StarterPlayer > StarterPlayerScripts",
+          "action": "SUBSTITUIR",
+          "lines": 252,
+          "sha256": "c74967d3de29d617ab17017f7dba2ee257e8d923a8f4dcf7c282d8f5009e5d5b",
+          "path": "scripts/V38_1/07H_GAME_UI.lua",
+          "parts": 2,
+          "hide_whole": false
+        },
+        {
+          "name": "09A_SHOP_UI",
+          "type": "ModuleScript",
+          "location": "ReplicatedStorage",
+          "action": "SUBSTITUIR",
+          "lines": 344,
+          "sha256": "e58c3895e94ba2a0ae98eba5148e188a24d0a3f87ff69fa3228cb71f877ee0f6",
+          "path": "scripts/V38_1/09A_SHOP_UI.lua",
+          "parts": 4,
+          "hide_whole": true
         }
       ]
     }
