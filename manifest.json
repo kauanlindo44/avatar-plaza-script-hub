@@ -1,8 +1,8 @@
 {
   "schema": 2,
   "project": "Avatar Plaza Script Hub",
-  "latest": "V40",
-  "updated_at": "2026-10-01T23:26:35+00:00",
+  "latest": "V40.1",
+  "updated_at": "2026-10-01T23:55:06+00:00",
   "poll_seconds": 5,
   "versions": [
     {
@@ -720,6 +720,27 @@
           "lines": 392,
           "sha256": "0cef554a666e785f5c1756fa5e472c5f01605d5d28105929c75d336cc7700f72",
           "path": "scripts/V40/09C_SHOP_CLIENT.lua",
+          "parts": 2,
+          "hide_full": false
+        }
+      ]
+    },
+    {
+      "id": "V40.1",
+      "title": "FUNDO EM TELA INTEIRA",
+      "date": "2026-10-01",
+      "summary": "Corrige a faixa vazia acima do catálogo e dos jogos. O fundo cobre a tela inteira e os controles respeitam a barra do Roblox. Substitua apenas um módulo.",
+      "install_note": "Requer a V40 completa. Pare o teste e substitua somente 07UI_DESIGN_SYSTEM, ModuleScript de ReplicatedStorage. Apague o código antigo uma vez e cole as duas partes em ordem no mesmo módulo. Inicie um novo teste para recarregar. Não crie outro script.",
+      "validation": "Sintaxe, cobertura com barras e recortes, fechamento de menus, fundo transparente e integração da V40 aprovados com serviços simulados. A aparência ainda deve ser conferida no Studio Lite/Roblox.",
+      "scripts": [
+        {
+          "name": "07UI_DESIGN_SYSTEM",
+          "type": "ModuleScript",
+          "location": "ReplicatedStorage",
+          "action": "SUBSTITUIR",
+          "lines": 159,
+          "sha256": "89a01698652e697114ac78b31e4e9473165090fa89e2810620ca19f4c2e5db24",
+          "path": "scripts/V40_1/07UI_DESIGN_SYSTEM.lua",
           "parts": 2,
           "hide_full": false
         }
