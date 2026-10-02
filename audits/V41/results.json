@@ -1,0 +1,62 @@
+[
+  {
+    "case": "syntax_and_limits",
+    "result": "pass",
+    "detail": "10 scripts <=400 lines; no compound assignments"
+  },
+  {
+    "case": "full_viewport_editor_geometry",
+    "result": "pass",
+    "detail": "7 viewports, notches/native bars, preview >=150 px and exclusive full-screen roots"
+  },
+  {
+    "case": "module_contract_and_dynamic_topbar",
+    "result": "pass",
+    "detail": "all controller UI fields exist; free top space reused and native resizing handled; body preserves preview"
+  },
+  {
+    "case": "hud_high_buttons_and_no_tooltips",
+    "result": "pass",
+    "detail": "higher launcher, 5 mobile shortcuts and no popup labels on hover/focus"
+  },
+  {
+    "case": "apply_single_clothing_preserves_live_avatar",
+    "result": "pass",
+    "detail": "shirt applied while pants, body, colors, hair/accessories, emotes and newer live changes survive; X removes one item"
+  },
+  {
+    "case": "blank_outfit_restore_history_and_body_limits",
+    "result": "pass",
+    "detail": "explicit complete outfits/blank replace, restore/history work, R15 limits and pending edits remain correct"
+  },
+  {
+    "case": "bundle_only_adds_its_pieces_and_rejects_stale_try",
+    "result": "pass",
+    "detail": "bundle changes body pieces only, no outfit wipe or partial apply; stale network result cannot overwrite edits"
+  },
+  {
+    "case": "appearance_not_ready_cannot_initialize_or_apply",
+    "result": "pass",
+    "detail": "not-yet-loaded avatar and missing edit baseline fail without changing the live skin"
+  },
+  {
+    "case": "client_exclusive_pages_and_focus_restore",
+    "result": "pass",
+    "detail": "real client: HUD/cart/Plus/loader isolation, proper return view/focus, body X and applying/removing clothing"
+  },
+  {
+    "case": "configured_plus_uses_real_product_and_ownership",
+    "result": "pass",
+    "detail": "only configured real pass data displayed; native purchase, owned state, no invented paid perks"
+  },
+  {
+    "case": "cart_selection_total_clear_remove_purchase",
+    "result": "pass",
+    "detail": "no duplicates, selection, unknown-price subtotal, official mixed-item cart request and clearing"
+  },
+  {
+    "case": "catalog_adaptive_grid_price_and_pagination",
+    "result": "pass",
+    "detail": "grid capped at 5x6, >=132px cells, explicit grouped Robux prices, complete next page"
+  }
+]
