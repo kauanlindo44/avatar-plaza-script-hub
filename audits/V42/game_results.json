@@ -1,0 +1,37 @@
+[
+  {
+    "case": "game_controller_room_contract_and_failures",
+    "result": "pass",
+    "detail": "create/join/cancel, cancellation failure, push race, board RPC and HUD restoration"
+  },
+  {
+    "case": "bot_training_and_stale_potato_callback",
+    "result": "pass",
+    "detail": "legal chess training, turn lock, clear result and stale callback cancellation"
+  },
+  {
+    "case": "online_potato_overlay_and_leave",
+    "result": "pass",
+    "detail": "physical online table kept visible, honest status and room leave"
+  },
+  {
+    "case": "real_room_server_create_join_close_and_arrival",
+    "result": "pass",
+    "detail": "actual 01C server reserves, seats both real character doubles, closes, frees tables and validates arrival"
+  },
+  {
+    "case": "real_room_server_host_leave_expiry_and_studio",
+    "result": "pass",
+    "detail": "host disconnect removes global room, including during reservation; Studio codes are local and expire"
+  },
+  {
+    "case": "room_cancellation_during_directory_close",
+    "result": "pass",
+    "detail": "host departure during yielding MemoryStore close cannot seat a guest or reopen a closed game"
+  },
+  {
+    "case": "simultaneous_matches_reserve_distinct_tables",
+    "result": "pass",
+    "detail": "separate simultaneous room matches claim separate physical tables before any network yield"
+  }
+]

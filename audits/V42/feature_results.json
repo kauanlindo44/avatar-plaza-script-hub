@@ -1,0 +1,52 @@
+[
+  {
+    "case": "actions_below_preview_and_body_apply",
+    "result": "pass",
+    "detail": "all preview actions below avatar; actual server scales change without deleting clothing and accessories"
+  },
+  {
+    "case": "saved_looks_5_by_4_and_mobile_detail",
+    "result": "pass",
+    "detail": "20 clear cards in 5x4 at 1080p; full-width phone gallery and closable selected look"
+  },
+  {
+    "case": "ugc_full_page_price_and_stale_search",
+    "result": "pass",
+    "detail": "full-screen UGC uses up to 5x6, grouped explicit prices and stale-response cancellation"
+  },
+  {
+    "case": "games_raw_viewport_safe_controls_and_top_categories",
+    "result": "pass",
+    "detail": "four raw viewports incl. notch; all game categories horizontal at top, board and controls fit"
+  },
+  {
+    "case": "pose_confirm_cancel_clamp_and_cleanup",
+    "result": "pass",
+    "detail": "joint edits affect one limb, clamp, stay after confirm, undo on cancel, restore on exit"
+  },
+  {
+    "case": "photo_five_sets_environment_camera_restore",
+    "result": "pass",
+    "detail": "five real sets, four angles unobstructed, bounded environment edits and exact local state restoration"
+  },
+  {
+    "case": "photo_ui_mobile_fit_pose_and_failed_capture",
+    "result": "pass",
+    "detail": "phone/desktop controls fit; pose confirmation, UI hide/restore, failed capture and HUD state preserved"
+  },
+  {
+    "case": "capture_timeout_rejects_stale_callbacks",
+    "result": "pass",
+    "detail": "timeout, overlapping stale completion, thrown service error and closed studio leave UI recoverable"
+  },
+  {
+    "case": "cross_server_claim_route_arrival_failures",
+    "result": "pass",
+    "detail": "global code, atomic guest claim, target host teleport, server-checked arrival and failure rollback"
+  },
+  {
+    "case": "directory_expiry_collision_and_host_lease",
+    "result": "pass",
+    "detail": "global collisions rejected, lease renewed, guest reservation expires and old room cannot be joined"
+  }
+]

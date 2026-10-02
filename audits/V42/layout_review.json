@@ -1,0 +1,173 @@
+{
+  "method": "Approximate actual GUI rectangles; DejaVu substitutes, placeholder viewports and no GPU/physics/native bars",
+  "reviews": [
+    {
+      "scene": "editor",
+      "viewport": [
+        1920,
+        1080
+      ],
+      "vertical_text_overflows": []
+    },
+    {
+      "scene": "body",
+      "viewport": [
+        1920,
+        1080
+      ],
+      "vertical_text_overflows": []
+    },
+    {
+      "scene": "cart",
+      "viewport": [
+        1920,
+        1080
+      ],
+      "vertical_text_overflows": []
+    },
+    {
+      "scene": "looks",
+      "viewport": [
+        1920,
+        1080
+      ],
+      "vertical_text_overflows": []
+    },
+    {
+      "scene": "editor",
+      "viewport": [
+        844,
+        390
+      ],
+      "vertical_text_overflows": []
+    },
+    {
+      "scene": "body",
+      "viewport": [
+        844,
+        390
+      ],
+      "vertical_text_overflows": []
+    },
+    {
+      "scene": "cart",
+      "viewport": [
+        844,
+        390
+      ],
+      "vertical_text_overflows": []
+    },
+    {
+      "scene": "looks",
+      "viewport": [
+        844,
+        390
+      ],
+      "vertical_text_overflows": []
+    },
+    {
+      "scene": "editor",
+      "viewport": [
+        360,
+        640
+      ],
+      "vertical_text_overflows": []
+    },
+    {
+      "scene": "body",
+      "viewport": [
+        360,
+        640
+      ],
+      "vertical_text_overflows": []
+    },
+    {
+      "scene": "cart",
+      "viewport": [
+        360,
+        640
+      ],
+      "vertical_text_overflows": []
+    },
+    {
+      "scene": "looks",
+      "viewport": [
+        360,
+        640
+      ],
+      "vertical_text_overflows": []
+    },
+    {
+      "scene": "games",
+      "viewport": [
+        1920,
+        1080
+      ],
+      "vertical_text_overflows": []
+    },
+    {
+      "scene": "board",
+      "viewport": [
+        1920,
+        1080
+      ],
+      "vertical_text_overflows": []
+    },
+    {
+      "scene": "photo_pose",
+      "viewport": [
+        1920,
+        1080
+      ],
+      "vertical_text_overflows": []
+    },
+    {
+      "scene": "games",
+      "viewport": [
+        844,
+        390
+      ],
+      "vertical_text_overflows": []
+    },
+    {
+      "scene": "board",
+      "viewport": [
+        844,
+        390
+      ],
+      "vertical_text_overflows": []
+    },
+    {
+      "scene": "photo_pose",
+      "viewport": [
+        844,
+        390
+      ],
+      "vertical_text_overflows": []
+    },
+    {
+      "scene": "games",
+      "viewport": [
+        360,
+        640
+      ],
+      "vertical_text_overflows": []
+    },
+    {
+      "scene": "board",
+      "viewport": [
+        360,
+        640
+      ],
+      "vertical_text_overflows": []
+    },
+    {
+      "scene": "photo_pose",
+      "viewport": [
+        360,
+        640
+      ],
+      "vertical_text_overflows": []
+    }
+  ]
+}
