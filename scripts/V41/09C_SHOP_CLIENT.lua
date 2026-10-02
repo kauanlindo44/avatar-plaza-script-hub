@@ -315,7 +315,7 @@ connect(U.Apply,function()
  if not S or not S.Current then toast("Aguarde a previa.")return end
  applying=true;U.Apply.Text="AGUARDE";local mine=S.Generation
  local d,e=call("Apply",{body=A.Copy(S.Current),rig=S.Rig,base=S.Base,replace=S.Replace==true})
- applying=false;U.Apply.Text="APLICAR"
+ applying=false;U.Apply.Text="Aplicar"
  if d and d.body and S.AcceptApplied then S.AcceptApplied(d.body,mine)end
  if not d then toast(e)elseif d.liveRig and d.wantedRig and d.liveRig~=d.wantedRig then toast("Look aplicado no rig atual ("..d.liveRig.."). R6/R15 da prévia continua salvo.")else toast("Skin aplicada.")end
 end,"Apply")

@@ -51,7 +51,7 @@ local function refreshCart()
  U.CartCount.Text=selected.." selecionados • "..count.." no carrinho"..(unknown>0 and(" • "..unknown.." sem preço")or"")
  U.CartTotal.Text=(unknown>0 and"SUBTOTAL: "or"TOTAL: ")..math.floor(total).." Robux"
  U.CartBuySelected.Text=selected>0 and("COMPRAR "..selected.." ITENS")or"SELECIONE ITENS"
- U.BuyLook.Text=count>0 and("CARRINHO ("..count..")")or"CARRINHO"
+ U.BuyLook.Text="Carrinho"
 end
 function M.Add(item)
  if not CTX then return false end

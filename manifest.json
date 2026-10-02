@@ -2,7 +2,7 @@
   "schema": 2,
   "project": "Avatar Plaza Script Hub",
   "latest": "V41",
-  "updated_at": "2026-10-02T01:12:56+00:00",
+  "updated_at": "2026-10-02T01:23:47+00:00",
   "poll_seconds": 5,
   "versions": [
     {
@@ -815,7 +815,7 @@
           "location": "ReplicatedStorage",
           "action": "SUBSTITUIR",
           "lines": 311,
-          "sha256": "f1c1818ba8a180427d3a5ab30528b120efd6e3bc11f88ab14e94b4dcfcce2b7e",
+          "sha256": "cc37f490716ca97405dcfd63f5eb8fbbd1ad9d4ee10ca5cd072103614667e41d",
           "path": "scripts/V41/09A_SHOP_UI.lua",
           "parts": 4,
           "hide_full": true
@@ -837,7 +837,7 @@
           "location": "ReplicatedStorage",
           "action": "SUBSTITUIR",
           "lines": 162,
-          "sha256": "b6f6333b1acdd01db7c323384dcdbab78f752d33d141d71ca7dec68741bad463",
+          "sha256": "df430288a879845f4328d27a5197fe06fb9dd7f98b5c78ad173944941988a054",
           "path": "scripts/V41/09C4_OUTFIT_LIBRARY.lua",
           "parts": 2,
           "hide_full": false
@@ -859,7 +859,7 @@
           "location": "StarterPlayer > StarterPlayerScripts",
           "action": "SUBSTITUIR",
           "lines": 381,
-          "sha256": "3de01c52a84c3c2c278e528db4aebc76c97afe8adfd7e647d4b8f7ee77154a43",
+          "sha256": "40274707db633dd5434ca9b59aefb39be9c8fea96d4764df35f4ac7a6f8c82b4",
           "path": "scripts/V41/09C_SHOP_CLIENT.lua",
           "parts": 2,
           "hide_full": false
