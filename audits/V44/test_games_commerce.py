@@ -70,6 +70,7 @@ assert(I.Load(123));assert(I.View(123).coins==0 and I.View(123).privacy.allowCop
 assert(not I.Equip(123,'Zenith'));assert(not I.BuyCoins(123,'box','Eclipse',1))
 assert(I.Transact(123,function(d)d.coins=10000;return true end));assert(I.BuyCoins(123,'box','Nox',3))
 local before=I.View(123);assert(before.coins==8500);assert(not I.BuyCoins(123,'box','Nox',1))
+assert(not I.BuyCoins(123,'style','Onyx',1));assert(I.View(123).coins==8500 and not I.View(123).owned.Onyx,'covered style caused a redundant coin purchase')
 assert(not I.OpenChoices(123,'Nox',{'Onyx','Onyx'}));assert(I.View(123).boxes.Nox==3)
 StoreRetry=true;local result=I.OpenChoices(123,'Nox',{'Onyx','Hex'});assert(result.quantity==2 and #result.styles==2)
 assert(I.View(123).boxes.Nox==1);assert(not I.OpenChoice(123,'Nox','Onyx',1));assert(I.Equip(123,'Onyx'))
@@ -85,6 +86,8 @@ local commerce=Modules['07K10_CARD_COMMERCE'];assert(I.Load(pl.UserId))
 onProduct=function(id)return{Name='Native product',PriceInRobux=2,IsForSale=true}end
 local store=commerce.Store(pl);assert(store.passes['1951234105'].price==2 and store.products.Nox.id==0 and not store.products.Nox.sale)
 assert(commerce.Prompt(pl,'pass',1951234105));assert(LastPrompt.id==1951234105);advance(3);assert(not commerce.Prompt(pl,'product','Nox'))
+local covered={UserId=789};assert(I.Load(789));assert(I.Transact(789,function(d)d.coins=10000;return true end));assert(I.BuyCoins(789,'box','Reign',3))
+assert(not commerce.Prompt(covered,'pass',1962433436));assert(not commerce.Prompt(covered,'product','Aurum'));assert(LastPrompt.id==1951234105,'covered choices still opened an unnecessary Robux prompt')
 assert(not commerce.PaidRandomAllowed(pl));RestrictRandom=true;assert(not commerce.PaidRandomAllowed(pl));FailPolicy=true;assert(not commerce.PaidRandomAllowed(pl))
 local market=Services.MarketplaceService;local callback
 setmetatable(market,{__index=function(_,k)if k=='ProcessReceipt'then error('write-only callback')end end,__newindex=function(t,k,v)if k=='ProcessReceipt'then callback=v else rawset(t,k,v)end end})
@@ -92,7 +95,7 @@ commerce.Start();assert(callback);assert(callback({ProductId=999,PlayerId=123,Pu
 C.Products.Eclipse=123456;assert(callback({ProductId=123456,PlayerId=123,PurchaseId='paid-real'})==Enum.ProductPurchaseDecision.PurchaseGranted)
 assert(callback({ProductId=123456,PlayerId=123,PurchaseId='paid-real'})==Enum.ProductPurchaseDecision.PurchaseGranted);assert(I.View(123).boxes.Eclipse==1)
 OwnedPasses[1962433436]=true;commerce.RefreshPasses(pl);assert(I.View(123).owned.Regent)
-return 'uses actual 2 Robux, zero product IDs disabled, permanent pass ownership verified, random blocked on every policy outcome and write-only receipt registration'
+return 'uses actual 2 Robux, zero product IDs disabled, covered choices prevent redundant prompts, permanent pass ownership verified, random blocked on every policy outcome and write-only receipt registration'
 ''')
 case('progress_reward_and_weekly_rank_deduplication',PROGRESS+r'''
 I.Load(1);I.Load(2);local context={duration=120,moves=20}

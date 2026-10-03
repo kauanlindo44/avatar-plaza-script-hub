@@ -23,9 +23,9 @@ Os sete módulos mantidos com a mesma fonte da V43 também estão no pacote para
 | CRIAR | `07K12_TOURNAMENT_UI` | ModuleScript | ReplicatedStorage | 58 |
 | CRIAR | `07K1_TRUCO_AI` | ModuleScript | ReplicatedStorage | 45 |
 | CRIAR | `07K5_TRUCO_UI` | ModuleScript | ReplicatedStorage | 96 |
-| CRIAR | `07K6_CARD_CATALOG` | ModuleScript | ReplicatedStorage | 28 |
+| CRIAR | `07K6_CARD_CATALOG` | ModuleScript | ReplicatedStorage | 33 |
 | CRIAR | `07K7_CARD_STYLES` | ModuleScript | ReplicatedStorage | 42 |
-| CRIAR | `07K9_CARD_INVENTORY_UI` | ModuleScript | ReplicatedStorage | 156 |
+| CRIAR | `07K9_CARD_INVENTORY_UI` | ModuleScript | ReplicatedStorage | 157 |
 | SUBSTITUIR | `07P0_STUDIO_PRESETS` | ModuleScript | ReplicatedStorage | 20 |
 | SUBSTITUIR | `07P2_STUDIO_AVATAR` | ModuleScript | ReplicatedStorage | 146 |
 | SUBSTITUIR | `07P3_POSE_EDITOR` | ModuleScript | ReplicatedStorage | 51 |
@@ -45,13 +45,13 @@ Os sete módulos mantidos com a mesma fonte da V43 também estão no pacote para
 | SUBSTITUIR | `09C7_COMMUNITY_FEED` | ModuleScript | ReplicatedStorage | 143 |
 | SUBSTITUIR | `09C8_COMMUNITY_DETAILS` | ModuleScript | ReplicatedStorage | 123 |
 | CRIAR | `09C9_PLAYER_INSPECT` | ModuleScript | ReplicatedStorage | 21 |
-| CRIAR | `07K10_CARD_COMMERCE` | ModuleScript | ServerScriptService | 76 |
+| CRIAR | `07K10_CARD_COMMERCE` | ModuleScript | ServerScriptService | 78 |
 | CRIAR | `07K11_GAMES_PROGRESS` | ModuleScript | ServerScriptService | 47 |
 | CRIAR | `07K13_TOURNAMENT_SERVICE` | ModuleScript | ServerScriptService | 212 |
 | CRIAR | `07K2_TRUCO_MATCH` | ModuleScript | ServerScriptService | 64 |
 | CRIAR | `07K3_TRUCO_DIRECTORY` | ModuleScript | ServerScriptService | 94 |
 | CRIAR | `07K4_TRUCO_TABLES` | ModuleScript | ServerScriptService | 44 |
-| CRIAR | `07K8_CARD_INVENTORY` | ModuleScript | ServerScriptService | 143 |
+| CRIAR | `07K8_CARD_INVENTORY` | ModuleScript | ServerScriptService | 144 |
 | SUBSTITUIR | `07W_WINS_SERVICE` | ModuleScript | ServerScriptService | 60 |
 | SUBSTITUIR | `09B1_AVATAR_DISCOVERY` | ModuleScript | ServerScriptService | 88 |
 | SUBSTITUIR | `09B2_COSPLAY_METADATA` | ModuleScript | ServerScriptService | 31 |

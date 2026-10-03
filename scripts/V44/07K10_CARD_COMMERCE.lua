@@ -43,6 +43,8 @@ function M.Prompt(pl,kind,key)
  if guards[pl]and os.clock()-guards[pl]<2 then return nil,"Aguarde o Roblox."end
  local inventory=I.View(pl.UserId);if not inventory then return nil,"Carregue o inventário antes da compra."end
  if kind=="pass"and(tonumber(key)==C.CustomPass and inventory.ateliers or inventory.owned[C.Passes[tonumber(key)]or""])then return nil,"Você já possui este benefício."end
+ local style=kind=="pass"and C.Passes[tonumber(key)]or kind=="product"and tostring(key)
+ if style and C.Covered(inventory,style)then return nil,"Suas caixas já garantem este visual. Escolha ao abrir."end
  if kind=="product"then local box=C.Collection(key)
   if box then local remaining=0;for _,s in ipairs(box.skins)do if not inventory.owned[s]then remaining=remaining+1 end end
    if remaining<=(inventory.boxes[key]or 0)then return nil,"Seu inventário já cobre os visuais desta coleção."end

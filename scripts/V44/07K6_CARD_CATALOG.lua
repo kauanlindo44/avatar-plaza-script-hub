@@ -25,4 +25,9 @@ C.Styles={
 }
 function C.Collection(id)for _,v in ipairs(C.Collections)do if v.id==id then return v end end end
 function C.PassFor(style)for id,s in pairs(C.Passes)do if s==style then return id end end end
+function C.Covered(data,style)
+ local s=C.Styles[style];local box=s and C.Collection(s.collection);if not box then return false end
+ local remaining=0;for _,key in ipairs(box.skins)do if not data.owned[key]then remaining=remaining+1 end end
+ return remaining<=(data.boxes[box.id]or 0)
+end
 return C

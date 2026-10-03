@@ -64,6 +64,7 @@ function I.BuyCoins(id,kind,key,quantity)
  elseif kind=="style"and style and key~="Classic"then
   return I.Transact(id,function(d)
    if d.owned[key]then return false,"Este visual já está no inventário."end
+   if C.Covered(d,key)then return false,"Suas caixas já garantem este visual. Abra uma delas e escolha."end
    if d.coins<style.coins then return false,"Moedas insuficientes."end
    d.coins=d.coins-style.coins;d.owned[key]=true;return true
   end)

@@ -105,10 +105,11 @@ function M.Build(gui,call,toast)
    for key,s in pairs(Catalog.Styles)do if key~="Classic"then
     local b=card(key,key,s.coins.." moedas • compra direta")
     Cards.Render(b,nil,key,{Position=UDim2.fromScale(.38,.27),Size=UDim2.fromScale(.24,.32)})
-    local coin=D.Button(b,"Comprar • "..s.coins.." moedas",{Position=UDim2.new(0,8,1,-100),Size=UDim2.new(1,-16,0,44)});D.SetEnabled(coin,not U.Data.owned[key]);coin.Activated:Connect(function()buy("style",key)end)
+    local covered=Catalog.Covered(U.Data,key)
+    local coin=D.Button(b,covered and not U.Data.owned[key]and"Escolha nas suas caixas"or"Comprar • "..s.coins.." moedas",{Position=UDim2.new(0,8,1,-100),Size=UDim2.new(1,-16,0,44)});D.SetEnabled(coin,not U.Data.owned[key]and not covered);coin.Activated:Connect(function()buy("style",key)end)
     local id=Catalog.PassFor(key);local p=id and U.Store and U.Store.passes[tostring(id)]or U.Store and U.Store.products[key]
     local rb=D.Button(b,p and p.sale and(p.price.." Robux • "..key)or"Robux: indisponível",{Position=UDim2.new(0,8,1,-52),Size=UDim2.new(1,-16,0,44)})
-    D.SetEnabled(rb,p and p.sale and not U.Data.owned[key]);rb.Activated:Connect(function()prompt(id and"pass"or"product",id or key)end)
+    D.SetEnabled(rb,p and p.sale and not U.Data.owned[key]and not covered);rb.Activated:Connect(function()prompt(id and"pass"or"product",id or key)end)
    end end
   else
    local b=card("Atelier","Ateliê","Imagem aprovada pela Roblox. Só o visual do seu baralho muda.")

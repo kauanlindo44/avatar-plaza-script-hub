@@ -2,7 +2,7 @@
   "schema": 2,
   "project": "Avatar Plaza Script Hub",
   "latest": "V44",
-  "updated_at": "2026-10-03T18:35:24+00:00",
+  "updated_at": "2026-10-03T18:59:25+00:00",
   "poll_seconds": 5,
   "versions": [
     {
@@ -1515,8 +1515,8 @@
           "type": "ModuleScript",
           "location": "ReplicatedStorage",
           "action": "CRIAR",
-          "lines": 28,
-          "sha256": "77509d585e48c572ba7a0a34758044813f01cefaf84375f977b5f743efcb5cf5",
+          "lines": 33,
+          "sha256": "087e7ff5c17e13e54396815aa0e1146f5fc5ddd765734e79815e5608c373b860",
           "path": "scripts/V44/07K6_CARD_CATALOG.lua",
           "parts": 2,
           "hide_full": false
@@ -1537,8 +1537,8 @@
           "type": "ModuleScript",
           "location": "ReplicatedStorage",
           "action": "CRIAR",
-          "lines": 156,
-          "sha256": "c55ef66e81ae308d8fd48ad2737d87907e8e0771d700b115147fb58fdc305974",
+          "lines": 157,
+          "sha256": "0c08c15ab421dbf798db175616f26c296fe89125737df4d32a96304a6ec63b25",
           "path": "scripts/V44/07K9_CARD_INVENTORY_UI.lua",
           "parts": 2,
           "hide_full": false
@@ -1757,8 +1757,8 @@
           "type": "ModuleScript",
           "location": "ServerScriptService",
           "action": "CRIAR",
-          "lines": 76,
-          "sha256": "0249966a0f2d3dde2f05e2716c2b37b791db39c767900e1c9d4a7cd1a4bae570",
+          "lines": 78,
+          "sha256": "d7f0e9493703ebdebd4835ccc2a8dc20bf28d36087b2bc80cf13dd600b5cec1c",
           "path": "scripts/V44/07K10_CARD_COMMERCE.lua",
           "parts": 2,
           "hide_full": false
@@ -1823,8 +1823,8 @@
           "type": "ModuleScript",
           "location": "ServerScriptService",
           "action": "CRIAR",
-          "lines": 143,
-          "sha256": "bd7cc7a2b50308a774e5db0507c4b0c5e0eba427b4a2e2b56e36614f068c023a",
+          "lines": 144,
+          "sha256": "a91a2af172b723962a01e72df9b0899fc3f3973b7a2007ca985da909dedc209c",
           "path": "scripts/V44/07K8_CARD_INVENTORY.lua",
           "parts": 2,
           "hide_full": false

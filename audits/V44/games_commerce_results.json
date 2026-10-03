@@ -27,7 +27,7 @@
   {
     "case": "commerce_native_price_policy_fail_closed_and_callback",
     "result": "pass",
-    "detail": "uses actual 2 Robux, zero product IDs disabled, permanent pass ownership verified, random blocked on every policy outcome and write-only receipt registration"
+    "detail": "uses actual 2 Robux, zero product IDs disabled, covered choices prevent redundant prompts, permanent pass ownership verified, random blocked on every policy outcome and write-only receipt registration"
   },
   {
     "case": "progress_reward_and_weekly_rank_deduplication",
