@@ -1,0 +1,72 @@
+[
+  {
+    "case": "apply_single_clothing_preserves_live_avatar",
+    "result": "pass",
+    "detail": "shirt applied while pants, body, colors, hair/accessories, emotes and newer live changes survive; X removes one item"
+  },
+  {
+    "case": "blank_outfit_restore_history_and_body_limits",
+    "result": "pass",
+    "detail": "explicit complete outfits/blank replace, restore/history work, R15 limits and pending edits remain correct"
+  },
+  {
+    "case": "bundle_only_adds_its_pieces_and_rejects_stale_try",
+    "result": "pass",
+    "detail": "bundle changes body pieces only, no outfit wipe or partial apply; stale network result cannot overwrite edits"
+  },
+  {
+    "case": "appearance_not_ready_cannot_initialize_or_apply",
+    "result": "pass",
+    "detail": "not-yet-loaded avatar and missing edit baseline fail without changing the live skin"
+  },
+  {
+    "case": "shop_full_controller_exclusive_utilities_confirmed_reset",
+    "result": "pass",
+    "detail": "V44 version guards, direct Plus, independent utilities, reachable loader close, cancel/confirm restore and HUD state preservation"
+  },
+  {
+    "case": "cart_outfit_selection_owned_filter_and_batch_purchase",
+    "result": "pass",
+    "detail": "selected/outfit tabs; current Roblox prices; already owned assets excluded; batch of 20 with explicit remainder; item deselection never resets avatar"
+  },
+  {
+    "case": "catalog_detail_page_fixed_actions_bundle_metadata",
+    "result": "pass",
+    "detail": "opaque full page; bundle metadata via AvatarEditorService, native creator/description and all purchase/try actions fixed above footer"
+  },
+  {
+    "case": "player_avatar_privacy_revocation_and_unique_likes",
+    "result": "pass",
+    "detail": "default copy disabled, explicit owner permission, revocation checked on Apply and one persistent like per visitor"
+  },
+  {
+    "case": "curated_cosplays_live_prices_canonical_names_and_unique_sets",
+    "result": "pass",
+    "detail": "real matching shirt/pants/accessory composition, five distinct combinations, publisher vs actual creators, cached native prices and internal budget tiers"
+  },
+  {
+    "case": "games_inventory_tournament_screen_geometry_and_exit_confirmation",
+    "result": "pass",
+    "detail": "fixed create/join/training/waiting controls at five sizes, notches, 48px exit targets, choice dialog and confirmed live-match resignation"
+  },
+  {
+    "case": "atelier_mobile_preview_crop_drag_zoom_save_and_face_toggle",
+    "result": "pass",
+    "detail": "inline card remains available on phone; direct crop dragging, bounded zoom/offset saving and front/back preview"
+  },
+  {
+    "case": "personal_commands_serial_rpc_refresh_avoids_rate_limit",
+    "result": "pass",
+    "detail": "set then refresh serializes calls with the real server minimum interval"
+  },
+  {
+    "case": "full_photo_controller_pose_capture_and_exit_races",
+    "result": "pass",
+    "detail": "confirmed pose persists; cancel restores; capture/enter callbacks after exit cannot resurrect the studio"
+  },
+  {
+    "case": "photo_environment_all_controls_and_modern_pose_undo",
+    "result": "pass",
+    "detail": "environment never scrolls, seven controls fully visible with >=44px buttons, modern joint discovery by body part, undo/redo, confirm/cancel and restored kinematic mode"
+  }
+]

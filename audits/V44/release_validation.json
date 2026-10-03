@@ -1,0 +1,64 @@
+{
+  "version": "V44",
+  "baseline_commit": "369b6f45fe42377f60ca698cf7c5d10e748f0405",
+  "baseline_tree": "46fbb3df4fb4656081a368c35225b3bd705721ab",
+  "handoff_read_before_changes": true,
+  "scripts": 55,
+  "create": 22,
+  "replace": 33,
+  "max_script_lines": 393,
+  "shop_ui_parts": 4,
+  "source_hashes_verified": true,
+  "functional_syntax_cases": 41,
+  "installer_cases": 1,
+  "total_cases": 42,
+  "bot_complete_matches": 72,
+  "suites": [
+    {
+      "suite": "results.json",
+      "cases": 14,
+      "result": "pass"
+    },
+    {
+      "suite": "games_commerce_results.json",
+      "cases": 8,
+      "result": "pass"
+    },
+    {
+      "suite": "integration_results.json",
+      "cases": 14,
+      "result": "pass"
+    },
+    {
+      "suite": "server_flow_results.json",
+      "cases": 5,
+      "result": "pass"
+    }
+  ],
+  "installer": {
+    "result": "pass",
+    "runtime": "Node.js + minimal DOM doubles; no CSS rendering",
+    "checks": [
+      "Offline V44",
+      "Old-cache rejection",
+      "55 source hashes",
+      "Exact part reconstruction",
+      "22 creations and 33 replacements",
+      "Clipboard/manual selection",
+      "Tampered-source fallback",
+      "Closing during load",
+      "No JavaScript exceptions"
+    ]
+  },
+  "native_roblox_tested": false,
+  "roblox_gamepass_prices_modified": false,
+  "developer_products_configured": false,
+  "paid_random_items_enabled": false,
+  "limits": [
+    "Native rendering, touch, purchases, subscriptions, Teleport and service rate limits require Roblox testing.",
+    "Developer Product IDs have not been provided.",
+    "Community is paginated capacity, not one million already curated outfits.",
+    "Six references from live clothing names are not universal visual recognition.",
+    "Legal review of the monetization decision is not certification of every applicable obligation."
+  ]
+}
