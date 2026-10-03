@@ -1,8 +1,8 @@
 {
   "schema": 2,
   "project": "Avatar Plaza Script Hub",
-  "latest": "V44",
-  "updated_at": "2026-10-03T20:18:42+00:00",
+  "latest": "V45",
+  "updated_at": "2026-10-03T22:15:46+00:00",
   "poll_seconds": 5,
   "versions": [
     {
@@ -2013,6 +2013,170 @@
           "lines": 358,
           "sha256": "334b7401c66e43e444698d8ed33d197e7022f871578a4adb4da00a71dad801ff",
           "path": "scripts/V44/09C_SHOP_CLIENT.lua",
+          "parts": 2,
+          "hide_full": false
+        }
+      ]
+    },
+    {
+      "id": "V45",
+      "title": "CARTAS COMPLETAS + CÂMERA + ATELIÊ + COMUNIDADE DE JOGADORES",
+      "date": "2026-10-03",
+      "summary": "Correção da câmera em primeira pessoa, rosto oculto apenas localmente, mão 3D privada com três cartas clicáveis e controles de movimento ocultos durante a partida. Visuais mudam frente, verso e acabamento; rank e naipe permanecem legíveis. Loja, caixas e visuais usam páginas laterais sem rolagem vertical. Ateliê aceita ID/link, verifica carregamento da imagem, permite zoom/arraste e salva/equipa. Escolha dos jogos com cartões de categoria e ações fixas. Comunidade usa avatares reais de jogadores, deduplica looks, separa itens pagos/gratuitos, consulta peças/pacotes e mantém duas linhas visíveis. Catálogo conserva cinco colunas e duas linhas em paisagem, com miniaturas maiores.",
+      "install_note": "Requer V44 completa, com os 55 scripts e a base original já instalados. Pare Play. SUBSTITUA apenas estes 14 scripts nas instâncias existentes; não crie nomes duplicados. Nenhum script novo, passe ou Developer Product adicional é necessário. Se ainda estiver instalando a V44, termine os 55 itens antes desta atualização. 09A_SHOP_UI: apague a fonte antiga uma vez e cole as 4 partes da V45, em ordem, no MESMO ModuleScript. Os outros scripts têm 2 partes consecutivas. Não misture partes de versões diferentes. Os IDs e preços atuais das compras são mantidos. Consulte INSTALL_V45.md.",
+      "validation": "55 fontes conferidas; 14 substituições de até 280 linhas, sem atribuição composta. 49 casos de lógica/sintaxe em Lua 5.4 com serviços simulados e 1 do JavaScript real do instalador. Incluem 72 partidas completas de bots, 400 combinações carta/visual, toque/raycast, restauração da câmera, geometria em celular/paisagem/desktop, imagem indisponível, preços nativos, pacotes gratuitos, privacidade e persistência. Ainda exige QA de renderização, toque real, compras e limites de API no Roblox. Não há coleção pronta de um milhão de skins, reconhecimento visual universal ou garantia de que um personagem específico esteja entre os perfis encontrados.",
+      "scripts": [
+        {
+          "name": "07H1_GAME_LOBBY",
+          "type": "ModuleScript",
+          "location": "ReplicatedStorage",
+          "action": "SUBSTITUIR",
+          "lines": 112,
+          "sha256": "3e6389b87213c5cb9e86fdca1c3d55cbf16779cb794d9515a72a627554bb09cd",
+          "path": "scripts/V45/07H1_GAME_LOBBY.lua",
+          "parts": 2,
+          "hide_full": false
+        },
+        {
+          "name": "07K5_TRUCO_UI",
+          "type": "ModuleScript",
+          "location": "ReplicatedStorage",
+          "action": "SUBSTITUIR",
+          "lines": 97,
+          "sha256": "a97dc8abc2936992b6288bad14ef26d70e23fd0c0a24f112339bbaabb9d2b1f5",
+          "path": "scripts/V45/07K5_TRUCO_UI.lua",
+          "parts": 2,
+          "hide_full": false
+        },
+        {
+          "name": "07K7_CARD_STYLES",
+          "type": "ModuleScript",
+          "location": "ReplicatedStorage",
+          "action": "SUBSTITUIR",
+          "lines": 73,
+          "sha256": "03284801b1471b2cdd6dfeaa636c013e8d97d9b45a5a24a5f0f39c488614fd36",
+          "path": "scripts/V45/07K7_CARD_STYLES.lua",
+          "parts": 2,
+          "hide_full": false
+        },
+        {
+          "name": "07K9_CARD_INVENTORY_UI",
+          "type": "ModuleScript",
+          "location": "ReplicatedStorage",
+          "action": "SUBSTITUIR",
+          "lines": 251,
+          "sha256": "217eb7a24110b5a94ef2436e03c27f15345516aac3b0a0a0892b214878b0ceca",
+          "path": "scripts/V45/07K9_CARD_INVENTORY_UI.lua",
+          "parts": 2,
+          "hide_full": false
+        },
+        {
+          "name": "07UI_DESIGN_SYSTEM",
+          "type": "ModuleScript",
+          "location": "ReplicatedStorage",
+          "action": "SUBSTITUIR",
+          "lines": 151,
+          "sha256": "2b9632558265bb2fcd02da6b62b0ed54c0cc5d990786858f0cf7ae08ad2ccae1",
+          "path": "scripts/V45/07UI_DESIGN_SYSTEM.lua",
+          "parts": 2,
+          "hide_full": false
+        },
+        {
+          "name": "09A_SHOP_UI",
+          "type": "ModuleScript",
+          "location": "ReplicatedStorage",
+          "action": "SUBSTITUIR",
+          "lines": 280,
+          "sha256": "808c7a40b0d06647e955da1ca1208fd77619ffc29e05c78fdc14f5b895afb630",
+          "path": "scripts/V45/09A_SHOP_UI.lua",
+          "parts": 4,
+          "hide_full": true
+        },
+        {
+          "name": "09C2_SHOP_CATALOG",
+          "type": "ModuleScript",
+          "location": "ReplicatedStorage",
+          "action": "SUBSTITUIR",
+          "lines": 245,
+          "sha256": "9fc98dccd6d679016f8fe03bbe350c0b7eae17ad28904cb604c154be95828c07",
+          "path": "scripts/V45/09C2_SHOP_CATALOG.lua",
+          "parts": 2,
+          "hide_full": false
+        },
+        {
+          "name": "09C7_COMMUNITY_FEED",
+          "type": "ModuleScript",
+          "location": "ReplicatedStorage",
+          "action": "SUBSTITUIR",
+          "lines": 170,
+          "sha256": "90b77749eadc0ef7dacaaa07e26507551fe5689f2860d0eda46fcd385c5860b3",
+          "path": "scripts/V45/09C7_COMMUNITY_FEED.lua",
+          "parts": 2,
+          "hide_full": false
+        },
+        {
+          "name": "09C8_COMMUNITY_DETAILS",
+          "type": "ModuleScript",
+          "location": "ReplicatedStorage",
+          "action": "SUBSTITUIR",
+          "lines": 123,
+          "sha256": "88130c78354d6cf1e10cca8ab93d5ed4d2aa029e1f30728f0dd065e4a935f086",
+          "path": "scripts/V45/09C8_COMMUNITY_DETAILS.lua",
+          "parts": 2,
+          "hide_full": false
+        },
+        {
+          "name": "07K8_CARD_INVENTORY",
+          "type": "ModuleScript",
+          "location": "ServerScriptService",
+          "action": "SUBSTITUIR",
+          "lines": 144,
+          "sha256": "dd462de8c66465302ddad3e55b43fe69abc43c6178c3d1e351b65bec0adcdcd2",
+          "path": "scripts/V45/07K8_CARD_INVENTORY.lua",
+          "parts": 2,
+          "hide_full": false
+        },
+        {
+          "name": "09B2_COSPLAY_METADATA",
+          "type": "ModuleScript",
+          "location": "ServerScriptService",
+          "action": "SUBSTITUIR",
+          "lines": 40,
+          "sha256": "4c081ace2d6a2385ce3d1da057f4f4b290a1329f0ae5d56a6db3cffd1bf89b2b",
+          "path": "scripts/V45/09B2_COSPLAY_METADATA.lua",
+          "parts": 2,
+          "hide_full": false
+        },
+        {
+          "name": "09B4_CURATED_LOOKS",
+          "type": "ModuleScript",
+          "location": "ServerScriptService",
+          "action": "SUBSTITUIR",
+          "lines": 129,
+          "sha256": "32d6d9c45f8abf837a7ee437d03994af13f6528c077787dd45483181bb0001a8",
+          "path": "scripts/V45/09B4_CURATED_LOOKS.lua",
+          "parts": 2,
+          "hide_full": false
+        },
+        {
+          "name": "07K_TRUCO_CLIENT",
+          "type": "LocalScript",
+          "location": "StarterPlayer > StarterPlayerScripts",
+          "action": "SUBSTITUIR",
+          "lines": 180,
+          "sha256": "744950a193c87f06df41bdb826c880416b11d91ab36b686b2ab81c633e30d022",
+          "path": "scripts/V45/07K_TRUCO_CLIENT.lua",
+          "parts": 2,
+          "hide_full": false
+        },
+        {
+          "name": "07K_TRUCO_SERVER",
+          "type": "Script",
+          "location": "ServerScriptService",
+          "action": "SUBSTITUIR",
+          "lines": 218,
+          "sha256": "d32578fa6d72f7f90adfb956dd8c988c2825834ce5c7016720ea16a982ce170c",
+          "path": "scripts/V45/07K_TRUCO_SERVER.lua",
           "parts": 2,
           "hide_full": false
         }

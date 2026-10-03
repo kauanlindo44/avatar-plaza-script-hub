@@ -1,0 +1,73 @@
+{
+  "version": "V45",
+  "baseline_commit": "9aae6c202e6a539e4330c772c755b88dd3c8cf7f",
+  "baseline_tree": "5eb17b42faa5d8ba53a65efc57168dbe12b44b84",
+  "baseline_release_blobs_verified": 76,
+  "handoff_read_before_changes": true,
+  "scripts": 14,
+  "snapshot_sources": 55,
+  "create": 0,
+  "replace": 14,
+  "max_patch_script_lines": 280,
+  "shop_ui_parts": 4,
+  "source_hashes_verified": true,
+  "functional_syntax_cases": 49,
+  "installer_cases": 1,
+  "total_cases": 50,
+  "bot_complete_matches": 72,
+  "card_style_face_combinations": 400,
+  "suites": [
+    {
+      "suite": "results.json",
+      "cases": 14,
+      "result": "pass"
+    },
+    {
+      "suite": "games_commerce_results.json",
+      "cases": 9,
+      "result": "pass"
+    },
+    {
+      "suite": "integration_results.json",
+      "cases": 15,
+      "result": "pass"
+    },
+    {
+      "suite": "server_flow_results.json",
+      "cases": 5,
+      "result": "pass"
+    },
+    {
+      "suite": "changes_results.json",
+      "cases": 6,
+      "result": "pass"
+    }
+  ],
+  "installer": {
+    "result": "pass",
+    "runtime": "Node.js + minimal DOM doubles; no CSS rendering",
+    "checks": [
+      "Offline V45",
+      "Current fallback version label",
+      "Old-cache rejection",
+      "14 patch source hashes and offline V44 base",
+      "Exact part reconstruction",
+      "0 creations and 14 replacements",
+      "New/replace labels with canonical instance names",
+      "Clipboard/manual selection",
+      "Tampered-source fallback",
+      "Closing during load",
+      "No JavaScript exceptions"
+    ]
+  },
+  "native_roblox_tested": false,
+  "roblox_prices_modified": false,
+  "new_monetization_ids": false,
+  "paid_random_items_enabled": false,
+  "photos_received_for_this_request": false,
+  "limits": [
+    "Native rendering, touch, purchases, subscriptions and service quotas require Roblox QA.",
+    "Current player-avatar discovery does not guarantee every cosplay, a curated million, or universal visual recognition.",
+    "This patch changes no rules, existing product IDs or persisted inventory keys."
+  ]
+}

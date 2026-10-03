@@ -1,20 +1,22 @@
-# Avatar Plaza — V44
+# Avatar Plaza — V45
 
-Atualização da V43 para Roblox Studio Lite: Truco, catálogo, Photo Mode, configurações, comunidade e inventário de baralhos. A implementação continua os scripts originais do handoff; este repositório não é um place vazio pronto para publicar.
+Correções para a V44 instalada no Roblox Studio Lite: comunidade de jogadores, câmera/mão do Truco, arte completa das cartas, Ateliê e seleção dos jogos. A base do handoff e a instalação V44 continuam necessárias.
 
-Abra [AVATAR_PLAZA_SCRIPT_HUB_PERMANENTE.html](AVATAR_PLAZA_SCRIPT_HUB_PERMANENTE.html) e selecione **V44**. O instalador funciona com as fontes embutidas e consulta as versões publicadas no GitHub. As fontes e suas partes têm SHA-256 verificado.
+Abra [AVATAR_PLAZA_SCRIPT_HUB_PERMANENTE.html](AVATAR_PLAZA_SCRIPT_HUB_PERMANENTE.html) e selecione **V45**. São **14 SUBSTITUIR / 0 CRIAR**, até 280 linhas por script alterado. Se ainda estiver instalando a V44, conclua os 55 scripts primeiro. As duas versões estão no HTML offline, e versões publicadas são consultadas no GitHub.
 
-São **55 scripts: 22 criações e 33 substituições**, até 393 linhas cada. Os títulos indicam **(NOVO)** ou **(SUBSTITUIR)**; essas indicações não fazem parte do nome no Roblox. `09A_SHOP_UI` tem exatamente quatro partes no mesmo ModuleScript. Os locais e dependências estão em [INSTALL_V44.md](INSTALL_V44.md).
+`09A_SHOP_UI` continua dividido em exatamente quatro partes no mesmo ModuleScript. Tipos, locais e nomes estão em [INSTALL_V45.md](INSTALL_V45.md); os avisos (SUBSTITUIR) não fazem parte do nome no Roblox.
 
-## O que mudou
+## O que mudou na V45
 
-- Truco Paulista, Mineiro e Goiano substituem Batata Envenenada. Quatro jogadores, duplas opostas, mão privada, mesa pública, treino em três dificuldades e salas entre servidores.
-- Torneios semanais gratuitos de xadrez, damas e Truco. Convites, aceite, check-in, reservas e prêmio somente em título. Nenhuma aposta.
-- Inventário com nove visuais originais, caixas de escolha garantida e Ateliê com imagem, zoom e ajuste por arraste, inclusive no celular. Cosméticos não mudam as cartas ou o resultado.
-- Catálogo com cinco colunas e duas linhas completas em telas horizontais. Ações de detalhe fixas, carrinho de itens escolhidos/outfit e restauração confirmada.
-- Prévias maiores, fundo adaptado ao avatar, giro 360° e preservação da skin ao aplicar uma peça. Photo Mode com pose direta R6/R15, desfazer/refazer e controles de ambiente sem rolagem.
-- Configurações coloridas, cinco mundos locais e comandos pessoais limitados. Inspeção de jogadores, curtidas e uso de look bloqueado por padrão até o dono permitir.
-- Comunidade com até cinco composições por referência conhecida, consulta ao catálogo Roblox, categorias internas de orçamento e 50 cards reciclados.
+- Comunidade usa a descrição atual de jogadores reais, com itens conferidos. Sem composições sintéticas de catálogo; conta Roblox e looks repetidos são excluídos. Abas Jogadores (pagos), Grátis, Publicados e Em alta; duas linhas inteiras em telas verificadas. Valores desconhecidos nunca são classificados como gratuitos. Partes de corpo em pacotes gratuitos também são consultadas.
+- Referências reconhecidas passaram de seis para dezesseis. O nome do cosplay só aparece quando as duas roupas têm uma referência compatível; isso não garante que perfis encontrados contenham todos esses personagens.
+- Câmera do Truco olha para fora do rosto. Corpo/acessórios originais ficam ocultos somente no cliente, controles móveis não cobrem cartas e os valores anteriores são restaurados na saída. Três cartas 3D privadas, em leque junto de cópias das mãos, aceitam toque, mouse ou teclas 1/2/3.
+- Visuais alteram frente, verso, gravação, cores e acabamento da carta. Índices e naipe usam áreas com contraste protegido. Imagem do Ateliê aparece nos dois lados; cartas cobertas/ocultas continuam sem revelar identidade.
+- Inventário e loja usam páginas laterais, com até seis escolhas em paisagem ou quatro em retrato. Compras, equipar, virar e abrir caixas ficam fixos e não exigem rolagem vertical.
+- Ateliê aceita ID ou link de imagem/decal, verifica carregamento, mantém prévia/zoom/arraste e salva já equipando. Imagem que não carrega não recebe confirmação de sucesso. Preços indisponíveis desativam compras sem atribuir valores vazios a propriedades booleanas da Roblox.
+- Jogos usam cartões de categoria, cores de seleção e ações fixas de partida rápida, amigos ou treino. Catálogo mantém cinco colunas e duas linhas em paisagem com menos margem e mais imagem nos cards.
+
+Sistemas de regras, torneios, bots, moedas, privacidade, carrinho e Photo Mode da V44 continuam presentes. Os IDs de monetização e preços do painel Roblox não foram alterados.
 
 ## Passes e preços
 
@@ -59,8 +61,8 @@ A análise técnica usa a Lei 15.211/2025 e o Decreto 12.880/2026, além de trê
 
 ## Validação e limites
 
-**44 casos passaram**: 43 de lógica/sintaxe em Lua 5.4 com serviços simulados e um do JavaScript real do instalador. Incluem 72 partidas completas de bots, geometria em diversas telas, preservação do avatar, os dez produtos/recibos, preços por cliente, privacidade e recuperação de salas/torneios.
+**50 casos passaram**: 49 de lógica/sintaxe em Lua 5.4 com serviços simulados e um do JavaScript real do instalador. Incluem 72 partidas completas de bots, 400 combinações carta/visual, toque/raycast, restauração da câmera, geometrias móveis, imagem indisponível, pacotes gratuitos, compras, avatar e recuperação de salas/torneios.
 
-Ainda é necessário testar no Roblox/Studio Lite a renderização 3D, o toque real, compras, assinatura, serviços publicados e viagem entre servidores. A comunidade tem capacidade paginada de um milhão de registros, não uma coleção pronta desse tamanho. Identificação de personagens usa nomes de roupas e referências verificadas, com seis personagens iniciais; não há reconhecimento visual universal.
+Ainda é necessário conferir no Roblox/Studio Lite a renderização 3D, o toque físico, compras, serviços publicados e limites de API. As fotos anunciadas nesta solicitação ainda não foram recebidas. A comunidade pesquisa perfis reais sob demanda; não é uma coleção pronta de um milhão de skins. Nome de personagem é inferido dos títulos das roupas e não de reconhecimento visual universal. IDs/nomes/preços de compra permanecem conforme a V44.
 
-Resultados, comandos de teste e roteiro de QA: [audits/V44/README.md](audits/V44/README.md).
+Resultados, fontes e roteiro de QA: [audits/V45/README.md](audits/V45/README.md). A decisão de monetização segue documentada na [auditoria V44](audits/V44/LEGAL_AND_RULES.md).
