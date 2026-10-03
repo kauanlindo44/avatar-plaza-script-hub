@@ -1,0 +1,325 @@
+{
+  "method": "Approximate actual GUI rectangles; DejaVu substitutes, placeholder viewports and no GPU/physics/native bars",
+  "reviews": [
+    {
+      "scene": "catalog",
+      "viewport": [
+        1920,
+        1080
+      ],
+      "vertical_text_overflows": []
+    },
+    {
+      "scene": "looks",
+      "viewport": [
+        1920,
+        1080
+      ],
+      "vertical_text_overflows": []
+    },
+    {
+      "scene": "look_selected",
+      "viewport": [
+        1920,
+        1080
+      ],
+      "vertical_text_overflows": []
+    },
+    {
+      "scene": "community",
+      "viewport": [
+        1920,
+        1080
+      ],
+      "vertical_text_overflows": []
+    },
+    {
+      "scene": "community_detail",
+      "viewport": [
+        1920,
+        1080
+      ],
+      "vertical_text_overflows": []
+    },
+    {
+      "scene": "settings",
+      "viewport": [
+        1920,
+        1080
+      ],
+      "vertical_text_overflows": []
+    },
+    {
+      "scene": "worlds",
+      "viewport": [
+        1920,
+        1080
+      ],
+      "vertical_text_overflows": []
+    },
+    {
+      "scene": "photo_pose",
+      "viewport": [
+        1920,
+        1080
+      ],
+      "vertical_text_overflows": []
+    },
+    {
+      "scene": "catalog",
+      "viewport": [
+        768,
+        432
+      ],
+      "vertical_text_overflows": []
+    },
+    {
+      "scene": "looks",
+      "viewport": [
+        768,
+        432
+      ],
+      "vertical_text_overflows": []
+    },
+    {
+      "scene": "look_selected",
+      "viewport": [
+        768,
+        432
+      ],
+      "vertical_text_overflows": []
+    },
+    {
+      "scene": "community",
+      "viewport": [
+        768,
+        432
+      ],
+      "vertical_text_overflows": []
+    },
+    {
+      "scene": "community_detail",
+      "viewport": [
+        768,
+        432
+      ],
+      "vertical_text_overflows": []
+    },
+    {
+      "scene": "settings",
+      "viewport": [
+        768,
+        432
+      ],
+      "vertical_text_overflows": []
+    },
+    {
+      "scene": "worlds",
+      "viewport": [
+        768,
+        432
+      ],
+      "vertical_text_overflows": []
+    },
+    {
+      "scene": "photo_pose",
+      "viewport": [
+        768,
+        432
+      ],
+      "vertical_text_overflows": []
+    },
+    {
+      "scene": "catalog",
+      "viewport": [
+        800,
+        360
+      ],
+      "vertical_text_overflows": []
+    },
+    {
+      "scene": "looks",
+      "viewport": [
+        800,
+        360
+      ],
+      "vertical_text_overflows": []
+    },
+    {
+      "scene": "look_selected",
+      "viewport": [
+        800,
+        360
+      ],
+      "vertical_text_overflows": []
+    },
+    {
+      "scene": "community",
+      "viewport": [
+        800,
+        360
+      ],
+      "vertical_text_overflows": []
+    },
+    {
+      "scene": "community_detail",
+      "viewport": [
+        800,
+        360
+      ],
+      "vertical_text_overflows": []
+    },
+    {
+      "scene": "settings",
+      "viewport": [
+        800,
+        360
+      ],
+      "vertical_text_overflows": []
+    },
+    {
+      "scene": "worlds",
+      "viewport": [
+        800,
+        360
+      ],
+      "vertical_text_overflows": []
+    },
+    {
+      "scene": "photo_pose",
+      "viewport": [
+        800,
+        360
+      ],
+      "vertical_text_overflows": []
+    },
+    {
+      "scene": "catalog",
+      "viewport": [
+        844,
+        390
+      ],
+      "vertical_text_overflows": []
+    },
+    {
+      "scene": "looks",
+      "viewport": [
+        844,
+        390
+      ],
+      "vertical_text_overflows": []
+    },
+    {
+      "scene": "look_selected",
+      "viewport": [
+        844,
+        390
+      ],
+      "vertical_text_overflows": []
+    },
+    {
+      "scene": "community",
+      "viewport": [
+        844,
+        390
+      ],
+      "vertical_text_overflows": []
+    },
+    {
+      "scene": "community_detail",
+      "viewport": [
+        844,
+        390
+      ],
+      "vertical_text_overflows": []
+    },
+    {
+      "scene": "settings",
+      "viewport": [
+        844,
+        390
+      ],
+      "vertical_text_overflows": []
+    },
+    {
+      "scene": "worlds",
+      "viewport": [
+        844,
+        390
+      ],
+      "vertical_text_overflows": []
+    },
+    {
+      "scene": "photo_pose",
+      "viewport": [
+        844,
+        390
+      ],
+      "vertical_text_overflows": []
+    },
+    {
+      "scene": "catalog",
+      "viewport": [
+        360,
+        640
+      ],
+      "vertical_text_overflows": []
+    },
+    {
+      "scene": "looks",
+      "viewport": [
+        360,
+        640
+      ],
+      "vertical_text_overflows": []
+    },
+    {
+      "scene": "look_selected",
+      "viewport": [
+        360,
+        640
+      ],
+      "vertical_text_overflows": []
+    },
+    {
+      "scene": "community",
+      "viewport": [
+        360,
+        640
+      ],
+      "vertical_text_overflows": []
+    },
+    {
+      "scene": "community_detail",
+      "viewport": [
+        360,
+        640
+      ],
+      "vertical_text_overflows": []
+    },
+    {
+      "scene": "settings",
+      "viewport": [
+        360,
+        640
+      ],
+      "vertical_text_overflows": []
+    },
+    {
+      "scene": "worlds",
+      "viewport": [
+        360,
+        640
+      ],
+      "vertical_text_overflows": []
+    },
+    {
+      "scene": "photo_pose",
+      "viewport": [
+        360,
+        640
+      ],
+      "vertical_text_overflows": []
+    }
+  ]
+}

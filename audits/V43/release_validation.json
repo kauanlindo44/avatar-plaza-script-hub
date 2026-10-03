@@ -1,0 +1,41 @@
+{
+  "version": "V43",
+  "base_commit": "a535c3bad18cfb640ecb9e22471281ca61fbad7e",
+  "scripts": 27,
+  "new_modules": 11,
+  "replacements": 16,
+  "max_lines": 355,
+  "functional_cases": 27,
+  "native_roblox_tested": false,
+  "visual_method": "Approximate GUI rectangles, substitute fonts, placeholder 3D previews",
+  "layouts": 40,
+  "catalog_fully_visible_layouts": [
+    [
+      768,
+      432
+    ],
+    [
+      800,
+      360
+    ],
+    [
+      844,
+      390
+    ],
+    [
+      1460,
+      821
+    ],
+    [
+      1920,
+      1080
+    ]
+  ],
+  "community_capacity": 1000000,
+  "community_verified_million": false,
+  "character_recognition": "Live clothing-name inference for three official references; no universal visual service",
+  "historical_checksums_corrected": [
+    "V37/07A0_CHESS_RULES",
+    "V37/07B0_CHECKERS_RULES"
+  ]
+}

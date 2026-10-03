@@ -1,0 +1,62 @@
+[
+  {
+    "case": "apply_single_clothing_preserves_live_avatar",
+    "result": "pass",
+    "detail": "shirt applied while pants, body, colors, hair/accessories, emotes and newer live changes survive; X removes one item"
+  },
+  {
+    "case": "blank_outfit_restore_history_and_body_limits",
+    "result": "pass",
+    "detail": "explicit complete outfits/blank replace, restore/history work, R15 limits and pending edits remain correct"
+  },
+  {
+    "case": "bundle_only_adds_its_pieces_and_rejects_stale_try",
+    "result": "pass",
+    "detail": "bundle changes body pieces only, no outfit wipe or partial apply; stale network result cannot overwrite edits"
+  },
+  {
+    "case": "appearance_not_ready_cannot_initialize_or_apply",
+    "result": "pass",
+    "detail": "not-yet-loaded avatar and missing edit baseline fail without changing the live skin"
+  },
+  {
+    "case": "cart_selection_total_clear_remove_purchase",
+    "result": "pass",
+    "detail": "no duplicates, selection, unknown-price subtotal, official mixed-item cart request and clearing"
+  },
+  {
+    "case": "client_native_plus_exclusive_cart_and_loader_close",
+    "result": "pass",
+    "detail": "direct Plus, cart/loader exclusivity, current UserService lookup and closing restores HUD and keyboard"
+  },
+  {
+    "case": "full_photo_controller_pose_capture_and_exit_races",
+    "result": "pass",
+    "detail": "confirmed pose persists; cancel restores; capture/enter callbacks after exit cannot resurrect the studio"
+  },
+  {
+    "case": "game_controller_room_contract_and_failures",
+    "result": "pass",
+    "detail": "create/join/cancel, cancellation failure, push race, board RPC and HUD restoration"
+  },
+  {
+    "case": "online_potato_overlay_and_leave",
+    "result": "pass",
+    "detail": "physical online table kept visible, honest status and room leave"
+  },
+  {
+    "case": "potato_reveal_lock_real_levels_and_stale_turn",
+    "result": "pass",
+    "detail": "three shared visible poisons, locked reveal, timed hide and no stale cancelled bot callbacks"
+  },
+  {
+    "case": "published_page_capacity_and_authorized_lookup",
+    "result": "pass",
+    "detail": "legacy filtered pages up to 47 records reload completely; oversized requests are rejected"
+  },
+  {
+    "case": "published_virtual_gallery_week_trend_and_reload",
+    "result": "pass",
+    "detail": "published 3D cards recycle, 47-code pages reload, week filters dates, trend decays likes and stale modes are discarded"
+  }
+]
