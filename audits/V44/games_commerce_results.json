@@ -27,7 +27,12 @@
   {
     "case": "commerce_native_price_policy_fail_closed_and_callback",
     "result": "pass",
-    "detail": "uses actual 2 Robux, zero product IDs disabled, covered choices prevent redundant prompts, permanent pass ownership verified, random blocked on every policy outcome and write-only receipt registration"
+    "detail": "configured products, native 1 Robux purchase metadata, no server display-price fallback, missing IDs disabled, covered choices prevent redundant prompts, verified passes, random blocked and write-only receipt registration"
+  },
+  {
+    "case": "configured_ten_product_receipts_correct_recipient_and_excluded_ether",
+    "result": "pass",
+    "detail": "10 screenshot IDs, correct prompts/benefits/recipient, persistent retry idempotence, duplicate offers refused, excluded Ether cannot grant Vaelis and renamed saved keys remain valid"
   },
   {
     "case": "progress_reward_and_weekly_rank_deduplication",

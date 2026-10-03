@@ -4,7 +4,7 @@ Atualização da V43 para Roblox Studio Lite: Truco, catálogo, Photo Mode, conf
 
 Abra [AVATAR_PLAZA_SCRIPT_HUB_PERMANENTE.html](AVATAR_PLAZA_SCRIPT_HUB_PERMANENTE.html) e selecione **V44**. O instalador funciona com as fontes embutidas e consulta as versões publicadas no GitHub. As fontes e suas partes têm SHA-256 verificado.
 
-São **55 scripts: 22 criações e 33 substituições**, até 393 linhas cada. `09A_SHOP_UI` tem exatamente quatro partes no mesmo ModuleScript. Os locais e dependências estão em [INSTALL_V44.md](INSTALL_V44.md).
+São **55 scripts: 22 criações e 33 substituições**, até 393 linhas cada. Os títulos indicam **(NOVO)** ou **(SUBSTITUIR)**; essas indicações não fazem parte do nome no Roblox. `09A_SHOP_UI` tem exatamente quatro partes no mesmo ModuleScript. Os locais e dependências estão em [INSTALL_V44.md](INSTALL_V44.md).
 
 ## O que mudou
 
@@ -18,7 +18,7 @@ São **55 scripts: 22 criações e 33 substituições**, até 393 linhas cada. `
 
 ## Passes e preços
 
-Os preços de teste informados pelo criador são **2 Robux**. A interface consulta o preço atual da Roblox; scripts não alteram o painel de preços.
+Os preços de teste informados pelo criador são **1 Robux** para passes e produtos. A interface consulta preços regionais/personalizados no cliente e bloqueia a compra se os metadados não estiverem disponíveis. Scripts não alteram o painel de preços.
 
 | ID de Game Pass | Benefício permanente | Sugestão após os testes |
 |---|---|---:|
@@ -28,11 +28,28 @@ Os preços de teste informados pelo criador são **2 Robux**. A interface consul
 
 | Coleção | Conteúdo conhecido | Moedas por escolha ou visual direto | Sugestão por escolha ou visual direto |
 |---|---|---:|---:|
-| Nox | Onyx, Vesper, Hex | 500 | 15 Robux |
+| Nox | Onyx, Veyra, Nyxar | 500 | 15 Robux |
 | Reign | Regent, Aurum, Valor | 1.200 | 35 Robux |
-| Eclipse | Zenith, Aether, Nova | 2.500 | 65 Robux |
+| Eclipse | Zenith, Vaelis, Nova | 2.500 | 65 Robux |
 
-Caixas e outros visuais vendidos por Robux precisam de **Developer Product IDs**, ainda não fornecidos. Estão em `07K6_CARD_CATALOG.Products`, todos com zero, e a compra correspondente fica desativada. Compras por moedas e os três passes já têm seus caminhos implementados. Moedas são ganhas em partidas PvP validadas; não existe venda de moedas.
+Os **dez Developer Products estão configurados** em `07K6_CARD_CATALOG.Products`:
+
+| Produto | ID |
+|---|---:|
+| Caixa Nox | 3716296910 |
+| Caixa Reign | 3716298871 |
+| Caixa Eclipse | 3716298939 |
+| Visual Onyx | 3716298994 |
+| Visual Veyra | 3716299051 |
+| Visual Nyxar | 3716299236 |
+| Visual Aurum | 3716300186 |
+| Visual Valor | 3716300285 |
+| Visual Vaelis | 3716300668 |
+| Visual Nova | 3716300484 |
+
+Éter Visual (3716300364) foi desativado pelo criador e não é usado. Os nomes Vesper/Hex/Aether permanecem apenas como chaves internas para preservar inventários; os nomes públicos são Veyra/Nyxar/Vaelis. As telas de nomes próprios não usam tradução automática. A tradução dos nomes na compra nativa da Roblox é configurada no painel de Localização.
+
+Compras por moedas e os três passes também estão implementados. Moedas são ganhas em partidas PvP validadas; não existe venda direta de moedas. Faça os testes dentro do jogo; os produtos de escolhas limitadas não devem ser habilitados para venda externa.
 
 ## Decisão sobre ECA Digital
 
@@ -42,7 +59,7 @@ A análise técnica usa a Lei 15.211/2025 e o Decreto 12.880/2026, além de trê
 
 ## Validação e limites
 
-**42 casos passaram**: 41 de lógica/sintaxe em Lua 5.4 com serviços simulados e um do JavaScript real do instalador. Incluem 72 partidas completas de bots, geometria em diversas telas, preservação do avatar, recibos, privacidade e recuperação de salas/torneios.
+**44 casos passaram**: 43 de lógica/sintaxe em Lua 5.4 com serviços simulados e um do JavaScript real do instalador. Incluem 72 partidas completas de bots, geometria em diversas telas, preservação do avatar, os dez produtos/recibos, preços por cliente, privacidade e recuperação de salas/torneios.
 
 Ainda é necessário testar no Roblox/Studio Lite a renderização 3D, o toque real, compras, assinatura, serviços publicados e viagem entre servidores. A comunidade tem capacidade paginada de um milhão de registros, não uma coleção pronta desse tamanho. Identificação de personagens usa nomes de roupas e referências verificadas, com seis personagens iniciais; não há reconhecimento visual universal.
 

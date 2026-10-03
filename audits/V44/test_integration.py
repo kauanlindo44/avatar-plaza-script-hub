@@ -86,6 +86,45 @@ assert(m.Budget(nil)=='unknown'and m.Budget(0)=='free'and m.Budget(55)=='1_55'an
 return 'real matching shirt/pants/accessory composition, five distinct combinations, publisher vs actual creators, cached native prices and internal budget tiers'
 ''')
 CARD_UI=THEME+module('07K0_TRUCO_RULES')+module('07K6_CARD_CATALOG')+module('07K7_CARD_STYLES')+module('07K5_TRUCO_UI')+module('07K9_CARD_INVENTORY_UI')+module('07K12_TOURNAMENT_UI')+module('07H1_GAME_LOBBY')
+case('card_shop_client_prices_renamed_choices_and_late_close',CARD_UI+r'''
+local catalog=Modules['07K6_CARD_CATALOG'];local gui=Instance.new('ScreenGui');gui.Parent=pg
+local data={coins=5000,owned={Classic=true},equipped='Classic',ateliers=false,boxes={Nox=1},custom={image=0,zoom=1}}
+local request;local u;local price=1;local failed;local closeOnQuery=false;local queries={}
+function Services.MarketplaceService:GetProductInfoAsync(id,kind)
+ assert(id~=3716300364,'excluded Ether was queried');queries[#queries+1]={id=id,kind=kind}
+ if closeOnQuery then closeOnQuery=false;u.Close.Activated:Fire()end
+ if id==failed then error('offline')end
+ return{Name='Translated native title',PriceInRobux=price,IsForSale=true}
+end
+local function registry()
+ local s={passes={},products={}}
+ for _,id in ipairs({1951234105,1962433436,1966813498})do s.passes[tostring(id)]={id=id,price=999,sale=true}end
+ for key,id in pairs(catalog.Products)do s.products[key]={id=id,price=999,sale=true}end
+ return s
+end
+u=Modules['07K9_CARD_INVENTORY_UI'].Build(gui,function(action,args)
+ if action=='inventory'then return data elseif action=='store'then return registry()
+ elseif action=='prompt'then request=deep(args);return true
+ elseif action=='openbox'then request=deep(args);for _,key in ipairs(args.styles)do data.owned[key]=true end;data.boxes[args.key]=data.boxes[args.key]-#args.styles;return{styles=args.styles}end
+end,function()end)
+local function button(parent,text)for _,o in ipairs(parent:GetDescendants())do if o:IsA('GuiButton')and o.Text==text then return o end end end
+u.Tab='Loja';u.Show()
+for _,entry in pairs(u.Store.products)do assert(entry.price==nil and not entry.sale,'server price leaked before client metadata')end
+flush();assert(#queries==13);assert(u.Store.products.Aether.price==1 and u.Store.passes['1951234105'].price==1)
+for _,q in ipairs(queries)do local pass=q.id==1951234105 or q.id==1962433436 or q.id==1966813498;assert(q.kind==(pass and Enum.InfoType.GamePass or Enum.InfoType.Product))end
+local vaelis=named(u.List,'Aether');local rb=button(vaelis,'1 Robux • Vaelis');assert(rb and rb.Active and rb.AutoLocalize==false)
+rb.Activated:Fire();assert(request.kind=='product'and request.key=='Aether'and catalog.Products[request.key]==3716300668)
+u.SetPreview('Aether');assert(u.PreviewName.Text=='Vaelis'and not u.PreviewName.AutoLocalize and u.Style=='Aether')
+u.OpenBox(catalog.Collections[1]);local veyra=button(u.Choices,'Veyra');local nyxar=button(u.Choices,'Nyxar');assert(veyra and nyxar and not veyra.AutoLocalize and not nyxar.AutoLocalize)
+veyra.Activated:Fire();assert(u.Style=='Vesper'and u.PreviewName.Text=='Veyra');u.Open.Activated:Fire()
+assert(request.key=='Nox'and request.styles[1]=='Vesper'and data.owned.Vesper and data.boxes.Nox==0)
+u.DialogClose.Activated:Fire();price=9;advance(31);u.Show();flush();assert(button(named(u.List,'Aether'),'9 Robux • Vaelis'))
+failed=catalog.Products.Aether;advance(31);u.Show();flush();assert(not u.Store.products.Aether.sale and u.Store.products.Aether.price==nil)
+assert(not button(named(u.List,'Aether'),'Robux: indisponível').Active,'metadata failure kept a purchasable/stale regional price')
+failed=nil;advance(31);closeOnQuery=true;u.Show();flush();assert(not u.Root.Visible)
+for _,entry in pairs(u.Store.products)do assert(not entry.sale,'late client price updated a closed view')end
+return '13 client-side native queries use correct product/pass type, 1-to-9 Robux refresh, no 999 server fallback, renamed choices keep saved/receipt keys, unavailable metadata disables purchase and late close is respected'
+''')
 case('games_inventory_tournament_screen_geometry_and_exit_confirmation',CARD_UI+r'''
 local gui=Instance.new('ScreenGui');gui.ScreenInsets=Enum.ScreenInsets.None;gui.Parent=pg
 local lobby=Modules['07H1_GAME_LOBBY'].Build(gui);local exited=0

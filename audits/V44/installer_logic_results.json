@@ -3,10 +3,12 @@
   "runtime": "Node.js + minimal DOM doubles; no CSS rendering",
   "checks": [
     "Offline V44",
+    "Current fallback version label",
     "Old-cache rejection",
     "55 source hashes",
     "Exact part reconstruction",
     "22 creations and 33 replacements",
+    "New/replace labels with canonical instance names",
     "Clipboard/manual selection",
     "Tampered-source fallback",
     "Closing during load",

@@ -2,7 +2,7 @@
   "schema": 2,
   "project": "Avatar Plaza Script Hub",
   "latest": "V44",
-  "updated_at": "2026-10-03T18:59:25+00:00",
+  "updated_at": "2026-10-03T20:18:42+00:00",
   "poll_seconds": 5,
   "versions": [
     {
@@ -1407,9 +1407,9 @@
       "id": "V44",
       "title": "TRUCO + CATÁLOGO + ESTÚDIO + VISUAIS GARANTIDOS",
       "date": "2026-10-03",
-      "summary": "Truco Paulista, Mineiro e Goiano no lugar da batata, com mesas para quatro, cartas privadas, bots em três níveis, salas entre servidores e torneios semanais gratuitos. Inventário, nove visuais originais e Ateliê com prévia e ajuste por arraste no celular. Compras consultam o preço atual; caixas de escolha garantida, sem aleatoriedade paga. Catálogo com 5 colunas × 2 linhas visíveis em telas horizontais, detalhe sem rolar ações, carrinho selecionados/outfit, restauração confirmada e prévias 360° maiores e claras. Photo Mode com manequim direto R6/R15, desfazer/refazer e ambiente sem rolagem. Configurações, comandos pessoais e permissão de copiar avatar desativada por padrão. Comunidade com composições consultadas no Roblox, filtros internos de orçamento, 50 cards reciclados e nomes conservadores de seis personagens conhecidos.",
-      "install_note": "Requer V43 completa e os scripts originais do handoff já instalados. Pare Play. CRIE 22 instâncias e SUBSTITUA 33 nos locais indicados, sem duplicar nomes. 07A_CHESS, 07B_CHECKERS, 07C_POISON_POTATO e 07W_WINS_SERVICE SUBSTITUEM os originais que já existem no jogo, embora apareçam pela primeira vez neste repositório. 07C_POISON_POTATO agora desativa o jogo antigo; não mantenha sua cópia ativa. Mantenha as regras 07A0/07B0 originais no ServerScriptService e as cópias em ReplicatedStorage. 09A_SHOP_UI: apague o código antigo uma vez e cole exatamente as 4 partes, em ordem, no MESMO ModuleScript. Instale os 55 itens antes de Play. Passes usam os IDs informados e o preço atual do Roblox, inclusive 2 Robux durante seu teste. Produtos repetíveis continuam desativados até receber IDs de Developer Product. Caixas oferecem escolha garantida, sem sorteios. Consulte INSTALL_V44.md e audits/V44/README.md.",
-      "validation": "55 fontes verificadas: até 400 linhas e sem atribuição composta. 41 casos de lógica/sintaxe em Lua 5.4 com serviços simulados, incluindo 72 partidas completas de bots; testes de geometria, avatar, compras, privacidade, torneios e recuperação. Mais 1 caso do JavaScript real do instalador, hashes, cache, fechamento e quatro partes exatas. Não executado no Studio Lite/Roblox: faltam renderização 3D, toque, compras/assinatura reais, rate limits e viagem entre servidores. Não existe base pronta de 1 milhão de skins nem reconhecimento universal de personagens. Revisão técnica não equivale a parecer jurídico.",
+      "summary": "Dez produtos configurados e três passes, preços consultados no cliente, Veyra/Nyxar/Vaelis e scripts identificados com (NOVO) ou (SUBSTITUIR). Truco Paulista, Mineiro e Goiano no lugar da batata, com mesas para quatro, cartas privadas, bots em três níveis, salas entre servidores e torneios semanais gratuitos. Inventário, nove visuais originais e Ateliê com prévia e ajuste por arraste no celular. Compras consultam o preço atual; caixas de escolha garantida, sem aleatoriedade paga. Catálogo com 5 colunas × 2 linhas visíveis em telas horizontais, detalhe sem rolar ações, carrinho selecionados/outfit, restauração confirmada e prévias 360° maiores e claras. Photo Mode com manequim direto R6/R15, desfazer/refazer e ambiente sem rolagem. Configurações, comandos pessoais e permissão de copiar avatar desativada por padrão. Comunidade com composições consultadas no Roblox, filtros internos de orçamento, 50 cards reciclados e nomes conservadores de seis personagens conhecidos.",
+      "install_note": "Requer V43 completa e os scripts originais do handoff já instalados. Pare Play. CRIE 22 instâncias e SUBSTITUA 33 nos locais indicados, sem duplicar nomes. Os títulos mostram (NOVO) ou (SUBSTITUIR); não inclua essas indicações no nome da instância. 07A_CHESS, 07B_CHECKERS, 07C_POISON_POTATO e 07W_WINS_SERVICE SUBSTITUEM os originais que já existem no jogo, embora apareçam pela primeira vez neste repositório. 07C_POISON_POTATO agora desativa o jogo antigo; não mantenha sua cópia ativa. Mantenha as regras 07A0/07B0 originais no ServerScriptService e as cópias em ReplicatedStorage. 09A_SHOP_UI: apague o código antigo uma vez e cole exatamente as 4 partes, em ordem, no MESMO ModuleScript. Instale os 55 itens antes de Play. Passes usam os IDs informados e o preço atual do Roblox, inclusive 1 Robux durante seu teste. Os dez Developer Products estão configurados; Éter Visual foi excluído. Caixas oferecem escolha garantida, sem sorteios. Consulte INSTALL_V44.md e audits/V44/README.md.",
+      "validation": "55 fontes verificadas: até 400 linhas e sem atribuição composta. 43 casos de lógica/sintaxe em Lua 5.4 com serviços simulados, incluindo 72 partidas completas de bots; testes de geometria, avatar, compras, privacidade, torneios e recuperação. Mais 1 caso do JavaScript real do instalador, hashes, cache, fechamento e quatro partes exatas. Não executado no Studio Lite/Roblox: faltam renderização 3D, toque, compras/assinatura reais, rate limits e viagem entre servidores. Não existe base pronta de 1 milhão de skins nem reconhecimento universal de personagens. Revisão técnica não equivale a parecer jurídico.",
       "scripts": [
         {
           "name": "07G1_HUB_SETTINGS",
@@ -1515,8 +1515,8 @@
           "type": "ModuleScript",
           "location": "ReplicatedStorage",
           "action": "CRIAR",
-          "lines": 33,
-          "sha256": "087e7ff5c17e13e54396815aa0e1146f5fc5ddd765734e79815e5608c373b860",
+          "lines": 37,
+          "sha256": "d90e73b6ae3651bee4e90a151dc4bd4559e13cdd6a7d46ff9d62c5623ee7a602",
           "path": "scripts/V44/07K6_CARD_CATALOG.lua",
           "parts": 2,
           "hide_full": false
@@ -1537,8 +1537,8 @@
           "type": "ModuleScript",
           "location": "ReplicatedStorage",
           "action": "CRIAR",
-          "lines": 157,
-          "sha256": "0c08c15ab421dbf798db175616f26c296fe89125737df4d32a96304a6ec63b25",
+          "lines": 184,
+          "sha256": "00fdb79ffbc967abf56120648cc7105426cb0d2c7554264a09014b891ab84881",
           "path": "scripts/V44/07K9_CARD_INVENTORY_UI.lua",
           "parts": 2,
           "hide_full": false
@@ -1757,8 +1757,8 @@
           "type": "ModuleScript",
           "location": "ServerScriptService",
           "action": "CRIAR",
-          "lines": 78,
-          "sha256": "d7f0e9493703ebdebd4835ccc2a8dc20bf28d36087b2bc80cf13dd600b5cec1c",
+          "lines": 76,
+          "sha256": "06613c6a14c8deded51011a7173bf38cab0a2e4b89268b642ccb339e187b7b83",
           "path": "scripts/V44/07K10_CARD_COMMERCE.lua",
           "parts": 2,
           "hide_full": false

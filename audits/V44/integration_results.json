@@ -45,6 +45,11 @@
     "detail": "real matching shirt/pants/accessory composition, five distinct combinations, publisher vs actual creators, cached native prices and internal budget tiers"
   },
   {
+    "case": "card_shop_client_prices_renamed_choices_and_late_close",
+    "result": "pass",
+    "detail": "13 client-side native queries use correct product/pass type, 1-to-9 Robux refresh, no 999 server fallback, renamed choices keep saved/receipt keys, unavailable metadata disables purchase and late close is respected"
+  },
+  {
     "case": "games_inventory_tournament_screen_geometry_and_exit_confirmation",
     "result": "pass",
     "detail": "fixed create/join/training/waiting controls at five sizes, notches, 48px exit targets, choice dialog and confirmed live-match resignation"

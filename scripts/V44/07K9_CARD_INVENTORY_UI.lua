@@ -5,9 +5,20 @@ local Catalog=require(Rep:WaitForChild("07K6_CARD_CATALOG"))
 local Cards=require(Rep:WaitForChild("07K7_CARD_STYLES"))
 local Bounds=require(Rep:WaitForChild("07UI_SCREEN_BOUNDS"))
 local UIS=game:GetService("UserInputService")
+local Market=game:GetService("MarketplaceService")
 local M={}
 function M.Build(gui,call,toast)
  local U={Tab="Caixas",Data=nil,Store=nil,Style="Classic",Back=true};local safe=Bounds.Bind(gui)
+ local storeToken=0;local priceCache={}
+ local function nativePrice(id,kind)
+  if type(id)~="number"or id<=0 then return{sale=false}end
+  local key=kind..id;local old=priceCache[key];if old and os.clock()-old.time<30 then return old.data end
+  local ok,d=pcall(function()return Market:GetProductInfoAsync(id,kind=="pass"and Enum.InfoType.GamePass or Enum.InfoType.Product)end)
+  local price=ok and type(d)=="table"and d.PriceInRobux
+  local valid=type(price)=="number"and price==price and price>=0 and price<math.huge
+  local p={sale=valid and d.IsForSale==true or false,price=valid and price or nil}
+  if ok then priceCache[key]={time=os.clock(),data=p}end;return p
+ end
  U.Root=D.New("Frame",{Name="CardInventory",Size=UDim2.fromScale(1,1),BackgroundColor3=C.bg,Visible=false},gui)
  U.Title=D.Text(U.Root,"Baralhos",{Font=Enum.Font.GothamBold,TextSize=24,TextXAlignment=Enum.TextXAlignment.Left})
  U.Close=D.IconButton(U.Root,"CloseInventory","close","Fechar inventário",{Size=UDim2.fromOffset(48,48),ZIndex=50})
@@ -16,12 +27,12 @@ function M.Build(gui,call,toast)
  for i,key in ipairs({"Caixas","Visuais","Loja","Ateliê"})do local b=D.Button(U.Tabs,key,{});tabs[i]=b
   b.Activated:Connect(function()U.Tab=key;U.Render()end)
  end
- U.Preview=D.Frame(U.Root,{BackgroundColor3=C.panel});U.PreviewName=D.Text(U.Preview,"Clássico",{Size=UDim2.new(1,0,0,32),Font=Enum.Font.GothamBold})
+ U.Preview=D.Frame(U.Root,{BackgroundColor3=C.panel});U.PreviewName=D.Text(U.Preview,"Clássico",{Size=UDim2.new(1,0,0,32),Font=Enum.Font.GothamBold,AutoLocalize=false})
  U.CardHost=D.New("Frame",{Position=UDim2.new(.2,0,0,40),Size=UDim2.new(.6,0,1,-98),BackgroundTransparency=1},U.Preview)
  U.Flip=D.Button(U.Preview,"Ver frente",{Position=UDim2.new(0,8,1,-52),Size=UDim2.new(1,-16,0,44)})
  U.List=D.Scroll(U.Root,{Name="InventoryItems"});local grid=D.New("UIGridLayout",{SortOrder=Enum.SortOrder.LayoutOrder,CellPadding=UDim2.fromOffset(8,8)},U.List)
  U.Dialog=D.Frame(U.Root,{Name="OpenBox",AnchorPoint=Vector2.new(.5,.5),Position=UDim2.fromScale(.5,.5),Size=UDim2.fromOffset(560,320),Visible=false,ZIndex=60})
- U.DialogTitle=D.Text(U.Dialog,"",{Position=UDim2.fromOffset(12,4),Size=UDim2.new(1,-74,0,48),Font=Enum.Font.GothamBold,TextSize=18,ZIndex=61})
+ U.DialogTitle=D.Text(U.Dialog,"",{Position=UDim2.fromOffset(12,4),Size=UDim2.new(1,-74,0,48),Font=Enum.Font.GothamBold,TextSize=18,ZIndex=61,AutoLocalize=false})
  U.DialogClose=D.IconButton(U.Dialog,"CloseBox","close","Fechar caixa",{Position=UDim2.new(1,-56,0,4),Size=UDim2.fromOffset(48,48),ZIndex=70})
  U.Choices=D.New("Frame",{Position=UDim2.fromOffset(10,60),Size=UDim2.new(1,-20,1,-136),BackgroundTransparency=1,ZIndex=61},U.Dialog)
  U.Open=D.Button(U.Dialog,"Escolha seus visuais",{Position=UDim2.new(0,10,1,-64),Size=UDim2.new(1,-20,0,52),BackgroundColor3=C.green,TextColor3=C.bg,ZIndex=62})
@@ -29,7 +40,7 @@ function M.Build(gui,call,toast)
  local function clear(p)for _,v in ipairs(p:GetChildren())do if v:IsA("GuiObject")then v:Destroy()end end end
  function U.SetPreview(style,custom)
   U.Style=style;U.PreviewCustom=custom;clear(U.CardHost);Cards.Render(U.CardHost,not U.Back and{rank="A",suit="S"}or nil,style,{Size=UDim2.fromScale(1,1)},custom or U.Data and U.Data.custom)
-  U.PreviewName.Text=style=="Custom"and"Ateliê"or Catalog.Styles[style]and Catalog.Styles[style].name or style
+  U.PreviewName.Text=Catalog.Name(style)
   U.Flip.Text=U.Back and"Ver frente"or"Ver verso"
  end
  U.Flip.Activated:Connect(function()U.Back=not U.Back;U.SetPreview(U.Style,U.PreviewCustom)end)
@@ -38,7 +49,7 @@ function M.Build(gui,call,toast)
  local function prompt(kind,key)local d,e=call("prompt",{kind=kind,key=key});if not d then toast(e)end end
  local function card(key,title,note)
   local b=D.Frame(U.List,{Name=key,BackgroundColor3=C.panel})
-  D.Text(b,title,{Position=UDim2.fromOffset(8,6),Size=UDim2.new(1,-16,0,24),Font=Enum.Font.GothamBold})
+  D.Text(b,title,{Position=UDim2.fromOffset(8,6),Size=UDim2.new(1,-16,0,24),Font=Enum.Font.GothamBold,AutoLocalize=false})
   D.Text(b,note,{Position=UDim2.fromOffset(8,34),Size=UDim2.new(1,-16,0,38),TextColor3=C.muted,TextSize=13})
   return b
  end
@@ -47,14 +58,14 @@ function M.Build(gui,call,toast)
   local selected={};local buttons={}
   local function paint()
    local n=0;for _,style in ipairs(box.skins)do local own=U.Data.owned[style];local on=selected[style]
-    buttons[style].Text=style..(own and" • adquirido"or on and" • escolhido"or"");buttons[style].BackgroundColor3=on and C.green or C.card
+    buttons[style].Text=Catalog.Name(style)..(own and" • adquirido"or on and" • escolhido"or"");buttons[style].BackgroundColor3=on and C.green or C.card
     if on then n=n+1 end
    end
    U.Open.Text=n==0 and"Selecione os visuais"or"Abrir "..n.." caixa(s) • "..n.." visual(is) garantido(s)";D.SetEnabled(U.Open,n>0 and n<=(U.Data.boxes[box.id]or 0))
   end
   for i,style in ipairs(box.skins)do
    Cards.Render(U.Choices,nil,style,{Position=UDim2.new((i-1)/3,4,0,0),Size=UDim2.new(1/3,-8,1,-46),ZIndex=62})
-   local b=D.Button(U.Choices,style,{Position=UDim2.new((i-1)/3,4,1,-44),Size=UDim2.new(1/3,-8,0,44),ZIndex=65});buttons[style]=b
+   local b=D.Button(U.Choices,Catalog.Name(style),{Position=UDim2.new((i-1)/3,4,1,-44),Size=UDim2.new(1/3,-8,0,44),ZIndex=65,AutoLocalize=false});buttons[style]=b
    D.SetEnabled(b,not U.Data.owned[style]);b.Activated:Connect(function()selected[style]=not selected[style];U.SetPreview(style);paint()end)
   end
   if U.OpenConnection then U.OpenConnection:Disconnect()end
@@ -67,7 +78,7 @@ function M.Build(gui,call,toast)
    if U.SkipConnection then U.SkipConnection:Disconnect()end;U.SkipConnection=U.Open.Activated:Connect(function()U.Skip=true end);D.SetEnabled(U.Open,true)
    for i,style in ipairs(result.styles)do
     if not U.Skip and U.Dialog.Visible then
-     local name=D.Text(U.Choices,style,{Size=UDim2.fromScale(1,1),TextSize=32,Font=Enum.Font.GothamBold,ZIndex=66})
+     local name=D.Text(U.Choices,Catalog.Name(style),{Size=UDim2.fromScale(1,1),TextSize=32,Font=Enum.Font.GothamBold,ZIndex=66,AutoLocalize=false})
      for _=1,12 do if U.Skip or not U.Dialog.Visible then break end;task.wait(.04)end;name:Destroy()
     end
    end
@@ -89,7 +100,7 @@ function M.Build(gui,call,toast)
   elseif U.Tab=="Visuais"then
    local styles={};for key in pairs(U.Data.owned)do table.insert(styles,key)end;if U.Data.ateliers then table.insert(styles,"Custom")end;table.sort(styles)
    for _,style in ipairs(styles)do
-    local b=card(style,style,U.Data.equipped==style and"Equipado"or"Visual permanente")
+    local b=card(style,Catalog.Name(style),U.Data.equipped==style and"Equipado"or"Visual permanente")
     Cards.Render(b,nil,style,{Position=UDim2.fromScale(.28,.27),Size=UDim2.fromScale(.44,.45)},U.Data.custom)
     local equip=D.Button(b,"Equipar",{Position=UDim2.new(0,8,1,-52),Size=UDim2.new(1,-16,0,44)});equip.Activated:Connect(function()
      U.SetPreview(style);local d,e=call("equip",{style=style});if d then refresh()else toast(e)end
@@ -99,16 +110,16 @@ function M.Build(gui,call,toast)
    for _,box in ipairs(Catalog.Collections)do
     local b=card(box.id,box.id,"Caixa de escolha • "..box.coins.." moedas")
     local coin=D.Button(b,"Comprar com moedas",{Position=UDim2.new(0,8,1,-100),Size=UDim2.new(1,-16,0,44)});coin.Activated:Connect(function()buy("box",box.id)end)
-    local p=U.Store and U.Store.products[box.id];local rb=D.Button(b,p and p.sale and(p.price.." Robux • garantida")or"Robux: produto não configurado",{Position=UDim2.new(0,8,1,-52),Size=UDim2.new(1,-16,0,44)})
+    local p=U.Store and U.Store.products[box.id];local rb=D.Button(b,p and p.sale and(p.price.." Robux • garantida")or"Robux: indisponível",{Position=UDim2.new(0,8,1,-52),Size=UDim2.new(1,-16,0,44)})
     D.SetEnabled(rb,p and p.sale==true);rb.Activated:Connect(function()prompt("product",box.id)end)
    end
    for key,s in pairs(Catalog.Styles)do if key~="Classic"then
-    local b=card(key,key,s.coins.." moedas • compra direta")
+    local b=card(key,s.name,s.coins.." moedas • compra direta")
     Cards.Render(b,nil,key,{Position=UDim2.fromScale(.38,.27),Size=UDim2.fromScale(.24,.32)})
     local covered=Catalog.Covered(U.Data,key)
     local coin=D.Button(b,covered and not U.Data.owned[key]and"Escolha nas suas caixas"or"Comprar • "..s.coins.." moedas",{Position=UDim2.new(0,8,1,-100),Size=UDim2.new(1,-16,0,44)});D.SetEnabled(coin,not U.Data.owned[key]and not covered);coin.Activated:Connect(function()buy("style",key)end)
     local id=Catalog.PassFor(key);local p=id and U.Store and U.Store.passes[tostring(id)]or U.Store and U.Store.products[key]
-    local rb=D.Button(b,p and p.sale and(p.price.." Robux • "..key)or"Robux: indisponível",{Position=UDim2.new(0,8,1,-52),Size=UDim2.new(1,-16,0,44)})
+    local rb=D.Button(b,p and p.sale and(p.price.." Robux • "..s.name)or"Robux: indisponível",{Position=UDim2.new(0,8,1,-52),Size=UDim2.new(1,-16,0,44),AutoLocalize=false})
     D.SetEnabled(rb,p and p.sale and not U.Data.owned[key]and not covered);rb.Activated:Connect(function()prompt(id and"pass"or"product",id or key)end)
    end end
   else
@@ -150,8 +161,24 @@ function M.Build(gui,call,toast)
   local cw=(U.List.AbsoluteSize.X-8-(cols-1)*8)/cols;grid.CellSize=UDim2.fromOffset(cw,U.Tab=="Ateliê"and math.max(320,ah-8)or math.max(220,math.min(300,ah/2-8)));grid.FillDirectionMaxCells=cols
   U.Dialog.Size=UDim2.fromOffset(math.min(620,aw-16),math.min(370,h-it-ib-16))
  end
- function U.Show()U.Root.Visible=true;refresh();local s,e=call("store");if s then U.Store=s;U.Render()elseif e then toast(e)end end
- U.Close.Activated:Connect(function()U.Root.Visible=false;U.Dialog.Visible=false;U.Skip=true;if U.OnClose then U.OnClose()end end)
+ function U.Show()
+  storeToken=storeToken+1;local token=storeToken;U.Root.Visible=true;U.Store=nil;refresh()
+  local s,e=call("store");if token~=storeToken or not U.Root.Visible then return end
+  if not s then if e then toast(e)end;return end
+  for _,group in ipairs({s.passes,s.products})do for _,entry in pairs(group)do entry.price=nil;entry.sale=false end end
+  U.Store=s;U.Render()
+  task.spawn(function()
+   for _,kind in ipairs({"pass","product"})do local group=kind=="pass"and s.passes or s.products
+    for _,entry in pairs(group)do
+     if token~=storeToken or not U.Root.Visible then return end
+     local p=nativePrice(entry.id,kind);if token~=storeToken or not U.Root.Visible then return end
+     entry.price=p.price;entry.sale=p.sale
+    end
+   end
+   if U.Tab=="Loja"or U.Tab=="Ateliê"and not U.Data.ateliers then U.Render()end
+  end)
+ end
+ U.Close.Activated:Connect(function()storeToken=storeToken+1;U.Root.Visible=false;U.Dialog.Visible=false;U.Skip=true;if U.OnClose then U.OnClose()end end)
  safe.Watch(U.Layout);return U
 end
 return M

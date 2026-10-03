@@ -28,15 +28,13 @@ function M.RefreshPasses(pl)
  end
 end
 function M.Store(pl)
+ -- O cliente consulta preços regionais/personalizados. Este registro só informa os IDs autorizados.
  local out={passes={},products={},randomEnabled=false,notice="Escolha garantida • cosméticos permanentes • sem apostas"}
  local passIDs={C.CustomPass};for id in pairs(C.Passes)do table.insert(passIDs,id)end
  for _,id in ipairs(passIDs)do
-  local d=info(id,"pass");out.passes[tostring(id)]={id=id,style=C.Passes[id]or"Ateliê",price=d and d.PriceInRobux,
-   sale=d and d.IsForSale==true and type(d.PriceInRobux)=="number" or false,name=d and d.Name or nil}
+  out.passes[tostring(id)]={id=id,style=C.Passes[id]or"Ateliê",sale=false}
  end
- for key,id in pairs(C.Products)do local d=info(id,"product")
-  out.products[key]={id=id,price=d and d.PriceInRobux,sale=d and d.IsForSale==true and type(d.PriceInRobux)=="number" or false}
- end
+ for key,id in pairs(C.Products)do out.products[key]={id=id,sale=false}end
  return out
 end
 function M.Prompt(pl,kind,key)

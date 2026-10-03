@@ -83,19 +83,50 @@ return 'atomic persistent choices, no duplicate consumption, cap on unnecessary 
 ''')
 case('commerce_native_price_policy_fail_closed_and_callback',INVENTORY+module('07K10_CARD_COMMERCE')+r'''
 local commerce=Modules['07K10_CARD_COMMERCE'];assert(I.Load(pl.UserId))
-onProduct=function(id)return{Name='Native product',PriceInRobux=2,IsForSale=true}end
-local store=commerce.Store(pl);assert(store.passes['1951234105'].price==2 and store.products.Nox.id==0 and not store.products.Nox.sale)
-assert(commerce.Prompt(pl,'pass',1951234105));assert(LastPrompt.id==1951234105);advance(3);assert(not commerce.Prompt(pl,'product','Nox'))
+onProduct=function(id)return{Name='Native product',PriceInRobux=1,IsForSale=true}end
+local store=commerce.Store(pl);assert(store.passes['1951234105'].price==nil and store.products.Nox.id==3716296910 and not store.products.Nox.sale)
+assert(commerce.Prompt(pl,'pass',1951234105));assert(LastPrompt.id==1951234105);advance(3)
+assert(commerce.Prompt(pl,'product','Nox'));assert(LastPrompt.id==3716296910);advance(3)
+local nox=C.Products.Nox;C.Products.Nox=0;assert(not commerce.Prompt(pl,'product','Nox'));C.Products.Nox=nox
 local covered={UserId=789};assert(I.Load(789));assert(I.Transact(789,function(d)d.coins=10000;return true end));assert(I.BuyCoins(789,'box','Reign',3))
-assert(not commerce.Prompt(covered,'pass',1962433436));assert(not commerce.Prompt(covered,'product','Aurum'));assert(LastPrompt.id==1951234105,'covered choices still opened an unnecessary Robux prompt')
+assert(not commerce.Prompt(covered,'pass',1962433436));assert(not commerce.Prompt(covered,'product','Aurum'));assert(LastPrompt.id==3716296910,'covered choices still opened an unnecessary Robux prompt')
 assert(not commerce.PaidRandomAllowed(pl));RestrictRandom=true;assert(not commerce.PaidRandomAllowed(pl));FailPolicy=true;assert(not commerce.PaidRandomAllowed(pl))
 local market=Services.MarketplaceService;local callback
 setmetatable(market,{__index=function(_,k)if k=='ProcessReceipt'then error('write-only callback')end end,__newindex=function(t,k,v)if k=='ProcessReceipt'then callback=v else rawset(t,k,v)end end})
 commerce.Start();assert(callback);assert(callback({ProductId=999,PlayerId=123,PurchaseId='unknown'})==Enum.ProductPurchaseDecision.NotProcessedYet)
-C.Products.Eclipse=123456;assert(callback({ProductId=123456,PlayerId=123,PurchaseId='paid-real'})==Enum.ProductPurchaseDecision.PurchaseGranted)
-assert(callback({ProductId=123456,PlayerId=123,PurchaseId='paid-real'})==Enum.ProductPurchaseDecision.PurchaseGranted);assert(I.View(123).boxes.Eclipse==1)
+assert(callback({ProductId=C.Products.Eclipse,PlayerId=123,PurchaseId='paid-real'})==Enum.ProductPurchaseDecision.PurchaseGranted)
+assert(callback({ProductId=C.Products.Eclipse,PlayerId=123,PurchaseId='paid-real'})==Enum.ProductPurchaseDecision.PurchaseGranted);assert(I.View(123).boxes.Eclipse==1)
 OwnedPasses[1962433436]=true;commerce.RefreshPasses(pl);assert(I.View(123).owned.Regent)
-return 'uses actual 2 Robux, zero product IDs disabled, covered choices prevent redundant prompts, permanent pass ownership verified, random blocked on every policy outcome and write-only receipt registration'
+return 'configured products, native 1 Robux purchase metadata, no server display-price fallback, missing IDs disabled, covered choices prevent redundant prompts, verified passes, random blocked and write-only receipt registration'
+''')
+case('configured_ten_product_receipts_correct_recipient_and_excluded_ether',INVENTORY+module('07K10_CARD_COMMERCE')+r'''
+local expected={Nox=3716296910,Reign=3716298871,Eclipse=3716298939,Onyx=3716298994,Vesper=3716299051,Hex=3716299236,Aurum=3716300186,Valor=3716300285,Aether=3716300668,Nova=3716300484}
+local commerce=Modules['07K10_CARD_COMMERCE'];commerce.Start();local market=Services.MarketplaceService
+onProduct=function()return{Name='Native',IsForSale=true,PriceInRobux=1}end
+local ids={};local n=0;assert(I.Load(99))
+for key,id in pairs(expected)do
+ assert(C.Products[key]==id and not ids[id]and id~=3716300364);ids[id]=true;n=n+1
+ local user={UserId=1000+n};I.Load(user.UserId);assert(commerce.Prompt(user,'product',key));assert(LastPrompt.id==id and LastPrompt.player==user)
+ local receipt={PurchaseId='configured-'..id,ProductId=id,PlayerId=user.UserId}
+ StoreRetry=true;assert(market.ProcessReceipt(receipt)==Enum.ProductPurchaseDecision.PurchaseGranted);StoreRetry=false
+ assert(market.ProcessReceipt(receipt)==Enum.ProductPurchaseDecision.PurchaseGranted)
+ local d=I.View(user.UserId);if C.Collection(key)then assert(d.boxes[key]==1)else assert(d.owned[key])end
+ assert(not I.View(99).owned[key]and not I.View(99).boxes[key],'purchase granted to another user')
+ advance(3)
+ if C.Collection(key)then
+  assert(commerce.Prompt(user,'product',key),'remaining collection choices should remain available')
+  for extra=2,3 do assert(market.ProcessReceipt({PurchaseId='configured-'..id..'-'..extra,ProductId=id,PlayerId=user.UserId})==Enum.ProductPurchaseDecision.PurchaseGranted)end
+  advance(3);assert(not commerce.Prompt(user,'product',key),'fully covered collection was offered again')
+ else assert(not commerce.Prompt(user,'product',key),'already owned visual was offered twice')end
+end
+assert(n==10);local actual=0;for _ in pairs(C.Products)do actual=actual+1 end;assert(actual==10)
+assert(C.Name('Vesper')=='Veyra'and C.Name('Hex')=='Nyxar'and C.Name('Aether')=='Vaelis')
+assert(market.ProcessReceipt({ProductId=3716300364,PlayerId=99,PurchaseId='excluded'})==Enum.ProductPurchaseDecision.NotProcessedYet)
+assert(not I.View(99).owned.Aether and not I.View(99).boxes.Eclipse)
+local pending={ProductId=C.Products.Aether,PlayerId=99,PurchaseId='retry-new'}
+FailStores=true;assert(market.ProcessReceipt(pending)==Enum.ProductPurchaseDecision.NotProcessedYet)
+FailStores=false;assert(market.ProcessReceipt(pending)==Enum.ProductPurchaseDecision.PurchaseGranted);assert(I.View(99).owned.Aether)
+return '10 screenshot IDs, correct prompts/benefits/recipient, persistent retry idempotence, duplicate offers refused, excluded Ether cannot grant Vaelis and renamed saved keys remain valid'
 ''')
 case('progress_reward_and_weekly_rank_deduplication',PROGRESS+r'''
 I.Load(1);I.Load(2);local context={duration=120,moves=20}

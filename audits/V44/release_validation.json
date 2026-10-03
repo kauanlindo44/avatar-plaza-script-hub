@@ -9,9 +9,9 @@
   "max_script_lines": 393,
   "shop_ui_parts": 4,
   "source_hashes_verified": true,
-  "functional_syntax_cases": 41,
+  "functional_syntax_cases": 43,
   "installer_cases": 1,
-  "total_cases": 42,
+  "total_cases": 44,
   "bot_complete_matches": 72,
   "suites": [
     {
@@ -21,12 +21,12 @@
     },
     {
       "suite": "games_commerce_results.json",
-      "cases": 8,
+      "cases": 9,
       "result": "pass"
     },
     {
       "suite": "integration_results.json",
-      "cases": 14,
+      "cases": 15,
       "result": "pass"
     },
     {
@@ -40,10 +40,12 @@
     "runtime": "Node.js + minimal DOM doubles; no CSS rendering",
     "checks": [
       "Offline V44",
+      "Current fallback version label",
       "Old-cache rejection",
       "55 source hashes",
       "Exact part reconstruction",
       "22 creations and 33 replacements",
+      "New/replace labels with canonical instance names",
       "Clipboard/manual selection",
       "Tampered-source fallback",
       "Closing during load",
@@ -52,13 +54,20 @@
   },
   "native_roblox_tested": false,
   "roblox_gamepass_prices_modified": false,
-  "developer_products_configured": false,
+  "developer_products_configured": true,
   "paid_random_items_enabled": false,
   "limits": [
     "Native rendering, touch, purchases, subscriptions, Teleport and service rate limits require Roblox testing.",
-    "Developer Product IDs have not been provided.",
     "Community is paginated capacity, not one million already curated outfits.",
     "Six references from live clothing names are not universal visual recognition.",
     "Legal review of the monetization decision is not certification of every applicable obligation."
-  ]
+  ],
+  "developer_product_count": 10,
+  "client_native_prices": true,
+  "test_robux_reported_by_creator": 1,
+  "excluded_developer_product": 3716300364,
+  "new_script_labels": true,
+  "configuration_baseline_commit": "fcdbe2f9e641ae28e66ac574cec7080f1e162c08",
+  "configuration_baseline_tree": "6d28717ce1a66308aed670dd54b4534e17bd608f",
+  "configuration_updated_at": "2026-10-03T20:18:42+00:00"
 }

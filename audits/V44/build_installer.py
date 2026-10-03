@@ -37,19 +37,29 @@ for name in order:
     specs.append(spec)
     sources[path] = code
 assert sum(s['action'] == 'CRIAR' for s in specs) == 22
+catalog = files['07K6_CARD_CATALOG'].read_text()
+product_source = catalog.split('C.Products={', 1)[1].split('}', 1)[0]
+products = {key: int(value) for key, value in re.findall(r'([A-Za-z]+)=(\d+)', product_source)}
+names = dict(re.findall(r'([A-Za-z]+)=\{name="([^"]+)"', catalog))
+product_order = ['Nox', 'Reign', 'Eclipse', 'Onyx', 'Vesper', 'Hex', 'Aurum', 'Valor', 'Aether', 'Nova']
+assert set(products) == set(product_order) and len(set(products.values())) == 10
+assert all(value > 0 for value in products.values()) and 3716300364 not in products.values()
 note = ('Requer V43 completa e os scripts originais do handoff já instalados. Pare Play. '
         'CRIE 22 instâncias e SUBSTITUA 33 nos locais indicados, sem duplicar nomes. '
+        'Os títulos mostram (NOVO) ou (SUBSTITUIR); não inclua essas indicações no nome da instância. '
         '07A_CHESS, 07B_CHECKERS, 07C_POISON_POTATO e 07W_WINS_SERVICE SUBSTITUEM os originais '
         'que já existem no jogo, embora apareçam pela primeira vez neste repositório. '
         '07C_POISON_POTATO agora desativa o jogo antigo; não mantenha sua cópia ativa. '
         'Mantenha as regras 07A0/07B0 originais no ServerScriptService e as cópias em ReplicatedStorage. '
         '09A_SHOP_UI: apague o código antigo uma vez e cole exatamente as 4 partes, em ordem, '
         'no MESMO ModuleScript. Instale os 55 itens antes de Play. Passes usam os IDs informados '
-        'e o preço atual do Roblox, inclusive 2 Robux durante seu teste. Produtos repetíveis '
-        'continuam desativados até receber IDs de Developer Product. Caixas oferecem escolha '
+        'e o preço atual do Roblox, inclusive 1 Robux durante seu teste. Os dez Developer Products '
+        'estão configurados; Éter Visual foi excluído. Caixas oferecem escolha '
         'garantida, sem sorteios. Consulte INSTALL_V44.md e audits/V44/README.md.')
 version = dict(id='V44', title='TRUCO + CATÁLOGO + ESTÚDIO + VISUAIS GARANTIDOS', date='2026-10-03',
-    summary=('Truco Paulista, Mineiro e Goiano no lugar da batata, com mesas para quatro, '
+    summary=('Dez produtos configurados e três passes, preços consultados no cliente, '
+        'Veyra/Nyxar/Vaelis e scripts identificados com (NOVO) ou (SUBSTITUIR). '
+        'Truco Paulista, Mineiro e Goiano no lugar da batata, com mesas para quatro, '
         'cartas privadas, bots em três níveis, salas entre servidores e torneios semanais gratuitos. '
         'Inventário, nove visuais originais e Ateliê com prévia e ajuste por arraste no celular. '
         'Compras consultam o preço atual; caixas de escolha garantida, sem aleatoriedade paga. '
@@ -61,7 +71,7 @@ version = dict(id='V44', title='TRUCO + CATÁLOGO + ESTÚDIO + VISUAIS GARANTIDO
         '50 cards reciclados e nomes conservadores de seis personagens conhecidos.'),
     install_note=note,
     validation=('55 fontes verificadas: até 400 linhas e sem atribuição composta. '
-        '41 casos de lógica/sintaxe em Lua 5.4 com serviços simulados, incluindo 72 partidas '
+        '43 casos de lógica/sintaxe em Lua 5.4 com serviços simulados, incluindo 72 partidas '
         'completas de bots; testes de geometria, avatar, compras, privacidade, torneios e recuperação. '
         'Mais 1 caso do JavaScript real do instalador, hashes, cache, fechamento e quatro partes exatas. '
         'Não executado no Studio Lite/Roblox: faltam renderização 3D, toque, compras/assinatura reais, '
@@ -74,7 +84,7 @@ manifest['versions'] = [v for v in manifest['versions'] if v['id'] != 'V44'] + [
 MP.write_text(json.dumps(manifest, ensure_ascii=False, indent=2) + '\n')
 def safe(value):
     return json.dumps(value, ensure_ascii=False, separators=(',', ':')).replace('<', '\\u003c').replace('\u2028', '\\u2028').replace('\u2029', '\\u2029')
-runtime = (ROOT / 'audits/V43/installer_runtime.js').read_text()
+runtime = (ROOT / 'audits/V44/installer_runtime.js').read_text()
 constants = ('const REPO_OWNER="kauanlindo44",REPO_NAME="avatar-plaza-script-hub",BRANCH="main";\n'
     'const RAW=`https://raw.githubusercontent.com/${REPO_OWNER}/${REPO_NAME}/${BRANCH}`;\n'
     'const FALLBACK_MANIFEST=' + safe(dict(manifest, versions=[version])) + ';\n'
@@ -97,16 +107,25 @@ install += ('## Antes de instalar\n\n'
     'uma instalação coerente. O carrinho e Plus não precisam de passe adicional.\n\n'
     '## Os 55 scripts\n\n| Ação | Nome | Tipo | Local | Linhas |\n|---|---|---|---|---:|\n')
 for s in specs:
-    install += f'| {s["action"]} | `{s["name"]}` | {s["type"]} | {s["location"]} | {s["lines"]} |\n'
+    label = '(NOVO)' if s['action'] == 'CRIAR' else '(SUBSTITUIR)'
+    install += f'| {s["action"]} | `{s["name"]}` **{label}** | {s["type"]} | {s["location"]} | {s["lines"]} |\n'
 install += ('\n## Compras e primeiro teste\n\n'
     'Os passes 1951234105/1962433436/1966813498 estão associados a Ateliê/Regent/Zenith. '
-    'O código não muda preços no painel Roblox. Mantenha os 2 Robux durante o teste. '
-    'Caixas e os outros visuais por Robux precisam de Developer Products: seus IDs ficam em '
-    '`07K6_CARD_CATALOG.Products`, por enquanto todos zero. Não coloque IDs de Game Pass nesse registro.\n\n'
+    'O código não muda preços no painel Roblox. O criador configurou passes e produtos por 1 Robux '
+    'durante o teste. A interface consulta o preço atual no cliente e desativa a compra se '
+    'a Roblox não confirmar preço/disponibilidade.\n\n'
+    'Os dez IDs abaixo estão em `07K6_CARD_CATALOG.Products`. As chaves Vesper/Hex/Aether '
+    'permanecem internas para preservar dados salvos; os nomes exibidos são Veyra/Nyxar/Vaelis. '
+    'Éter Visual (3716300364) está desativado e não é usado.\n\n'
+    '| Developer Product | ID | Preço de teste informado |\n|---|---:|---:|\n')
+for key in product_order:
+    label = 'Caixa ' + key if key in ['Nox', 'Reign', 'Eclipse'] else 'Visual ' + names[key]
+    install += f'| {label} | {products[key]} | 1 Robux |\n'
+install += ('\n'
     'Publique em um place de teste e use duas contas para verificar os itens de QA em '
     '`audits/V44/README.md`. O proprietário pode já possuir seus passes; a compra real '
     'deve ser conferida por uma conta que ainda não tenha o benefício. Não use os testes '
     'simulados como prova de compra real.\n')
 (ROOT / 'INSTALL_V44.md').write_text(install)
 print(json.dumps(dict(latest='V44', scripts=len(specs), create=22, replace=33,
-    max_lines=max(s['lines'] for s in specs), html_bytes=hp.stat().st_size), ensure_ascii=False))
+    products_configured=len(products), max_lines=max(s['lines'] for s in specs), html_bytes=hp.stat().st_size), ensure_ascii=False))
