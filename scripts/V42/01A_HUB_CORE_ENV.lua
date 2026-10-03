@@ -99,4 +99,3 @@ end
 kit:SetAttribute("LightingReady",true)
 kit:SetAttribute("CoreReady",true)
 print("AVATAR PLAZA V42: ambiente carregado")
-

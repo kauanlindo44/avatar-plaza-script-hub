@@ -161,4 +161,3 @@ rpc.OnServerInvoke=function(pl,action,args)
 end
 Players.PlayerRemoving:Connect(function(pl)session[pl]=nil;busy[pl]=nil end)
 print("AVATAR PLAZA V42: shop server + carrinho oficial pronto")
-

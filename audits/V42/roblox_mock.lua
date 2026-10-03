@@ -342,4 +342,3 @@ pl.HasRobloxSubscription=false;pl.signals={}
 function pl:GetPropertyChangedSignal(k)self.signals[k]=self.signals[k]or Signal();return self.signals[k]end
 function pl:GetJoinData()return self.join or{}end
 function pl.CharacterAdded:Wait()end
-
