@@ -1,0 +1,28 @@
+{
+  "version": "V49",
+  "base_commit": "0f66b71e205282905a5b778e2545a9eeb8f7e980",
+  "snapshot_sources": 61,
+  "creates": 3,
+  "replaces_cumulative_from_V44": 38,
+  "delta_from_V48": 11,
+  "lua_cases": 91,
+  "installer_javascript_cases": 1,
+  "total_cases": 92,
+  "cases": {
+    "body_results.json": 17,
+    "results.json": 13,
+    "integration_results.json": 13,
+    "changes_results.json": 6,
+    "features_results.json": 7,
+    "games_commerce_results.json": 9,
+    "server_flow_results.json": 5,
+    "fixes_results.json": 12,
+    "redesign_results.json": 9
+  },
+  "max_snapshot_lines": 393,
+  "max_patch_lines": 367,
+  "native_roblox_tested": false,
+  "purchases_made": false,
+  "place_published": false,
+  "prices_ids_changed": false
+}

@@ -1,0 +1,42 @@
+[
+  {
+    "suite": "test_bodies.py",
+    "returncode": 0
+  },
+  {
+    "suite": "test_changes.py",
+    "returncode": 0
+  },
+  {
+    "suite": "test_features.py",
+    "returncode": 0
+  },
+  {
+    "suite": "test_fixes.py",
+    "returncode": 0
+  },
+  {
+    "suite": "test_games_commerce.py",
+    "returncode": 0
+  },
+  {
+    "suite": "test_integration.py",
+    "returncode": 0
+  },
+  {
+    "suite": "test_redesign.py",
+    "returncode": 0
+  },
+  {
+    "suite": "test_server_flows.py",
+    "returncode": 0
+  },
+  {
+    "suite": "test_v49.py",
+    "returncode": 0
+  },
+  {
+    "suite": "test_installer_logic.cjs",
+    "returncode": 0
+  }
+]

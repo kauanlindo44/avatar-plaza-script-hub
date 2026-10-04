@@ -1,19 +1,25 @@
-# Avatar Plaza — V48
+# Avatar Plaza — V49
 
-Atualização para Roblox Studio Lite feita sobre a última V47 do GitHub (`308f6706902576cb7a6e2f929cdc265f04866654`). O instalador entrega **36 SUBSTITUIR / 0 CRIAR**, cumulativos desde a V44 completa. Quem já concluiu a V47 substitui somente os **19 scripts** listados em [INSTALL_V48.md](INSTALL_V48.md). O snapshot contém 57 fontes.
+Atualização baseada na V48 mais recente do GitHub (`0f66b71e205282905a5b778e2545a9eeb8f7e980`). **Quem terminou a V48 instala 11 itens: 3 NOVOS e 8 substituições.** O pacote cumulativo desde a V44 completa tem 41 itens: 3 NOVOS e 38 substituições. Snapshot de 61 fontes.
 
-Baixe [AVATAR_PLAZA_SCRIPT_HUB_PERMANENTE.html](AVATAR_PLAZA_SCRIPT_HUB_PERMANENTE.html), abra **V48**, pare Play e substitua as instâncias indicadas. A base original e a V44 completa continuam necessárias; V48 inclui V45, V46 e V47. **09A_SHOP_UI tem exatamente quatro partes consecutivas no mesmo ModuleScript**, sem fonte inteira exposta. Os demais têm duas partes. Nenhum passe, Developer Product ou preço novo.
+Baixe [AVATAR_PLAZA_SCRIPT_HUB_PERMANENTE.html](AVATAR_PLAZA_SCRIPT_HUB_PERMANENTE.html), abra **V49** e siga [INSTALL_V49.md](INSTALL_V49.md). Pare Play e crie primeiro os três novos. Preserve nomes, tipos e locais das instâncias. 09A_SHOP_UI tem quatro partes consecutivas no mesmo ModuleScript; os demais têm duas. O HTML contém V44/V49 offline e mantém o histórico online. Nenhum passe, Developer Product ou preço adicional.
 
-## Mudanças desta versão
+## Correções de corpo
 
-- **Jogos:** nova interface preta/verde, categorias Xadrez/Damas/Truco no topo e painel que usa toda a altura disponível. Partida rápida, Criar / entrar e Contra bots têm controles claros, com ilustração lateral nas telas largas. A área restante oferece três orientações visuais curtas sobre o jogo selecionado quando há espaço suficiente.
-- **Truco 2D:** mesa com quatro posições públicas e três cartas privadas legíveis, placar e ações fixas. Pode jogar qualquer carta própria na sua vez. Cliente não cria mão 3D nem muda a câmera. Variantes, bots, gritos, regras e privacidade continuam no servidor.
-- **Cartas e caixas:** nove edições receberam arte própria na frente/verso, mantendo rank e naipe. Caixas têm embalagem distinta. Todos os visuais aparecem antes de pagar, com **100% ao escolher**, sem sorteio. Após a confirmação efetiva do servidor, a escolha aparece recebida imediatamente; cancelar não concede nada. Cartas e resultado mantêm proporção.
-- **Ateliê:** Carregar/Recarregar mostram sucesso verde ou falha vermelha. ID/tipo inválido e timeout são identificados. Na falha genérica, permissão, moderação ou conexão aparecem como possibilidades; não se inventa diagnóstico. Salvar exige metadados válidos e imagem carregada. Zoom/recorte, frente/verso e textura canônica continuam disponíveis.
-- **Catálogo:** botão SUBCATEGORIA fica mais destacado. Corpo mostra pagos primeiro, com CORPOS GRÁTIS separado e MEMES / CRIATURAS. Pacotes nativos também carregam proporções/cores, preservando roupas e acessórios existentes. Prévia 360 e aplicação no personagem suportam geometria incomum.
-- **Limiteds:** substitui a vitrine Lojas UGC. Filtro nativo Collectibles mais confirmação por item excluem itens comuns. Cards horizontais com destaque dourado, busca e Popular / Menor preço dão aparência diferente do catálogo.
-- **Comunidade:** até três colunas e duas linhas maiores. Falhas transitórias recebem uma nova tentativa sem apagar looks carregados; pool e janela limitados mantêm o uso de memória. Itens de um look mostram imagem e nome; toque abre descrição, preço, Experimentar e Carrinho. Prévia e X de remoção/fechamento continuam.
-- **Photo Mode:** painéis contextuais mais destacados e nenhum bloco inferior permanente com nome do fundo. Cinco ambientes originais receberam mais detalhes e movimento limitado: Galeria Aurora, Ilhas Celestes, Costa Dourada, Jardim Sakura e Cidade Prisma.
+- Ao entrar, consulta a aparência **equipada** no perfil Roblox. Corpos próprios são construídos com as partes nativas e estrutura R15, sem o corpo imposto pelas Avatar Settings da experiência. Possuir um corpo sem equipá-lo no perfil não o veste automaticamente.
+- Ao trocar corpo ou rig, reconstrói o personagem completo, preservando posição, roupas, acessórios, vida, velocidade e ferramentas; retoma o assento e vincula câmera/animações. Não muda apenas Humanoid.RigType.
+- Confere os IDs das peças, proporções, estrutura e rig efetivos antes de informar sucesso. Falha de construção mantém o personagem anterior. Reaparecer após morrer recupera o último look confirmado na sessão.
+- Pacotes usam todas as peças e proporções do outfit nativo. Camisas/calças/acessórios que não foram editados continuam. Pacote incompleto não é apresentado como aplicação concluída.
+
+## Catálogo aprovado
+
+Prévia quadrada, Aplicar em texto verde e Salvar/Restaurar/Carrinho/Corpo em ícones compactos. Itens equipados continuam embaixo, com miniatura e X ao lado da imagem. Área maior pode exibir mais itens. Duas linhas, cinco colunas nas telas largas e quatro quando necessário; retrato adapta para manter legibilidade. Preços continuam explícitos em Robux. Jogos, Truco 2D, Limiteds, comunidade e Photo Mode incorporam as correções V48.
+
+## Validação
+
+**91 casos Lua 5.4 com serviços simulados + 1 caso do JavaScript real do instalador.** Os 17 novos casos incluem entrada com corpo nativo, R6/R15, proporções, readback, falhas, substituição concorrente, respawn, câmera/animações e catálogo. Os doubles não carregam meshes reais nem executam compras. Ainda é necessário testar o **gato abacaxi equipado na conta**, corpos realistas e memes no Roblox/Studio Lite.
+
+Detalhes, comandos reproduzíveis e limites em [audits/V49/README.md](audits/V49/README.md); referências oficiais em [audits/V49/RESEARCH.md](audits/V49/RESEARCH.md). A V44 completa e a base original continuam necessárias.
 
 ## Passes e preços
 
@@ -48,9 +54,9 @@ Compras por moedas e os três passes também estão implementados. Moedas são g
 
 A escolha é conhecida e garantida, sem resultado aleatório. A decisão considera o art. 20 da Lei 15.211/2025 para este jogo acessível a menores. As restrições/verificações nativas da Roblox existem; não se infere idade pela idade da conta nem se coleta documento próprio. Fontes oficiais atuais, três documentos distintos da Roblox e limites estão em [audits/V48/RESEARCH.md](audits/V48/RESEARCH.md). Essa decisão não certifica conformidade integral do jogo.
 
-## Validação e limites
+## Limites de validação
 
-**77 casos passaram:** 76 em Lua 5.4 com serviços e geometria simulados, mais um no JavaScript real do instalador. Incluem sintaxe das 57 fontes, 72 partidas completas, 400 combinações carta/visual, compras/recibos, cancelamento, 50/100 looks, HTTP 429/503, tipo/textura de imagem, tempo limite, proporções nativas e controles em várias telas. Os cinco cenários têm 72–159 partes, com até 20 elementos móveis. Testes, causas e evidências estão em [audits/V48/README.md](audits/V48/README.md).
+Os resultados atuais estão em [audits/V49/README.md](audits/V49/README.md). A V49 tem 92 casos executados, incluindo os fluxos de recibos, imagem, comunidade, jogos e as novas correções de corpo. São doubles de serviços e geometria, mais JavaScript real com DOM mínimo; não simulam renderização de meshes ou pagamentos reais.
 
 A pesquisa pública não encontrou cinco fotos verificáveis de cada fundo do Catalog Avatar Creator; os cinco ambientes são originais. Não foram usados paths históricos de imagens ausentes como evidência. Nenhum código ou asset do CAC foi incorporado.
 

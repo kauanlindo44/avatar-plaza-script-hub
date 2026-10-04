@@ -1,0 +1,27 @@
+[
+  {
+    "case": "real_room_server_create_join_close_and_arrival",
+    "result": "pass",
+    "detail": "actual 01C server reserves, seats both real character doubles, closes, frees tables and validates arrival"
+  },
+  {
+    "case": "room_cancellation_during_directory_close",
+    "result": "pass",
+    "detail": "host departure during yielding MemoryStore close cannot seat a guest or reopen a closed game"
+  },
+  {
+    "case": "board_room_end_frees_membership_and_cup_whitelist",
+    "result": "pass",
+    "detail": "no removed game, board result releases membership/table, cup accepts only classified players and reconnects after original 10-minute room creation lease"
+  },
+  {
+    "case": "truco_bootstrap_four_seats_private_payload_and_old_room_close",
+    "result": "pass",
+    "detail": "real bootstrap and RPC; four seats, own-hand-only pushes, turn/revision guard, resignation and delayed old cleanup cannot erase a new room"
+  },
+  {
+    "case": "truco_cup_seats_can_arrive_in_any_order_and_reconnect",
+    "result": "pass",
+    "detail": "qualified duplas reserve fixed opposite seats despite reverse arrival order, and returning player retains their seat after disconnect"
+  }
+]
