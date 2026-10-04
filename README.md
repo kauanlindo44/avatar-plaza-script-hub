@@ -1,19 +1,19 @@
-# Avatar Plaza — V47
+# Avatar Plaza — V48
 
-Atualização para Roblox Studio Lite feita sobre a última V46 do GitHub (`bb96f275811b106ff5996e7f4865ff78df4b69cf`). O instalador entrega **32 SUBSTITUIR / 0 CRIAR**, cumulativos desde a V44 completa. Quem já concluiu a V46 precisa substituir somente os **18 scripts** listados em [INSTALL_V47.md](INSTALL_V47.md). O snapshot contém 56 fontes.
+Atualização para Roblox Studio Lite feita sobre a última V47 do GitHub (`308f6706902576cb7a6e2f929cdc265f04866654`). O instalador entrega **36 SUBSTITUIR / 0 CRIAR**, cumulativos desde a V44 completa. Quem já concluiu a V47 substitui somente os **19 scripts** listados em [INSTALL_V48.md](INSTALL_V48.md). O snapshot contém 57 fontes.
 
-Baixe [AVATAR_PLAZA_SCRIPT_HUB_PERMANENTE.html](AVATAR_PLAZA_SCRIPT_HUB_PERMANENTE.html), abra **V47**, pare Play e substitua as instâncias indicadas. A base original e a V44 completa continuam necessárias; não instale V45/V46 separadamente. **09A_SHOP_UI são exatamente quatro partes consecutivas no mesmo ModuleScript**, sem fonte inteira exposta. Os demais têm duas partes. Nenhum passe, Developer Product ou preço novo.
+Baixe [AVATAR_PLAZA_SCRIPT_HUB_PERMANENTE.html](AVATAR_PLAZA_SCRIPT_HUB_PERMANENTE.html), abra **V48**, pare Play e substitua as instâncias indicadas. A base original e a V44 completa continuam necessárias; V48 inclui V45, V46 e V47. **09A_SHOP_UI tem exatamente quatro partes consecutivas no mesmo ModuleScript**, sem fonte inteira exposta. Os demais têm duas partes. Nenhum passe, Developer Product ou preço novo.
 
 ## Mudanças desta versão
 
-- **Jogos:** Xadrez, Damas e Truco no topo em ambas as orientações. Fundo carvão, categorias com ícones e opções compactas abaixo. Criar sala acompanha a categoria selecionada; categorias ficam bloqueadas durante pedidos e espera. Código e Cancelar não se sobrepõem em paisagem curta.
-- **Caixas e cartas:** caixas têm embalagem própria com tampa, lateral, fita, selo e sombra. Frente e verso dos visuais continuam preservando rank/naipe legíveis. O Ateliê deixa mais área da imagem visível, sem apagar a identidade da carta.
-- **Ateliê:** o servidor verifica se o ID corresponde a Image/Decal. Quando a permissão nativa permite carregar o Decal, lê sua textura e destrói o invólucro sem inserir nada no Workspace. Caso contrário, tenta o ID original e thumbnail nativo. Salvar exige metadados válidos e imagem carregada; respostas antigas, timeout e fechar não podem mostrar sucesso. Textura, zoom e recorte persistem. Custom sem imagem leva ao editor em vez de equipar um visual vazio.
-- **Comunidade:** nomes de usuário são opcionais, com cache e limite global conservador; uma falha do UserService não interrompe descrições reais. Os candidatos são limitados por página e até quatro descrições são carregadas simultaneamente. Falha temporária não é armazenada como fim da lista. Até 50 looks no início, Carregar mais manual e janela de 100; os lotes restantes são reaproveitados e os antigos saem em grupos de dez. Até três linhas completas aparecem com altura suficiente, duas em telas curtas. Todos, Robux, Grátis e Publicados permanecem visíveis. Nenhuma skin sintética é adicionada; preço desconhecido continua distinto de gratuito. Erros internos ficam no servidor.
-- **Catálogo:** aproveita a faixa inferior antes reservada pelo Core UI, preservando o recorte físico do dispositivo e os controles nativos no topo. Prévia e cards recebem mais altura; duas linhas do catálogo continuam legíveis. Aplicação de roupas e proporções preserva as partes não editadas.
-- **Photo Mode:** ferramentas laterais, painéis contextuais e controles de luz/pose sem rolagem. Emotes R15 executam no avatar do cenário, com espera pela faixa real do Animator, parar, velocidade e congelar. Cinco ambientes originais — Galeria Aurora, Ilhas Celestes, Costa Dourada, Jardim Sakura e Cidade Prisma — têm camadas, detalhes e movimento limitado. Cenários ficam atrás do avatar nos quatro ângulos e são locais ao jogador. Sair restaura câmera e iluminação.
-
-Regras, moedas, torneios, privacidade, carrinho e dados existentes continuam compatíveis. Decisões de monetização anteriores permanecem.
+- **Jogos:** nova interface preta/verde, categorias Xadrez/Damas/Truco no topo e painel que usa toda a altura disponível. Partida rápida, Criar / entrar e Contra bots têm controles claros, com ilustração lateral nas telas largas. A área restante oferece três orientações visuais curtas sobre o jogo selecionado quando há espaço suficiente.
+- **Truco 2D:** mesa com quatro posições públicas e três cartas privadas legíveis, placar e ações fixas. Pode jogar qualquer carta própria na sua vez. Cliente não cria mão 3D nem muda a câmera. Variantes, bots, gritos, regras e privacidade continuam no servidor.
+- **Cartas e caixas:** nove edições receberam arte própria na frente/verso, mantendo rank e naipe. Caixas têm embalagem distinta. Todos os visuais aparecem antes de pagar, com **100% ao escolher**, sem sorteio. Após a confirmação efetiva do servidor, a escolha aparece recebida imediatamente; cancelar não concede nada. Cartas e resultado mantêm proporção.
+- **Ateliê:** Carregar/Recarregar mostram sucesso verde ou falha vermelha. ID/tipo inválido e timeout são identificados. Na falha genérica, permissão, moderação ou conexão aparecem como possibilidades; não se inventa diagnóstico. Salvar exige metadados válidos e imagem carregada. Zoom/recorte, frente/verso e textura canônica continuam disponíveis.
+- **Catálogo:** botão SUBCATEGORIA fica mais destacado. Corpo mostra pagos primeiro, com CORPOS GRÁTIS separado e MEMES / CRIATURAS. Pacotes nativos também carregam proporções/cores, preservando roupas e acessórios existentes. Prévia 360 e aplicação no personagem suportam geometria incomum.
+- **Limiteds:** substitui a vitrine Lojas UGC. Filtro nativo Collectibles mais confirmação por item excluem itens comuns. Cards horizontais com destaque dourado, busca e Popular / Menor preço dão aparência diferente do catálogo.
+- **Comunidade:** até três colunas e duas linhas maiores. Falhas transitórias recebem uma nova tentativa sem apagar looks carregados; pool e janela limitados mantêm o uso de memória. Itens de um look mostram imagem e nome; toque abre descrição, preço, Experimentar e Carrinho. Prévia e X de remoção/fechamento continuam.
+- **Photo Mode:** painéis contextuais mais destacados e nenhum bloco inferior permanente com nome do fundo. Cinco ambientes originais receberam mais detalhes e movimento limitado: Galeria Aurora, Ilhas Celestes, Costa Dourada, Jardim Sakura e Cidade Prisma.
 
 ## Passes e preços
 
@@ -44,16 +44,14 @@ Os **dez Developer Products estão configurados** em `07K6_CARD_CATALOG.Products
 
 Compras por moedas e os três passes também estão implementados. Moedas são ganhas em partidas PvP validadas; não existe venda direta de moedas. Faça os testes dentro do jogo; os produtos de escolhas limitadas não devem ser habilitados para venda externa.
 
-## Decisão sobre ECA Digital
+## Decisão sobre caixas
 
-Caixas aleatórias estão desativadas para todas as contas. O jogador escolhe um visual permanente conhecido, sem sorteio. `PolicyService` e `AccountAge` não são tratados como prova de maioridade. Não se coletam documento, data de nascimento ou declaração de idade no jogo.
-
-A análise técnica usa a Lei 15.211/2025 e o Decreto 12.880/2026, além de três documentos distintos de monetização da Roblox. Fontes, regras regionais e limites estão em [audits/V44/LEGAL_AND_RULES.md](audits/V44/LEGAL_AND_RULES.md). Essa decisão não é uma certificação de conformidade integral.
+A escolha é conhecida e garantida, sem resultado aleatório. A decisão considera o art. 20 da Lei 15.211/2025 para este jogo acessível a menores. As restrições/verificações nativas da Roblox existem; não se infere idade pela idade da conta nem se coleta documento próprio. Fontes oficiais atuais, três documentos distintos da Roblox e limites estão em [audits/V48/RESEARCH.md](audits/V48/RESEARCH.md). Essa decisão não certifica conformidade integral do jogo.
 
 ## Validação e limites
 
-**68 casos passaram:** 67 em Lua 5.4 com serviços e geometria simulados, mais um no JavaScript real do instalador. Incluem sintaxe das 56 fontes, 72 partidas completas, 400 combinações carta/visual, 50/100 looks, HTTP 429, recuperação e autorização por visitante, tipo/textura de imagem, cancelamento/timeout, cotas, controles e enquadramento em várias telas. Os cinco cenários têm 58–144 partes, com até 20 elementos móveis.
+**77 casos passaram:** 76 em Lua 5.4 com serviços e geometria simulados, mais um no JavaScript real do instalador. Incluem sintaxe das 57 fontes, 72 partidas completas, 400 combinações carta/visual, compras/recibos, cancelamento, 50/100 looks, HTTP 429/503, tipo/textura de imagem, tempo limite, proporções nativas e controles em várias telas. Os cinco cenários têm 72–159 partes, com até 20 elementos móveis. Testes, causas e evidências estão em [audits/V48/README.md](audits/V48/README.md).
 
-As três fotos desta solicitação foram inspecionadas. A base foi comparada às 58 entradas remotas da V46 antes de editar. Causas, fontes oficiais, testes e limites estão em [audits/V47/README.md](audits/V47/README.md).
+A pesquisa pública não encontrou cinco fotos verificáveis de cada fundo do Catalog Avatar Creator; os cinco ambientes são originais. Não foram usados paths históricos de imagens ausentes como evidência. Nenhum código ou asset do CAC foi incorporado.
 
-Ainda é necessário testar no Roblox/Studio Lite/place publicado: renderização, toque físico, emotes reais, imagens aprovadas, compras e latência dos serviços. Os testes não certificam nitidez no aparelho nem disponibilidade de assets. A comunidade consulta perfis sob demanda; não é uma coleção pronta de um milhão de skins nem reconhecimento visual universal de personagens. Nenhuma arte ou código do Catalog Avatar Creator foi copiado.
+Ainda é necessário testar no Roblox/Studio Lite/place publicado: renderização, toque físico, emotes reais, imagens aprovadas, compras e latência. Os testes simulados não certificam nitidez no aparelho nem disponibilidade de assets. A comunidade consulta perfis reais sob demanda; não é uma coleção pronta de um milhão de skins nem reconhecimento visual universal de personagens. Esta atualização publica fontes no GitHub, sem publicar o place ou fazer compras.

@@ -1,0 +1,42 @@
+{
+  "version": "V48",
+  "result": "pass",
+  "base_commit": "308f6706902576cb7a6e2f929cdc265f04866654",
+  "base_tree": "a23c34818f82bf4b23ed3d66c766f4933d1d3743",
+  "base_blobs_verified": 60,
+  "snapshot_sources": 57,
+  "cumulative_replacements": 36,
+  "delta_from_V47": 19,
+  "new_instances": 0,
+  "max_source_lines": 393,
+  "lua_5_4_simulated_cases": 76,
+  "real_installer_javascript_cases": 1,
+  "total_cases": 77,
+  "suites": {
+    "results.json": 13,
+    "integration_results.json": 15,
+    "changes_results.json": 6,
+    "features_results.json": 7,
+    "games_commerce_results.json": 9,
+    "server_flow_results.json": 5,
+    "fixes_results.json": 12,
+    "redesign_results.json": 9
+  },
+  "full_truco_matches": 72,
+  "card_combinations": 400,
+  "roblox_native_qa_performed": false,
+  "real_purchases_performed": false,
+  "place_published": false,
+  "prices_changed": false,
+  "verified_CAC_environment_photos_per_set": 0,
+  "photo_scene_parts": [
+    72,
+    159
+  ],
+  "max_moving_elements": 20,
+  "html_sha256": "70187929641236d6918378efc56eee92116940387e1fd6fc4eecc4aab855c91f",
+  "limits": [
+    "Lua GUI geometry and service doubles do not certify native rendering, moderation, emotes, latency or payments.",
+    "No five verified photos per CAC environment were found; the five procedural scenes are original."
+  ]
+}

@@ -1,0 +1,67 @@
+[
+  {
+    "case": "syntax_studio_lite_limits",
+    "result": "pass",
+    "detail": "57 scripts <=400 lines, no compound assignment"
+  },
+  {
+    "case": "viewport_controls_and_fixed_close_targets",
+    "result": "pass",
+    "detail": "7 screen sizes; full background, safe 48px X targets and no scrolling close buttons"
+  },
+  {
+    "case": "catalog_five_by_two_and_explicit_prices",
+    "result": "pass",
+    "detail": "10 cards fully visible in 5x2 at 768x432, short landscape and desktop; numeric Robux values retained"
+  },
+  {
+    "case": "settings_categories_and_local_world_restoration",
+    "result": "pass",
+    "detail": "colored categories, nested world X, local cosmetics with unchanged collision and exact restoration"
+  },
+  {
+    "case": "hud_plus_native_direct_and_music",
+    "result": "pass",
+    "detail": "Plus opens official prompt without shop dependency or intermediate page; debounce and music work"
+  },
+  {
+    "case": "preview_bounds_angles_drag_and_stale_error",
+    "result": "pass",
+    "detail": "four full-body angles, drag/resize retention, stale-model disposal and safe string errors"
+  },
+  {
+    "case": "discovery_real_profiles_bounds_authorization_cache",
+    "result": "pass",
+    "detail": "32 bounded candidates per page, real descriptions verified at load, metadata cache, validated IDs and cleanup"
+  },
+  {
+    "case": "cosplay_names_require_matching_live_clothes",
+    "result": "pass",
+    "detail": "fresh item-name consultation; no title guesses from a single item, generic Naruto label or mixed characters"
+  },
+  {
+    "case": "community_detail_opaque_rotation_items_close_and_save",
+    "result": "pass",
+    "detail": "full opaque detail, all four sides, R6/R15, item X, save and stale-close protection"
+  },
+  {
+    "case": "saved_preview_larger_compact_cards_and_restore",
+    "result": "pass",
+    "detail": "selected preview >550px at desktop and >250px in short landscape, smaller cards and working restore/X"
+  },
+  {
+    "case": "photo_sets_clear_360_animation_and_restore",
+    "result": "pass",
+    "detail": "five actual local sets, animation/pause, scenery stays behind all angles, restored camera and lighting"
+  },
+  {
+    "case": "pose_canvas_drag_confirm_cancel_no_scroll",
+    "result": "pass",
+    "detail": "direct touchscreen mannequin, no pose scrolling, all actions visible, confirm/cancel and bounded movement"
+  },
+  {
+    "case": "chess_bot_tactics_search_depth_and_cancellation",
+    "result": "pass",
+    "detail": "medium/hard avoid a defended capture; hard searches deeper; live state immutable and cancelled search cannot move"
+  }
+]

@@ -1,0 +1,47 @@
+[
+  {
+    "case": "truco_real_rank_profiles_and_private_cards",
+    "result": "pass",
+    "detail": "40 unique cards; three real profiles, legal raises, team decisions, special hands and sanitized public covered cards"
+  },
+  {
+    "case": "truco_manual_audit_proof_and_goiano_ties",
+    "result": "pass",
+    "detail": "legal top/bottom, first-origin lock, proof before penalty, no false accusation points, Goiano tied seats only and no-point redeal"
+  },
+  {
+    "case": "truco_bot_complete_games_all_variants_levels",
+    "result": "pass",
+    "detail": "72 complete matches; levels make distinct decisions, only own/public cards, no invalid turns or infinite raises"
+  },
+  {
+    "case": "goiano_total_dealing_deadline",
+    "result": "pass",
+    "detail": "Goiano distribution shares a total 10-second deadline; normal decisions retain 30 seconds"
+  },
+  {
+    "case": "inventory_atomic_choice_duplicates_failure_and_receipts",
+    "result": "pass",
+    "detail": "atomic persistent choices, no duplicate consumption, cap on unnecessary boxes, fail-closed coins, bounded custom editor and receipt retry grants once"
+  },
+  {
+    "case": "commerce_native_price_policy_fail_closed_and_callback",
+    "result": "pass",
+    "detail": "configured products, native 1 Robux purchase metadata, no server display-price fallback, missing IDs disabled, covered choices prevent redundant prompts, verified passes, random blocked and write-only receipt registration"
+  },
+  {
+    "case": "configured_ten_product_receipts_correct_recipient_and_excluded_ether",
+    "result": "pass",
+    "detail": "10 screenshot IDs, correct prompts/benefits/recipient, persistent retry idempotence, duplicate offers refused, excluded Ether cannot grant Vaelis and renamed saved keys remain valid"
+  },
+  {
+    "case": "progress_reward_and_weekly_rank_deduplication",
+    "result": "pass",
+    "detail": "validated PvP only; one reward/rank per match, team ranking, no bots or irregular results, bounded repeat-opponent coins"
+  },
+  {
+    "case": "tournaments_consent_checkin_ten_seeds_and_rematches",
+    "result": "pass",
+    "detail": "top 10 + reserves, opt-in deadlines, bounded check-in, accepted online replacement, six byes, authorization, active match not expired and draw rematch"
+  }
+]
