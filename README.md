@@ -1,38 +1,30 @@
-# Avatar Plaza — V45
+# Avatar Plaza — V46
 
-Correções para a V44 instalada no Roblox Studio Lite: comunidade de jogadores, câmera/mão do Truco, arte completa das cartas, Ateliê e seleção dos jogos. A base do handoff e a instalação V44 continuam necessárias.
+Atualização para Roblox Studio Lite, feita sobre a última V45 publicada no GitHub. O instalador entrega **30 SUBSTITUIR / 0 CRIAR**, cumulativas desde a V44 completa. Não é necessário instalar a V45 antes. O snapshot auditável contém 56 fontes, incluindo o `08B_AVATAR_DATA` original atualizado; o pacote de substituições contém apenas 30.
 
-Abra [AVATAR_PLAZA_SCRIPT_HUB_PERMANENTE.html](AVATAR_PLAZA_SCRIPT_HUB_PERMANENTE.html) e selecione **V45**. São **14 SUBSTITUIR / 0 CRIAR**, até 280 linhas por script alterado. Se ainda estiver instalando a V44, conclua os 55 scripts primeiro. As duas versões estão no HTML offline, e versões publicadas são consultadas no GitHub.
+Abra [AVATAR_PLAZA_SCRIPT_HUB_PERMANENTE.html](AVATAR_PLAZA_SCRIPT_HUB_PERMANENTE.html), selecione **V46**, pare Play e substitua as instâncias indicadas. Se ainda estiver instalando a V44, termine os seus 55 itens primeiro. A base original do handoff e suas dependências continuam necessárias. [INSTALL_V46.md](INSTALL_V46.md) lista nomes, tipos, locais e partes. **09A_SHOP_UI são exatamente quatro partes no mesmo ModuleScript**, sem fonte inteira exposta.
 
-`09A_SHOP_UI` continua dividido em exatamente quatro partes no mesmo ModuleScript. Tipos, locais e nomes estão em [INSTALL_V45.md](INSTALL_V45.md); os avisos (SUBSTITUIR) não fazem parte do nome no Roblox.
+## Mudanças
 
-## O que mudou na V45
+- Truco reserva espaço para a mesa e enquadra as cartas nos quatro lugares, inclusive em paisagem estreita. Três cartas completas ficam acima dos botões individuais, com placar no topo e ações abaixo. A câmera gira por arraste e possui Centralizar. Um toque joga somente ao soltar, evitando jogar ao arrastar. Qualquer carta própria é permitida; o servidor mantém a validação de turno e revisão.
+- Bots esperam 2,8 segundos entre decisões nas partidas contra bots; vazas completas permanecem 3,2 segundos. Entre mãos há pausa. O rótulo é Contra bots. TRUCO, SEIS, NOVE, DEZ e DOZE seguem os valores de cada perfil; Aceitar/Correr são decisões reais. Não há novos valores ou regras inventadas.
+- Jogos têm categorias e ações explícitas. A loja de baralhos abre em Loja; Meus visuais e Minhas caixas explicam onde equipar/abrir. Páginas fixas mantêm ações e prévias visíveis sem rolagem vertical. Os visuais ganharam coroas, constelações, vitrais, gravações e figuras, preservando rank/naipe legíveis. Frente e verso recebem o visual.
+- Ateliê tem **Carregar/Recarregar**, pré-carregamento nativo, tentativa alternativa de thumbnail e falha com nova tentativa. Ajustar zoom/recorte não destrói e recarrega a imagem. Imagens não carregadas não podem ser salvas como sucesso. O passe existente e a validação Image/Decal são mantidos.
+- Catálogo mantém **5 colunas × 2 linhas em paisagem**, com miniaturas maiores. Toque abre um painel compacto de Comprar/Experimentar, mantendo a prévia visível. Roupas, remoção por X e proporções aplicam automaticamente no personagem, com debounce e preservação das partes não editadas. O botão Aplicar continua disponível. Corpo passa a buscar pacotes reais BodyParts/DynamicHeadAvatar e inclui gratuitos.
+- Comunidade consulta avatares atuais de jogadores reais, sem criar skins sintéticas. Até 50 looks no lote inicial, **Carregar mais** manual, janela máxima de 100 com descarte em grupos de dez e 50 cards de UI reciclados. APIs de amigos e metadados em lote ajudam a encontrar perfis; no máximo quatro descrições são carregadas simultaneamente. Todos, Robux, Grátis e Publicados têm busca/retry. Preço desconhecido não é gratuito. Nomes de estilo são inferências conservadoras dos itens; cosplay exige evidência consistente nas duas roupas.
+- Photo Mode permite selecionar e arrastar uma parte no avatar do cenário ou no manequim 2D. Alças coloridas, mover/girar, desfazer/refazer, Aplicar/Cancelar ficam disponíveis sem rolagem. Animações usam o rig real do cenário com PlayEmoteAsync em R15; é possível parar, mudar velocidade e congelar como pose. Cinco fundos receberam melhorias visuais e o ambiente tem luz/exposição ajustáveis. O fundo do título ao lado do X foi retirado.
 
-- Comunidade usa a descrição atual de jogadores reais, com itens conferidos. Sem composições sintéticas de catálogo; conta Roblox e looks repetidos são excluídos. Abas Jogadores (pagos), Grátis, Publicados e Em alta; duas linhas inteiras em telas verificadas. Valores desconhecidos nunca são classificados como gratuitos. Partes de corpo em pacotes gratuitos também são consultadas.
-- Referências reconhecidas passaram de seis para dezesseis. O nome do cosplay só aparece quando as duas roupas têm uma referência compatível; isso não garante que perfis encontrados contenham todos esses personagens.
-- Câmera do Truco olha para fora do rosto. Corpo/acessórios originais ficam ocultos somente no cliente, controles móveis não cobrem cartas e os valores anteriores são restaurados na saída. Três cartas 3D privadas, em leque junto de cópias das mãos, aceitam toque, mouse ou teclas 1/2/3.
-- Visuais alteram frente, verso, gravação, cores e acabamento da carta. Índices e naipe usam áreas com contraste protegido. Imagem do Ateliê aparece nos dois lados; cartas cobertas/ocultas continuam sem revelar identidade.
-- Inventário e loja usam páginas laterais, com até seis escolhas em paisagem ou quatro em retrato. Compras, equipar, virar e abrir caixas ficam fixos e não exigem rolagem vertical.
-- Ateliê aceita ID ou link de imagem/decal, verifica carregamento, mantém prévia/zoom/arraste e salva já equipando. Imagem que não carrega não recebe confirmação de sucesso. Preços indisponíveis desativam compras sem atribuir valores vazios a propriedades booleanas da Roblox.
-- Jogos usam cartões de categoria, cores de seleção e ações fixas de partida rápida, amigos ou treino. Catálogo mantém cinco colunas e duas linhas em paisagem com menos margem e mais imagem nos cards.
-
-Sistemas de regras, torneios, bots, moedas, privacidade, carrinho e Photo Mode da V44 continuam presentes. Os IDs de monetização e preços do painel Roblox não foram alterados.
+Regras, moedas, privacidade, carrinho, torneios e dados persistidos permanecem. A atualização não modifica preços no painel Roblox, não compra produtos e não adiciona IDs.
 
 ## Passes e preços
 
 Os preços de teste informados pelo criador são **1 Robux** para passes e produtos. A interface consulta preços regionais/personalizados no cliente e bloqueia a compra se os metadados não estiverem disponíveis. Scripts não alteram o painel de preços.
 
-| ID de Game Pass | Benefício permanente | Sugestão após os testes |
-|---|---|---:|
-| 1951234105 | Ateliê: imagem no baralho, zoom e ajuste | 249 Robux |
-| 1962433436 | Regent | 35 Robux |
-| 1966813498 | Zenith | 65 Robux |
-
-| Coleção | Conteúdo conhecido | Moedas por escolha ou visual direto | Sugestão por escolha ou visual direto |
-|---|---|---:|---:|
-| Nox | Onyx, Veyra, Nyxar | 500 | 15 Robux |
-| Reign | Regent, Aurum, Valor | 1.200 | 35 Robux |
-| Eclipse | Zenith, Vaelis, Nova | 2.500 | 65 Robux |
+| ID de Game Pass | Benefício permanente |
+|---|---|
+| 1951234105 | Ateliê: imagem no baralho, zoom e ajuste |
+| 1962433436 | Regent |
+| 1966813498 | Zenith |
 
 Os **dez Developer Products estão configurados** em `07K6_CARD_CATALOG.Products`:
 
@@ -61,8 +53,8 @@ A análise técnica usa a Lei 15.211/2025 e o Decreto 12.880/2026, além de trê
 
 ## Validação e limites
 
-**50 casos passaram**: 49 de lógica/sintaxe em Lua 5.4 com serviços simulados e um do JavaScript real do instalador. Incluem 72 partidas completas de bots, 400 combinações carta/visual, toque/raycast, restauração da câmera, geometrias móveis, imagem indisponível, pacotes gratuitos, compras, avatar e recuperação de salas/torneios.
+**56 casos passaram**: 55 em Lua 5.4 com serviços simulados e um no JavaScript real do instalador. Incluem sintaxe das 56 fontes, 72 partidas de bots, 400 combinações carta/visual, projeção das cartas em cinco telas e quatro lugares, câmera/toque, aplicação do avatar, 50/100 looks, concorrência limitada, preços, persistência, pose, animação e fechar durante chamadas pendentes.
 
-Ainda é necessário conferir no Roblox/Studio Lite a renderização 3D, o toque físico, compras, serviços publicados e limites de API. As fotos anunciadas nesta solicitação ainda não foram recebidas. A comunidade pesquisa perfis reais sob demanda; não é uma coleção pronta de um milhão de skins. Nome de personagem é inferido dos títulos das roupas e não de reconhecimento visual universal. IDs/nomes/preços de compra permanecem conforme a V44.
+A foto enviada foi inspecionada. Para poses foram analisados dez quadros de um vídeo público demonstrando o editor do Catalog Avatar Creator, publicado em um tópico de 2023; **não são dez fotos distintas da versão atual**. Nenhuma arte ou código desse jogo foi copiado. As referências e causas estão em [audits/V46/README.md](audits/V46/README.md).
 
-Resultados, fontes e roteiro de QA: [audits/V45/README.md](audits/V45/README.md). A decisão de monetização segue documentada na [auditoria V44](audits/V44/LEGAL_AND_RULES.md).
+Ainda exige teste no Roblox/Studio Lite: renderização, toque físico, imagens aprovadas, compra real, limite de serviços e latência. Os testes geométricos não certificam nitidez dos pixels no dispositivo. A comunidade não é uma coleção pronta de um milhão de skins, nem reconhece visualmente todo personagem; thumbnails podem manter cache próprio da Roblox. A decisão de monetização continua documentada em [audits/V44/LEGAL_AND_RULES.md](audits/V44/LEGAL_AND_RULES.md).

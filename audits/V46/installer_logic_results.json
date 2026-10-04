@@ -1,0 +1,17 @@
+{
+  "result": "pass",
+  "runtime": "Node.js + minimal DOM doubles; no CSS rendering",
+  "checks": [
+    "Offline V46",
+    "Current fallback version label",
+    "Old-cache rejection",
+    "30 patch source hashes and offline V44 base",
+    "Exact part reconstruction",
+    "0 creations and 30 replacements",
+    "New/replace labels with canonical instance names",
+    "Clipboard/manual selection",
+    "Tampered-source fallback",
+    "Closing during load",
+    "No JavaScript exceptions"
+  ]
+}
