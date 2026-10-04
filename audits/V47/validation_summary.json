@@ -1,0 +1,20 @@
+{
+  "release": "V47",
+  "base_commit": "bb96f275811b106ff5996e7f4865ff78df4b69cf",
+  "snapshot_sources": 56,
+  "replacements": 32,
+  "new_instances": 0,
+  "changed_from_V46": 18,
+  "tests": {
+    "games_commerce_results.json": 9,
+    "server_flow_results.json": 5,
+    "features_results.json": 7,
+    "changes_results.json": 6,
+    "installer_logic_results.json": 1,
+    "integration_results.json": 15,
+    "fixes_results.json": 12,
+    "results.json": 13
+  },
+  "total_cases": 68,
+  "native_Roblox_QA": false
+}

@@ -1,0 +1,32 @@
+[
+  {
+    "case": "card_face_artwork_readable_suits_all_styles_and_custom_both_sides",
+    "result": "pass",
+    "detail": "400 style/card combinations retain rank and suit with high contrast; full material visible on fronts; custom artwork visible on both sides; covered/iron cards reveal no identity"
+  },
+  {
+    "case": "inventory_all_pages_no_scroll_fixed_controls_and_owned_atelier",
+    "result": "pass",
+    "detail": "all 12 shop entries and 11 owned visuals reachable via fixed pages; six slots landscape/four portrait; no vertical scrolling; buy/flip/X and entire Atelier visible without overlap at five sizes including notches"
+  },
+  {
+    "case": "atelier_loading_failure_draft_preservation_and_boolean_controls",
+    "result": "pass",
+    "detail": "unavailable/unmoderated image cannot appear saved; loaded event enables saving; edits preserved; nil enable value converts to native boolean safely"
+  },
+  {
+    "case": "community_three_rows_when_space_allows_paid_free_tabs_and_thumbnails",
+    "result": "pass",
+    "detail": "three complete rows with enough height, two on short screens; native player thumbnails stay >=45px; paid/free tabs call validated budgets; no synthetic Roblox character tab"
+  },
+  {
+    "case": "community_free_body_bundle_and_unknown_price_retry",
+    "result": "pass",
+    "detail": "off-sale body asset may be obtained in a verified free native bundle; bundle priced once and cached; unknown items still cannot be classified free"
+  },
+  {
+    "case": "truco_first_person_private_world_hand_touch_and_restore",
+    "result": "pass",
+    "detail": "first-person camera looks outward; original face/accessories hidden only locally; three private 3D cards and avatar hands; touch ray selects correct owned card; opponent turn ignored; camera/transparency/models restored on exit"
+  }
+]

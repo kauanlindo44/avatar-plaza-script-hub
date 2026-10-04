@@ -1,0 +1,62 @@
+[
+  {
+    "case": "username_outage_still_loads_fifty_actual_player_outfits",
+    "result": "pass",
+    "detail": "HTTP 429 on optional usernames does not block fifty distinct native outfits; failed name service is queried once; no invented author or visible stack trace"
+  },
+  {
+    "case": "name_budget_global_across_visitors_and_recovers_next_minute",
+    "result": "pass",
+    "detail": "at most 180 IDs per minute shared across visitors, batches <=32 and name lookups resume after sixty seconds"
+  },
+  {
+    "case": "description_service_failure_retry_is_not_cached_and_not_end_of_list",
+    "result": "pass",
+    "detail": "outage yields a retry rather than a false final page; recovery works immediately after the normal throttle; each visitor retains authorized native profiles"
+  },
+  {
+    "case": "community_rpc_internal_source_paths_and_http_trace_are_hidden",
+    "result": "pass",
+    "detail": "raw nested Script:line and HTTP errors remain on server logs; remote payload provides a short retry message"
+  },
+  {
+    "case": "manual_feed_pending_tail_survives_last_page_and_stops_fetching",
+    "result": "pass",
+    "detail": "all 72 looks from three pages remain reachable; cached tails add ten then two; reaching the end disables requests without discarding pending looks"
+  },
+  {
+    "case": "atelier_validates_type_texture_cancel_timeout_and_latest_request",
+    "result": "pass",
+    "detail": "latest request wins; native decal texture is shown and saved on both faces; wrong type, unavailable ID and twelve-second metadata timeout never claim readiness; closing cancels late artwork"
+  },
+  {
+    "case": "server_image_type_and_canonical_decal_texture_never_trust_client",
+    "result": "pass",
+    "detail": "server rejects non-images and missing assets; pass gates saved custom visuals; decal wrapper destroyed and never inserted; forged texture ignored; canonical texture/crop persist and expired metadata can refresh"
+  },
+  {
+    "case": "top_game_categories_compact_room_actions_and_waiting_lock",
+    "result": "pass",
+    "detail": "three categories share a top row in both orientations; compact create/join actions remain within the panel; matching room label and Truco-only inventory; category cannot change during a pending request or room"
+  },
+  {
+    "case": "catalog_reclaims_core_bottom_gap_preserves_device_safe_area",
+    "result": "pass",
+    "detail": "100px core inset no longer reserves an empty bottom band; real 22px hardware inset is retained; card grid/footer grow while native top and notch controls remain safe"
+  },
+  {
+    "case": "photo_sidebar_all_tools_emotes_camera_and_light_controls_fit",
+    "result": "pass",
+    "detail": "six lateral tools plus hide/restore; emote and camera controls remain >=44px; all environment +/- controls fit without scrolling; popup X remains separate and a scene area survives on five viewports"
+  },
+  {
+    "case": "photo_delayed_native_emote_track_stop_and_failed_playback",
+    "result": "pass",
+    "detail": "native track may arrive after PlayEmoteAsync returns; actual track receives loop/speed; natural stop restores manual pose; Stop during a native call cancels its late track; failed emote never claims playback"
+  },
+  {
+    "case": "detailed_live_sets_bounded_motion_and_clear_full_rotation",
+    "result": "pass",
+    "detail": "five distinct detailed procedural sets; 58–144 parts, <=20 moving elements; all scenery corners behind avatar at four angles; pause and scene cleanup work"
+  }
+]
