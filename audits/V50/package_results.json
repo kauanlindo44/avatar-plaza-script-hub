@@ -1,0 +1,11 @@
+{
+  "version": "V50",
+  "result": "pass",
+  "scripts": 11,
+  "replace": 8,
+  "create": 3,
+  "max_lines": 367,
+  "unchanged_code": true,
+  "syntax": "all 11 pass under Lua 5.4",
+  "historical_versions": 19
+}

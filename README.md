@@ -1,8 +1,8 @@
-# Avatar Plaza — V49
+# Avatar Plaza — V50
 
-Atualização baseada na V48 mais recente do GitHub (`0f66b71e205282905a5b778e2545a9eeb8f7e980`). **Quem terminou a V48 instala 11 itens: 3 NOVOS e 8 substituições.** O pacote cumulativo desde a V44 completa tem 41 itens: 3 NOVOS e 38 substituições. Snapshot de 61 fontes.
+Pacote reduzido baseado na V49 mais recente do GitHub (`43a2e678427e3d5e03540ba3589b106a4437f6b9`). **A aba V50 contém somente 11 itens: 8 substituições e 3 NOVOS**, para quem terminou a V48. São os mesmos códigos da V49. Se algum desses itens já recebeu o código da V49, não precisa substituir novamente; quem terminou os 11 não tem código adicional para instalar. O pacote cumulativo V49 continua no histórico para instalações anteriores.
 
-Baixe [AVATAR_PLAZA_SCRIPT_HUB_PERMANENTE.html](AVATAR_PLAZA_SCRIPT_HUB_PERMANENTE.html), abra **V49** e siga [INSTALL_V49.md](INSTALL_V49.md). Pare Play e crie primeiro os três novos. Preserve nomes, tipos e locais das instâncias. 09A_SHOP_UI tem quatro partes consecutivas no mesmo ModuleScript; os demais têm duas. O HTML contém V44/V49 offline e mantém o histórico online. Nenhum passe, Developer Product ou preço adicional.
+Baixe [AVATAR_PLAZA_SCRIPT_HUB_PERMANENTE.html](AVATAR_PLAZA_SCRIPT_HUB_PERMANENTE.html), abra **V50** e siga [INSTALL_V50.md](INSTALL_V50.md). Pare Play e crie primeiro os três novos, somente se ainda não existem. Preserve nomes, tipos e locais das instâncias. 09A_SHOP_UI tem quatro partes consecutivas no mesmo ModuleScript; os demais têm duas. O HTML contém V44/V50 offline e mantém o histórico online. Nenhum passe, Developer Product ou preço adicional. A conferência da entrega está em [audits/V50/README.md](audits/V50/README.md).
 
 ## Correções de corpo
 

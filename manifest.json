@@ -1,8 +1,8 @@
 {
   "schema": 2,
   "project": "Avatar Plaza Script Hub",
-  "latest": "V49",
-  "updated_at": "2026-10-04T23:04:27+00:00",
+  "latest": "V50",
+  "updated_at": "2026-10-04T23:48:03+00:00",
   "poll_seconds": 5,
   "versions": [
     {
@@ -3746,6 +3746,137 @@
           "lines": 367,
           "sha256": "34b9f410a2630490debd7c0d9604a0790cf1ee80a093d6b80d61fff9e28b8446",
           "path": "scripts/V49/09C_SHOP_CLIENT.lua",
+          "parts": 2,
+          "hide_full": false
+        }
+      ]
+    },
+    {
+      "id": "V50",
+      "title": "8 SUBSTITUIÇÕES + 3 NOVOS — CORPOS E CATÁLOGO",
+      "date": "2026-10-04",
+      "summary": "Pacote reduzido para quem terminou a V48: apenas as 8 substituições e os 3 scripts novos da correção de corpos e do catálogo. O código é o mesmo da V49. Se já aplicou os 11 itens da V49, esta versão não exige outra instalação.",
+      "install_note": "Para quem terminou a V48: são somente 11 itens, 8 substituições e 3 NOVOS. Pare Play. Crie primeiro os três novos nos locais indicados, somente se ainda não existem. Depois substitua o código dos oito existentes, sem duplicar instâncias. Se algum destes itens já recebeu o código da V49, pule esse item: a fonte da V50 é idêntica. 09A_SHOP_UI tem 4 partes consecutivas no MESMO ModuleScript; os demais têm 2 partes. Use apenas o nome do script no Studio, sem (NOVO) ou (SUBSTITUIR). Consulte INSTALL_V50.md.",
+      "validation": "11 fontes idênticas à V49, todas com até 400 linhas. Conferência de quantidade, tipos, locais, hashes, cópia e reconstrução das partes no instalador. A V50 reorganiza a entrega; a validação do jogo permanece a da V49, com testes simulados e confirmação visual pendente no Roblox real.",
+      "scripts": [
+        {
+          "name": "08B1_BODY_PACKAGES",
+          "type": "ModuleScript",
+          "location": "ReplicatedStorage",
+          "action": "CRIAR",
+          "path": "scripts/V50/08B1_BODY_PACKAGES.lua",
+          "lines": 47,
+          "sha256": "23bc68a801f83031a937624068d10f9069ca727ed80d450fbd17565bf7cb7340",
+          "parts": 2,
+          "hide_full": false
+        },
+        {
+          "name": "09B5_AVATAR_RUNTIME",
+          "type": "ModuleScript",
+          "location": "ServerScriptService",
+          "action": "CRIAR",
+          "path": "scripts/V50/09B5_AVATAR_RUNTIME.lua",
+          "lines": 157,
+          "sha256": "61669c6a3b87d2b4bab08646c990ce6260f609f77b81819b2480c71962b5b593",
+          "parts": 2,
+          "hide_full": false
+        },
+        {
+          "name": "09C11_AVATAR_CHARACTER",
+          "type": "LocalScript",
+          "location": "StarterPlayer > StarterPlayerScripts",
+          "action": "CRIAR",
+          "path": "scripts/V50/09C11_AVATAR_CHARACTER.lua",
+          "lines": 54,
+          "sha256": "28508e7de1ce5c18379a3f276f5967b1c843d38d9f8588cc11c9c0e0ac2ff020",
+          "parts": 2,
+          "hide_full": false
+        },
+        {
+          "name": "08B_AVATAR_DATA",
+          "type": "ModuleScript",
+          "location": "ReplicatedStorage",
+          "action": "SUBSTITUIR",
+          "lines": 345,
+          "sha256": "86490b5bf678cd87dfe16d6266706574d9480399b29ceada7bdbda3d8fcc8f0a",
+          "path": "scripts/V50/08B_AVATAR_DATA.lua",
+          "parts": 2,
+          "hide_full": false
+        },
+        {
+          "name": "08D_SKIN_STATE",
+          "type": "ModuleScript",
+          "location": "ReplicatedStorage",
+          "action": "SUBSTITUIR",
+          "lines": 131,
+          "sha256": "9484f95cd9273e3d41114db42640a78cbb57f332fb5d64b4d317445376fb467a",
+          "path": "scripts/V50/08D_SKIN_STATE.lua",
+          "parts": 2,
+          "hide_full": false
+        },
+        {
+          "name": "09A_SHOP_UI",
+          "type": "ModuleScript",
+          "location": "ReplicatedStorage",
+          "action": "SUBSTITUIR",
+          "lines": 280,
+          "sha256": "eb7257441dd9aec44ae013855ee6acb0ed130d52aee6e485d94cbc60b9b114d5",
+          "path": "scripts/V50/09A_SHOP_UI.lua",
+          "parts": 4,
+          "hide_full": true
+        },
+        {
+          "name": "09A1_SHOP_LAYOUT",
+          "type": "ModuleScript",
+          "location": "ReplicatedStorage",
+          "action": "SUBSTITUIR",
+          "lines": 134,
+          "sha256": "87d9479de4f9e6e489434ebf8efc168a388a676abf24992464927231fb931f7e",
+          "path": "scripts/V50/09A1_SHOP_LAYOUT.lua",
+          "parts": 2,
+          "hide_full": false
+        },
+        {
+          "name": "09B_SHOP_SERVER",
+          "type": "Script",
+          "location": "ServerScriptService",
+          "action": "SUBSTITUIR",
+          "lines": 203,
+          "sha256": "d90f44562586cdfeb419d2e79bf447aec7eca730a5fdc242ac143f04ab61e620",
+          "path": "scripts/V50/09B_SHOP_SERVER.lua",
+          "parts": 2,
+          "hide_full": false
+        },
+        {
+          "name": "09C_SHOP_CLIENT",
+          "type": "LocalScript",
+          "location": "StarterPlayer > StarterPlayerScripts",
+          "action": "SUBSTITUIR",
+          "lines": 367,
+          "sha256": "34b9f410a2630490debd7c0d9604a0790cf1ee80a093d6b80d61fff9e28b8446",
+          "path": "scripts/V50/09C_SHOP_CLIENT.lua",
+          "parts": 2,
+          "hide_full": false
+        },
+        {
+          "name": "09C2_SHOP_CATALOG",
+          "type": "ModuleScript",
+          "location": "ReplicatedStorage",
+          "action": "SUBSTITUIR",
+          "lines": 248,
+          "sha256": "35901a6f9d22d866082141c53b638a9e3e32a83a31d9c51921b02a5243fec772",
+          "path": "scripts/V50/09C2_SHOP_CATALOG.lua",
+          "parts": 2,
+          "hide_full": false
+        },
+        {
+          "name": "09C4_OUTFIT_LIBRARY",
+          "type": "ModuleScript",
+          "location": "ReplicatedStorage",
+          "action": "SUBSTITUIR",
+          "lines": 167,
+          "sha256": "0d98abd8619ffb6a5cbb9e635009d000fa7bbe251ffe003f0881eba3ceddec80",
+          "path": "scripts/V50/09C4_OUTFIT_LIBRARY.lua",
           "parts": 2,
           "hide_full": false
         }
