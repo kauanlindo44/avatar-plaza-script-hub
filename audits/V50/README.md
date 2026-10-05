@@ -8,6 +8,10 @@ Os três novos são `08B1_BODY_PACKAGES`, `09B5_AVATAR_RUNTIME` e `09C11_AVATAR_
 
 O instalador conserva os tipos/locais, rótulos (NOVO)/(SUBSTITUIR), SHA-256 e a cópia em partes. 09A_SHOP_UI continua com quatro partes no mesmo ModuleScript; os demais têm duas. O HTML inclui V50 e a base V44 sem conexão. A aba V50 contém apenas os 11 itens.
 
+Correção do indicador: sincronização online aplica a classe CSS verde `online`; modo local/cache aplica `offline`. Antes, o texto mudava sem atualizar a classe, mantendo a cor cinza. `AVATAR_PLAZA_V50.html` é uma cópia do instalador atual com nome explícito. A lógica dos 11 scripts Roblox não mudou.
+
+Cartões compactos: nome e ação, tipo, local no Studio, última linha e botão de copiar. O código inteiro fica oculto. Os demais scripts oferecem a divisão em partes numa seção recolhida; 09A_SHOP_UI mostra seus quatro botões com a última linha de cada parte. Somente se as duas tentativas de cópia automática falharem, o código correspondente é aberto e selecionado para permitir cópia manual.
+
 Reproduzir o pacote:
 
 ```bash

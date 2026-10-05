@@ -72,7 +72,7 @@ def build():
     manifest['versions'] = [v for v in manifest['versions'] if v['id'] != 'V50'] + [version]
     manifest_path.write_text(json.dumps(manifest, ensure_ascii=False, indent=2) + '\n')
     sources = {s['path']: (ROOT / s['path']).read_text() for v in [base, version] for s in v['scripts']}
-    runtime = (ROOT / 'audits/V49/installer_runtime.js').read_text()
+    runtime = (ROOT / 'audits/V50/installer_runtime.js').read_text()
     constants = (
         'const REPO_OWNER="kauanlindo44",REPO_NAME="avatar-plaza-script-hub",BRANCH="main";\n'
         'const RAW=`https://raw.githubusercontent.com/${REPO_OWNER}/${REPO_NAME}/${BRANCH}`;\n'
@@ -82,7 +82,13 @@ def build():
     html_path = ROOT / 'AVATAR_PLAZA_SCRIPT_HUB_PERMANENTE.html'
     html = re.sub(r'<script>[\s\S]*?</script>', lambda _: '<script>\n' + constants + runtime + '\n</script>', html_path.read_text())
     html = re.sub(r'inclui a V\d+(?:\.\d+)?(?: e a instalação V44)?', 'inclui a V50 e a instalação V44', html)
+    if '/* COMPACT_INSTALLER */' not in html:
+        html = html.replace('</style>', '''/* COMPACT_INSTALLER */
+.scriptplace{display:flex;gap:12px;flex-wrap:wrap;margin:10px 0}.scriptplace>span{background:#122437;border:1px solid #315371;border-radius:9px;padding:8px 11px}.scriptplace small{display:block;color:#94b3cc;font-size:10px;font-weight:800;letter-spacing:.7px}.scriptplace b{display:block;font-size:14px;color:#edf8ff}.copyblock{margin-top:10px}.lastline{background:#081320;border:1px solid #24415b;border-radius:8px;padding:8px 10px;margin-bottom:8px}.lastline span{display:block;font-size:10px;font-weight:800;color:#85a7bd;letter-spacing:.7px}.lastline code{display:block;margin-top:3px;font:12px/1.5 Consolas,monospace;color:#c9efff;white-space:pre-wrap;overflow-wrap:anywhere}.copyblock>.btn{min-height:44px;min-width:180px}.partsgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.partblock{background:#101c2a;border:1px solid #28435d;border-radius:10px;padding:10px;min-width:0}.partblock>b{font-size:12px;color:#e2e9ff}.optionalparts{margin-top:12px}.optionalparts summary{font-size:12px;color:#98b8ce}.partnote{color:#b8ccd9;font-size:12px}textarea[hidden]{display:none}.status.online{font-weight:800}
+@media(max-width:620px){.partsgrid{grid-template-columns:1fr}.copyblock>.btn{width:100%}.scriptplace{gap:7px}.scriptplace>span{max-width:100%;overflow-wrap:anywhere}}
+</style>''')
     html_path.write_text(html)
+    (ROOT / 'AVATAR_PLAZA_V50.html').write_text(html)
     install = '# Instalação V50 — somente 11 itens\n\n'
     install += 'Requer a **V48 completa já instalada**. São **8 substituições + 3 scripts NOVOS**. A V50 contém exatamente o mesmo código destes 11 itens da V49; apenas retira da aba os outros 30 itens cumulativos.\n\n'
     install += '**Se já colocou o código da V49 em algum destes itens, pule esse item.** Se terminou todos os 11 da V49, não há código adicional para instalar.\n\n'

@@ -9,7 +9,12 @@
     "Exact part reconstruction",
     "3 creations and 8 replacements",
     "New/replace labels with canonical instance names",
-    "Clipboard/manual selection",
+    "Compact name/type/location and last-line cards",
+    "All full/part source fields initially hidden",
+    "Exact whole-script and four-part clipboard output",
+    "Blocked clipboard reveals and selects only the requested source",
+    "Online status uses the green CSS class",
+    "Offline status clears the online CSS class",
     "Tampered-source fallback",
     "Closing during load",
     "No JavaScript exceptions"

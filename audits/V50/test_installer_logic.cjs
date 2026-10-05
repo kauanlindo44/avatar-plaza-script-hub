@@ -12,6 +12,7 @@ class Element {
     for (const match of markup.matchAll(/<(button|textarea|details|div)\b([^>]*)>/g)) {
       const el = new Element(match[1]);
       el.classes = (match[2].match(/class="([^"]*)"/)?.[1] || '').split(' ');
+      el.hidden = /\bhidden\b/.test(match[2]);
       const id = match[2].match(/id="([^"]*)"/)?.[1]; if (id) ids.set(id, el);
       this.appendChild(el);
     }
@@ -46,6 +47,7 @@ const evaluate = code => vm.runInContext(code, sandbox);
   storage.set('ap_manifest_cache', JSON.stringify({ latest: 'V36A', updated_at: '2026-09-01', versions: [{ id: 'V36A', scripts: [] }] }));
   await evaluate('loadManifest()'); assert.equal(evaluate('manifest.latest'), 'V50');
   assert.equal(ids.get('net').textContent, 'OFFLINE • pacote V50 disponível');
+  assert.equal(ids.get('net').className, 'status offline');
   await evaluate('openVersion("V50")'); assert.equal(evaluate('readyVersion'), 'V50', ids.get('scriptsLoad')?.textContent);
   const sections = ids.get('versionContent').children.filter(el => el.dataset.name);
   assert.equal(sections.length, 11);
@@ -65,15 +67,44 @@ const evaluate = code => vm.runInContext(code, sandbox);
     const parts = section.querySelectorAll('.partarea');
     assert.equal(parts.map(el => el.value).join(''), source);
     assert.equal(crypto.createHash('sha256').update(source).digest('hex'), spec.sha256);
-    assert.equal(section.querySelectorAll('.selectpart').length, parts.length);
+    assert(parts.every(el => el.hidden), 'part source visible before copying');
+    assert(section.innerHTML.includes(spec.type));
+    assert(section.innerHTML.includes(spec.location.replace(/>/g, '&gt;')));
+    assert(section.innerHTML.includes('ÚLTIMA LINHA'));
+    const expectedLastLine = evaluate(`esc(lastLine(${JSON.stringify(source)}))`);
+    assert(section.innerHTML.includes(`<code>${expectedLastLine}</code>`));
+    copied.length = 0;
     if (spec.name === '09A_SHOP_UI') {
       assert.equal(parts.length, 4); assert.equal(section.querySelector('.allcode'), null);
       for (const button of section.querySelectorAll('.part')) await button.onclick();
       assert.equal(copied.join(''), source);
-      section.querySelector('.selectpart').onclick(); assert.equal(parts[0].selectionEnd, parts[0].value.length);
-    } else assert.equal(section.querySelector('.allcode').value, source);
+      assert(parts.every(el => el.hidden));
+    } else {
+      const area = section.querySelector('.allcode');
+      assert.equal(area.value, source); assert(area.hidden);
+      await section.querySelector('.all').onclick();
+      assert.equal(copied[0], source); assert(area.hidden);
+    }
   }
+  const manualSection = sections.find(s => s.querySelector('.all'));
+  sandbox.navigator.clipboard.writeText = async () => { throw Error('clipboard blocked'); };
+  await manualSection.querySelector('.all').onclick();
+  const manualArea = manualSection.querySelector('.allcode');
+  assert.equal(manualArea.hidden, false);
+  assert.equal(manualArea.selectionStart, 0);
+  assert.equal(manualArea.selectionEnd, manualArea.value.length);
+  assert(manualSection.querySelectorAll('.partarea').every(el => el.hidden));
+  sandbox.navigator.clipboard.writeText = async text => copied.push(text);
   evaluate('markInstalled()'); assert.equal(storage.get('ap_installed_version'), 'V50');
+  sandbox.fetch = async () => ({ ok: true, json: async () => manifest });
+  await evaluate('loadManifest()');
+  assert.equal(evaluate('manifest.latest'), 'V50');
+  assert.equal(ids.get('net').textContent, 'ONLINE • sincronizado');
+  assert.equal(ids.get('net').className, 'status online');
+  sandbox.fetch = async () => { throw Error('offline'); };
+  await evaluate('loadManifest()');
+  assert.equal(ids.get('net').className, 'status offline');
+  assert(!ids.get('net').className.includes('online'));
   sandbox.fetch = async () => ({ ok: true, text: async () => 'tampered' });
   evaluate('isRemote=true');
   const result = await evaluate('getText(FALLBACK_MANIFEST.versions[0].scripts[0])');
@@ -81,7 +112,7 @@ const evaluate = code => vm.runInContext(code, sandbox);
   const opening = evaluate('openVersion("V50")'); evaluate('closeVersion()'); await opening;
   assert.equal(ids.get('overlay').style.display, 'none');
   assert.equal(evaluate('readyVersion'), null);
-  const report = { result: 'pass', runtime: 'Node.js + minimal DOM doubles; no CSS rendering', checks: ['Offline V50', 'Current fallback version label', 'Old-cache rejection', '11 patch source hashes and offline V44 base', 'Exact part reconstruction', '3 creations and 8 replacements', 'New/replace labels with canonical instance names', 'Clipboard/manual selection', 'Tampered-source fallback', 'Closing during load', 'No JavaScript exceptions'] };
+  const report = { result: 'pass', runtime: 'Node.js + minimal DOM doubles; no CSS rendering', checks: ['Offline V50', 'Current fallback version label', 'Old-cache rejection', '11 patch source hashes and offline V44 base', 'Exact part reconstruction', '3 creations and 8 replacements', 'New/replace labels with canonical instance names', 'Compact name/type/location and last-line cards', 'All full/part source fields initially hidden', 'Exact whole-script and four-part clipboard output', 'Blocked clipboard reveals and selects only the requested source', 'Online status uses the green CSS class', 'Offline status clears the online CSS class', 'Tampered-source fallback', 'Closing during load', 'No JavaScript exceptions'] };
   fs.writeFileSync(path.join(__dirname, 'installer_logic_results.json'), JSON.stringify(report, null, 2) + '\n');
   console.log(JSON.stringify(report));
 })().catch(error => { console.error(error); process.exit(1); });

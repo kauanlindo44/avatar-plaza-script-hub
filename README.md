@@ -4,6 +4,10 @@ Pacote reduzido baseado na V49 mais recente do GitHub (`43a2e678427e3d5e03540ba3
 
 Baixe [AVATAR_PLAZA_SCRIPT_HUB_PERMANENTE.html](AVATAR_PLAZA_SCRIPT_HUB_PERMANENTE.html), abra **V50** e siga [INSTALL_V50.md](INSTALL_V50.md). Pare Play e crie primeiro os três novos, somente se ainda não existem. Preserve nomes, tipos e locais das instâncias. 09A_SHOP_UI tem quatro partes consecutivas no mesmo ModuleScript; os demais têm duas. O HTML contém V44/V50 offline e mantém o histórico online. Nenhum passe, Developer Product ou preço adicional. A conferência da entrega está em [audits/V50/README.md](audits/V50/README.md).
 
+Também disponível como [AVATAR_PLAZA_V50.html](AVATAR_PLAZA_V50.html), com o mesmo conteúdo e indicação ONLINE em verde quando sincronizado. Esta correção é somente do instalador; os 11 códigos Roblox continuam idênticos à V49.
+
+O HTML usa cartões compactos com nome, tipo, local, última linha e botão de copiar, sem exibir o código inteiro. A divisão em partes continua disponível; se a cópia automática falhar, o código correspondente é aberto e selecionado para cópia manual.
+
 ## Correções de corpo
 
 - Ao entrar, consulta a aparência **equipada** no perfil Roblox. Corpos próprios são construídos com as partes nativas e estrutura R15, sem o corpo imposto pelas Avatar Settings da experiência. Possuir um corpo sem equipá-lo no perfil não o veste automaticamente.
