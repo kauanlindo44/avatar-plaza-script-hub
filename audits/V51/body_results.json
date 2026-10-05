@@ -1,0 +1,87 @@
+[
+  {
+    "case": "owned_profile_overrides_forced_game_body",
+    "result": "pass",
+    "detail": "native equipped user description replaces the experience-forced body; six parts/scales survive with original clothes/accessories; no purchase API"
+  },
+  {
+    "case": "join_forced_r6_uses_profile_r15_and_full_parts",
+    "result": "pass",
+    "detail": "join rebuilds a forced R6 into the equipped R15 profile, keeps spawn position and serves snapshots for managed characters"
+  },
+  {
+    "case": "apply_r6_to_r15_returns_actual_rig_and_body",
+    "result": "pass",
+    "detail": "actual generated rig and read-back appearance are returned, instead of success with a live R6"
+  },
+  {
+    "case": "explicit_r15_to_r6_is_rebuilt_instead_of_enum_write",
+    "result": "pass",
+    "detail": "explicit R6 selection replaces the joint/part hierarchy; no RigType reassignment"
+  },
+  {
+    "case": "wrong_readback_falls_back_to_verified_body_model",
+    "result": "pass",
+    "detail": "successful native method with wrong description is detected and repaired with a verified native model"
+  },
+  {
+    "case": "failed_model_load_keeps_previous_body_and_reports_failure",
+    "result": "pass",
+    "detail": "failed correction returns error and rolls the existing appearance back; no fake success or destroyed avatar"
+  },
+  {
+    "case": "wrong_rig_structure_or_body_assets_never_committed",
+    "result": "pass",
+    "detail": "wrong fifteen-part structure and wrong body ID both fail before character ownership changes"
+  },
+  {
+    "case": "body_bundle_uses_native_outfit_all_parts_and_scales",
+    "result": "pass",
+    "detail": "native package supplies all six meshes, native proportions and animations even if the catalog item list is incomplete; old clothes/accessories survive"
+  },
+  {
+    "case": "unavailable_native_body_outfit_is_not_partial_success",
+    "result": "pass",
+    "detail": "unavailable native body description reports retry without applying half a package"
+  },
+  {
+    "case": "direct_body_part_promotes_r15_but_shirt_does_not",
+    "result": "pass",
+    "detail": "individual body meshes use R15; normal clothes keep the selected rig; stale server reply cannot change later edits"
+  },
+  {
+    "case": "animation_package_does_not_force_rig_change",
+    "result": "pass",
+    "detail": "only body packages force R15; animation packages preserve the existing rig and body"
+  },
+  {
+    "case": "session_outfit_survives_native_respawn",
+    "result": "pass",
+    "detail": "respawn uses the last confirmed outfit in this server session instead of reverting to the experience-forced body"
+  },
+  {
+    "case": "startup_service_outage_retries_without_claiming_loaded_body",
+    "result": "pass",
+    "detail": "profile outage gives a short retry message and can recover; no incorrect body-ready state"
+  },
+  {
+    "case": "catalog_larger_preview_controls_and_equipped_x_do_not_overlap",
+    "result": "pass",
+    "detail": "larger viewport, same compact action area, real equipped thumbnails and separate >=40x44 X target on six screens"
+  },
+  {
+    "case": "owned_body_promotes_even_a_profile_marked_r6",
+    "result": "pass",
+    "detail": "equipped custom body gets the complete R15 hierarchy even when the profile still reports R6"
+  },
+  {
+    "case": "failed_old_request_cannot_replace_a_newer_character",
+    "result": "pass",
+    "detail": "character replacement during an asset request invalidates the old operation before swap or destruction"
+  },
+  {
+    "case": "movement_camera_and_animation_bundle_refresh_for_rebuilt_character",
+    "result": "pass",
+    "detail": "new Humanoid becomes normal camera subject; rig-specific fallback locomotion works and refreshed animation IDs take effect without forcing a scripted camera"
+  }
+]

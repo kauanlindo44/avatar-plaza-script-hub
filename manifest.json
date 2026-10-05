@@ -1,8 +1,8 @@
 {
   "schema": 2,
   "project": "Avatar Plaza Script Hub",
-  "latest": "V50",
-  "updated_at": "2026-10-05T00:02:39+00:00",
+  "latest": "V51",
+  "updated_at": "2026-10-05T01:21:11+00:00",
   "poll_seconds": 5,
   "versions": [
     {
@@ -3877,6 +3877,147 @@
           "lines": 167,
           "sha256": "0d98abd8619ffb6a5cbb9e635009d000fa7bbe251ffe003f0881eba3ceddec80",
           "path": "scripts/V50/09C4_OUTFIT_LIBRARY.lua",
+          "parts": 2,
+          "hide_full": false
+        }
+      ]
+    },
+    {
+      "id": "V51",
+      "title": "CORPOS NATIVOS + TELA DO CELULAR — 11 SUBSTITUIÇÕES + 1 NOVO",
+      "date": "2026-10-04",
+      "summary": "Correção da origem da área segura, topo livre ao lado da Roblox, prévia maior e cards com Robux embaixo. Pacotes nativos preservam metadados, expressão e acessórios do corpo; falhas podem ser tentadas novamente. Somente o delta depois da V50 completa.",
+      "install_note": "Requer a V50 completa (ou os mesmos 11 itens da V49 sobre a V48 completa). São 12 itens: 11 SUBSTITUIÇÕES e 1 NOVO. Pare Play e crie primeiro 08B2_BODY_DESCRIPTION em ReplicatedStorage, como ModuleScript. Depois substitua os 11 existentes, sem duplicar instâncias. Os três NOVOS da V50 são existentes nesta versão. 09A_SHOP_UI continua com 4 partes consecutivas no MESMO ModuleScript; os demais têm 2 partes. (NOVO)/(SUBSTITUIR) são rótulos, não parte do nome. Consulte INSTALL_V51.md.",
+      "validation": "106 verificações Lua 5.4 com serviços/geometria simulados, incluindo 15 novos casos de corpos e celular. Verificação do JavaScript real do instalador, hashes e cópia em partes. Não houve execução no Roblox real; renderização de corpos específicos e toque físico ainda precisam de teste no aparelho.",
+      "scripts": [
+        {
+          "name": "08B2_BODY_DESCRIPTION",
+          "type": "ModuleScript",
+          "location": "ReplicatedStorage",
+          "parts": 2,
+          "action": "CRIAR",
+          "path": "scripts/V51/08B2_BODY_DESCRIPTION.lua",
+          "sha256": "8ec8fac703de4e5dbc8a9dcbf56d94ba830cd24b382bdaf56f995643da9e019b",
+          "lines": 77
+        },
+        {
+          "name": "07UI_SCREEN_BOUNDS",
+          "type": "ModuleScript",
+          "location": "ReplicatedStorage",
+          "action": "SUBSTITUIR",
+          "lines": 50,
+          "sha256": "729ef6da6eb0640523ce59f0402e540bf4551154db3ab7eef93337b45368e2a0",
+          "path": "scripts/V51/07UI_SCREEN_BOUNDS.lua",
+          "parts": 2,
+          "hide_full": false
+        },
+        {
+          "name": "08B_AVATAR_DATA",
+          "type": "ModuleScript",
+          "location": "ReplicatedStorage",
+          "action": "SUBSTITUIR",
+          "lines": 350,
+          "sha256": "44ae3fc2f0e9fa7d7eb974764fa37953f9e3188c996db754f4deffc370c4c4ab",
+          "path": "scripts/V51/08B_AVATAR_DATA.lua",
+          "parts": 2,
+          "hide_full": false
+        },
+        {
+          "name": "08B1_BODY_PACKAGES",
+          "type": "ModuleScript",
+          "location": "ReplicatedStorage",
+          "action": "SUBSTITUIR",
+          "path": "scripts/V51/08B1_BODY_PACKAGES.lua",
+          "lines": 76,
+          "sha256": "69c5c51a4d869ac21d63495d0b5480a03878a92671062899acdea223205d8904",
+          "parts": 2,
+          "hide_full": false
+        },
+        {
+          "name": "08D_SKIN_STATE",
+          "type": "ModuleScript",
+          "location": "ReplicatedStorage",
+          "action": "SUBSTITUIR",
+          "lines": 130,
+          "sha256": "d0509fb1e75f37cb83d4fbf88f8a569b99bb9e2c00896918c39e0039c9841554",
+          "path": "scripts/V51/08D_SKIN_STATE.lua",
+          "parts": 2,
+          "hide_full": false
+        },
+        {
+          "name": "09A_SHOP_UI",
+          "type": "ModuleScript",
+          "location": "ReplicatedStorage",
+          "action": "SUBSTITUIR",
+          "lines": 285,
+          "sha256": "040fcd4c8f14ba68655e359ca222a086f1eee1cabc5ee82f1d4c4a60997685b4",
+          "path": "scripts/V51/09A_SHOP_UI.lua",
+          "parts": 4,
+          "hide_full": true
+        },
+        {
+          "name": "09A1_SHOP_LAYOUT",
+          "type": "ModuleScript",
+          "location": "ReplicatedStorage",
+          "action": "SUBSTITUIR",
+          "lines": 154,
+          "sha256": "d037fd5706bca068d4eda13f3182378600521773cd4b56ca894e07384e46f071",
+          "path": "scripts/V51/09A1_SHOP_LAYOUT.lua",
+          "parts": 2,
+          "hide_full": false
+        },
+        {
+          "name": "09B_SHOP_SERVER",
+          "type": "Script",
+          "location": "ServerScriptService",
+          "action": "SUBSTITUIR",
+          "lines": 203,
+          "sha256": "091ac901d28cc86e6330bfd32e4ae277851d4aef59dafc00902f6173a24ce5ef",
+          "path": "scripts/V51/09B_SHOP_SERVER.lua",
+          "parts": 2,
+          "hide_full": false
+        },
+        {
+          "name": "09B5_AVATAR_RUNTIME",
+          "type": "ModuleScript",
+          "location": "ServerScriptService",
+          "action": "SUBSTITUIR",
+          "path": "scripts/V51/09B5_AVATAR_RUNTIME.lua",
+          "lines": 177,
+          "sha256": "903126cd41914d2b13c1f67d97f43aa35c2ba07fdd8de1c463cb2c1f12c2b831",
+          "parts": 2,
+          "hide_full": false
+        },
+        {
+          "name": "09C_SHOP_CLIENT",
+          "type": "LocalScript",
+          "location": "StarterPlayer > StarterPlayerScripts",
+          "action": "SUBSTITUIR",
+          "lines": 374,
+          "sha256": "8e90c5782af8fa79b5718e1420338e8e991ae6d2879a76710aaaab2acefa7f38",
+          "path": "scripts/V51/09C_SHOP_CLIENT.lua",
+          "parts": 2,
+          "hide_full": false
+        },
+        {
+          "name": "09C2_SHOP_CATALOG",
+          "type": "ModuleScript",
+          "location": "ReplicatedStorage",
+          "action": "SUBSTITUIR",
+          "lines": 246,
+          "sha256": "21e820390e71db52cf85695b88e1e81dabd3509402c6117ac7b9e933c0a6612c",
+          "path": "scripts/V51/09C2_SHOP_CATALOG.lua",
+          "parts": 2,
+          "hide_full": false
+        },
+        {
+          "name": "09C6_AVATAR_PREVIEW",
+          "type": "ModuleScript",
+          "location": "ReplicatedStorage",
+          "action": "SUBSTITUIR",
+          "lines": 115,
+          "sha256": "5c96cd6c624de9d74565aab1204252d3b4baf3ba75c3c664fa6ea1e04ba5b1cc",
+          "path": "scripts/V51/09C6_AVATAR_PREVIEW.lua",
           "parts": 2,
           "hide_full": false
         }

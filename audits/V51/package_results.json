@@ -1,0 +1,9 @@
+{
+  "version": "V51",
+  "items": 12,
+  "replace": 11,
+  "create": 1,
+  "max_lines": 374,
+  "html_bytes": 634845,
+  "prerequisite": "Complete V50 or equivalent V49 patch over complete V48"
+}

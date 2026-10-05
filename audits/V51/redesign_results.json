@@ -1,0 +1,47 @@
+[
+  {
+    "case": "game_lobby_uses_whole_remaining_area_black_green_and_clear_modes",
+    "result": "pass",
+    "detail": "game selection stays above full-height black/green dashboard; explicit room/bot/quick actions and safe hit areas fit five screens without empty capped panel"
+  },
+  {
+    "case": "atelier_explicit_ready_error_and_unknown_moderation_reason",
+    "result": "pass",
+    "detail": "loaded native image produces clear green success; invalid ID/final timeout produce red failure; possible permission/moderation/network cause remains explicitly unconfirmed"
+  },
+  {
+    "case": "collection_coin_purchase_choice_visible_before_payment_and_immediate_result",
+    "result": "pass",
+    "detail": "all three cosmetic fronts disclosed before payment; explicit single known choice; one debit/one open; chosen result shown immediately after confirmed coin grant, without rolling animation"
+  },
+  {
+    "case": "collection_robux_waits_for_server_inventory_receipt_and_cancel_never_grants",
+    "result": "pass",
+    "detail": "purchase result requires server inventory credit from ProcessReceipt; prompt success cannot grant; duplicate updates consume once; only own cancellation clears pending choice"
+  },
+  {
+    "case": "meme_body_bundle_native_scales_colors_preserve_clothing_apply_and_preview",
+    "result": "pass",
+    "detail": "native body outfit proportions/colors included, body assets visible in 360 preview and actual server Apply; prior clothes/accessories retained; wide meme geometry drives camera bounds"
+  },
+  {
+    "case": "limited_store_only_verified_collectibles_distinct_cards_and_paging",
+    "result": "pass",
+    "detail": "native Collectibles filter plus per-result Limited/GUID proof rejects ordinary hats; named search and paging work; separate gold-accent image/price layout fits phone and landscape"
+  },
+  {
+    "case": "community_item_tiles_are_image_name_only_metadata_opens_on_tap",
+    "result": "pass",
+    "detail": "item tiles carry thumbnail, name and separate remove X; creator/price/description move to safe closeable item popup, preserving the whole-look preview"
+  },
+  {
+    "case": "community_transient_failure_retries_same_page_and_keeps_loaded_looks",
+    "result": "pass",
+    "detail": "one transient failure reuses the same page; initial fifty and next ten survive recovery without duplication, wiping previously loaded rows or user intervention"
+  },
+  {
+    "case": "photo_no_bottom_background_caption_and_transient_notice_only",
+    "result": "pass",
+    "detail": "no permanent lower caption/bar; transient text appears above and expires; scene retains recovered bottom area while all panels remain contextual"
+  }
+]

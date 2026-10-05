@@ -1,0 +1,37 @@
+[
+  {
+    "case": "truco_2d_public_cards_four_seats_and_hidden_identity",
+    "result": "pass",
+    "detail": "four public seats and three private cards remain separated/readable in five sizes and every seat; covered identity stays hidden; button choice preserves weakest-card freedom"
+  },
+  {
+    "case": "truco_bot_reading_time_weaker_card_legal_and_traditional_calls",
+    "result": "pass",
+    "detail": "a weaker chosen card is legal; bots wait 2.8s per action; completed trick remains 3.2s; raise names match each documented profile"
+  },
+  {
+    "case": "community_manual_fifty_bounded_hundred_recycle_and_retry",
+    "result": "pass",
+    "detail": "first batch capped at 50 real distinct descriptions; scroll does not fetch; manual batches recycle oldest rows in tens after 100; 50 GUI slots and 600 seen-signature bound; transient failure can retry"
+  },
+  {
+    "case": "catalog_auto_applies_debounced_clothes_body_and_external_look",
+    "result": "pass",
+    "detail": "two rapid clothing choices produce one native Apply; untouched accessories preserved; body applies automatically; no AcceptApplied feedback loop; a look chosen outside the catalog applies on returning"
+  },
+  {
+    "case": "body_paid_default_free_option_real_bundle_search",
+    "result": "pass",
+    "detail": "Corpo starts with paid native body bundles; explicit free subcategory queries zero-priced bundles; results remain real"
+  },
+  {
+    "case": "photo_real_scene_animation_freeze_pose_drag_gizmos_and_late_exit",
+    "result": "pass",
+    "detail": "emote executes on the scene rig with native PlayEmoteAsync; speed/loop and freeze preserve a mixed-axis pose; direct body ray selection/drag with 44px handles; UI clicks ignored; overlay cleanup and exit during native playback cannot resurrect avatar"
+  },
+  {
+    "case": "community_native_friend_profiles_four_request_concurrency_and_exact_description",
+    "result": "pass",
+    "detail": "native friend pages reused from cache; four yielding native description calls maximum; 32 candidates bounded; actual outfit preserved; cautious style label derived from native item metadata"
+  }
+]

@@ -1,29 +1,30 @@
-# Avatar Plaza — V50
+# Avatar Plaza — V51
 
-Pacote reduzido baseado na V49 mais recente do GitHub (`43a2e678427e3d5e03540ba3589b106a4437f6b9`). **A aba V50 contém somente 11 itens: 8 substituições e 3 NOVOS**, para quem terminou a V48. São os mesmos códigos da V49. Se algum desses itens já recebeu o código da V49, não precisa substituir novamente; quem terminou os 11 não tem código adicional para instalar. O pacote cumulativo V49 continua no histórico para instalações anteriores.
+Atualização feita sobre a última V50 do GitHub, commit `3a46d5547042db04a47268d29900bbc13bb073a8`. **Somente 12 itens: 11 substituições e 1 NOVO**, para quem terminou a V50 (ou os mesmos 11 itens da V49 sobre a V48 completa). Não é um pacote cumulativo.
 
-Baixe [AVATAR_PLAZA_SCRIPT_HUB_PERMANENTE.html](AVATAR_PLAZA_SCRIPT_HUB_PERMANENTE.html), abra **V50** e siga [INSTALL_V50.md](INSTALL_V50.md). Pare Play e crie primeiro os três novos, somente se ainda não existem. Preserve nomes, tipos e locais das instâncias. 09A_SHOP_UI tem quatro partes consecutivas no mesmo ModuleScript; os demais têm duas. O HTML contém V44/V50 offline e mantém o histórico online. Nenhum passe, Developer Product ou preço adicional. A conferência da entrega está em [audits/V50/README.md](audits/V50/README.md).
+Baixe [AVATAR_PLAZA_V51.html](AVATAR_PLAZA_V51.html) ou [AVATAR_PLAZA_SCRIPT_HUB_PERMANENTE.html](AVATAR_PLAZA_SCRIPT_HUB_PERMANENTE.html), abra V51 e siga [INSTALL_V51.md](INSTALL_V51.md). Pare Play. Crie primeiro `08B2_BODY_DESCRIPTION`, um ModuleScript em ReplicatedStorage, e depois substitua os onze existentes. Os novos da V50 já existem e agora são substituições. 09A_SHOP_UI mantém quatro partes no mesmo ModuleScript; os demais têm duas. Todas as fontes entregues têm até 374 linhas.
 
-Também disponível como [AVATAR_PLAZA_V50.html](AVATAR_PLAZA_V50.html), com o mesmo conteúdo e indicação ONLINE em verde quando sincronizado. Esta correção é somente do instalador; os 11 códigos Roblox continuam idênticos à V49.
+O instalador conserva os cartões compactos: nome e ação, tipo, local, última linha e copiar. O código fica oculto e somente é revelado para cópia manual se as tentativas automáticas falharem. ONLINE usa verde; sem conexão, o HTML inclui V51 e V44. O histórico V49/V50 continua disponível online.
 
-O HTML usa cartões compactos com nome, tipo, local, última linha e botão de copiar, sem exibir o código inteiro. A divisão em partes continua disponível; se a cópia automática falhar, o código correspondente é aberto e selecionado para cópia manual.
+## Corpos nativos
 
-## Correções de corpo
+Pacotes usam a descrição nativa do outfit, suas proporções, formato da cabeça, expressão estática e acessórios do corpo. Roupas vestidas são mantidas. Consulta de metadados do cartão não impede um pacote nativo de abrir; um extra indisponível não rejeita um corpo que já foi resolvido. Os pedidos têm uma nova tentativa e cache limitado.
 
-- Ao entrar, consulta a aparência **equipada** no perfil Roblox. Corpos próprios são construídos com as partes nativas e estrutura R15, sem o corpo imposto pelas Avatar Settings da experiência. Possuir um corpo sem equipá-lo no perfil não o veste automaticamente.
-- Ao trocar corpo ou rig, reconstrói o personagem completo, preservando posição, roupas, acessórios, vida, velocidade e ferramentas; retoma o assento e vincula câmera/animações. Não muda apenas Humanoid.RigType.
-- Confere os IDs das peças, proporções, estrutura e rig efetivos antes de informar sucesso. Falha de construção mantém o personagem anterior. Reaparecer após morrer recupera o último look confirmado na sessão.
-- Pacotes usam todas as peças e proporções do outfit nativo. Camisas/calças/acessórios que não foram editados continuam. Pacote incompleto não é apresentado como aplicação concluída.
+Prévia e personagem preservam metadados de BodyPartDescription. O servidor parte de uma cópia da descrição real e mantém mudanças recentes que não foram editadas. A criação usa verificação de tipos de assets; o rig e os IDs efetivos são conferidos antes de confirmar. Formatos da cabeça que mudam com o mesmo ID também provocam reconstrução. Falhas mostram mensagem e **Tentar novamente** na prévia. Não se informa que um corpo genérico é o solicitado. Uma confirmação sem mudança visual reaproveita a prévia pronta ou em carregamento, sem cancelar e repetir o pedido; fechar o catálogo suspende novos pedidos de prévia.
 
-## Catálogo aprovado
+## Tela do celular
 
-Prévia quadrada, Aplicar em texto verde e Salvar/Restaurar/Carrinho/Corpo em ícones compactos. Itens equipados continuam embaixo, com miniatura e X ao lado da imagem. Área maior pode exibir mais itens. Duas linhas, cinco colunas nas telas largas e quatro quando necessário; retrato adapta para manter legibilidade. Preços continuam explícitos em Robux. Jogos, Truco 2D, Limiteds, comunidade e Photo Mode incorporam as correções V48.
+O cálculo agora usa a origem real de CoreUISafeInsets. Isso remove a margem inferior criada por misturar coordenadas, preservando o recorte físico do aparelho. Busca/filtros aproveitam o topo livre ao lado dos controles Roblox quando cabem; caso contrário ficam abaixo. A orientação e alterações dos controles nativos recalculam o layout.
+
+A prévia usa mais altura e largura, com rotação e zoom em uma faixa própria. Itens equipados continuam embaixo com imagem e X separados. Catálogo deitado mostra **5 cards por linha e 2 linhas nas telas com largura suficiente**; retrato e telas pequenas adaptam as colunas. Imagem ocupa a parte principal do card e o preço fica em um rodapé pequeno abaixo. Janelas e X permanecem dentro da área segura; abertura curta respeita a preferência de movimento reduzido.
 
 ## Validação
 
-**91 casos Lua 5.4 com serviços simulados + 1 caso do JavaScript real do instalador.** Os 17 novos casos incluem entrada com corpo nativo, R6/R15, proporções, readback, falhas, substituição concorrente, respawn, câmera/animações e catálogo. Os doubles não carregam meshes reais nem executam compras. Ainda é necessário testar o **gato abacaxi equipado na conta**, corpos realistas e memes no Roblox/Studio Lite.
+**106 verificações Lua 5.4 com serviços/geometria simulados + 1 caso do JavaScript real do instalador.** Incluem 15 novos casos: metadados nativos, expressão/cílios, roupa isolada, salvamento/respawn, falha e retry, IDs divergentes, confirmação sem pedido duplicado, origem da tela, cinco colunas/duas linhas, X e controles, mudança de orientação e enquadramento de 360°.
 
-Detalhes, comandos reproduzíveis e limites em [audits/V49/README.md](audits/V49/README.md); referências oficiais em [audits/V49/RESEARCH.md](audits/V49/RESEARCH.md). A V44 completa e a base original continuam necessárias.
+Os testes não carregam meshes reais, não validam o toque físico e não executam compras. Ainda é necessário testar o **Funky Ehh Kid Meme (Gumball)**, o gato abacaxi e corpos realistas no Roblox/Studio Lite. Não foi confirmado um ID de bundle específico do Gumball nem a causa de falha desse asset em execução. Esta atualização corrige causas reproduzíveis no código e acrescenta diagnóstico/retry.
+
+Veja [audits/V51/README.md](audits/V51/README.md) e as referências oficiais em [audits/V51/RESEARCH.md](audits/V51/RESEARCH.md). O place não foi publicado; as fontes e o instalador são atualizados no GitHub.
 
 ## Passes e preços
 
@@ -60,7 +61,7 @@ A escolha é conhecida e garantida, sem resultado aleatório. A decisão conside
 
 ## Limites de validação
 
-Os resultados atuais estão em [audits/V49/README.md](audits/V49/README.md). A V49 tem 92 casos executados, incluindo os fluxos de recibos, imagem, comunidade, jogos e as novas correções de corpo. São doubles de serviços e geometria, mais JavaScript real com DOM mínimo; não simulam renderização de meshes ou pagamentos reais.
+Os resultados atuais estão em [audits/V51/README.md](audits/V51/README.md). A V51 tem 107 verificações, incluindo os fluxos de recibos, imagem, comunidade, jogos e as correções de corpo/tela. São doubles de serviços e geometria, mais JavaScript real com DOM mínimo; não simulam renderização de meshes ou pagamentos reais.
 
 A pesquisa pública não encontrou cinco fotos verificáveis de cada fundo do Catalog Avatar Creator; os cinco ambientes são originais. Não foram usados paths históricos de imagens ausentes como evidência. Nenhum código ou asset do CAC foi incorporado.
 

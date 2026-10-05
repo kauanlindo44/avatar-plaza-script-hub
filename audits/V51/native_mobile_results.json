@@ -1,0 +1,77 @@
+[
+  {
+    "case": "published_body_metadata_survives_preview_save_apply_and_respawn",
+    "result": "pass",
+    "detail": "native package metadata, mood/static face and bundled eyebrows survive preview, confirmed server apply, save and respawn; outfit accessories augment existing clothing; catalog outage/optional extra do not block native body"
+  },
+  {
+    "case": "single_asset_remove_does_not_resurrect_old_head_metadata",
+    "result": "pass",
+    "detail": "separate X removes the selected mesh and its metadata; replacing only a head clears its old shape without deleting torso or clothes"
+  },
+  {
+    "case": "legacy_saved_looks_and_forged_native_fields_are_handled",
+    "result": "pass",
+    "detail": "old saved bodies load with defaults; invalid IDs/types/shapes rejected; unrelated native IDs cannot override canonical selected parts"
+  },
+  {
+    "case": "live_native_edit_preserved_when_only_clothing_changes",
+    "result": "pass",
+    "detail": "three-way clothing merge preserves newer live head metadata/static expression and named emotes"
+  },
+  {
+    "case": "changed_head_shape_and_removed_shape_rebuild_and_read_back",
+    "result": "pass",
+    "detail": "shape changes and clearing shape trigger verified reconstruction even when head asset ID remains the same"
+  },
+  {
+    "case": "native_body_and_preview_transient_build_retry",
+    "result": "pass",
+    "detail": "native body and preview each recover from one transient creation error, with catalog-only asset verification"
+  },
+  {
+    "case": "unconfirmed_preview_never_displays_generic_body_as_success",
+    "result": "pass",
+    "detail": "native factory returning a generic/wrong torso fails visibly instead of claiming readiness; retry can then load the actual model"
+  },
+  {
+    "case": "complete_outfit_failure_is_atomic_and_retry_keeps_generation",
+    "result": "pass",
+    "detail": "two failed complete-outfit attempts leave prior body/history untouched and return actionable retry text"
+  },
+  {
+    "case": "documented_core_origin_reclaims_exact_phantom_margin",
+    "result": "pass",
+    "detail": "official -59/-58 origin produces true 59/58/59/21 margins, not a phantom 79px bottom; native-guide fallback agrees"
+  },
+  {
+    "case": "landscape_topbar_free_space_cards_prices_and_bottom_safe",
+    "result": "pass",
+    "detail": "five full-width images by two visible rows, tiny below-image price footer, free topbar header and real hardware bottom across five landscape/tablet screens; no native control overlap"
+  },
+  {
+    "case": "orientation_native_controls_changes_and_accessible_popup_bounds",
+    "result": "pass",
+    "detail": "both orientations/notches/cutouts recalculate safe header; four 44px controls and active emote stop sit outside preview; 48px popup exits and equipped-item row stay inside device-safe bounds"
+  },
+  {
+    "case": "camera_default_fits_all_body_corners_at_arbitrary_yaw",
+    "result": "pass",
+    "detail": "all eight body-box corners remain visible at 24 yaw angles and four tall/wide viewports with the catalog default zoom; huge meme geometry does not depend on a square frame"
+  },
+  {
+    "case": "native_part_roles_allow_complete_meshes_with_custom_names",
+    "result": "pass",
+    "detail": "native body-part roles validate a full R15 skeleton without forcing mesh instance names; missing roles still fail structural verification"
+  },
+  {
+    "case": "catalog_retry_button_recovers_visible_native_preview_failure",
+    "result": "pass",
+    "detail": "actual catalog controller exposes readable load failure and retry; retry creates the correct preview, clears error and retains body while rotating/zooming"
+  },
+  {
+    "case": "confirmed_same_appearance_does_not_cancel_pending_or_repeat_body_load",
+    "result": "pass",
+    "detail": "confirmation of identical appearance retains an in-flight or loaded preview instead of canceling/reloading native assets; real clothing change loads once; hidden catalog does not load meshes"
+  }
+]
