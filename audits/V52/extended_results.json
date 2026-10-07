@@ -1,0 +1,72 @@
+[
+  {
+    "case": "truco_real_rank_profiles_and_private_cards",
+    "result": "pass",
+    "detail": "40 unique cards; three real profiles, legal raises, team decisions, special hands and sanitized public covered cards"
+  },
+  {
+    "case": "truco_bot_complete_games_all_variants_levels",
+    "result": "pass",
+    "detail": "72 complete matches; levels make distinct decisions, only own/public cards, no invalid turns or infinite raises"
+  },
+  {
+    "case": "progress_reward_and_weekly_rank_deduplication",
+    "result": "pass",
+    "detail": "validated PvP only; one reward/rank per match, team ranking, no bots or irregular results, bounded repeat-opponent coins"
+  },
+  {
+    "case": "tournaments_consent_checkin_ten_seeds_and_rematches",
+    "result": "pass",
+    "detail": "top 10 + reserves, opt-in deadlines, bounded check-in, accepted online replacement, six byes, authorization, active match not expired and draw rematch"
+  },
+  {
+    "case": "published_body_metadata_survives_preview_save_apply_and_respawn",
+    "result": "pass",
+    "detail": "native package metadata, mood/static face and bundled eyebrows survive preview, confirmed server apply, save and respawn; outfit accessories augment existing clothing; catalog outage/optional extra do not block native body"
+  },
+  {
+    "case": "single_asset_remove_does_not_resurrect_old_head_metadata",
+    "result": "pass",
+    "detail": "separate X removes the selected mesh and its metadata; replacing only a head clears its old shape without deleting torso or clothes"
+  },
+  {
+    "case": "legacy_saved_looks_and_forged_native_fields_are_handled",
+    "result": "pass",
+    "detail": "old saved bodies load with defaults; invalid IDs/types/shapes rejected; unrelated native IDs cannot override canonical selected parts"
+  },
+  {
+    "case": "live_native_edit_preserved_when_only_clothing_changes",
+    "result": "pass",
+    "detail": "three-way clothing merge preserves newer live head metadata/static expression and named emotes"
+  },
+  {
+    "case": "complete_outfit_failure_is_atomic_and_retry_keeps_generation",
+    "result": "pass",
+    "detail": "two failed complete-outfit attempts leave prior body/history untouched and return actionable retry text"
+  },
+  {
+    "case": "documented_core_origin_reclaims_exact_phantom_margin",
+    "result": "pass",
+    "detail": "official -59/-58 origin produces true 59/58/59/21 margins, not a phantom 79px bottom; native-guide fallback agrees"
+  },
+  {
+    "case": "quick_match_partitions_full_and_clean_and_blocks_custom",
+    "result": "pass",
+    "detail": "server quick queue separated by variant + canonical deck key; custom/undersized selection never joins a standard room"
+  },
+  {
+    "case": "server_custom_deck_saved_configuration_and_image_validation",
+    "result": "pass",
+    "detail": "real server RPC saves deck preferences; 52-card room automatic, public options only, no unowned Ateliê save"
+  },
+  {
+    "case": "atelier_load_errors_success_edit_and_save_guard",
+    "result": "pass",
+    "detail": "real image/decal metadata, IsLoaded success gate, invalid ID visible error, edits kept and save forbidden after failed load"
+  },
+  {
+    "case": "atelier_and_custom_room_controls_fit_both_orientations",
+    "result": "pass",
+    "detail": "all editable image and deck-rank buttons on-screen; mobile landscape controls avoid apply/create buttons"
+  }
+]

@@ -1,0 +1,57 @@
+[
+  {
+    "case": "layered_clothing_changes_r6_to_r15_preserves_outfit",
+    "result": "pass",
+    "detail": "3D silhouette is layered clothing; selects R15 without clearing classic clothes or other accessories"
+  },
+  {
+    "case": "physical_missing_mesh_fails_preview_and_live",
+    "result": "pass",
+    "detail": "physical WrapLayer/Handle required, preview forces native R15; API metadata does not fake a successful missing outfit"
+  },
+  {
+    "case": "community_search_filter_virtualized_3_or_4_columns",
+    "result": "pass",
+    "detail": "only outfits, search and dropdown filter; four wide/three narrow columns, recyclable pool capped at 50"
+  },
+  {
+    "case": "saved_avatar_preview_visible_and_items_remain_below",
+    "result": "pass",
+    "detail": "selected saved avatar rendered automatically, permanent panel in both orientations, equipped item strip stays below preview"
+  },
+  {
+    "case": "lobby_three_games_safe_click_targets_and_coins",
+    "result": "pass",
+    "detail": "three elaborate game panels; four actions each, coin header, 44px actions and quick-match setup"
+  },
+  {
+    "case": "official_and_custom_decks_and_dynamic_manilha",
+    "result": "pass",
+    "detail": "40/24 official decks; 52-card custom possible only in created rooms; clean-deck manilha wraps to Q, invalid/undersized selections refused"
+  },
+  {
+    "case": "direct_purchase_and_legacy_credit_receipts_are_atomic",
+    "result": "pass",
+    "detail": "no new box offers/server purchases; direct visuals persist, duplicate receipts grant once, historical paid credit redeemed without loss"
+  },
+  {
+    "case": "atelier_saved_presets_round_trip_and_deck_saved",
+    "result": "pass",
+    "detail": "persistent saved image transforms and one deck preset; owned-only, per-account IDs and 12-slot bound"
+  },
+  {
+    "case": "store_three_sample_cards_and_no_boxes_tab",
+    "result": "pass",
+    "detail": "direct store, visible three-card preview, no boxes tab, saved-styles tab and native-price-only purchase actions"
+  },
+  {
+    "case": "table_four_players_public_center_private_hand",
+    "result": "pass",
+    "detail": "relative seating, green central table, own three cards below, any owned card can be played only on own turn"
+  },
+  {
+    "case": "chess_checkers_centered_and_large_on_mobile",
+    "result": "pass",
+    "detail": "board centered in screen, larger native safe-area fit, compact clocks and 44px actions"
+  }
+]
