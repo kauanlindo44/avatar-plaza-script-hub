@@ -1,0 +1,27 @@
+[
+  {
+    "case": "pineapple_native_description_and_visible_structure",
+    "result": "pass",
+    "detail": "exact ID remains layered Shirt; R15 selected; classic outfit preserved; physical structure and visual preloading required"
+  },
+  {
+    "case": "cages_meshes_and_specific_instances_required",
+    "result": "pass",
+    "detail": "missing body cage, empty accessory mesh and missing exact applied instance cannot pass validation"
+  },
+  {
+    "case": "visual_fetch_failure_and_recoverable_saved_preview",
+    "result": "pass",
+    "detail": "content failure visible in saved looks; retry loads valid preview and clears the failure state"
+  },
+  {
+    "case": "photo_uses_same_validation_and_preserves_previous_scene",
+    "result": "pass",
+    "detail": "photo rejects incomplete clothing; failed emote rebuild leaves previous model intact"
+  },
+  {
+    "case": "disabled_project_setting_has_explicit_error",
+    "result": "pass",
+    "detail": "disabled project layered setting reports a concrete configuration message without trying to modify a protected property"
+  }
+]

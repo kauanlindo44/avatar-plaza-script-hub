@@ -1,29 +1,32 @@
-# Avatar Plaza — V52
+# Avatar Plaza — V53
 
-Atualização sobre a V51 mais recente do GitHub, commit `24dad1296cabb261eb67bf1aed5a449f6cac3cf9`. **23 substituições + 5 módulos novos**, para quem já instalou a V51 completa. A entrega contém somente os 28 scripts que mudaram; não é um pacote cumulativo.
+Atualização baseada no GitHub `main`, V52, commit `b397dfe12ebebed3ca61c91df530dbcbc69ca902`. **19 substituições + 2 módulos novos**, somente o delta para quem já instalou a V52 completa.
 
-Abra [AVATAR_PLAZA_V52.html](AVATAR_PLAZA_V52.html) ou [AVATAR_PLAZA_SCRIPT_HUB_PERMANENTE.html](AVATAR_PLAZA_SCRIPT_HUB_PERMANENTE.html). [INSTALL_V52.md](INSTALL_V52.md) lista nome exato, tipo e local de cada item. Pare Play, crie primeiro os cinco módulos novos em ReplicatedStorage e depois substitua os 23 existentes. Todos têm até 357 linhas. O código fica oculto, com última linha e botões para copiar inteiro ou em duas partes.
+Abra [AVATAR_PLAZA_V53.html](AVATAR_PLAZA_V53.html) ou [AVATAR_PLAZA_SCRIPT_HUB_PERMANENTE.html](AVATAR_PLAZA_SCRIPT_HUB_PERMANENTE.html). O [INSTALL_V53.md](INSTALL_V53.md) lista nome exato, tipo e local. Pare Play, crie primeiro os dois módulos novos e depois substitua os 19 existentes. Código oculto, última linha e copiar inteiro/em duas partes; todos os itens têm menos de 400 linhas.
 
-## Comunidade, avatares e tela
+## Avatar e catálogo
 
-Comunidade usa pesquisa, filtro e outfits, sem faixa permanente de categorias. São quatro colunas nas telas largas ou três nas menores, e até cinco linhas quando há espaço legível. O pool recicla até 50 cartões e limita o histórico carregado a 100 registros. As consultas continuam trazendo perfis reais, sem prometer um milhão de looks prontos ou reconhecer personagens automaticamente.
+Prévia, personagem e Photo Mode usam um carregamento compartilhado, com verificação de descrição, estrutura do corpo, acessórios físicos e downloads de malhas/texturas. Roupas 3D selecionam R15 quando necessário. A reconstrução é rejeitada antes de substituir o personagem se vier incompleta. Prévias maiores oferecem nova tentativa; a prévia principal evita avisos/botões duplicados. Fundo neutro mais claro e enquadramento 360° mantêm a leitura de avatares claros e escuros.
 
-Meus avatares abre a prévia do look selecionado, mantendo os itens equipados embaixo. No retrato, a prévia ocupa a parte superior; no deitado, fica ao lado da grade. A área disponível ao lado dos controles Roblox é aproveitada quando cabe, respeitando notch, recorte físico e botões nativos.
+O gato abacaxi `72779265740934` é uma camisa 3D, não um pacote de corpo. O caminho simulado preserva camisa/calça clássicas e outros acessórios ao experimentá-la. **Layered Clothing deve estar permitido no projeto**; scripts não podem habilitar a propriedade protegida. Não houve teste dessa malha no motor Roblox; IDs e cages presentes não garantem a deformação visual final de todo asset.
 
-Roupas 3D que mudam a silhueta agora selecionam R15 na prévia, no personagem e nos looks salvos. Os pacotes preservam metadados nativos e as roupas já equipadas. A confirmação exige acessórios físicos com Handle/WrapLayer; só ter os IDs na descrição não é suficiente. **Confira Layered Clothing nas propriedades/Avatar Settings do projeto. LoadCharacterLayeredClothing não pode ser alterada por scripts.**
+O catálogo reaproveita até 40 instâncias de card ao rolar, preservando duas linhas visíveis e até cinco cards por linha conforme o espaço. Miniaturas amplas, Robux compactos embaixo e itens equipados com X permanecem. O botão **+ CARRINHO** nos detalhes adiciona sem trocar o avatar. Experimentar também adiciona uma vez.
 
-## Jogos e visuais
+O carrinho do outfit consulta pacotes de corpo/pares de sapatos, evita peças duplicadas e mantém escolhas desmarcadas. Compra aguarda a consulta; itens indisponíveis/já possuídos são excluídos. O total é estimativa ou subtotal conhecido; valores desconhecidos ficam para consulta no Roblox. Cotações de pacotes usam resultados limitados, sem promessa de encontrar a combinação global mais barata.
 
-O lobby tem três painéis com arte própria e Partida rápida, Criar sala, Entrar na sala e Contra bots. No retrato, os painéis ficam empilhados e amplos; em telas largas, aparecem lado a lado. Moedas ficam junto ao cabeçalho. Xadrez e dama usam tabuleiro maior e centrado.
+## Jogos e Truco
 
-Truco usa mesa 2D verde, jogadores ao redor, sua mão embaixo e cartas públicas no centro, com coleta visual para o canto depois da vaza. A partida rápida separa variante e baralho cheio/limpo. Criar permite escolher valores/naipes e salvar uma configuração. Mesas personalizadas ficam fora de ranking e moedas competitivas. A distribuição é automática; cartas dos adversários continuam privadas.
+Abas Truco/Dama/Xadrez mostram quatro ações do jogo escolhido, em grafite/verde suave. Moedas no cabeçalho, perfis verticais de bots **Nico, Lia e Dante**, ligados aos níveis reais das IAs existentes. Tabuleiros de dama/xadrez continuam grandes e centrados.
 
-A loja vende **visuais diretamente** e mostra três cartas de amostra. Cada tema tem desenho próprio; valor e naipe permanecem legíveis. Ateliê permite carregar/recarregar imagem ou decal, arrastar, ampliar, girar, ajustar luz, escolher moldura/faixa e ver frente/verso. Salvos permite guardar e reequipar até 12 visuais por conta.
+Salas humanas de Truco mostram duas duplas e começam depois de os quatro confirmarem **Estou pronto**. O anfitrião pode reservar o assento oposto para um amigo Roblox por dois minutos e compartilhar o código. A confirmação é limpa ao reentrar. O fluxo de código entre servidores usa a viagem existente; não envia mensagens automáticas ao amigo.
 
-As caixas foram retiradas das novas ofertas e das compras por moedas. Créditos antigos podem ser resgatados sem nova cobrança; recibos pendentes continuam sendo processados para preservar compras anteriores. Não há resultado aleatório. IDs de passes/produtos diretos e preços do painel permanecem os mesmos; a interface consulta o preço atual na Roblox. Éter Visual (3716300364) continua desativado.
+Mesa 2D maior, quatro jogadores, cartas públicas no centro, três cartas próprias tocáveis e uma faixa de ações embaixo. TRUCO permite dez segundos de resposta; o servidor encerra chamadas vencidas e a interface usa somente aumentos legais da variante. A revanche exige todos os votos, retém os assentos e reinicia mãos/placar; não aparece nos torneios. As artes de cartas ficaram menos carregadas, com valor/naipe explícitos.
 
-## Validação
+Compra direta, Ateliê, visuais salvos, baralho cheio/limpo/personalizado, regras e progressão da V52 continuam. IDs e preços do painel não foram alterados; sem novas ofertas de caixas. Éter Visual `3716300364` permanece desativado.
 
-**74 fontes efetivas com sintaxe válida, 25 cenários Lua simulados e testes do JavaScript real do instalador.** Os cenários incluem 72 partidas completas de bots, persistência, recibos idempotentes, privacidade, corpos nativos e geometria em ambas as orientações. Detalhes em [audits/V52/README.md](audits/V52/README.md), referências oficiais em [audits/V52/RESEARCH.md](audits/V52/RESEARCH.md).
+## Verificação
 
-Não houve execução no Roblox real nem compras. Meshes específicos, toque físico, imagens aprovadas, preços nativos e latência ainda precisam de teste no aparelho. As duas referências enviadas foram abertas e usadas para orientar a composição; a arte e o código desta entrega são próprios. O place não foi publicado. Versões anteriores e seus instaladores continuam no histórico.
+**76 fontes efetivas com sintaxe válida, 40 cenários Lua simulados e JavaScript real do instalador com cópia/hashes conferidos.** Um cenário inclui 72 partidas completas de bots. Geometria e alvos de toque amostrados de 320×568 a 1920×1080, incluindo deitado 568×320. Relatório em [audits/V53/README.md](audits/V53/README.md), fontes em [audits/V53/RESEARCH.md](audits/V53/RESEARCH.md).
+
+Não houve execução no Roblox, compra ou publicação do place. Renderização/deformação de assets, toque físico e viagens reais entre servidores precisam de teste no aparelho. Versões anteriores permanecem no histórico; este instalador não é cumulativo.
+

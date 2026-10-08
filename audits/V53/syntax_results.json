@@ -1,0 +1,9 @@
+{
+  "syntax": "pass",
+  "effective_sources": 76,
+  "delta_items": 21,
+  "replace": 19,
+  "create": 2,
+  "dependency_metadata": "pass",
+  "max_lines": 373
+}

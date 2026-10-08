@@ -1,0 +1,11 @@
+{
+  "version": "V53",
+  "base_commit": "b397dfe12ebebed3ca61c91df530dbcbc69ca902",
+  "items": 21,
+  "replace": 19,
+  "create": 2,
+  "max_lines": 373,
+  "effective_sources": 76,
+  "html_bytes": 712192,
+  "prerequisite": "Complete V52 already installed"
+}
