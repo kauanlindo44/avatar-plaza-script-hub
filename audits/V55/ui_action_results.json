@@ -1,0 +1,12 @@
+[
+  {
+    "case": "ai_generated_and_saved_looks_keep_visible_actions_on_mobile",
+    "result": "pass",
+    "detail": "live and saved results in six sizes retain explicit actions/items; item X edits the chosen look; edited appearance is sent for saving and applying"
+  },
+  {
+    "case": "salem_prints_real_face_identity_and_traditional_card_theme",
+    "result": "pass",
+    "detail": "all themes keep ranks, correct suits and traditional number pips; Salem has distinct autumn artwork on a paper face; backs disclose no card identity"
+  }
+]

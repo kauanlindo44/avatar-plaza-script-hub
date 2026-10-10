@@ -1,0 +1,17 @@
+[
+  {
+    "case": "new_assistant_questionnaire_music_and_photo_safe_controls",
+    "result": "pass",
+    "detail": "six portrait/landscape sizes: compact music, questionnaire and photo popup inside safe bounds; important actions at least 44px; adjacent buttons do not intersect"
+  },
+  {
+    "case": "community_five_across_two_rows_and_items_survive_utility_failure",
+    "result": "pass",
+    "detail": "landscape has ten visible outfits in 5x2, portrait two columns, bounded 100 data/50 reusable cards; equipped items stay functional even when cart initialization fails"
+  },
+  {
+    "case": "closed_catalog_still_applies_pineapple_on_map",
+    "result": "pass",
+    "detail": "closing the catalog during the debounce cannot cancel the selected shirt; live character is freshly validated and retains original body and clothes"
+  }
+]

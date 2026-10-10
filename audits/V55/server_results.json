@@ -1,0 +1,27 @@
+[
+  {
+    "case": "four_real_players_ready_consent_and_private_hands",
+    "result": "pass",
+    "detail": "four joined players wait for all ready; rejoin resets consent; 2v2 own-hand-only payloads and turn/revision validation"
+  },
+  {
+    "case": "friend_partner_slot_is_reserved_and_expires",
+    "result": "pass",
+    "detail": "only host reserves verified Roblox friend in opposite team seat; others cannot take it; free after 120s"
+  },
+  {
+    "case": "cross_server_friend_arrival_uses_reserved_seat",
+    "result": "pass",
+    "detail": "another server claims reserved opposite seat and routes to host; arrival validates room token, guest and source universe"
+  },
+  {
+    "case": "ten_second_raise_deadline_is_enforced_by_server",
+    "result": "pass",
+    "detail": "native RPC refuses a response after deadline and settles the pending call before processing late action"
+  },
+  {
+    "case": "rematch_requires_all_votes_and_old_cleanup_is_cancelled",
+    "result": "pass",
+    "detail": "one vote cannot restart a 2v2 match; all four reset score and fresh hands; delayed cleanup of old result cannot close new match"
+  }
+]
