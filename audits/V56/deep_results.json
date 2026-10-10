@@ -1,0 +1,62 @@
+[
+  {
+    "case": "native_error_trace_keeps_original_asset_and_stage",
+    "result": "pass",
+    "detail": "native 429 preserved verbatim in Output with stage/source/ID/trace; malformed diagnostic input stays bounded"
+  },
+  {
+    "case": "server_confirmation_does_not_require_client_content_download",
+    "result": "pass",
+    "detail": "server confirms native description/physical instances; the client reports its separate fetch failure instead of blocking all server swaps"
+  },
+  {
+    "case": "equipped_tool_assets_cannot_block_avatar_validation",
+    "result": "pass",
+    "detail": "unrelated tool meshes are excluded from avatar content verification"
+  },
+  {
+    "case": "failed_postswap_confirmation_restores_old_character_and_tools",
+    "result": "pass",
+    "detail": "old character remains intact through final verification; failed replacement restores its tools, parent and live player reference"
+  },
+  {
+    "case": "fixed_block_sets_do_not_follow_avatar_camera_or_resize",
+    "result": "pass",
+    "detail": "rotating avatar leaves camera and block CFrames unchanged; six local rooms including Halloween stay fixed during independent camera and layout changes"
+  },
+  {
+    "case": "animated_ghost_details_keep_their_relative_position",
+    "result": "pass",
+    "detail": "optional ghost animation carries its eyes; main room and avatar remain stationary"
+  },
+  {
+    "case": "failed_native_emote_play_keeps_previous_pose_and_model",
+    "result": "pass",
+    "detail": "animation creation and playback validate before replacing the current avatar or pose"
+  },
+  {
+    "case": "native_health_completion_updates_all_connected_clients",
+    "result": "pass",
+    "detail": "startup native health broadcasts readiness; an early unavailable snapshot cannot leave the interface permanently offline"
+  },
+  {
+    "case": "hair_edit_preserves_other_items_and_cleans_previous_hair",
+    "result": "pass",
+    "detail": "a targeted hair change keeps clothes/body/other accessories; replacement scope and budget are validated server-side"
+  },
+  {
+    "case": "dynamic_halloween_windows_preserve_card_and_board_art",
+    "result": "pass",
+    "detail": "late-created dialogs receive Halloween decoration; decorative objects cannot intercept touches; board cells and card identities stay protected"
+  },
+  {
+    "case": "music_reuses_legacy_audio_and_stops_duplicate_controller",
+    "result": "pass",
+    "detail": "existing ACPPlazaMusicV2 sound is adopted; old controller/panel and later duplicate startup are disabled without a second audio stream"
+  },
+  {
+    "case": "photo_prefers_exact_character_clone_and_restores_archivable",
+    "result": "pass",
+    "detail": "matching live appearance takes the character clone path and restores its original Archivable value"
+  }
+]
