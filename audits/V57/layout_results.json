@@ -1,0 +1,17 @@
+[
+  {
+    "case": "responsive_conversation_music_photo_controls_and_inline_choices",
+    "result": "pass",
+    "detail": "six sizes/cutouts: safe 44px controls, compact music and inline creation form; retry and camera/avatar controls do not overlap"
+  },
+  {
+    "case": "inline_results_and_detail_item_actions_stay_usable",
+    "result": "pass",
+    "detail": "five inline results keep latest indices consistent; details retain items/X/apply/save/cart; a help-only answer preserves previous looks"
+  },
+  {
+    "case": "photo_all_context_choices_fit_without_scroll",
+    "result": "pass",
+    "detail": "all 4/6/7/10 photo menu choices remain visible with 44px targets and no scrolling on narrow landscape and portrait"
+  }
+]

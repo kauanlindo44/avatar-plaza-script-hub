@@ -1,8 +1,8 @@
 {
   "schema": 2,
   "project": "Avatar Plaza Script Hub",
-  "latest": "V56",
-  "updated_at": "2026-10-10T20:50:49+00:00",
+  "latest": "V57",
+  "updated_at": "2026-10-10T22:12:47+00:00",
   "poll_seconds": 5,
   "versions": [
     {
@@ -5409,6 +5409,86 @@
           "path": "scripts/V56/09I_ASSISTANT_SERVER.lua",
           "sha256": "3c1bbf3daeff5935ad4defed741509f23be11ec7412d6aec73342ca3ee53860c",
           "lines": 121,
+          "parts": 2
+        }
+      ]
+    },
+    {
+      "id": "V57",
+      "title": "CORREÇÃO DO CABELO + CARRINHO + DIAGNÓSTICO POR ITEM — 7 SUBSTITUIÇÕES",
+      "date": "2026-10-10",
+      "summary": "Cliente aceita o carrinho V55 fornecido. Cabelo rígido usa a classificação nativa aplicada e pode ter Part/SpecialMesh sem WrapLayer; roupa 3D mantém validação de instância exata, malha, camada e corpo. Erro informa ID/tipo/requisito e separa validação do jogo, erro de script, erro nativo, conteúdo e configuração.",
+      "install_note": "Requer V56 completa. V57: somente 7 SUBSTITUIÇÕES e nenhum NOVO. Pare Play, substitua as fontes completas nos locais indicados e reinicie Play. Não duplique scripts. Mantenha 09C4_OUTFIT_LIBRARY da V55 já instalada; não existe substituição V56/V57 desse módulo. Guia: INSTALL_V57.md.",
+      "validation": "97 fontes efetivas com sintaxe Lua 5.4 válida; 41 cenários simulados. Cliente real do catálogo/carrinho, roupa em camadas com cabelo rígido corrigido, diagnóstico cliente/servidor, rollback, prévias e Photo Mode. Não houve execução no motor Roblox ou confirmação visual do gato no mapa publicado.",
+      "scripts": [
+        {
+          "name": "08B2_BODY_DESCRIPTION",
+          "type": "ModuleScript",
+          "location": "ReplicatedStorage",
+          "parts": 2,
+          "action": "SUBSTITUIR",
+          "path": "scripts/V57/08B2_BODY_DESCRIPTION.lua",
+          "sha256": "f720952356d761dada5ab6edb6df30c8daa8606b2e09d903f74567b8e8292e9f",
+          "lines": 91
+        },
+        {
+          "name": "08B3_AVATAR_VERIFY",
+          "type": "ModuleScript",
+          "location": "ReplicatedStorage",
+          "action": "SUBSTITUIR",
+          "path": "scripts/V57/08B3_AVATAR_VERIFY.lua",
+          "sha256": "f8e26c363dc078591322326b8d8c379c14b24fed6c44b9a4b31391455a04c9fe",
+          "lines": 67,
+          "parts": 2
+        },
+        {
+          "name": "08B4_AVATAR_LOAD",
+          "type": "ModuleScript",
+          "location": "ReplicatedStorage",
+          "action": "SUBSTITUIR",
+          "path": "scripts/V57/08B4_AVATAR_LOAD.lua",
+          "sha256": "9d03f41b136f497b8f8b1e656a49289d792027e455f8f128ec69cc3ffcf89a57",
+          "lines": 113,
+          "parts": 2
+        },
+        {
+          "name": "08B5_AVATAR_DIAGNOSTICS",
+          "type": "ModuleScript",
+          "location": "ReplicatedStorage",
+          "action": "SUBSTITUIR",
+          "path": "scripts/V57/08B5_AVATAR_DIAGNOSTICS.lua",
+          "sha256": "922991d1454bdd9e2cef5b479cdb807e3c6906deb94e7052960693fc873653bb",
+          "lines": 68,
+          "parts": 2
+        },
+        {
+          "name": "09B_SHOP_SERVER",
+          "type": "Script",
+          "location": "ServerScriptService",
+          "action": "SUBSTITUIR",
+          "lines": 214,
+          "sha256": "16552a69b087e36a49ebc3441fe8e76f58c697d30b45c043dcd9b2b99a372d41",
+          "path": "scripts/V57/09B_SHOP_SERVER.lua",
+          "parts": 2
+        },
+        {
+          "name": "09C12_AVATAR_FEEDBACK",
+          "type": "LocalScript",
+          "location": "StarterPlayer > StarterPlayerScripts",
+          "action": "SUBSTITUIR",
+          "path": "scripts/V57/09C12_AVATAR_FEEDBACK.lua",
+          "sha256": "4f70325e14f07935d86e28e4a98fb19eb03282027955e4ebdef37229bd91fa98",
+          "lines": 105,
+          "parts": 2
+        },
+        {
+          "name": "09C_SHOP_CLIENT",
+          "type": "LocalScript",
+          "location": "StarterPlayer > StarterPlayerScripts",
+          "action": "SUBSTITUIR",
+          "lines": 380,
+          "sha256": "b6c86f6a08a2e5da11045acc5d551c8acf81d065a1fa1f3efc73f691e991033e",
+          "path": "scripts/V57/09C_SHOP_CLIENT.lua",
           "parts": 2
         }
       ]

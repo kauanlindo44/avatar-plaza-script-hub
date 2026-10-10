@@ -1,0 +1,22 @@
+[
+  {
+    "case": "replicated_avatar_fetch_failure_is_reported_with_native_id",
+    "result": "pass",
+    "detail": "actual client verifier emits content failure with the server trace; next confirmed epoch closes the error and reports success"
+  },
+  {
+    "case": "diagnostic_catalog_button_uses_real_open_event",
+    "result": "pass",
+    "detail": "catalog action fires AvatarShop08Gui.OpenRequest instead of relying on an unused nonce or invalid Activate method"
+  },
+  {
+    "case": "truco_card_store_prices_complete_individually_and_retry",
+    "result": "pass",
+    "detail": "one failed price cannot keep other visuals consulting forever; each purchase needs a confirmed native price; retry reloads the store"
+  },
+  {
+    "case": "assistant_real_controller_keeps_results_in_conversation_and_handles_error",
+    "result": "pass",
+    "detail": "actual LocalScript opens inline questionnaire, keeps look results in chat, and displays failures inline while releasing the send control"
+  }
+]
