@@ -1,0 +1,27 @@
+[
+  {
+    "case": "only_successfully_applied_avatar_survives_new_session",
+    "result": "pass",
+    "detail": "fresh profile load never saves itself; confirmed live native metadata/layers/scales/emotes survive a fresh session; failed body cannot replace the persisted choice"
+  },
+  {
+    "case": "rapid_applies_coalesce_and_leave_flushes_newest_revision",
+    "result": "pass",
+    "detail": "25 rapid edits coalesce to the newest body; ordinary writes are spaced eight seconds; leaving bypasses the delay and flushes the latest pending skin"
+  },
+  {
+    "case": "new_session_prevents_old_server_overwrite",
+    "result": "pass",
+    "detail": "atomic session token blocks a late flush from an older server from overwriting the newer session"
+  },
+  {
+    "case": "storage_outage_never_overwrites_record_with_profile_defaults",
+    "result": "pass",
+    "detail": "read/write outage is visible; existing data remains intact; retry and final flush recover the intended skin without profile fallback overwrites"
+  },
+  {
+    "case": "shutdown_flush_and_update_callback_retry_are_idempotent",
+    "result": "pass",
+    "detail": "BindToClose waits for pending saves; repeated UpdateAsync transform execution has no yielding calls or external side effects"
+  }
+]

@@ -1,32 +1,29 @@
-# Avatar Plaza — V53
+# Avatar Plaza — V54
 
-Atualização baseada no GitHub `main`, V52, commit `b397dfe12ebebed3ca61c91df530dbcbc69ca902`. **19 substituições + 2 módulos novos**, somente o delta para quem já instalou a V52 completa.
+Atualização baseada na V53 mais recente do GitHub, commit `f99494623aa804cf43bd04712e50e33220a19b26`. **18 substituições + 3 módulos novos**, em 21 locais de instalação, com 19 fontes diferentes. Requer a V53 completa.
 
-Abra [AVATAR_PLAZA_V53.html](AVATAR_PLAZA_V53.html) ou [AVATAR_PLAZA_SCRIPT_HUB_PERMANENTE.html](AVATAR_PLAZA_SCRIPT_HUB_PERMANENTE.html). O [INSTALL_V53.md](INSTALL_V53.md) lista nome exato, tipo e local. Pare Play, crie primeiro os dois módulos novos e depois substitua os 19 existentes. Código oculto, última linha e copiar inteiro/em duas partes; todos os itens têm menos de 400 linhas.
+Abra [AVATAR_PLAZA_V54.html](AVATAR_PLAZA_V54.html) ou [AVATAR_PLAZA_SCRIPT_HUB_PERMANENTE.html](AVATAR_PLAZA_SCRIPT_HUB_PERMANENTE.html). O [INSTALL_V54.md](INSTALL_V54.md) mostra cada nome, tipo e local. Pare Play, crie os três NOVOS e substitua os existentes. As regras 07A0_CHESS_RULES e 07B0_CHECKERS_RULES precisam do mesmo código em **ReplicatedStorage e ServerScriptService**. Não duplique instâncias dentro da mesma pasta. Código oculto, última linha e copiar inteiro/em duas partes; todas as fontes têm menos de 400 linhas.
 
-## Avatar e catálogo
+## Interfaces
 
-Prévia, personagem e Photo Mode usam um carregamento compartilhado, com verificação de descrição, estrutura do corpo, acessórios físicos e downloads de malhas/texturas. Roupas 3D selecionam R15 quando necessário. A reconstrução é rejeitada antes de substituir o personagem se vier incompleta. Prévias maiores oferecem nova tentativa; a prévia principal evita avisos/botões duplicados. Fundo neutro mais claro e enquadramento 360° mantêm a leitura de avatares claros e escuros.
+Jogos com abas, moedas no cabeçalho, quatro ações claras, retratos originais de Nico/Lia/Dante e painéis em azul escuro/jade com acentos e efeitos. Opções têm um único X; ele cancela a espera da sala. Mesa 2D de Truco com madeira/feltro, duplas destacadas, cartas públicas no centro e coleta animada da vaza, três cartas próprias acima dos botões e decisão com dez segundos. Tabuleiros de dama/xadrez grandes e centrados; promoção permite quatro escolhas também contra bots.
 
-O gato abacaxi `72779265740934` é uma camisa 3D, não um pacote de corpo. O caminho simulado preserva camisa/calça clássicas e outros acessórios ao experimentá-la. **Layered Clothing deve estar permitido no projeto**; scripts não podem habilitar a propriedade protegida. Não houve teste dessa malha no motor Roblox; IDs e cages presentes não garantem a deformação visual final de todo asset.
+Meus looks tem prévia principal maior sobre palco iluminado, cards compactos, ações visíveis e itens embaixo com X separado. Salvar abre uma tela com prévia e formulário. Comunidade tem duas skins lado a lado, busca/filtro, fundo iluminado e detalhes 360°. Os dados reais e a janela virtual limitada continuam: 50 slots, até 100 looks em memória e Carregar mais.
 
-O catálogo reaproveita até 40 instâncias de card ao rolar, preservando duas linhas visíveis e até cinco cards por linha conforme o espaço. Miniaturas amplas, Robux compactos embaixo e itens equipados com X permanecem. O botão **+ CARRINHO** nos detalhes adiciona sem trocar o avatar. Experimentar também adiciona uma vez.
+Carrinho separa Itens escolhidos e Look completo, apresenta estimativa/quantidade, marcação e remoção, Recarregar e prévia lateral quando há largura. Falha de cotação libera nova tentativa; abrir ou comprar não muda a skin. Preços finais e compras continuam nos prompts oficiais.
 
-O carrinho do outfit consulta pacotes de corpo/pares de sapatos, evita peças duplicadas e mantém escolhas desmarcadas. Compra aguarda a consulta; itens indisponíveis/já possuídos são excluídos. O total é estimativa ou subtotal conhecido; valores desconhecidos ficam para consulta no Roblox. Cotações de pacotes usam resultados limitados, sem promessa de encontrar a combinação global mais barata.
+As telas usam os mesmos cálculos seguros do catálogo: aproveitam o topo livre ao lado dos controles Roblox quando cabe e chegam ao limite inferior seguro, respeitando cutouts e margens nativas. Catálogo e sua faixa de itens equipados continuam.
 
-## Jogos e Truco
+## Persistência e regras
 
-Abas Truco/Dama/Xadrez mostram quatro ações do jogo escolhido, em grafite/verde suave. Moedas no cabeçalho, perfis verticais de bots **Nico, Lia e Dante**, ligados aos níveis reais das IAs existentes. Tabuleiros de dama/xadrez continuam grandes e centrados.
+A última aparência aplicada e confirmada no personagem entra em uma fila de salvamento do servidor. Ao entrar de novo, o jogo tenta restaurá-la antes do perfil padrão. Há confirmação de gravação e aviso de falha; abrir o catálogo sem editar não grava o perfil padrão sobre uma restauração que falhou. A fila agrupa edições e faz flush na saída/shutdown. O token de sessão bloqueia escrita tardia de um servidor antigo, mas não recupera dados ainda não gravados antes de uma queda ou transferência.
 
-Salas humanas de Truco mostram duas duplas e começam depois de os quatro confirmarem **Estou pronto**. O anfitrião pode reservar o assento oposto para um amigo Roblox por dois minutos e compartilhar o código. A confirmação é limpa ao reentrar. O fluxo de código entre servidores usa a viagem existente; não envia mensagens automáticas ao amigo.
+As regras de dama brasileira e os casos de promoção/empate/repetição de xadrez foram revisados nas duas cópias. Fontes oficiais em [audits/V54/RESEARCH.md](audits/V54/RESEARCH.md).
 
-Mesa 2D maior, quatro jogadores, cartas públicas no centro, três cartas próprias tocáveis e uma faixa de ações embaixo. TRUCO permite dez segundos de resposta; o servidor encerra chamadas vencidas e a interface usa somente aumentos legais da variante. A revanche exige todos os votos, retém os assentos e reinicia mãos/placar; não aparece nos torneios. As artes de cartas ficaram menos carregadas, com valor/naipe explícitos.
+## Validação e instalação
 
-Compra direta, Ateliê, visuais salvos, baralho cheio/limpo/personalizado, regras e progressão da V52 continuam. IDs e preços do painel não foram alterados; sem novas ofertas de caixas. Éter Visual `3716300364` permanece desativado.
+**79 fontes efetivas com sintaxe válida, 61 cenários Lua simulados e JavaScript real do instalador com cópia/hashes conferidos.** Um cenário inclui 72 partidas completas de bots. Geometria amostrada de 320×568 a 1920×1080, incluindo 568×320. Relatório em [audits/V54/README.md](audits/V54/README.md).
 
-## Verificação
+Não houve execução no Roblox, compra ou publicação do place. Teste renderização, toque físico, viagem entre servidores e persistência real no jogo publicado. DataStores precisam estar disponíveis; teste em Studio exige acesso às APIs habilitado. Para camadas, Layered Clothing precisa estar permitido nas configurações do projeto; scripts não podem alterar a propriedade protegida.
 
-**76 fontes efetivas com sintaxe válida, 40 cenários Lua simulados e JavaScript real do instalador com cópia/hashes conferidos.** Um cenário inclui 72 partidas completas de bots. Geometria e alvos de toque amostrados de 320×568 a 1920×1080, incluindo deitado 568×320. Relatório em [audits/V53/README.md](audits/V53/README.md), fontes em [audits/V53/RESEARCH.md](audits/V53/RESEARCH.md).
-
-Não houve execução no Roblox, compra ou publicação do place. Renderização/deformação de assets, toque físico e viagens reais entre servidores precisam de teste no aparelho. Versões anteriores permanecem no histórico; este instalador não é cumulativo.
-
+Passes, produtos e preços continuam os existentes. Compra direta, Ateliê e visuais salvos permanecem. Éter Visual 3716300364 continua desativado; sem novas ofertas de caixas. Versões anteriores estão no histórico; o instalador da V54 é somente o delta depois da V53.

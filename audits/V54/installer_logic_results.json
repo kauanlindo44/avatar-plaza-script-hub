@@ -1,0 +1,23 @@
+{
+  "result": "pass",
+  "runtime": "Node.js + minimal DOM doubles; no CSS rendering",
+  "checks": [
+    "Offline V54",
+    "Current fallback version label",
+    "Old-cache rejection",
+    "21 patch source hashes and offline V44 base",
+    "Exact part reconstruction",
+    "3 creations and 18 replacements",
+    "New/replace labels with canonical instance names",
+    "Compact name/type/location and last-line cards",
+    "All full/part source fields initially hidden",
+    "Exact whole-script clipboard output and two-part reconstruction",
+    "Blocked clipboard reveals and selects only the requested source",
+    "Online status uses the green CSS class",
+    "Offline status clears the online CSS class",
+    "Tampered-source fallback",
+    "Closing during load",
+    "Both chess/checkers copies have distinct explicit Studio locations and identical source",
+    "No JavaScript exceptions"
+  ]
+}

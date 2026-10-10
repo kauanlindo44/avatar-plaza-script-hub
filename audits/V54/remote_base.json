@@ -1,0 +1,2170 @@
+{
+  "commit": "f99494623aa804cf43bd04712e50e33220a19b26",
+  "tree": "59ea8469bcb235943c933c5c37a97b21115a26a4",
+  "blobs": [
+    {
+      "path": "manifest.json",
+      "sha": "f3337ecc04cff8f98b70a352f4748fcb2886707a"
+    },
+    {
+      "path": "scripts/V36B/07G_HUB_UI.lua",
+      "sha": "718c9a3ac89a6385d5f322ec1da3d94259940350"
+    },
+    {
+      "path": "scripts/V36B/09A_SHOP_UI.lua",
+      "sha": "a0ac87f0828783cf452b4b73568ce10a1b7e5987"
+    },
+    {
+      "path": "scripts/V36B/09C2_SHOP_CATALOG.lua",
+      "sha": "e48753618de47327ca2cd2aa36be32dfb56b256c"
+    },
+    {
+      "path": "scripts/V36C/01A_HUB_CORE_ENV.lua",
+      "sha": "5d77935866f2d163ee5d650919887143ff52b839"
+    },
+    {
+      "path": "scripts/V36C/01B_HUB_WORLD.lua",
+      "sha": "79d0a2b1d66ba3f2093acc8570489b15e9c6ee3b"
+    },
+    {
+      "path": "scripts/V36C/07G_HUB_UI.lua",
+      "sha": "33186898badd1577d9e4f4654c71cc6476cf6cce"
+    },
+    {
+      "path": "scripts/V36C/09A_SHOP_UI.lua",
+      "sha": "70b11242fce9f7725b78097fcce4172b371beead"
+    },
+    {
+      "path": "scripts/V36C/09C2_SHOP_CATALOG.lua",
+      "sha": "190c84b71e7b13eb4ae5c788e4dadc77243aa2f5"
+    },
+    {
+      "path": "scripts/V36C/09C_SHOP_CLIENT.lua",
+      "sha": "39d3f1df78b2f7a49f8d0127ebdcd7032a11ebce"
+    },
+    {
+      "path": "scripts/V36D/01A_HUB_CORE_ENV.lua",
+      "sha": "3c14eaa7bd2262c9cd97520df28493d41853c722"
+    },
+    {
+      "path": "scripts/V36D/01B_HUB_WORLD.lua",
+      "sha": "b150d3c3adcc524f7143af5d710026d6cc38a7fc"
+    },
+    {
+      "path": "scripts/V36D/07G_HUB_UI.lua",
+      "sha": "be1bc479959083b48c36e7d5045ba02e3037e25c"
+    },
+    {
+      "path": "scripts/V36D/07X_SOCIAL_TAGS.lua",
+      "sha": "8e45da00b6eb30e3f12a0c4eb5b9efa6c1ab9144"
+    },
+    {
+      "path": "scripts/V36D/09A_SHOP_UI.lua",
+      "sha": "e952169ae62e1ef4aa106cd892b6a5cfc7bb753b"
+    },
+    {
+      "path": "scripts/V36D/09C2_SHOP_CATALOG.lua",
+      "sha": "535162a1772b3964e3bbd0f23796685b1e6dbadc"
+    },
+    {
+      "path": "scripts/V36D/09C_SHOP_CLIENT.lua",
+      "sha": "d8408f299682e037594576bcc668280f507de32d"
+    },
+    {
+      "path": "scripts/V36E/01A_HUB_CORE_ENV.lua",
+      "sha": "31dd1e450c2bcfba1ba0848d99fe89ac50646ea1"
+    },
+    {
+      "path": "scripts/V36E/01B_HUB_WORLD.lua",
+      "sha": "b2c6a6b329387b0b23073632095c3e0d937a9624"
+    },
+    {
+      "path": "scripts/V36E/07G_HUB_UI.lua",
+      "sha": "d7cc5f819b01ae56c78065640ef9fc26443af538"
+    },
+    {
+      "path": "scripts/V36E/07H_GAME_UI.lua",
+      "sha": "1df9695ba8820fb050a76bf50e5ea1acc64fcbfb"
+    },
+    {
+      "path": "scripts/V36E/09A_SHOP_UI.lua",
+      "sha": "f8ce6a02f415040cb93a807a8e3ca0b71ba4c535"
+    },
+    {
+      "path": "scripts/V36E/09C1_SHOP_LOOKS.lua",
+      "sha": "9c5680d57704734ca7e62a268685654029f0dfc4"
+    },
+    {
+      "path": "scripts/V36E/09C2_SHOP_CATALOG.lua",
+      "sha": "af0cb188cb5e1bfe575c6e1e04e3ad967f5f8a50"
+    },
+    {
+      "path": "scripts/V36E/09C_SHOP_CLIENT.lua",
+      "sha": "24d2398838eb49d0cc7a038539077e84acb833f0"
+    },
+    {
+      "path": "scripts/V37/01A_HUB_CORE_ENV.lua",
+      "sha": "b1ac84b1059fef05cbd8e9f36d12a6b8a9515e95"
+    },
+    {
+      "path": "scripts/V37/01B_HUB_WORLD.lua",
+      "sha": "1d0f5fbd7f6d58c2ad2e992b4f1b8a8a14511a24"
+    },
+    {
+      "path": "scripts/V37/07A0_CHESS_RULES.lua",
+      "sha": "0317107b56938b9727da9b92adb042db673131cb"
+    },
+    {
+      "path": "scripts/V37/07B0_CHECKERS_RULES.lua",
+      "sha": "48b6414c18f4cd7b36f5c7aee892c270c7bab999"
+    },
+    {
+      "path": "scripts/V37/07G_HUB_UI.lua",
+      "sha": "57c3fe84397be76735e12d071dc3445b7ae3fc04"
+    },
+    {
+      "path": "scripts/V37/07H_GAME_UI.lua",
+      "sha": "8878ba1276c632cf16c88a34c788f054b7c393ef"
+    },
+    {
+      "path": "scripts/V37/08D_SKIN_STATE.lua",
+      "sha": "f4d5e7ec59cee9df40d207db3bbbf01e37504498"
+    },
+    {
+      "path": "scripts/V37/09A_SHOP_UI.lua",
+      "sha": "994fe6fa31750882bbd81b77a9b28b558a6cb5e4"
+    },
+    {
+      "path": "scripts/V37/09B_SHOP_SERVER.lua",
+      "sha": "b399ee1b2bd7a13a4ad338c3aff5c4c9322f4b52"
+    },
+    {
+      "path": "scripts/V37/09C1_SHOP_LOOKS.lua",
+      "sha": "35d605a651259b8fef22ac2abdaf84b26148c03c"
+    },
+    {
+      "path": "scripts/V37/09C2_SHOP_CATALOG.lua",
+      "sha": "f0d39786118214de4e0829e94855db3ab2161148"
+    },
+    {
+      "path": "scripts/V37/09C4_OUTFIT_LIBRARY.lua",
+      "sha": "8122fb07c229168376b62f63095c7defce6e1365"
+    },
+    {
+      "path": "scripts/V37/09C_SHOP_CLIENT.lua",
+      "sha": "73517af8f27d172c1330ed75046b8390b82b5ec8"
+    },
+    {
+      "path": "scripts/V38/01A_HUB_CORE_ENV.lua",
+      "sha": "0eadd0df51ca11d2b8481eb6138ce47d20c42e48"
+    },
+    {
+      "path": "scripts/V38/01B_HUB_WORLD.lua",
+      "sha": "50f8d7f56c9d370805c7d42f1b0d5d504e5435b7"
+    },
+    {
+      "path": "scripts/V38/07G_HUB_UI.lua",
+      "sha": "2c6553c1d4baadebf3074efa891ec13a84e72173"
+    },
+    {
+      "path": "scripts/V38/07H_GAME_UI.lua",
+      "sha": "3326cb05d203dcfb80241ea6014335d10d88269f"
+    },
+    {
+      "path": "scripts/V38/09A_SHOP_UI.lua",
+      "sha": "5f6a0fdf48e1c08ed2abe0005a8b152a387653dd"
+    },
+    {
+      "path": "scripts/V38/09C1_SHOP_LOOKS.lua",
+      "sha": "b4d377a02c986958f4c49432a2ea3c73dc3987ae"
+    },
+    {
+      "path": "scripts/V38/09C2_SHOP_CATALOG.lua",
+      "sha": "539ee7a4cffd06c2101083bb6cf104c77b10feb1"
+    },
+    {
+      "path": "scripts/V38/09C4_OUTFIT_LIBRARY.lua",
+      "sha": "a676fd8281849651567333a61054b4ff608dbe39"
+    },
+    {
+      "path": "scripts/V38/09C5_UGC_STORES.lua",
+      "sha": "d7a731401558595f1f5e12692cee15251a8d51e1"
+    },
+    {
+      "path": "scripts/V38/09C_SHOP_CLIENT.lua",
+      "sha": "74ce8703142b58597ca5e13d67adfebc04a9a574"
+    },
+    {
+      "path": "scripts/V38_1/01A_HUB_CORE_ENV.lua",
+      "sha": "5c55e6f8573f532e0c5fde35c6a816d17ab62cae"
+    },
+    {
+      "path": "scripts/V38_1/01B_HUB_WORLD.lua",
+      "sha": "cdb14cb1c9be085175c1f53932934c4758eefc22"
+    },
+    {
+      "path": "scripts/V38_1/01C_HUB_CHALLENGES.lua",
+      "sha": "cc7acd533fcccd643596211ddc8fba3ebb505624"
+    },
+    {
+      "path": "scripts/V38_1/07G_HUB_UI.lua",
+      "sha": "b02b30074e8819717b4590224d2058283554b9e4"
+    },
+    {
+      "path": "scripts/V38_1/07H_GAME_UI.lua",
+      "sha": "41a631dc279119c25ad8ea33acd7bbffdd8e1260"
+    },
+    {
+      "path": "scripts/V38_1/09A_SHOP_UI.lua",
+      "sha": "e894f524a3a291f11f29207cea25c06a0f7e9d5c"
+    },
+    {
+      "path": "scripts/V38_1/09C_SHOP_CLIENT.lua",
+      "sha": "f07c0a4e01eaede8ba453635363e4a921878055c"
+    },
+    {
+      "path": "scripts/V39/07G_HUB_UI.lua",
+      "sha": "76e219b23b9c39e50587b4d4d6aa7365004890ae"
+    },
+    {
+      "path": "scripts/V39/07H_GAME_UI.lua",
+      "sha": "200e7579114fc80e9ce9dd201bfc2e13a48d75fe"
+    },
+    {
+      "path": "scripts/V39/09A_SHOP_UI.lua",
+      "sha": "18813612a637bb1131eedf07c664d2d35eb60d89"
+    },
+    {
+      "path": "scripts/V39/09B_SHOP_SERVER.lua",
+      "sha": "9346d7de208d44c30e74622c4ffbc603050ae4dd"
+    },
+    {
+      "path": "scripts/V39/09C1_SHOP_LOOKS.lua",
+      "sha": "7dafa2a47158bd36034d7a583d979a0de8e3dd20"
+    },
+    {
+      "path": "scripts/V39/09C2_SHOP_CATALOG.lua",
+      "sha": "1c861365712f6e6ec13ccb31835ab1cfb24fdfd1"
+    },
+    {
+      "path": "scripts/V39/09C4_OUTFIT_LIBRARY.lua",
+      "sha": "297a3f714dd0739a471ea8233a2f8b88c385c6d0"
+    },
+    {
+      "path": "scripts/V39/09C5_UGC_STORES.lua",
+      "sha": "8c5fa53e136e62dd7b56a423bb1f92e96baeaf80"
+    },
+    {
+      "path": "scripts/V39/09C_SHOP_CLIENT.lua",
+      "sha": "ff7a55ddc84b1dcdc431ca750b5869ee56dd4b9f"
+    },
+    {
+      "path": "scripts/V40/07G_HUB_UI.lua",
+      "sha": "18145557231b09b21b43c1b8fe8ad37b80d2550e"
+    },
+    {
+      "path": "scripts/V40/07H1_GAME_LOBBY.lua",
+      "sha": "1b84cc1257b00b2113008a7e66f018ebf1adeefb"
+    },
+    {
+      "path": "scripts/V40/07H2_GAME_BOARD.lua",
+      "sha": "80471e808863db1ffb3bd8f6691b0f1e18620fa0"
+    },
+    {
+      "path": "scripts/V40/07H_GAME_UI.lua",
+      "sha": "d6921baa3e5f2acd5b287095dd43ec9ecf2cc8b4"
+    },
+    {
+      "path": "scripts/V40/07UI_DESIGN_SYSTEM.lua",
+      "sha": "20461f6401d2073e6e8a472b609647e2b43759fa"
+    },
+    {
+      "path": "scripts/V40/09A_SHOP_UI.lua",
+      "sha": "dd9fa8545170c1e96d540a6ebe56d52cd9c2469e"
+    },
+    {
+      "path": "scripts/V40/09C_SHOP_CLIENT.lua",
+      "sha": "f9719dff077b21d461d1a43443f5a2c07fb7443e"
+    },
+    {
+      "path": "scripts/V40_1/07UI_DESIGN_SYSTEM.lua",
+      "sha": "94be9ec1a96ecc6e64cfccc2beb34e19129dafaa"
+    },
+    {
+      "path": "scripts/V41/07G_HUB_UI.lua",
+      "sha": "7107e12677fd693b2dc79fd399f58c548f2f7201"
+    },
+    {
+      "path": "scripts/V41/07UI_DESIGN_SYSTEM.lua",
+      "sha": "6217b376d7736db5b25ac93fe5ca161f96af6a9c"
+    },
+    {
+      "path": "scripts/V41/08B_AVATAR_DATA.lua",
+      "sha": "ac5f7f3c4e7c4be47572908ca3fa4c0053922d9d"
+    },
+    {
+      "path": "scripts/V41/08D_SKIN_STATE.lua",
+      "sha": "8799e45747d719baf177026fbf16214767d876c0"
+    },
+    {
+      "path": "scripts/V41/09A1_SHOP_LAYOUT.lua",
+      "sha": "1bcadd7e9b373261c373739cbb25131b92e72f1d"
+    },
+    {
+      "path": "scripts/V41/09A_SHOP_UI.lua",
+      "sha": "4a23fb327ddea3dc20976696c3515bfcfdc13eaf"
+    },
+    {
+      "path": "scripts/V41/09B_SHOP_SERVER.lua",
+      "sha": "5758e2e4f97a0cfff0eb1dbb7808ffa6121fc531"
+    },
+    {
+      "path": "scripts/V41/09C2_SHOP_CATALOG.lua",
+      "sha": "d2e6e3bc7c5fd7f532ffa476ade5a7b65472590a"
+    },
+    {
+      "path": "scripts/V41/09C4_OUTFIT_LIBRARY.lua",
+      "sha": "204866abcf19d4893a8cbefc95ddf655632757a8"
+    },
+    {
+      "path": "scripts/V41/09C_SHOP_CLIENT.lua",
+      "sha": "afc81bb8595c09e0c15b07bd63030966b252b86b"
+    },
+    {
+      "path": "scripts/V42/01A_HUB_CORE_ENV.lua",
+      "sha": "873a33cc739a3a336455427ad368c8475239d9aa"
+    },
+    {
+      "path": "scripts/V42/01C_HUB_CHALLENGES.lua",
+      "sha": "3bedd1f3cca1a5b760e2d5c6832197d53f7582f9"
+    },
+    {
+      "path": "scripts/V42/07H1_GAME_LOBBY.lua",
+      "sha": "1d9a1753e6d878b0da1c319fcb41ca61acdbc5a5"
+    },
+    {
+      "path": "scripts/V42/07H2_GAME_BOARD.lua",
+      "sha": "d0f2e22eaad4a781cd6b399fa20b66a3d1d97bb1"
+    },
+    {
+      "path": "scripts/V42/07H3_CROSS_SERVER_ROOMS.lua",
+      "sha": "69bb8409743c25f09c7b4fe38aaf014a89187260"
+    },
+    {
+      "path": "scripts/V42/07H_GAME_UI.lua",
+      "sha": "d3f8b3e30f08cd353eeec21f71f1aa24ef9c4e2d"
+    },
+    {
+      "path": "scripts/V42/07P0_STUDIO_PRESETS.lua",
+      "sha": "5069d10147b1262d6c94a45cfa566c824976d536"
+    },
+    {
+      "path": "scripts/V42/07P2_STUDIO_AVATAR.lua",
+      "sha": "2b30fc18aad0e7bafa8e32aa4e8d2c7f8f4cb8b3"
+    },
+    {
+      "path": "scripts/V42/07P3_POSE_EDITOR.lua",
+      "sha": "71462239c20b0d7acfe1700d7d58b94c5b992056"
+    },
+    {
+      "path": "scripts/V42/07P4_STUDIO_UI.lua",
+      "sha": "74eba4c977fca6ca729b32864719bf210b61d541"
+    },
+    {
+      "path": "scripts/V42/07P_PHOTO_MODE.lua",
+      "sha": "732d22290b4eaa2fd1db2cc6caa162582b635db5"
+    },
+    {
+      "path": "scripts/V42/07UI_SCREEN_BOUNDS.lua",
+      "sha": "3be9bfe32dae224aa87a21282520520953299152"
+    },
+    {
+      "path": "scripts/V42/09A1_SHOP_LAYOUT.lua",
+      "sha": "0207ee980f6525ad960ab7a9b25243cf91993cc9"
+    },
+    {
+      "path": "scripts/V42/09A_SHOP_UI.lua",
+      "sha": "a57f2807b5048fd7a663a52fdc2d9940f12fbede"
+    },
+    {
+      "path": "scripts/V42/09B_SHOP_SERVER.lua",
+      "sha": "1eb12149635d864271f7e2695ee51a00a892da3d"
+    },
+    {
+      "path": "scripts/V42/09C1_SHOP_LOOKS.lua",
+      "sha": "64d19a36f91e3e13ff8646451c086732b0721ad0"
+    },
+    {
+      "path": "scripts/V42/09C2_SHOP_CATALOG.lua",
+      "sha": "f77076374df9427944a1aa580190dfefd1c0e101"
+    },
+    {
+      "path": "scripts/V42/09C4_OUTFIT_LIBRARY.lua",
+      "sha": "49b18779aa406f1fc9004ac489bc59cccc628ab2"
+    },
+    {
+      "path": "scripts/V42/09C5_UGC_STORES.lua",
+      "sha": "f4196c7f35e15354d843d06137540894a36e02b6"
+    },
+    {
+      "path": "scripts/V42/09C_SHOP_CLIENT.lua",
+      "sha": "0bbbab28a764ba3ea8b97c19baafa5e29c811a1b"
+    },
+    {
+      "path": "scripts/V43/07G1_HUB_SETTINGS.lua",
+      "sha": "77a3811da01bf7b166671a5e87bb515d48356e8c"
+    },
+    {
+      "path": "scripts/V43/07G2_LOCAL_WORLDS.lua",
+      "sha": "7f01a183e4b00094dbd3d129dca324075770c323"
+    },
+    {
+      "path": "scripts/V43/07G_HUB_UI.lua",
+      "sha": "90e3c5581fb29425dadffedbe95f3c0d9c6c8ade"
+    },
+    {
+      "path": "scripts/V43/07H4_BOT_ENGINE.lua",
+      "sha": "639d51e7b09fda36dbf8b13da8e88066409ef24f"
+    },
+    {
+      "path": "scripts/V43/07H_GAME_UI.lua",
+      "sha": "23475ae5efc37f098a46d3d83fc525ee8a664e35"
+    },
+    {
+      "path": "scripts/V43/07P0_STUDIO_PRESETS.lua",
+      "sha": "266c79f3908e43e5a274dc03f0a3b4628dc19d5b"
+    },
+    {
+      "path": "scripts/V43/07P2_STUDIO_AVATAR.lua",
+      "sha": "7d3ad3a6a254577959ec393db4eac8c758782c05"
+    },
+    {
+      "path": "scripts/V43/07P3_POSE_EDITOR.lua",
+      "sha": "1ff40823ea433301d41aae6ec6bda0637d2ee2a8"
+    },
+    {
+      "path": "scripts/V43/07P4_STUDIO_UI.lua",
+      "sha": "c3a7b34fa138cfc110d39ffefca5fd39b2a1c5b4"
+    },
+    {
+      "path": "scripts/V43/07P5_POSE_CANVAS.lua",
+      "sha": "7d31e4a27fb33ea0a61d7f0c30264466efcf1d33"
+    },
+    {
+      "path": "scripts/V43/07P6_STUDIO_SETS.lua",
+      "sha": "0eb3947bcfc6eed6c02b187a15a10308cc44c2d2"
+    },
+    {
+      "path": "scripts/V43/07P_PHOTO_MODE.lua",
+      "sha": "9f48e52dc4c31fd33941654fa852409f19f75c4d"
+    },
+    {
+      "path": "scripts/V43/07UI_DESIGN_SYSTEM.lua",
+      "sha": "8aef27be74d2061ca44a9d4b490fe30e139565e7"
+    },
+    {
+      "path": "scripts/V43/07UI_SCREEN_BOUNDS.lua",
+      "sha": "3973df5938b39fa916738d3ca426e0fcf61a6cf9"
+    },
+    {
+      "path": "scripts/V43/09A1_SHOP_LAYOUT.lua",
+      "sha": "09e56a3a66c75e8233592cdda0a08071a268928c"
+    },
+    {
+      "path": "scripts/V43/09A2_PREVIEW_LAYOUT.lua",
+      "sha": "0c4d6ac510a4e548cb539f9f7cb741917c56b1d7"
+    },
+    {
+      "path": "scripts/V43/09A_SHOP_UI.lua",
+      "sha": "40eea73eac7642ec4a6ef1f8402441a0a6f2a6a0"
+    },
+    {
+      "path": "scripts/V43/09B1_AVATAR_DISCOVERY.lua",
+      "sha": "f865b617edbb7e8a56abbddf7fd7e6fa3bd05f3a"
+    },
+    {
+      "path": "scripts/V43/09B2_COSPLAY_METADATA.lua",
+      "sha": "83d3c014bda81d847e323aa45ae4ea9650deed23"
+    },
+    {
+      "path": "scripts/V43/09B_SHOP_SERVER.lua",
+      "sha": "8f3b01d079fd3ffaf72d311e9b919645bbffdeba"
+    },
+    {
+      "path": "scripts/V43/09C1_SHOP_LOOKS.lua",
+      "sha": "5404a38f8096808af936762bd509bc0c8ee19cf4"
+    },
+    {
+      "path": "scripts/V43/09C2_SHOP_CATALOG.lua",
+      "sha": "2090d2d009ccd0e329cab15c25ba9dec63539217"
+    },
+    {
+      "path": "scripts/V43/09C4_OUTFIT_LIBRARY.lua",
+      "sha": "0f236eeed4ac0625d0e61d858b88dc4147c9223f"
+    },
+    {
+      "path": "scripts/V43/09C6_AVATAR_PREVIEW.lua",
+      "sha": "1811c7c8013f80bfcf3684e5175c8ccacb6628dc"
+    },
+    {
+      "path": "scripts/V43/09C7_COMMUNITY_FEED.lua",
+      "sha": "7bb9cd8d40cdbc404aadb54dfee1c18c707dc313"
+    },
+    {
+      "path": "scripts/V43/09C8_COMMUNITY_DETAILS.lua",
+      "sha": "ca32b59a3464cc182369adb4b13b4a9c24bb3997"
+    },
+    {
+      "path": "scripts/V43/09C_SHOP_CLIENT.lua",
+      "sha": "5ee3a788902a00f2e74c5c7cc976a22c3838ee49"
+    },
+    {
+      "path": "scripts/V44/01C_HUB_CHALLENGES.lua",
+      "sha": "fa01c8e551933701c88898837b46d541991d72ff"
+    },
+    {
+      "path": "scripts/V44/07A_CHESS.lua",
+      "sha": "04e1c8c076766cd47ad9cbdf8fdce649f2398e0d"
+    },
+    {
+      "path": "scripts/V44/07B_CHECKERS.lua",
+      "sha": "fdcd25185b820420fd5497cc444ac338d5744357"
+    },
+    {
+      "path": "scripts/V44/07C_POISON_POTATO.lua",
+      "sha": "b466adb44ab3ebba5cd24e38cb542c55e997ff70"
+    },
+    {
+      "path": "scripts/V44/07G1_HUB_SETTINGS.lua",
+      "sha": "8a884b83ecb27bddcf8c12c8eecb9ab1b4725a48"
+    },
+    {
+      "path": "scripts/V44/07G2_LOCAL_WORLDS.lua",
+      "sha": "338dc64fbcd155a14b3f82422205e19c23e534da"
+    },
+    {
+      "path": "scripts/V44/07G3_PERSONAL_TOOLS.lua",
+      "sha": "f9e7a4aa8b4c57e58d4cd70ebc686aba6605ea13"
+    },
+    {
+      "path": "scripts/V44/07G_HUB_UI.lua",
+      "sha": "26b08d0d4f10ac3afeeb3bfc503dc4e2d4b3997f"
+    },
+    {
+      "path": "scripts/V44/07G_SETTINGS_SERVER.lua",
+      "sha": "12a0d52ae6e03a35d2fa978a47663fb9fd6d681b"
+    },
+    {
+      "path": "scripts/V44/07H1_GAME_LOBBY.lua",
+      "sha": "21aff04c9857b32f74e37c507679420a6356ffd9"
+    },
+    {
+      "path": "scripts/V44/07H4_BOT_ENGINE.lua",
+      "sha": "639d51e7b09fda36dbf8b13da8e88066409ef24f"
+    },
+    {
+      "path": "scripts/V44/07H_GAME_UI.lua",
+      "sha": "79a1a114967971bc6a66e7d8eb188ad7338bf03a"
+    },
+    {
+      "path": "scripts/V44/07K0_TRUCO_RULES.lua",
+      "sha": "03bf3964eab813b63b54c083343c625daf2ee48c"
+    },
+    {
+      "path": "scripts/V44/07K10_CARD_COMMERCE.lua",
+      "sha": "f122d8dffcfcf3930f101f7ee53c55d5e5d846fb"
+    },
+    {
+      "path": "scripts/V44/07K11_GAMES_PROGRESS.lua",
+      "sha": "82a3b2ec43fcc86fbf96bddf06f609a042626760"
+    },
+    {
+      "path": "scripts/V44/07K12_TOURNAMENT_UI.lua",
+      "sha": "e8fe81e06e00f99fda48afb7d53a35d77d8e4bc9"
+    },
+    {
+      "path": "scripts/V44/07K13_TOURNAMENT_SERVICE.lua",
+      "sha": "fd879cceac1298568aa79b30449984cc59a22afb"
+    },
+    {
+      "path": "scripts/V44/07K1_TRUCO_AI.lua",
+      "sha": "88c029d1f7bbc37ca1c4dc42aea74ad3a66a8e3a"
+    },
+    {
+      "path": "scripts/V44/07K2_TRUCO_MATCH.lua",
+      "sha": "407ce3199d40dca2d1e61e187af7b549e1f9e2b6"
+    },
+    {
+      "path": "scripts/V44/07K3_TRUCO_DIRECTORY.lua",
+      "sha": "da83c442995afb2955980f13b581964f58c764be"
+    },
+    {
+      "path": "scripts/V44/07K4_TRUCO_TABLES.lua",
+      "sha": "21faa66b6bde55b5f3b9092b46c761e2b26459d7"
+    },
+    {
+      "path": "scripts/V44/07K5_TRUCO_UI.lua",
+      "sha": "4f385d0233d770eda242282daebb1464798818b8"
+    },
+    {
+      "path": "scripts/V44/07K6_CARD_CATALOG.lua",
+      "sha": "f48484d108e1142e11316b0128e1d91996f43d2d"
+    },
+    {
+      "path": "scripts/V44/07K7_CARD_STYLES.lua",
+      "sha": "2870e87fb256a150167429e5531b07f870da51d7"
+    },
+    {
+      "path": "scripts/V44/07K8_CARD_INVENTORY.lua",
+      "sha": "724b89119d2901b010809ee3b47e15b857082530"
+    },
+    {
+      "path": "scripts/V44/07K9_CARD_INVENTORY_UI.lua",
+      "sha": "40beee62aa437b5c38c321998eae4814adf98f66"
+    },
+    {
+      "path": "scripts/V44/07K_TRUCO_CLIENT.lua",
+      "sha": "453eb7967b85b99f2010bbb557fa82e08f8e1dc7"
+    },
+    {
+      "path": "scripts/V44/07K_TRUCO_SERVER.lua",
+      "sha": "8b4eecc59d698c4efdc7b7787f8150f9d10bf6a4"
+    },
+    {
+      "path": "scripts/V44/07P0_STUDIO_PRESETS.lua",
+      "sha": "266c79f3908e43e5a274dc03f0a3b4628dc19d5b"
+    },
+    {
+      "path": "scripts/V44/07P2_STUDIO_AVATAR.lua",
+      "sha": "7d3ad3a6a254577959ec393db4eac8c758782c05"
+    },
+    {
+      "path": "scripts/V44/07P3_POSE_EDITOR.lua",
+      "sha": "9187f6447156b2f05ac5c6c77d053096ae6e5793"
+    },
+    {
+      "path": "scripts/V44/07P4_STUDIO_UI.lua",
+      "sha": "ad3366ecec282027af5e79beb6b14a647e67ea52"
+    },
+    {
+      "path": "scripts/V44/07P5_POSE_CANVAS.lua",
+      "sha": "c3de3608b2e332d09302c1bbb491559929ded171"
+    },
+    {
+      "path": "scripts/V44/07P6_STUDIO_SETS.lua",
+      "sha": "0eb3947bcfc6eed6c02b187a15a10308cc44c2d2"
+    },
+    {
+      "path": "scripts/V44/07P_PHOTO_MODE.lua",
+      "sha": "ea776e3694831a7e0d30af8dd201de7a4f5a7167"
+    },
+    {
+      "path": "scripts/V44/07UI_DESIGN_SYSTEM.lua",
+      "sha": "8aef27be74d2061ca44a9d4b490fe30e139565e7"
+    },
+    {
+      "path": "scripts/V44/07UI_SCREEN_BOUNDS.lua",
+      "sha": "3973df5938b39fa916738d3ca426e0fcf61a6cf9"
+    },
+    {
+      "path": "scripts/V44/07W_WINS_SERVICE.lua",
+      "sha": "b89bc8a4d82662b803ce1fae8bf9ff8a1374b98a"
+    },
+    {
+      "path": "scripts/V44/09A1_SHOP_LAYOUT.lua",
+      "sha": "3546db8fefd104c88a33c01202542bc92ff13483"
+    },
+    {
+      "path": "scripts/V44/09A2_PREVIEW_LAYOUT.lua",
+      "sha": "5ced4cd2991656304c74c1397ddeeed95acdf3a5"
+    },
+    {
+      "path": "scripts/V44/09A_SHOP_UI.lua",
+      "sha": "c4e2405ad3fd4bda5b97fd6db71e0c8ffbbdc83d"
+    },
+    {
+      "path": "scripts/V44/09B1_AVATAR_DISCOVERY.lua",
+      "sha": "f865b617edbb7e8a56abbddf7fd7e6fa3bd05f3a"
+    },
+    {
+      "path": "scripts/V44/09B2_COSPLAY_METADATA.lua",
+      "sha": "ec3d340c9d16bdb533420b658698d38d2ba2c5fc"
+    },
+    {
+      "path": "scripts/V44/09B3_PLAYER_INSPECT.lua",
+      "sha": "697602f21a1c579abc0b972cf3b7192a9c64bbbd"
+    },
+    {
+      "path": "scripts/V44/09B4_CURATED_LOOKS.lua",
+      "sha": "948a045e8f8b00bca0367e899ee1aeb789ab88d8"
+    },
+    {
+      "path": "scripts/V44/09B_SHOP_SERVER.lua",
+      "sha": "5122c646634c816ff5cc15bd23562ea6711f2ee1"
+    },
+    {
+      "path": "scripts/V44/09C10_CONFIRM_ACTION.lua",
+      "sha": "8d283fc783af24de007567175066d0e397a377ee"
+    },
+    {
+      "path": "scripts/V44/09C1_SHOP_LOOKS.lua",
+      "sha": "b69fc1068d19ddc778f6e85262d570503dcebb96"
+    },
+    {
+      "path": "scripts/V44/09C2_SHOP_CATALOG.lua",
+      "sha": "a8a0511cf0379e889fe9ee08a620a60895e9d65b"
+    },
+    {
+      "path": "scripts/V44/09C4_OUTFIT_LIBRARY.lua",
+      "sha": "dbec57d09f3d1a2f8ebb82eee81b26ef817424b7"
+    },
+    {
+      "path": "scripts/V44/09C6_AVATAR_PREVIEW.lua",
+      "sha": "23f8508181239a375614307457e6e8d6b4135c5a"
+    },
+    {
+      "path": "scripts/V44/09C7_COMMUNITY_FEED.lua",
+      "sha": "b341cd5b2d4b528338fa9daa9810c5d394830bb0"
+    },
+    {
+      "path": "scripts/V44/09C8_COMMUNITY_DETAILS.lua",
+      "sha": "41d3eec017f3c970b7f0bd64adb2bdcb51575850"
+    },
+    {
+      "path": "scripts/V44/09C9_PLAYER_INSPECT.lua",
+      "sha": "8125f232cc6f018447c9c6dbca031ff7679cd87c"
+    },
+    {
+      "path": "scripts/V44/09C_SHOP_CLIENT.lua",
+      "sha": "6f3684bbd3c1f8c3f9edd5a30347146706911b9e"
+    },
+    {
+      "path": "scripts/V45/01C_HUB_CHALLENGES.lua",
+      "sha": "fa01c8e551933701c88898837b46d541991d72ff"
+    },
+    {
+      "path": "scripts/V45/07A_CHESS.lua",
+      "sha": "04e1c8c076766cd47ad9cbdf8fdce649f2398e0d"
+    },
+    {
+      "path": "scripts/V45/07B_CHECKERS.lua",
+      "sha": "fdcd25185b820420fd5497cc444ac338d5744357"
+    },
+    {
+      "path": "scripts/V45/07C_POISON_POTATO.lua",
+      "sha": "b466adb44ab3ebba5cd24e38cb542c55e997ff70"
+    },
+    {
+      "path": "scripts/V45/07G1_HUB_SETTINGS.lua",
+      "sha": "8a884b83ecb27bddcf8c12c8eecb9ab1b4725a48"
+    },
+    {
+      "path": "scripts/V45/07G2_LOCAL_WORLDS.lua",
+      "sha": "338dc64fbcd155a14b3f82422205e19c23e534da"
+    },
+    {
+      "path": "scripts/V45/07G3_PERSONAL_TOOLS.lua",
+      "sha": "f9e7a4aa8b4c57e58d4cd70ebc686aba6605ea13"
+    },
+    {
+      "path": "scripts/V45/07G_HUB_UI.lua",
+      "sha": "26b08d0d4f10ac3afeeb3bfc503dc4e2d4b3997f"
+    },
+    {
+      "path": "scripts/V45/07G_SETTINGS_SERVER.lua",
+      "sha": "12a0d52ae6e03a35d2fa978a47663fb9fd6d681b"
+    },
+    {
+      "path": "scripts/V45/07H1_GAME_LOBBY.lua",
+      "sha": "35225e72071c55f51f823417820662be45bbf87d"
+    },
+    {
+      "path": "scripts/V45/07H4_BOT_ENGINE.lua",
+      "sha": "639d51e7b09fda36dbf8b13da8e88066409ef24f"
+    },
+    {
+      "path": "scripts/V45/07H_GAME_UI.lua",
+      "sha": "79a1a114967971bc6a66e7d8eb188ad7338bf03a"
+    },
+    {
+      "path": "scripts/V45/07K0_TRUCO_RULES.lua",
+      "sha": "03bf3964eab813b63b54c083343c625daf2ee48c"
+    },
+    {
+      "path": "scripts/V45/07K10_CARD_COMMERCE.lua",
+      "sha": "f122d8dffcfcf3930f101f7ee53c55d5e5d846fb"
+    },
+    {
+      "path": "scripts/V45/07K11_GAMES_PROGRESS.lua",
+      "sha": "82a3b2ec43fcc86fbf96bddf06f609a042626760"
+    },
+    {
+      "path": "scripts/V45/07K12_TOURNAMENT_UI.lua",
+      "sha": "e8fe81e06e00f99fda48afb7d53a35d77d8e4bc9"
+    },
+    {
+      "path": "scripts/V45/07K13_TOURNAMENT_SERVICE.lua",
+      "sha": "fd879cceac1298568aa79b30449984cc59a22afb"
+    },
+    {
+      "path": "scripts/V45/07K1_TRUCO_AI.lua",
+      "sha": "88c029d1f7bbc37ca1c4dc42aea74ad3a66a8e3a"
+    },
+    {
+      "path": "scripts/V45/07K2_TRUCO_MATCH.lua",
+      "sha": "407ce3199d40dca2d1e61e187af7b549e1f9e2b6"
+    },
+    {
+      "path": "scripts/V45/07K3_TRUCO_DIRECTORY.lua",
+      "sha": "da83c442995afb2955980f13b581964f58c764be"
+    },
+    {
+      "path": "scripts/V45/07K4_TRUCO_TABLES.lua",
+      "sha": "21faa66b6bde55b5f3b9092b46c761e2b26459d7"
+    },
+    {
+      "path": "scripts/V45/07K5_TRUCO_UI.lua",
+      "sha": "de725d6b51ad2f66cc1123ca84d595e15dc98ee6"
+    },
+    {
+      "path": "scripts/V45/07K6_CARD_CATALOG.lua",
+      "sha": "f48484d108e1142e11316b0128e1d91996f43d2d"
+    },
+    {
+      "path": "scripts/V45/07K7_CARD_STYLES.lua",
+      "sha": "d562bb893ab785293ddefc8ea2848c9e7e585807"
+    },
+    {
+      "path": "scripts/V45/07K8_CARD_INVENTORY.lua",
+      "sha": "1f22afcd13eb5dbe37127ac454306e5f25607f2a"
+    },
+    {
+      "path": "scripts/V45/07K9_CARD_INVENTORY_UI.lua",
+      "sha": "e3b23b865c2e50079c58af2a4c55f877158ea614"
+    },
+    {
+      "path": "scripts/V45/07K_TRUCO_CLIENT.lua",
+      "sha": "4d3c78e1070600a37696fe446ce38b9c653f8ded"
+    },
+    {
+      "path": "scripts/V45/07K_TRUCO_SERVER.lua",
+      "sha": "93057f3bf7da9e6bd60a3ff21946f9458aad439b"
+    },
+    {
+      "path": "scripts/V45/07P0_STUDIO_PRESETS.lua",
+      "sha": "266c79f3908e43e5a274dc03f0a3b4628dc19d5b"
+    },
+    {
+      "path": "scripts/V45/07P2_STUDIO_AVATAR.lua",
+      "sha": "7d3ad3a6a254577959ec393db4eac8c758782c05"
+    },
+    {
+      "path": "scripts/V45/07P3_POSE_EDITOR.lua",
+      "sha": "9187f6447156b2f05ac5c6c77d053096ae6e5793"
+    },
+    {
+      "path": "scripts/V45/07P4_STUDIO_UI.lua",
+      "sha": "ad3366ecec282027af5e79beb6b14a647e67ea52"
+    },
+    {
+      "path": "scripts/V45/07P5_POSE_CANVAS.lua",
+      "sha": "c3de3608b2e332d09302c1bbb491559929ded171"
+    },
+    {
+      "path": "scripts/V45/07P6_STUDIO_SETS.lua",
+      "sha": "0eb3947bcfc6eed6c02b187a15a10308cc44c2d2"
+    },
+    {
+      "path": "scripts/V45/07P_PHOTO_MODE.lua",
+      "sha": "ea776e3694831a7e0d30af8dd201de7a4f5a7167"
+    },
+    {
+      "path": "scripts/V45/07UI_DESIGN_SYSTEM.lua",
+      "sha": "5cf1c22be04c824a7f78fd68bf6d708c9c89081c"
+    },
+    {
+      "path": "scripts/V45/07UI_SCREEN_BOUNDS.lua",
+      "sha": "3973df5938b39fa916738d3ca426e0fcf61a6cf9"
+    },
+    {
+      "path": "scripts/V45/07W_WINS_SERVICE.lua",
+      "sha": "b89bc8a4d82662b803ce1fae8bf9ff8a1374b98a"
+    },
+    {
+      "path": "scripts/V45/09A1_SHOP_LAYOUT.lua",
+      "sha": "3546db8fefd104c88a33c01202542bc92ff13483"
+    },
+    {
+      "path": "scripts/V45/09A2_PREVIEW_LAYOUT.lua",
+      "sha": "5ced4cd2991656304c74c1397ddeeed95acdf3a5"
+    },
+    {
+      "path": "scripts/V45/09A_SHOP_UI.lua",
+      "sha": "9601ef379f25a2cf4624a422e672ba1dd55d2d5c"
+    },
+    {
+      "path": "scripts/V45/09B1_AVATAR_DISCOVERY.lua",
+      "sha": "f865b617edbb7e8a56abbddf7fd7e6fa3bd05f3a"
+    },
+    {
+      "path": "scripts/V45/09B2_COSPLAY_METADATA.lua",
+      "sha": "7bfa5711ded89f6f05c14b6512aea01f98a30892"
+    },
+    {
+      "path": "scripts/V45/09B3_PLAYER_INSPECT.lua",
+      "sha": "697602f21a1c579abc0b972cf3b7192a9c64bbbd"
+    },
+    {
+      "path": "scripts/V45/09B4_CURATED_LOOKS.lua",
+      "sha": "5e68049ce4669bc76e41913fb5b7de4c232ad69c"
+    },
+    {
+      "path": "scripts/V45/09B_SHOP_SERVER.lua",
+      "sha": "5122c646634c816ff5cc15bd23562ea6711f2ee1"
+    },
+    {
+      "path": "scripts/V45/09C10_CONFIRM_ACTION.lua",
+      "sha": "8d283fc783af24de007567175066d0e397a377ee"
+    },
+    {
+      "path": "scripts/V45/09C1_SHOP_LOOKS.lua",
+      "sha": "b69fc1068d19ddc778f6e85262d570503dcebb96"
+    },
+    {
+      "path": "scripts/V45/09C2_SHOP_CATALOG.lua",
+      "sha": "f8e8fce46d889506697d37194a99e1eb31cb6647"
+    },
+    {
+      "path": "scripts/V45/09C4_OUTFIT_LIBRARY.lua",
+      "sha": "dbec57d09f3d1a2f8ebb82eee81b26ef817424b7"
+    },
+    {
+      "path": "scripts/V45/09C6_AVATAR_PREVIEW.lua",
+      "sha": "23f8508181239a375614307457e6e8d6b4135c5a"
+    },
+    {
+      "path": "scripts/V45/09C7_COMMUNITY_FEED.lua",
+      "sha": "3a7f250fcf9a038fde185f397401ff0079e0c49e"
+    },
+    {
+      "path": "scripts/V45/09C8_COMMUNITY_DETAILS.lua",
+      "sha": "23bef81a38253c8c303133ff85f6df37c1935475"
+    },
+    {
+      "path": "scripts/V45/09C9_PLAYER_INSPECT.lua",
+      "sha": "8125f232cc6f018447c9c6dbca031ff7679cd87c"
+    },
+    {
+      "path": "scripts/V45/09C_SHOP_CLIENT.lua",
+      "sha": "6f3684bbd3c1f8c3f9edd5a30347146706911b9e"
+    },
+    {
+      "path": "scripts/V46/01C_HUB_CHALLENGES.lua",
+      "sha": "fa01c8e551933701c88898837b46d541991d72ff"
+    },
+    {
+      "path": "scripts/V46/07A_CHESS.lua",
+      "sha": "04e1c8c076766cd47ad9cbdf8fdce649f2398e0d"
+    },
+    {
+      "path": "scripts/V46/07B_CHECKERS.lua",
+      "sha": "fdcd25185b820420fd5497cc444ac338d5744357"
+    },
+    {
+      "path": "scripts/V46/07C_POISON_POTATO.lua",
+      "sha": "b466adb44ab3ebba5cd24e38cb542c55e997ff70"
+    },
+    {
+      "path": "scripts/V46/07G1_HUB_SETTINGS.lua",
+      "sha": "8a884b83ecb27bddcf8c12c8eecb9ab1b4725a48"
+    },
+    {
+      "path": "scripts/V46/07G2_LOCAL_WORLDS.lua",
+      "sha": "338dc64fbcd155a14b3f82422205e19c23e534da"
+    },
+    {
+      "path": "scripts/V46/07G3_PERSONAL_TOOLS.lua",
+      "sha": "f9e7a4aa8b4c57e58d4cd70ebc686aba6605ea13"
+    },
+    {
+      "path": "scripts/V46/07G_HUB_UI.lua",
+      "sha": "26b08d0d4f10ac3afeeb3bfc503dc4e2d4b3997f"
+    },
+    {
+      "path": "scripts/V46/07G_SETTINGS_SERVER.lua",
+      "sha": "12a0d52ae6e03a35d2fa978a47663fb9fd6d681b"
+    },
+    {
+      "path": "scripts/V46/07H1_GAME_LOBBY.lua",
+      "sha": "9f8eb9083f3436f6e08e9398356b18d2f5bf281e"
+    },
+    {
+      "path": "scripts/V46/07H4_BOT_ENGINE.lua",
+      "sha": "639d51e7b09fda36dbf8b13da8e88066409ef24f"
+    },
+    {
+      "path": "scripts/V46/07H_GAME_UI.lua",
+      "sha": "5ad8c71cf3a3ebe1d1e5365baa42dd308d12aeb0"
+    },
+    {
+      "path": "scripts/V46/07K0_TRUCO_RULES.lua",
+      "sha": "d6a540bb4a6978eaf6c96a5039b02d28d4859680"
+    },
+    {
+      "path": "scripts/V46/07K10_CARD_COMMERCE.lua",
+      "sha": "f122d8dffcfcf3930f101f7ee53c55d5e5d846fb"
+    },
+    {
+      "path": "scripts/V46/07K11_GAMES_PROGRESS.lua",
+      "sha": "82a3b2ec43fcc86fbf96bddf06f609a042626760"
+    },
+    {
+      "path": "scripts/V46/07K12_TOURNAMENT_UI.lua",
+      "sha": "66bdec985e1da578f7d60dce550a8ed494950b76"
+    },
+    {
+      "path": "scripts/V46/07K13_TOURNAMENT_SERVICE.lua",
+      "sha": "fd879cceac1298568aa79b30449984cc59a22afb"
+    },
+    {
+      "path": "scripts/V46/07K1_TRUCO_AI.lua",
+      "sha": "88c029d1f7bbc37ca1c4dc42aea74ad3a66a8e3a"
+    },
+    {
+      "path": "scripts/V46/07K2_TRUCO_MATCH.lua",
+      "sha": "b4df0932f9c48e228d5e84364d5be21080bea381"
+    },
+    {
+      "path": "scripts/V46/07K3_TRUCO_DIRECTORY.lua",
+      "sha": "da83c442995afb2955980f13b581964f58c764be"
+    },
+    {
+      "path": "scripts/V46/07K4_TRUCO_TABLES.lua",
+      "sha": "dad19e37d1a5601163ab7b18fd641111925e70c5"
+    },
+    {
+      "path": "scripts/V46/07K5_TRUCO_UI.lua",
+      "sha": "85de43350d0d7d5ee7f3c09c2906e2b7a692881e"
+    },
+    {
+      "path": "scripts/V46/07K6_CARD_CATALOG.lua",
+      "sha": "f48484d108e1142e11316b0128e1d91996f43d2d"
+    },
+    {
+      "path": "scripts/V46/07K7_CARD_STYLES.lua",
+      "sha": "6cfc1e6449bbb9920456d8c8f5a40c5d28cf7365"
+    },
+    {
+      "path": "scripts/V46/07K8_CARD_INVENTORY.lua",
+      "sha": "f080c9ac946caef0c95750b6967f6734f27e3228"
+    },
+    {
+      "path": "scripts/V46/07K9_CARD_INVENTORY_UI.lua",
+      "sha": "60772a94964bfebe4f02f745c6c037115502e03e"
+    },
+    {
+      "path": "scripts/V46/07K_TRUCO_CLIENT.lua",
+      "sha": "a04b79a63569f07c6b32528a44b3725834e8a412"
+    },
+    {
+      "path": "scripts/V46/07K_TRUCO_SERVER.lua",
+      "sha": "e196bc0f98213c2746f218da7bd0046b32863261"
+    },
+    {
+      "path": "scripts/V46/07P0_STUDIO_PRESETS.lua",
+      "sha": "abcfb589f49d2b8b5e5889dbe62e4613cb85164f"
+    },
+    {
+      "path": "scripts/V46/07P2_STUDIO_AVATAR.lua",
+      "sha": "76b2c1f57073d77f277457fd27533fe6b084a718"
+    },
+    {
+      "path": "scripts/V46/07P3_POSE_EDITOR.lua",
+      "sha": "7400c9eebaa8fbbce98b6717fcaae1777474c328"
+    },
+    {
+      "path": "scripts/V46/07P4_STUDIO_UI.lua",
+      "sha": "fa7dac6d5fb892d32dbb79722ece3daf6f5b81ed"
+    },
+    {
+      "path": "scripts/V46/07P5_POSE_CANVAS.lua",
+      "sha": "240eea132be0ab1172cb0cbf07014f52c5758612"
+    },
+    {
+      "path": "scripts/V46/07P6_STUDIO_SETS.lua",
+      "sha": "4ece27f78b985fa467ebcf5d25ba325913e9f4ac"
+    },
+    {
+      "path": "scripts/V46/07P_PHOTO_MODE.lua",
+      "sha": "09110090469b542bdfe4d9874936380e00b00f4a"
+    },
+    {
+      "path": "scripts/V46/07UI_DESIGN_SYSTEM.lua",
+      "sha": "e780deccf45429b68aef271148a02856337d940c"
+    },
+    {
+      "path": "scripts/V46/07UI_SCREEN_BOUNDS.lua",
+      "sha": "3973df5938b39fa916738d3ca426e0fcf61a6cf9"
+    },
+    {
+      "path": "scripts/V46/07W_WINS_SERVICE.lua",
+      "sha": "b89bc8a4d82662b803ce1fae8bf9ff8a1374b98a"
+    },
+    {
+      "path": "scripts/V46/08B_AVATAR_DATA.lua",
+      "sha": "39470978cb537e2cc87a3ce1b0f701aef2043250"
+    },
+    {
+      "path": "scripts/V46/09A1_SHOP_LAYOUT.lua",
+      "sha": "56b41d2efd1b3ab1361ca0ca664329ed483ee50a"
+    },
+    {
+      "path": "scripts/V46/09A2_PREVIEW_LAYOUT.lua",
+      "sha": "5ced4cd2991656304c74c1397ddeeed95acdf3a5"
+    },
+    {
+      "path": "scripts/V46/09A_SHOP_UI.lua",
+      "sha": "929ff2d0953538b2d621ba8e5ad91c70cbb93565"
+    },
+    {
+      "path": "scripts/V46/09B1_AVATAR_DISCOVERY.lua",
+      "sha": "140f55ec7df795bbc98671bf206de4fcb173e94a"
+    },
+    {
+      "path": "scripts/V46/09B2_COSPLAY_METADATA.lua",
+      "sha": "453e48b9b2dcf1b3721eccd1e091d78009acc775"
+    },
+    {
+      "path": "scripts/V46/09B3_PLAYER_INSPECT.lua",
+      "sha": "697602f21a1c579abc0b972cf3b7192a9c64bbbd"
+    },
+    {
+      "path": "scripts/V46/09B4_CURATED_LOOKS.lua",
+      "sha": "1d284830cb969bd91106800837e7fc2bddf8609a"
+    },
+    {
+      "path": "scripts/V46/09B_SHOP_SERVER.lua",
+      "sha": "5122c646634c816ff5cc15bd23562ea6711f2ee1"
+    },
+    {
+      "path": "scripts/V46/09C10_CONFIRM_ACTION.lua",
+      "sha": "8d283fc783af24de007567175066d0e397a377ee"
+    },
+    {
+      "path": "scripts/V46/09C1_SHOP_LOOKS.lua",
+      "sha": "b69fc1068d19ddc778f6e85262d570503dcebb96"
+    },
+    {
+      "path": "scripts/V46/09C2_SHOP_CATALOG.lua",
+      "sha": "d82cb3dbe1d86fcfaedd7492995c535c02b0882e"
+    },
+    {
+      "path": "scripts/V46/09C4_OUTFIT_LIBRARY.lua",
+      "sha": "dbec57d09f3d1a2f8ebb82eee81b26ef817424b7"
+    },
+    {
+      "path": "scripts/V46/09C6_AVATAR_PREVIEW.lua",
+      "sha": "23f8508181239a375614307457e6e8d6b4135c5a"
+    },
+    {
+      "path": "scripts/V46/09C7_COMMUNITY_FEED.lua",
+      "sha": "0c7ecd9d15dd9b0d47f1b0bd7b965b04ec7a92aa"
+    },
+    {
+      "path": "scripts/V46/09C8_COMMUNITY_DETAILS.lua",
+      "sha": "aa6fa2d4dc5a72f77fdaac590249cf077927a2a9"
+    },
+    {
+      "path": "scripts/V46/09C9_PLAYER_INSPECT.lua",
+      "sha": "8125f232cc6f018447c9c6dbca031ff7679cd87c"
+    },
+    {
+      "path": "scripts/V46/09C_SHOP_CLIENT.lua",
+      "sha": "9bffbb5efd8be333cf7c2a97f0fae9a72c95d200"
+    },
+    {
+      "path": "scripts/V47/01C_HUB_CHALLENGES.lua",
+      "sha": "fa01c8e551933701c88898837b46d541991d72ff"
+    },
+    {
+      "path": "scripts/V47/07A_CHESS.lua",
+      "sha": "04e1c8c076766cd47ad9cbdf8fdce649f2398e0d"
+    },
+    {
+      "path": "scripts/V47/07B_CHECKERS.lua",
+      "sha": "fdcd25185b820420fd5497cc444ac338d5744357"
+    },
+    {
+      "path": "scripts/V47/07C_POISON_POTATO.lua",
+      "sha": "b466adb44ab3ebba5cd24e38cb542c55e997ff70"
+    },
+    {
+      "path": "scripts/V47/07G1_HUB_SETTINGS.lua",
+      "sha": "8a884b83ecb27bddcf8c12c8eecb9ab1b4725a48"
+    },
+    {
+      "path": "scripts/V47/07G2_LOCAL_WORLDS.lua",
+      "sha": "338dc64fbcd155a14b3f82422205e19c23e534da"
+    },
+    {
+      "path": "scripts/V47/07G3_PERSONAL_TOOLS.lua",
+      "sha": "f9e7a4aa8b4c57e58d4cd70ebc686aba6605ea13"
+    },
+    {
+      "path": "scripts/V47/07G_HUB_UI.lua",
+      "sha": "26b08d0d4f10ac3afeeb3bfc503dc4e2d4b3997f"
+    },
+    {
+      "path": "scripts/V47/07G_SETTINGS_SERVER.lua",
+      "sha": "12a0d52ae6e03a35d2fa978a47663fb9fd6d681b"
+    },
+    {
+      "path": "scripts/V47/07H1_GAME_LOBBY.lua",
+      "sha": "3c6ad4fd1a0bb4c5b3aada831eaa4a228a8e9ad0"
+    },
+    {
+      "path": "scripts/V47/07H4_BOT_ENGINE.lua",
+      "sha": "639d51e7b09fda36dbf8b13da8e88066409ef24f"
+    },
+    {
+      "path": "scripts/V47/07H_GAME_UI.lua",
+      "sha": "5ad8c71cf3a3ebe1d1e5365baa42dd308d12aeb0"
+    },
+    {
+      "path": "scripts/V47/07K0_TRUCO_RULES.lua",
+      "sha": "d6a540bb4a6978eaf6c96a5039b02d28d4859680"
+    },
+    {
+      "path": "scripts/V47/07K10_CARD_COMMERCE.lua",
+      "sha": "f122d8dffcfcf3930f101f7ee53c55d5e5d846fb"
+    },
+    {
+      "path": "scripts/V47/07K11_GAMES_PROGRESS.lua",
+      "sha": "82a3b2ec43fcc86fbf96bddf06f609a042626760"
+    },
+    {
+      "path": "scripts/V47/07K12_TOURNAMENT_UI.lua",
+      "sha": "66bdec985e1da578f7d60dce550a8ed494950b76"
+    },
+    {
+      "path": "scripts/V47/07K13_TOURNAMENT_SERVICE.lua",
+      "sha": "fd879cceac1298568aa79b30449984cc59a22afb"
+    },
+    {
+      "path": "scripts/V47/07K1_TRUCO_AI.lua",
+      "sha": "88c029d1f7bbc37ca1c4dc42aea74ad3a66a8e3a"
+    },
+    {
+      "path": "scripts/V47/07K2_TRUCO_MATCH.lua",
+      "sha": "b4df0932f9c48e228d5e84364d5be21080bea381"
+    },
+    {
+      "path": "scripts/V47/07K3_TRUCO_DIRECTORY.lua",
+      "sha": "da83c442995afb2955980f13b581964f58c764be"
+    },
+    {
+      "path": "scripts/V47/07K4_TRUCO_TABLES.lua",
+      "sha": "dad19e37d1a5601163ab7b18fd641111925e70c5"
+    },
+    {
+      "path": "scripts/V47/07K5_TRUCO_UI.lua",
+      "sha": "85de43350d0d7d5ee7f3c09c2906e2b7a692881e"
+    },
+    {
+      "path": "scripts/V47/07K6_CARD_CATALOG.lua",
+      "sha": "f48484d108e1142e11316b0128e1d91996f43d2d"
+    },
+    {
+      "path": "scripts/V47/07K7_CARD_STYLES.lua",
+      "sha": "2b8e48a49015594c48bb02e07b2cac09e95baace"
+    },
+    {
+      "path": "scripts/V47/07K8_CARD_INVENTORY.lua",
+      "sha": "325c7362b53d0e1f375b176542a19b3f71683474"
+    },
+    {
+      "path": "scripts/V47/07K9_CARD_INVENTORY_UI.lua",
+      "sha": "630b4d239e7e5ba2f3fce840027a3f7ae5898a62"
+    },
+    {
+      "path": "scripts/V47/07K_TRUCO_CLIENT.lua",
+      "sha": "a04b79a63569f07c6b32528a44b3725834e8a412"
+    },
+    {
+      "path": "scripts/V47/07K_TRUCO_SERVER.lua",
+      "sha": "f2106766038722f4ffd7cb088f617c1f9a5ec519"
+    },
+    {
+      "path": "scripts/V47/07P0_STUDIO_PRESETS.lua",
+      "sha": "64ebd2cc19854d3600c3dad4e17aa2179f4d0a9e"
+    },
+    {
+      "path": "scripts/V47/07P2_STUDIO_AVATAR.lua",
+      "sha": "e37455efe350af4608dd694885b792660b1f631f"
+    },
+    {
+      "path": "scripts/V47/07P3_POSE_EDITOR.lua",
+      "sha": "7400c9eebaa8fbbce98b6717fcaae1777474c328"
+    },
+    {
+      "path": "scripts/V47/07P4_STUDIO_UI.lua",
+      "sha": "759672ff9c5ede89c574c5ca90a73e2c8c99d773"
+    },
+    {
+      "path": "scripts/V47/07P5_POSE_CANVAS.lua",
+      "sha": "240eea132be0ab1172cb0cbf07014f52c5758612"
+    },
+    {
+      "path": "scripts/V47/07P6_STUDIO_SETS.lua",
+      "sha": "7714cdb939b03d5bb73344551ae07d4302360a4b"
+    },
+    {
+      "path": "scripts/V47/07P_PHOTO_MODE.lua",
+      "sha": "100db2b7bf14bc0a4b04b27fe8481c55b5ba0e2a"
+    },
+    {
+      "path": "scripts/V47/07UI_DESIGN_SYSTEM.lua",
+      "sha": "11282f58cc0dd8455165f538ae136c5fd41852b8"
+    },
+    {
+      "path": "scripts/V47/07UI_SCREEN_BOUNDS.lua",
+      "sha": "7fb76e6a0da74104c3f47f4a872f2597b2eb8f72"
+    },
+    {
+      "path": "scripts/V47/07W_WINS_SERVICE.lua",
+      "sha": "b89bc8a4d82662b803ce1fae8bf9ff8a1374b98a"
+    },
+    {
+      "path": "scripts/V47/08B_AVATAR_DATA.lua",
+      "sha": "39470978cb537e2cc87a3ce1b0f701aef2043250"
+    },
+    {
+      "path": "scripts/V47/09A1_SHOP_LAYOUT.lua",
+      "sha": "4f6f026533b7fcef51db800ec01e9c969a04569d"
+    },
+    {
+      "path": "scripts/V47/09A2_PREVIEW_LAYOUT.lua",
+      "sha": "5ced4cd2991656304c74c1397ddeeed95acdf3a5"
+    },
+    {
+      "path": "scripts/V47/09A_SHOP_UI.lua",
+      "sha": "9c19cf9b6a9a5921ac6159da0202de7ed798b8fa"
+    },
+    {
+      "path": "scripts/V47/09B1_AVATAR_DISCOVERY.lua",
+      "sha": "35672af437fd777de795e6d9534c644999f70dd7"
+    },
+    {
+      "path": "scripts/V47/09B2_COSPLAY_METADATA.lua",
+      "sha": "453e48b9b2dcf1b3721eccd1e091d78009acc775"
+    },
+    {
+      "path": "scripts/V47/09B3_PLAYER_INSPECT.lua",
+      "sha": "697602f21a1c579abc0b972cf3b7192a9c64bbbd"
+    },
+    {
+      "path": "scripts/V47/09B4_CURATED_LOOKS.lua",
+      "sha": "b618f60dc49909c89b7cf5604d677dd1c6e893dc"
+    },
+    {
+      "path": "scripts/V47/09B_SHOP_SERVER.lua",
+      "sha": "638fcfdd53c2eb717968b0235377f6cfe6e5d387"
+    },
+    {
+      "path": "scripts/V47/09C10_CONFIRM_ACTION.lua",
+      "sha": "8d283fc783af24de007567175066d0e397a377ee"
+    },
+    {
+      "path": "scripts/V47/09C1_SHOP_LOOKS.lua",
+      "sha": "b69fc1068d19ddc778f6e85262d570503dcebb96"
+    },
+    {
+      "path": "scripts/V47/09C2_SHOP_CATALOG.lua",
+      "sha": "d82cb3dbe1d86fcfaedd7492995c535c02b0882e"
+    },
+    {
+      "path": "scripts/V47/09C4_OUTFIT_LIBRARY.lua",
+      "sha": "dbec57d09f3d1a2f8ebb82eee81b26ef817424b7"
+    },
+    {
+      "path": "scripts/V47/09C6_AVATAR_PREVIEW.lua",
+      "sha": "23f8508181239a375614307457e6e8d6b4135c5a"
+    },
+    {
+      "path": "scripts/V47/09C7_COMMUNITY_FEED.lua",
+      "sha": "2add2a948d134bc2f64c45c24f6832210c0e8355"
+    },
+    {
+      "path": "scripts/V47/09C8_COMMUNITY_DETAILS.lua",
+      "sha": "aa6fa2d4dc5a72f77fdaac590249cf077927a2a9"
+    },
+    {
+      "path": "scripts/V47/09C9_PLAYER_INSPECT.lua",
+      "sha": "8125f232cc6f018447c9c6dbca031ff7679cd87c"
+    },
+    {
+      "path": "scripts/V47/09C_SHOP_CLIENT.lua",
+      "sha": "9bffbb5efd8be333cf7c2a97f0fae9a72c95d200"
+    },
+    {
+      "path": "scripts/V48/01C_HUB_CHALLENGES.lua",
+      "sha": "fa01c8e551933701c88898837b46d541991d72ff"
+    },
+    {
+      "path": "scripts/V48/07A_CHESS.lua",
+      "sha": "04e1c8c076766cd47ad9cbdf8fdce649f2398e0d"
+    },
+    {
+      "path": "scripts/V48/07B_CHECKERS.lua",
+      "sha": "fdcd25185b820420fd5497cc444ac338d5744357"
+    },
+    {
+      "path": "scripts/V48/07C_POISON_POTATO.lua",
+      "sha": "b466adb44ab3ebba5cd24e38cb542c55e997ff70"
+    },
+    {
+      "path": "scripts/V48/07G1_HUB_SETTINGS.lua",
+      "sha": "8a884b83ecb27bddcf8c12c8eecb9ab1b4725a48"
+    },
+    {
+      "path": "scripts/V48/07G2_LOCAL_WORLDS.lua",
+      "sha": "338dc64fbcd155a14b3f82422205e19c23e534da"
+    },
+    {
+      "path": "scripts/V48/07G3_PERSONAL_TOOLS.lua",
+      "sha": "f9e7a4aa8b4c57e58d4cd70ebc686aba6605ea13"
+    },
+    {
+      "path": "scripts/V48/07G_HUB_UI.lua",
+      "sha": "526220792f00bd67e72954583aed5ce2bed738f6"
+    },
+    {
+      "path": "scripts/V48/07G_SETTINGS_SERVER.lua",
+      "sha": "12a0d52ae6e03a35d2fa978a47663fb9fd6d681b"
+    },
+    {
+      "path": "scripts/V48/07H1_GAME_LOBBY.lua",
+      "sha": "cc32a272583546159baf4384396900bc08dbe95d"
+    },
+    {
+      "path": "scripts/V48/07H4_BOT_ENGINE.lua",
+      "sha": "639d51e7b09fda36dbf8b13da8e88066409ef24f"
+    },
+    {
+      "path": "scripts/V48/07H_GAME_UI.lua",
+      "sha": "5ad8c71cf3a3ebe1d1e5365baa42dd308d12aeb0"
+    },
+    {
+      "path": "scripts/V48/07K0_TRUCO_RULES.lua",
+      "sha": "d6a540bb4a6978eaf6c96a5039b02d28d4859680"
+    },
+    {
+      "path": "scripts/V48/07K10_CARD_COMMERCE.lua",
+      "sha": "f122d8dffcfcf3930f101f7ee53c55d5e5d846fb"
+    },
+    {
+      "path": "scripts/V48/07K11_GAMES_PROGRESS.lua",
+      "sha": "82a3b2ec43fcc86fbf96bddf06f609a042626760"
+    },
+    {
+      "path": "scripts/V48/07K12_TOURNAMENT_UI.lua",
+      "sha": "66bdec985e1da578f7d60dce550a8ed494950b76"
+    },
+    {
+      "path": "scripts/V48/07K13_TOURNAMENT_SERVICE.lua",
+      "sha": "fd879cceac1298568aa79b30449984cc59a22afb"
+    },
+    {
+      "path": "scripts/V48/07K1_TRUCO_AI.lua",
+      "sha": "88c029d1f7bbc37ca1c4dc42aea74ad3a66a8e3a"
+    },
+    {
+      "path": "scripts/V48/07K2_TRUCO_MATCH.lua",
+      "sha": "b4df0932f9c48e228d5e84364d5be21080bea381"
+    },
+    {
+      "path": "scripts/V48/07K3_TRUCO_DIRECTORY.lua",
+      "sha": "da83c442995afb2955980f13b581964f58c764be"
+    },
+    {
+      "path": "scripts/V48/07K4_TRUCO_TABLES.lua",
+      "sha": "dad19e37d1a5601163ab7b18fd641111925e70c5"
+    },
+    {
+      "path": "scripts/V48/07K5_TRUCO_UI.lua",
+      "sha": "1b8a3998cb249d3875f034bdd749625e850c0c8d"
+    },
+    {
+      "path": "scripts/V48/07K6_CARD_CATALOG.lua",
+      "sha": "2220cd0789976dd3f36a6f8bd0e5ceeff5ed69d4"
+    },
+    {
+      "path": "scripts/V48/07K7_CARD_STYLES.lua",
+      "sha": "88dce15e582611c249e2539a60d08ad1e6a77126"
+    },
+    {
+      "path": "scripts/V48/07K8_CARD_INVENTORY.lua",
+      "sha": "325c7362b53d0e1f375b176542a19b3f71683474"
+    },
+    {
+      "path": "scripts/V48/07K9_CARD_INVENTORY_UI.lua",
+      "sha": "54b7ccd84a5eeb01cfc0e92c6e496d64c5fbc2fa"
+    },
+    {
+      "path": "scripts/V48/07K_TRUCO_CLIENT.lua",
+      "sha": "e190eab8ff21b127ba0dd398e25ffa5ccb4c654f"
+    },
+    {
+      "path": "scripts/V48/07K_TRUCO_SERVER.lua",
+      "sha": "f2106766038722f4ffd7cb088f617c1f9a5ec519"
+    },
+    {
+      "path": "scripts/V48/07P0_STUDIO_PRESETS.lua",
+      "sha": "64ebd2cc19854d3600c3dad4e17aa2179f4d0a9e"
+    },
+    {
+      "path": "scripts/V48/07P2_STUDIO_AVATAR.lua",
+      "sha": "e37455efe350af4608dd694885b792660b1f631f"
+    },
+    {
+      "path": "scripts/V48/07P3_POSE_EDITOR.lua",
+      "sha": "7400c9eebaa8fbbce98b6717fcaae1777474c328"
+    },
+    {
+      "path": "scripts/V48/07P4_STUDIO_UI.lua",
+      "sha": "1408538be94f732372ef3c2ce7d7141989a02143"
+    },
+    {
+      "path": "scripts/V48/07P5_POSE_CANVAS.lua",
+      "sha": "240eea132be0ab1172cb0cbf07014f52c5758612"
+    },
+    {
+      "path": "scripts/V48/07P6_STUDIO_SETS.lua",
+      "sha": "33ff32c44d84847857113ac9b93961ff7f7c3248"
+    },
+    {
+      "path": "scripts/V48/07P_PHOTO_MODE.lua",
+      "sha": "87107c4846cfc42f0b954e76bdd11ab3c54b8089"
+    },
+    {
+      "path": "scripts/V48/07UI_DESIGN_SYSTEM.lua",
+      "sha": "11282f58cc0dd8455165f538ae136c5fd41852b8"
+    },
+    {
+      "path": "scripts/V48/07UI_SCREEN_BOUNDS.lua",
+      "sha": "7fb76e6a0da74104c3f47f4a872f2597b2eb8f72"
+    },
+    {
+      "path": "scripts/V48/07W_WINS_SERVICE.lua",
+      "sha": "b89bc8a4d82662b803ce1fae8bf9ff8a1374b98a"
+    },
+    {
+      "path": "scripts/V48/08B_AVATAR_DATA.lua",
+      "sha": "a285e492425301a95def70dad43451cd716c383d"
+    },
+    {
+      "path": "scripts/V48/09A1_SHOP_LAYOUT.lua",
+      "sha": "b75e401b19cc923db6dee63707280dcbb5e63796"
+    },
+    {
+      "path": "scripts/V48/09A2_PREVIEW_LAYOUT.lua",
+      "sha": "1b2ec45f896083cf95c72284ddb96b04cdbcca48"
+    },
+    {
+      "path": "scripts/V48/09A_SHOP_UI.lua",
+      "sha": "9c19cf9b6a9a5921ac6159da0202de7ed798b8fa"
+    },
+    {
+      "path": "scripts/V48/09B1_AVATAR_DISCOVERY.lua",
+      "sha": "2688df63ed7ce06a9f544a4db3251ff2dc5aeab8"
+    },
+    {
+      "path": "scripts/V48/09B2_COSPLAY_METADATA.lua",
+      "sha": "453e48b9b2dcf1b3721eccd1e091d78009acc775"
+    },
+    {
+      "path": "scripts/V48/09B3_PLAYER_INSPECT.lua",
+      "sha": "697602f21a1c579abc0b972cf3b7192a9c64bbbd"
+    },
+    {
+      "path": "scripts/V48/09B4_CURATED_LOOKS.lua",
+      "sha": "b618f60dc49909c89b7cf5604d677dd1c6e893dc"
+    },
+    {
+      "path": "scripts/V48/09B_SHOP_SERVER.lua",
+      "sha": "638fcfdd53c2eb717968b0235377f6cfe6e5d387"
+    },
+    {
+      "path": "scripts/V48/09C10_CONFIRM_ACTION.lua",
+      "sha": "8d283fc783af24de007567175066d0e397a377ee"
+    },
+    {
+      "path": "scripts/V48/09C1_SHOP_LOOKS.lua",
+      "sha": "b69fc1068d19ddc778f6e85262d570503dcebb96"
+    },
+    {
+      "path": "scripts/V48/09C2_SHOP_CATALOG.lua",
+      "sha": "dc42c8d6a0dce3bef64914f75823b98e8a376e9d"
+    },
+    {
+      "path": "scripts/V48/09C4_OUTFIT_LIBRARY.lua",
+      "sha": "dbec57d09f3d1a2f8ebb82eee81b26ef817424b7"
+    },
+    {
+      "path": "scripts/V48/09C5_UGC_STORES.lua",
+      "sha": "2f4512ee1bdfee35686790cc734faae3f05115b4"
+    },
+    {
+      "path": "scripts/V48/09C6_AVATAR_PREVIEW.lua",
+      "sha": "23f8508181239a375614307457e6e8d6b4135c5a"
+    },
+    {
+      "path": "scripts/V48/09C7_COMMUNITY_FEED.lua",
+      "sha": "1d89dd3daf3d337276d7c2962d3b135918739ae0"
+    },
+    {
+      "path": "scripts/V48/09C8_COMMUNITY_DETAILS.lua",
+      "sha": "7eaeb488b77ea4bb15bf73ee659d40b2241fc686"
+    },
+    {
+      "path": "scripts/V48/09C9_PLAYER_INSPECT.lua",
+      "sha": "8125f232cc6f018447c9c6dbca031ff7679cd87c"
+    },
+    {
+      "path": "scripts/V48/09C_SHOP_CLIENT.lua",
+      "sha": "6017a76ddd20f6566a58ca6c86e61bb49ebb01a1"
+    },
+    {
+      "path": "scripts/V49/01C_HUB_CHALLENGES.lua",
+      "sha": "fa01c8e551933701c88898837b46d541991d72ff"
+    },
+    {
+      "path": "scripts/V49/07A_CHESS.lua",
+      "sha": "04e1c8c076766cd47ad9cbdf8fdce649f2398e0d"
+    },
+    {
+      "path": "scripts/V49/07B_CHECKERS.lua",
+      "sha": "fdcd25185b820420fd5497cc444ac338d5744357"
+    },
+    {
+      "path": "scripts/V49/07C_POISON_POTATO.lua",
+      "sha": "b466adb44ab3ebba5cd24e38cb542c55e997ff70"
+    },
+    {
+      "path": "scripts/V49/07G1_HUB_SETTINGS.lua",
+      "sha": "8a884b83ecb27bddcf8c12c8eecb9ab1b4725a48"
+    },
+    {
+      "path": "scripts/V49/07G2_LOCAL_WORLDS.lua",
+      "sha": "338dc64fbcd155a14b3f82422205e19c23e534da"
+    },
+    {
+      "path": "scripts/V49/07G3_PERSONAL_TOOLS.lua",
+      "sha": "f9e7a4aa8b4c57e58d4cd70ebc686aba6605ea13"
+    },
+    {
+      "path": "scripts/V49/07G_HUB_UI.lua",
+      "sha": "526220792f00bd67e72954583aed5ce2bed738f6"
+    },
+    {
+      "path": "scripts/V49/07G_SETTINGS_SERVER.lua",
+      "sha": "12a0d52ae6e03a35d2fa978a47663fb9fd6d681b"
+    },
+    {
+      "path": "scripts/V49/07H1_GAME_LOBBY.lua",
+      "sha": "cc32a272583546159baf4384396900bc08dbe95d"
+    },
+    {
+      "path": "scripts/V49/07H4_BOT_ENGINE.lua",
+      "sha": "639d51e7b09fda36dbf8b13da8e88066409ef24f"
+    },
+    {
+      "path": "scripts/V49/07H_GAME_UI.lua",
+      "sha": "5ad8c71cf3a3ebe1d1e5365baa42dd308d12aeb0"
+    },
+    {
+      "path": "scripts/V49/07K0_TRUCO_RULES.lua",
+      "sha": "d6a540bb4a6978eaf6c96a5039b02d28d4859680"
+    },
+    {
+      "path": "scripts/V49/07K10_CARD_COMMERCE.lua",
+      "sha": "f122d8dffcfcf3930f101f7ee53c55d5e5d846fb"
+    },
+    {
+      "path": "scripts/V49/07K11_GAMES_PROGRESS.lua",
+      "sha": "82a3b2ec43fcc86fbf96bddf06f609a042626760"
+    },
+    {
+      "path": "scripts/V49/07K12_TOURNAMENT_UI.lua",
+      "sha": "66bdec985e1da578f7d60dce550a8ed494950b76"
+    },
+    {
+      "path": "scripts/V49/07K13_TOURNAMENT_SERVICE.lua",
+      "sha": "fd879cceac1298568aa79b30449984cc59a22afb"
+    },
+    {
+      "path": "scripts/V49/07K1_TRUCO_AI.lua",
+      "sha": "88c029d1f7bbc37ca1c4dc42aea74ad3a66a8e3a"
+    },
+    {
+      "path": "scripts/V49/07K2_TRUCO_MATCH.lua",
+      "sha": "b4df0932f9c48e228d5e84364d5be21080bea381"
+    },
+    {
+      "path": "scripts/V49/07K3_TRUCO_DIRECTORY.lua",
+      "sha": "da83c442995afb2955980f13b581964f58c764be"
+    },
+    {
+      "path": "scripts/V49/07K4_TRUCO_TABLES.lua",
+      "sha": "dad19e37d1a5601163ab7b18fd641111925e70c5"
+    },
+    {
+      "path": "scripts/V49/07K5_TRUCO_UI.lua",
+      "sha": "1b8a3998cb249d3875f034bdd749625e850c0c8d"
+    },
+    {
+      "path": "scripts/V49/07K6_CARD_CATALOG.lua",
+      "sha": "2220cd0789976dd3f36a6f8bd0e5ceeff5ed69d4"
+    },
+    {
+      "path": "scripts/V49/07K7_CARD_STYLES.lua",
+      "sha": "88dce15e582611c249e2539a60d08ad1e6a77126"
+    },
+    {
+      "path": "scripts/V49/07K8_CARD_INVENTORY.lua",
+      "sha": "325c7362b53d0e1f375b176542a19b3f71683474"
+    },
+    {
+      "path": "scripts/V49/07K9_CARD_INVENTORY_UI.lua",
+      "sha": "54b7ccd84a5eeb01cfc0e92c6e496d64c5fbc2fa"
+    },
+    {
+      "path": "scripts/V49/07K_TRUCO_CLIENT.lua",
+      "sha": "e190eab8ff21b127ba0dd398e25ffa5ccb4c654f"
+    },
+    {
+      "path": "scripts/V49/07K_TRUCO_SERVER.lua",
+      "sha": "f2106766038722f4ffd7cb088f617c1f9a5ec519"
+    },
+    {
+      "path": "scripts/V49/07P0_STUDIO_PRESETS.lua",
+      "sha": "64ebd2cc19854d3600c3dad4e17aa2179f4d0a9e"
+    },
+    {
+      "path": "scripts/V49/07P2_STUDIO_AVATAR.lua",
+      "sha": "e37455efe350af4608dd694885b792660b1f631f"
+    },
+    {
+      "path": "scripts/V49/07P3_POSE_EDITOR.lua",
+      "sha": "7400c9eebaa8fbbce98b6717fcaae1777474c328"
+    },
+    {
+      "path": "scripts/V49/07P4_STUDIO_UI.lua",
+      "sha": "1408538be94f732372ef3c2ce7d7141989a02143"
+    },
+    {
+      "path": "scripts/V49/07P5_POSE_CANVAS.lua",
+      "sha": "240eea132be0ab1172cb0cbf07014f52c5758612"
+    },
+    {
+      "path": "scripts/V49/07P6_STUDIO_SETS.lua",
+      "sha": "33ff32c44d84847857113ac9b93961ff7f7c3248"
+    },
+    {
+      "path": "scripts/V49/07P_PHOTO_MODE.lua",
+      "sha": "87107c4846cfc42f0b954e76bdd11ab3c54b8089"
+    },
+    {
+      "path": "scripts/V49/07UI_DESIGN_SYSTEM.lua",
+      "sha": "11282f58cc0dd8455165f538ae136c5fd41852b8"
+    },
+    {
+      "path": "scripts/V49/07UI_SCREEN_BOUNDS.lua",
+      "sha": "7fb76e6a0da74104c3f47f4a872f2597b2eb8f72"
+    },
+    {
+      "path": "scripts/V49/07W_WINS_SERVICE.lua",
+      "sha": "b89bc8a4d82662b803ce1fae8bf9ff8a1374b98a"
+    },
+    {
+      "path": "scripts/V49/08B1_BODY_PACKAGES.lua",
+      "sha": "99f25ae974646f36000e824e8304dcf812e3d45f"
+    },
+    {
+      "path": "scripts/V49/08B_AVATAR_DATA.lua",
+      "sha": "2f6be4cb8d707676922ce8d920330f82a0f53d93"
+    },
+    {
+      "path": "scripts/V49/08D_SKIN_STATE.lua",
+      "sha": "a5d4e8043d5c8f2a15c60d5e955daa3fd7ad736f"
+    },
+    {
+      "path": "scripts/V49/09A1_SHOP_LAYOUT.lua",
+      "sha": "8a4aa4e7c03cfd8055f8ab6626ba6d0c723b52d4"
+    },
+    {
+      "path": "scripts/V49/09A2_PREVIEW_LAYOUT.lua",
+      "sha": "1b2ec45f896083cf95c72284ddb96b04cdbcca48"
+    },
+    {
+      "path": "scripts/V49/09A_SHOP_UI.lua",
+      "sha": "3306270a032afd3867d97be36fd4bc5208e2506a"
+    },
+    {
+      "path": "scripts/V49/09B1_AVATAR_DISCOVERY.lua",
+      "sha": "2688df63ed7ce06a9f544a4db3251ff2dc5aeab8"
+    },
+    {
+      "path": "scripts/V49/09B2_COSPLAY_METADATA.lua",
+      "sha": "453e48b9b2dcf1b3721eccd1e091d78009acc775"
+    },
+    {
+      "path": "scripts/V49/09B3_PLAYER_INSPECT.lua",
+      "sha": "697602f21a1c579abc0b972cf3b7192a9c64bbbd"
+    },
+    {
+      "path": "scripts/V49/09B4_CURATED_LOOKS.lua",
+      "sha": "b618f60dc49909c89b7cf5604d677dd1c6e893dc"
+    },
+    {
+      "path": "scripts/V49/09B5_AVATAR_RUNTIME.lua",
+      "sha": "295fd86d2bf6312db2e8b9b5a9d74368cc7b85f4"
+    },
+    {
+      "path": "scripts/V49/09B_SHOP_SERVER.lua",
+      "sha": "0a0dd3e46f01986fe900a2a6de714a368e66388b"
+    },
+    {
+      "path": "scripts/V49/09C10_CONFIRM_ACTION.lua",
+      "sha": "8d283fc783af24de007567175066d0e397a377ee"
+    },
+    {
+      "path": "scripts/V49/09C11_AVATAR_CHARACTER.lua",
+      "sha": "3f1d252aa53342c676de9df4f1468db0cf3369bf"
+    },
+    {
+      "path": "scripts/V49/09C1_SHOP_LOOKS.lua",
+      "sha": "b69fc1068d19ddc778f6e85262d570503dcebb96"
+    },
+    {
+      "path": "scripts/V49/09C2_SHOP_CATALOG.lua",
+      "sha": "fd479160617fb392122afe7ed2e8f8bfb5b0f798"
+    },
+    {
+      "path": "scripts/V49/09C4_OUTFIT_LIBRARY.lua",
+      "sha": "6bc3c7b8b1b62db87c4f2204041201711ecefc81"
+    },
+    {
+      "path": "scripts/V49/09C5_UGC_STORES.lua",
+      "sha": "2f4512ee1bdfee35686790cc734faae3f05115b4"
+    },
+    {
+      "path": "scripts/V49/09C6_AVATAR_PREVIEW.lua",
+      "sha": "23f8508181239a375614307457e6e8d6b4135c5a"
+    },
+    {
+      "path": "scripts/V49/09C7_COMMUNITY_FEED.lua",
+      "sha": "1d89dd3daf3d337276d7c2962d3b135918739ae0"
+    },
+    {
+      "path": "scripts/V49/09C8_COMMUNITY_DETAILS.lua",
+      "sha": "7eaeb488b77ea4bb15bf73ee659d40b2241fc686"
+    },
+    {
+      "path": "scripts/V49/09C9_PLAYER_INSPECT.lua",
+      "sha": "8125f232cc6f018447c9c6dbca031ff7679cd87c"
+    },
+    {
+      "path": "scripts/V49/09C_SHOP_CLIENT.lua",
+      "sha": "1ac34f6556a679405ce8709224ff90aa756a0c32"
+    },
+    {
+      "path": "scripts/V50/08B1_BODY_PACKAGES.lua",
+      "sha": "99f25ae974646f36000e824e8304dcf812e3d45f"
+    },
+    {
+      "path": "scripts/V50/08B_AVATAR_DATA.lua",
+      "sha": "2f6be4cb8d707676922ce8d920330f82a0f53d93"
+    },
+    {
+      "path": "scripts/V50/08D_SKIN_STATE.lua",
+      "sha": "a5d4e8043d5c8f2a15c60d5e955daa3fd7ad736f"
+    },
+    {
+      "path": "scripts/V50/09A1_SHOP_LAYOUT.lua",
+      "sha": "8a4aa4e7c03cfd8055f8ab6626ba6d0c723b52d4"
+    },
+    {
+      "path": "scripts/V50/09A_SHOP_UI.lua",
+      "sha": "3306270a032afd3867d97be36fd4bc5208e2506a"
+    },
+    {
+      "path": "scripts/V50/09B5_AVATAR_RUNTIME.lua",
+      "sha": "295fd86d2bf6312db2e8b9b5a9d74368cc7b85f4"
+    },
+    {
+      "path": "scripts/V50/09B_SHOP_SERVER.lua",
+      "sha": "0a0dd3e46f01986fe900a2a6de714a368e66388b"
+    },
+    {
+      "path": "scripts/V50/09C11_AVATAR_CHARACTER.lua",
+      "sha": "3f1d252aa53342c676de9df4f1468db0cf3369bf"
+    },
+    {
+      "path": "scripts/V50/09C2_SHOP_CATALOG.lua",
+      "sha": "fd479160617fb392122afe7ed2e8f8bfb5b0f798"
+    },
+    {
+      "path": "scripts/V50/09C4_OUTFIT_LIBRARY.lua",
+      "sha": "6bc3c7b8b1b62db87c4f2204041201711ecefc81"
+    },
+    {
+      "path": "scripts/V50/09C_SHOP_CLIENT.lua",
+      "sha": "1ac34f6556a679405ce8709224ff90aa756a0c32"
+    },
+    {
+      "path": "scripts/V51/07UI_SCREEN_BOUNDS.lua",
+      "sha": "43c2565fd604f5b61159e03861e7f059ff2e72c6"
+    },
+    {
+      "path": "scripts/V51/08B1_BODY_PACKAGES.lua",
+      "sha": "ec44f07a99e3245e3500303f4b99f517db63fa1d"
+    },
+    {
+      "path": "scripts/V51/08B2_BODY_DESCRIPTION.lua",
+      "sha": "0783f31f07a15cee4dc512a87a3458652345759b"
+    },
+    {
+      "path": "scripts/V51/08B_AVATAR_DATA.lua",
+      "sha": "b8525a0521827b18fce556ba3b07211c799b98d6"
+    },
+    {
+      "path": "scripts/V51/08D_SKIN_STATE.lua",
+      "sha": "2bdefd316918a6e5d6b2a455663f0d5f5726571f"
+    },
+    {
+      "path": "scripts/V51/09A1_SHOP_LAYOUT.lua",
+      "sha": "befa7d61f61edd97a7d75d1b15647cd334c685f1"
+    },
+    {
+      "path": "scripts/V51/09A_SHOP_UI.lua",
+      "sha": "705a894577d4c2a363e77731a39cd744efd348f1"
+    },
+    {
+      "path": "scripts/V51/09B5_AVATAR_RUNTIME.lua",
+      "sha": "f9f6d9af3226fa2a7ee0a1fe45989cd3877dbdeb"
+    },
+    {
+      "path": "scripts/V51/09B_SHOP_SERVER.lua",
+      "sha": "08ddbeec231f2845ae77fd54754e1e5b397930fe"
+    },
+    {
+      "path": "scripts/V51/09C2_SHOP_CATALOG.lua",
+      "sha": "33a0a0af041b11b6e3fe587aa49f621a301218a0"
+    },
+    {
+      "path": "scripts/V51/09C6_AVATAR_PREVIEW.lua",
+      "sha": "85db1d39c264893220361d9f6a9c49d31f716726"
+    },
+    {
+      "path": "scripts/V51/09C_SHOP_CLIENT.lua",
+      "sha": "979ba73fba8da52ff8589f6bc55e94758d39e1c5"
+    },
+    {
+      "path": "scripts/V52/07H1_GAME_LOBBY.lua",
+      "sha": "3c02a1b0c74b93185703a74727708f412ba59e5f"
+    },
+    {
+      "path": "scripts/V52/07H2_GAME_BOARD.lua",
+      "sha": "d92c4790ce4a5f20b7c3c45d03b6aca23d053fe1"
+    },
+    {
+      "path": "scripts/V52/07H5_TRUCO_SETUP.lua",
+      "sha": "aaf6656a34ec844d3a58ac9349caddffd28491ba"
+    },
+    {
+      "path": "scripts/V52/07H_GAME_UI.lua",
+      "sha": "b4d6463a111204891eed74d8a20f685c127bdd0b"
+    },
+    {
+      "path": "scripts/V52/07K0_TRUCO_RULES.lua",
+      "sha": "1d4061cefbe5f8b87bfc411a2923be8f1eaa5743"
+    },
+    {
+      "path": "scripts/V52/07K10_CARD_COMMERCE.lua",
+      "sha": "37664961eb2fb6f17bc83076fb4274f62d0a7cd3"
+    },
+    {
+      "path": "scripts/V52/07K14_DECK_OPTIONS.lua",
+      "sha": "51f23fb7d65605d821a2f5cca2cfa79eb88535e0"
+    },
+    {
+      "path": "scripts/V52/07K15_TRUCO_TABLE.lua",
+      "sha": "d9ba27afad7071b7535a45cdd9ec641c8d8f4971"
+    },
+    {
+      "path": "scripts/V52/07K16_ATELIER_UI.lua",
+      "sha": "ec45ecb2d98a6201dad03f59a71d14c71653f8be"
+    },
+    {
+      "path": "scripts/V52/07K2_TRUCO_MATCH.lua",
+      "sha": "ae4655f6a8ec05239fb55a46d804c33a660c4aab"
+    },
+    {
+      "path": "scripts/V52/07K5_TRUCO_UI.lua",
+      "sha": "6798b6cc8eee91fb3e600f37beeb33223f94e289"
+    },
+    {
+      "path": "scripts/V52/07K6_CARD_CATALOG.lua",
+      "sha": "e79ded28d98549e4aaef60695a14a077796036bf"
+    },
+    {
+      "path": "scripts/V52/07K7_CARD_STYLES.lua",
+      "sha": "ba5526da97f34cbe40cecf6808e106286891297e"
+    },
+    {
+      "path": "scripts/V52/07K8_CARD_INVENTORY.lua",
+      "sha": "3fa161a59b6f5079d6abc7e466cff0d08b1f315e"
+    },
+    {
+      "path": "scripts/V52/07K9_CARD_INVENTORY_UI.lua",
+      "sha": "5de1027685a6d917f5ecc42e5703376bece0bfad"
+    },
+    {
+      "path": "scripts/V52/07K_TRUCO_CLIENT.lua",
+      "sha": "5f19c7425e4e9274808f47352037fd77218cae15"
+    },
+    {
+      "path": "scripts/V52/07K_TRUCO_SERVER.lua",
+      "sha": "4434d67b23d5cdf2dbbe695e2f0d339ce3b520a6"
+    },
+    {
+      "path": "scripts/V52/08B1_BODY_PACKAGES.lua",
+      "sha": "09e92565905c8dcfbd8a0993c966e40d4b199b71"
+    },
+    {
+      "path": "scripts/V52/08B3_AVATAR_VERIFY.lua",
+      "sha": "38ca0f22afa625e77061dcff7c1157c769308089"
+    },
+    {
+      "path": "scripts/V52/08B_AVATAR_DATA.lua",
+      "sha": "1a8a9c66458def02b6f9c98122bc32f12c54454f"
+    },
+    {
+      "path": "scripts/V52/08D_SKIN_STATE.lua",
+      "sha": "586b9a9d6204e462f98f33a85a555ac3314973b0"
+    },
+    {
+      "path": "scripts/V52/09A1_SHOP_LAYOUT.lua",
+      "sha": "34050cdf2eb727d64c74776cd805bc374ecd8dad"
+    },
+    {
+      "path": "scripts/V52/09A2_PREVIEW_LAYOUT.lua",
+      "sha": "31823452bf870ae18a9b38476569008f42246253"
+    },
+    {
+      "path": "scripts/V52/09B5_AVATAR_RUNTIME.lua",
+      "sha": "d5bf1f2b49bd8c9d627eb64dc0af5881fb9e4d5f"
+    },
+    {
+      "path": "scripts/V52/09B_SHOP_SERVER.lua",
+      "sha": "261af06a7770b99dc2ab18e0482dbb51aa5c3279"
+    },
+    {
+      "path": "scripts/V52/09C1_SHOP_LOOKS.lua",
+      "sha": "6ac667b714cd8ee7a35bdaaa2dce3c7767f33337"
+    },
+    {
+      "path": "scripts/V52/09C6_AVATAR_PREVIEW.lua",
+      "sha": "a8d4ee0a60d13c7429a0e26277a1f813eef5cfe6"
+    },
+    {
+      "path": "scripts/V52/09C7_COMMUNITY_FEED.lua",
+      "sha": "608e2be39e82279d8cebe29bc53b15dcf4ac3d7d"
+    },
+    {
+      "path": "scripts/V53/07H1_GAME_LOBBY.lua",
+      "sha": "60c256233f1e17e85c0b7179a412eb3b34c1bc83"
+    },
+    {
+      "path": "scripts/V53/07H_GAME_UI.lua",
+      "sha": "ea12fe3d7bd3b76a8443d40abb5b92b214bf7b79"
+    },
+    {
+      "path": "scripts/V53/07K15_TRUCO_TABLE.lua",
+      "sha": "3bb1aa80771181bc3ca4bcb22bba4481bdf83c0a"
+    },
+    {
+      "path": "scripts/V53/07K2_TRUCO_MATCH.lua",
+      "sha": "b79fb1f30de781da0c6253dcf567edd11694e859"
+    },
+    {
+      "path": "scripts/V53/07K3_TRUCO_DIRECTORY.lua",
+      "sha": "b5eceb2600267e378d2868e1eb980751eb90e577"
+    },
+    {
+      "path": "scripts/V53/07K5_TRUCO_UI.lua",
+      "sha": "03bd408dc187cfb8d241950e5e16733a5292ff61"
+    },
+    {
+      "path": "scripts/V53/07K7_CARD_STYLES.lua",
+      "sha": "687b81f09e0f39453cf9d3f830f4c331dcbbe0ed"
+    },
+    {
+      "path": "scripts/V53/07K_TRUCO_CLIENT.lua",
+      "sha": "2cc0a0e0d7683f64aa567b55b62b48f703eae352"
+    },
+    {
+      "path": "scripts/V53/07K_TRUCO_SERVER.lua",
+      "sha": "ccebb2da49428fecaf2b9533e4ba8ae2eecc80a8"
+    },
+    {
+      "path": "scripts/V53/07P2_STUDIO_AVATAR.lua",
+      "sha": "8cebb4e895f4ac8decb54d69b2b67c9b3077aac7"
+    },
+    {
+      "path": "scripts/V53/08B2_BODY_DESCRIPTION.lua",
+      "sha": "f75eb00b24a9d754252a5130fdaf0ebabc6da3d7"
+    },
+    {
+      "path": "scripts/V53/08B3_AVATAR_VERIFY.lua",
+      "sha": "2662c296bfc559bd7264f00ec3382cb198de3152"
+    },
+    {
+      "path": "scripts/V53/08B4_AVATAR_LOAD.lua",
+      "sha": "b9b667a6c980f666ae6f051dddc4aa58bfb3e510"
+    },
+    {
+      "path": "scripts/V53/09A1_SHOP_LAYOUT.lua",
+      "sha": "d962b6b5e57602cc217cd2bfbf7c5a181f7d8d0d"
+    },
+    {
+      "path": "scripts/V53/09B5_AVATAR_RUNTIME.lua",
+      "sha": "85732db92ae792eaeee1a5dd30f46997aa4c9d65"
+    },
+    {
+      "path": "scripts/V53/09B6_CART_RESOLVER.lua",
+      "sha": "35963f2f706072fb09b476da0f57eec6f2e263ea"
+    },
+    {
+      "path": "scripts/V53/09B_SHOP_SERVER.lua",
+      "sha": "d5d5656e1ff9312f47878627be6a8221b6c84683"
+    },
+    {
+      "path": "scripts/V53/09C2_SHOP_CATALOG.lua",
+      "sha": "74d433384ce21f382806468d45949533481b75a7"
+    },
+    {
+      "path": "scripts/V53/09C4_OUTFIT_LIBRARY.lua",
+      "sha": "6a399ecc50888eab466229b2a28087dd69213aef"
+    },
+    {
+      "path": "scripts/V53/09C6_AVATAR_PREVIEW.lua",
+      "sha": "99551e9ff9f2ad6ada7511b685da02ce27fd5c7f"
+    },
+    {
+      "path": "scripts/V53/09C_SHOP_CLIENT.lua",
+      "sha": "af06f9bff99667ce50c3b5eeebcd4d76431908ec"
+    }
+  ]
+}

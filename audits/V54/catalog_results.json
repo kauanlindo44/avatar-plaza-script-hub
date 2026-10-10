@@ -1,0 +1,27 @@
+[
+  {
+    "case": "full_outfit_resolves_package_and_deduplicates_parts",
+    "result": "pass",
+    "detail": "two non-sale body pieces become one native purchasable bundle; duplicate pieces excluded and ownership refreshed"
+  },
+  {
+    "case": "cart_quote_does_not_guess_price_or_ownership",
+    "result": "pass",
+    "detail": "metadata/ownership failures remain unknown; off-sale price is not counted as a buyable item"
+  },
+  {
+    "case": "server_cart_rejects_bad_ids_and_excludes_owned_or_unavailable",
+    "result": "pass",
+    "detail": "native bulk prompt includes unique valid asset and bundle only; owned/off-sale and forged IDs excluded on server"
+  },
+  {
+    "case": "cart_resolves_before_buy_and_keeps_selection",
+    "result": "pass",
+    "detail": "checkout disabled until bundle resolution; known subtotal honest; unchecked bundle remains unchecked after refresh; closed cart does not flood requests"
+  },
+  {
+    "case": "catalog_reuses_slots_and_clicks_current_item",
+    "result": "pass",
+    "detail": "400 catalog items use at most 40 GUI cards; recycled click maps to current item; cart button keeps avatar; trying item adds it once"
+  }
+]

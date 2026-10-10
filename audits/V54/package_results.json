@@ -1,0 +1,17 @@
+{
+  "version": "V54",
+  "base_commit": "f99494623aa804cf43bd04712e50e33220a19b26",
+  "items": 21,
+  "replace": 18,
+  "create": 3,
+  "unique_delta_sources": 19,
+  "max_lines": 389,
+  "effective_sources": 79,
+  "simulated_cases": 61,
+  "html_bytes": 702246,
+  "prerequisite": "Complete V53 already installed",
+  "dual_rule_locations": [
+    "07A0_CHESS_RULES",
+    "07B0_CHECKERS_RULES"
+  ]
+}

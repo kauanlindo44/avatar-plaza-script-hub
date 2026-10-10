@@ -1,0 +1,32 @@
+[
+  {
+    "case": "selected_game_profiles_and_safe_mobile_controls",
+    "result": "pass",
+    "detail": "one selected game/four actions; named vertical virtual profiles; six sizes including 568x320 preserve 44px controls, header and close"
+  },
+  {
+    "case": "dupla_roster_ready_and_friend_reservation_fit",
+    "result": "pass",
+    "detail": "opposite seats form two readable duplas; ready toggle, copying code and 2-minute friend reservation remain on-screen"
+  },
+  {
+    "case": "table_public_cards_names_and_three_direct_hand_cards",
+    "result": "pass",
+    "detail": "four public cards at least 40px high on larger 2D felt; three private tappable cards above one footer; six screen sizes; any owned card can be played on own turn"
+  },
+  {
+    "case": "truco_ten_seconds_and_legal_mineiro_counter_raise",
+    "result": "pass",
+    "detail": "10s visible countdown disables expired controls; Mineiro 4 raises to 6; rematch visible in finished dialog and excluded from cup"
+  },
+  {
+    "case": "chess_and_checkers_board_controls_fit_safe_bounds",
+    "result": "pass",
+    "detail": "centered square chess/checkers boards at least 200px; match controls and all four promotion choices preserve 44px touch targets in six screen sizes"
+  },
+  {
+    "case": "actual_game_controller_promotes_and_cancels_waiting_with_single_exit",
+    "result": "pass",
+    "detail": "real game LocalScript shows four promotion choices, blocks other taps while choosing, closes promotion on exit, and the single waiting-room X actually cancels the server queue"
+  }
+]
