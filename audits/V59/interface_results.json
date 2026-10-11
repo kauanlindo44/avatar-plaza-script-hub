@@ -1,0 +1,22 @@
+[
+  {
+    "case": "retry_close_header_and_all_tabs_preserve_safe_touch_targets",
+    "result": "pass",
+    "detail": "six safe sizes x four tabs x two connection states; retry never covers close/heading/actions/body/notice; narrow non-chat tabs reserve a retry row"
+  },
+  {
+    "case": "user_messages_keep_right_alignment_after_new_conversation",
+    "result": "pass",
+    "detail": "actual message row fills list width, user bubble right edge stays fixed, AI remains left, compatibility language is labeled and reset restores welcome"
+  },
+  {
+    "case": "keyboard_keeps_send_and_reload_inside_visible_area",
+    "result": "pass",
+    "detail": "typing hides only creation-mode controls, leaving send and recovery above keyboard; mode controls return after dismissal"
+  },
+  {
+    "case": "real_client_discloses_english_and_recovers_after_native_error",
+    "result": "pass",
+    "detail": "actual LocalScript shows true connection failure and diagnostic, sends English suggestion, reload recovers, native response stays unchanged and new chat returns to welcome"
+  }
+]

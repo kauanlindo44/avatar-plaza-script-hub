@@ -1,8 +1,8 @@
 {
   "schema": 2,
   "project": "Avatar Plaza Script Hub",
-  "latest": "V58",
-  "updated_at": "2026-10-11T01:07:44+00:00",
+  "latest": "V59",
+  "updated_at": "2026-10-11T02:49:00+00:00",
   "poll_seconds": 5,
   "versions": [
     {
@@ -5768,6 +5768,56 @@
           "action": "SUBSTITUIR",
           "path": "scripts/V58/09I_ASSISTANT_SERVER.lua",
           "sha256": "0efe3b57b8790cdd89f9820bb0422659ee9adac43dc5c98307d242ac5a7a3d8b",
+          "lines": 121,
+          "parts": 2
+        }
+      ]
+    },
+    {
+      "id": "V59",
+      "title": "IA: HTTP 400 + DIAGNÓSTICO INDEPENDENTE — 4 SUBSTITUIÇÕES",
+      "date": "2026-10-11",
+      "summary": "Remove a instrução contraditória de português/JSON, usa texto simples em inglês e verifica a instrução real. Recarregar compara o exemplo oficial separadamente. Corrige sobreposição do X e alinhamento das mensagens; preserva limites, reembolso e verificação de planos.",
+      "install_note": "Requer V58 completa. V59: somente 4 SUBSTITUIÇÕES da IA; nenhum script novo. Pare Play, substitua as fontes completas nos locais indicados e reinicie Play. Recarregar IA compara o assistente com o exemplo oficial. Respostas em inglês neste teste de compatibilidade. Guia: INSTALL_V59.md.",
+      "validation": "14 cenários simulados; 98 fontes efetivas com sintaxe válida; seis resoluções, quatro abas e dois estados de conexão; JavaScript real do instalador. TextGenerator nativo ainda precisa de teste no Roblox; HTTP 400 não foi confirmado como resolvido no serviço.",
+      "scripts": [
+        {
+          "name": "09I2_ASSISTANT_ENGINE",
+          "type": "ModuleScript",
+          "location": "ServerScriptService",
+          "action": "SUBSTITUIR",
+          "path": "scripts/V59/09I2_ASSISTANT_ENGINE.lua",
+          "sha256": "d13df8081e5929aa0506360d0e587a7aeaa8c080366b096c94b3b1c165089f26",
+          "lines": 87,
+          "parts": 2
+        },
+        {
+          "name": "09I4_ASSISTANT_UI",
+          "type": "ModuleScript",
+          "location": "ReplicatedStorage",
+          "action": "SUBSTITUIR",
+          "path": "scripts/V59/09I4_ASSISTANT_UI.lua",
+          "sha256": "ce3d88a6eeb5f2e97c339ccb03cbceed34e5c2a3bb1077ab4d37d5377b37e2b0",
+          "lines": 129,
+          "parts": 2
+        },
+        {
+          "name": "09I_ASSISTANT_CLIENT",
+          "type": "LocalScript",
+          "location": "StarterPlayer > StarterPlayerScripts",
+          "action": "SUBSTITUIR",
+          "path": "scripts/V59/09I_ASSISTANT_CLIENT.lua",
+          "sha256": "25e956bb54250f4b9ddcad99519c975b1830cda5e320b6dbddd182e569440edb",
+          "lines": 79,
+          "parts": 2
+        },
+        {
+          "name": "09I_ASSISTANT_SERVER",
+          "type": "Script",
+          "location": "ServerScriptService",
+          "action": "SUBSTITUIR",
+          "path": "scripts/V59/09I_ASSISTANT_SERVER.lua",
+          "sha256": "67a890fc8a2c20b887c12726220e52c1e9476292f5cdf27037ad43643a235597",
           "lines": 121,
           "parts": 2
         }

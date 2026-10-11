@@ -1,0 +1,52 @@
+[
+  {
+    "case": "full_health_uses_the_actual_plain_english_contract",
+    "result": "pass",
+    "detail": "real adapter instruction changed, probe uses the same full contract, plain native text is preserved; official valid sampling settings and separate requests"
+  },
+  {
+    "case": "manual_reload_compares_reference_without_overwriting_assistant_state",
+    "result": "pass",
+    "detail": "successful official example cannot conceal a failed real prompt; original error and stage survive; recovery repeats both contracts"
+  },
+  {
+    "case": "failure_of_both_native_contracts_stays_unavailable",
+    "result": "pass",
+    "detail": "two real-service failures remain visible; cached recovery pause avoids retries on every status request; later actual success restores availability"
+  },
+  {
+    "case": "reference_failure_does_not_erase_a_valid_assistant_answer",
+    "result": "pass",
+    "detail": "reference diagnostic is independent in both directions; assistant availability requires its own valid response"
+  },
+  {
+    "case": "filtered_transport_removes_unsafe_symbols_but_keeps_the_request",
+    "result": "pass",
+    "detail": "moderation runs before transport; accents normalize, URL-unsafe symbols are removed, wholly filtered messages never reach the generator"
+  },
+  {
+    "case": "optional_legacy_json_and_plain_custom_keywords_still_work",
+    "result": "pass",
+    "detail": "valid older JSON is accepted without requesting it; plain native style phrase and safe local keyword fallback remain usable"
+  },
+  {
+    "case": "malformed_native_reply_never_becomes_success",
+    "result": "pass",
+    "detail": "empty or invalid native output fails response validation and recovers only after a real valid reply"
+  },
+  {
+    "case": "native_deadline_destroys_the_timed_out_generator",
+    "result": "pass",
+    "detail": "timeout retains failure, removes its generator and does not convert a late reply into availability"
+  },
+  {
+    "case": "server_reports_contract_diagnostic_and_refunds_failed_requests",
+    "result": "pass",
+    "detail": "HTTP 400 refunds daily/session usage and reaches client with true health; status and real answers declare English compatibility; eight valid independent requests still enforced"
+  },
+  {
+    "case": "paid_plan_requires_full_assistant_health_not_only_reference",
+    "result": "pass",
+    "detail": "successful reference call cannot unlock plan purchase while actual assistant is failing; existing real product path resumes after health recovery"
+  }
+]
