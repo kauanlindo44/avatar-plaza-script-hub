@@ -1,0 +1,52 @@
+[
+  {
+    "case": "one_free_slot_idempotent_expiry_and_restart",
+    "result": "pass",
+    "detail": "same submission does not extend time; other item blocked across module/server restart; expiry releases the slot; no purchase or currency"
+  },
+  {
+    "case": "global_dedup_and_withdraw_keep_original_deadline",
+    "result": "pass",
+    "detail": "duplicate asset refused globally without consuming another player slot; withdrawal releases asset but not the owner cooldown"
+  },
+  {
+    "case": "storage_and_listing_failures_are_explicit_and_recoverable",
+    "result": "pass",
+    "detail": "no false publication/success on DataStore or MemoryStore failure; same draft repairs listing; interrupted withdrawal repairs on status reload"
+  },
+  {
+    "case": "favorites_persist_after_expiry_and_never_change_visibility_rank",
+    "result": "pass",
+    "detail": "favorites are persistent independent bookmarks, including expired highlights; unavailable items stay marked and can be removed; ranking and payments unchanged"
+  },
+  {
+    "case": "native_validation_purchase_and_live_off_sale_check",
+    "result": "pass",
+    "detail": "only real avatar catalog items accepted, invalid numbers/products rejected; current availability and price checked before native asset/bundle purchase"
+  },
+  {
+    "case": "bounded_global_pages_wrap_without_duplicates_or_paid_priority",
+    "result": "pass",
+    "detail": "137 global items traversed through bounded pages and circular native index; different viewers get different starts; no favoriting or spend rank"
+  },
+  {
+    "case": "native_owned_background_inventory_does_not_drop_entries",
+    "result": "pass",
+    "detail": "native permission and AvatarBackground filter; 10 inventory entries shown as 6+4 without loss; server resolves only owned profile assets and never parents/executes container"
+  },
+  {
+    "case": "background_permissions_decode_failure_and_cancel_are_honest",
+    "result": "pass",
+    "detail": "denied inventory access, missing ownership, unavailable image and canceled requests never pretend a background was applied"
+  },
+  {
+    "case": "retirement_blocks_new_sales_and_keeps_previous_plan",
+    "result": "pass",
+    "detail": "no native AI startup for free players; new prompts blocked before purchase; existing Pro plan still recognized until expiry, advertising hidden, receipts untouched"
+  },
+  {
+    "case": "real_shop_server_routes_highlights_and_avatar_codes",
+    "result": "pass",
+    "detail": "actual RemoteFunction routes publish/feed/check and AV code to native appearance, retaining avatar snapshot endpoint"
+  }
+]

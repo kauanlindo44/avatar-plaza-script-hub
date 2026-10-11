@@ -1,0 +1,47 @@
+[
+  {
+    "case": "hud_safe_geometry_without_music_cart_looks_overlap",
+    "result": "pass",
+    "detail": "15 HUD controls checked for safe bounds and pairwise overlap at six sizes; free Highlights launches Stores without opening AI"
+  },
+  {
+    "case": "compact_settings_all_categories_worlds_and_legacy_access",
+    "result": "pass",
+    "detail": "compact capped settings panel preserves 44px touch targets, six worlds, back/X, and an optional earlier-purchase shortcut at every safe size"
+  },
+  {
+    "case": "local_world_themes_are_distinct_restore_and_do_not_change_physics",
+    "result": "pass",
+    "detail": "cloud islands, anime village/gates, neon city, coast and Halloween trees/pumpkins are distinct local geometry; collisions and player untouched, original ground/sky/light restored"
+  },
+  {
+    "case": "horizontal_highlights_adapt_rows_cards_and_touch_controls",
+    "result": "pass",
+    "detail": "45 items stay reachable through horizontal rows; at most seven visible cards and three rows, safe footer, readable nonoverlapping prices and 44px buy/favorite targets"
+  },
+  {
+    "case": "highlight_composer_favorite_buy_and_details_are_separate",
+    "result": "pass",
+    "detail": "favorite never enters cart, direct buy opens only purchase, card opens details, composer confirms native item before free submit with safe close and controls"
+  },
+  {
+    "case": "community_cards_only_player_look_and_working_code",
+    "result": "pass",
+    "detail": "community cards display exactly Look de jogador and a searchable code, without usernames or price text"
+  },
+  {
+    "case": "photo_profile_image_scene_keeps_avatar_pose_and_rotation",
+    "result": "pass",
+    "detail": "exact avatar model is preserved while rotating/posing; only a validated Roblox profile image is placed, no old decorative rooms, invalid replacement keeps current scene and exit cleans up"
+  },
+  {
+    "case": "actual_shop_client_stores_music_and_cart_focus",
+    "result": "pass",
+    "detail": "actual shop client opens free highlights, closes only music popup without stopping audio, isolates cart, returns to prior page, restores HUD on exit"
+  },
+  {
+    "case": "catalog_halloween_selection_is_orange",
+    "result": "pass",
+    "detail": "Halloween tab remains orange before and after selection; its submenu uses an orange palette without changing native keyword searches"
+  }
+]
