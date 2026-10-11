@@ -1,0 +1,62 @@
+[
+  {
+    "case": "same_emotes_in_another_order_keep_the_same_appearance_key",
+    "result": "pass",
+    "detail": "unordered native emote dictionaries cannot trigger a false appearance change; actual emote or rig changes still invalidate the key without mutating the saved list"
+  },
+  {
+    "case": "native_rigid_hair_correction_accepts_special_mesh_without_wrap",
+    "result": "pass",
+    "detail": "requested layered Hair corrected by applied native metadata to rigid accepts Part+SpecialMesh without cages or enabled layered clothing"
+  },
+  {
+    "case": "attached_native_classification_overrides_stale_blob",
+    "result": "pass",
+    "detail": "the applied AccessoryDescription.IsLayered wins over a stale GetAccessories blob and request flag"
+  },
+  {
+    "case": "layered_items_remain_strict_and_identify_exact_failure",
+    "result": "pass",
+    "detail": "shirt remains layered even if metadata says rigid; missing cage/mesh/instance and disabled WrapLayer fail with exact ID and requirement"
+  },
+  {
+    "case": "actually_layered_hair_still_requires_its_wrap",
+    "result": "pass",
+    "detail": "genuinely layered Hair is still rejected when its WrapLayer is disabled; correction is limited to natively rigid hair"
+  },
+  {
+    "case": "same_type_cannot_substitute_for_missing_requested_item",
+    "result": "pass",
+    "detail": "a valid Shirt instance of the same type cannot confirm an ID whose applied descriptor is absent"
+  },
+  {
+    "case": "rigid_hair_combined_with_pineapple_applies_on_actual_character",
+    "result": "pass",
+    "detail": "server swap accepts rigid corrected hair plus real layered shirt, preserves classic clothes and records canonical appearance"
+  },
+  {
+    "case": "diagnostic_kind_id_and_requirement_survive_public_and_output",
+    "result": "pass",
+    "detail": "typed diagnostics preserve exact failure and original native error; next stage cannot inherit a stale failed item"
+  },
+  {
+    "case": "shop_bootstrap_accepts_existing_v55_cart_module",
+    "result": "pass",
+    "detail": "actual shop initializes V55 cart, opens it, applies layered shirt with corrected rigid hair after closing, and accepts canonical state without another apply loop"
+  },
+  {
+    "case": "native_instance_error_keeps_exact_id_and_native_label",
+    "result": "pass",
+    "detail": "a native per-item API exception keeps its original cause, ID and distinct native classification"
+  },
+  {
+    "case": "client_failure_window_distinguishes_validation_from_native_error",
+    "result": "pass",
+    "detail": "real feedback controller labels validation honestly, shows precise ID/check and retains native exception text and accessible close"
+  },
+  {
+    "case": "server_receives_typed_client_item_report_and_drops_forged_id",
+    "result": "pass",
+    "detail": "client proof is preserved in server Output while item identity/type must belong to the server-confirmed avatar"
+  }
+]

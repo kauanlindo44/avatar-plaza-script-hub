@@ -1,0 +1,22 @@
+[
+  {
+    "case": "safe_cart_looks_and_save_actions_use_all_available_space",
+    "result": "pass",
+    "detail": "six phone/desktop sizes with real core-origin/cutout arithmetic; checkout reaches safe bottom; six look actions and save form fit without scrolling; 44px touch controls"
+  },
+  {
+    "case": "saved_look_item_x_does_not_cover_thumbnail_and_small_errors_stay_compact",
+    "result": "pass",
+    "detail": "main preview can retry; thumbnail error is one compact line; each item has a separate 44px X and removal affects only that draft item"
+  },
+  {
+    "case": "cart_quote_failure_can_reload_without_changing_avatar",
+    "result": "pass",
+    "detail": "failed full-look quote releases controls; reload succeeds, authoritative purchase is available, and opening or buying never resets the preview"
+  },
+  {
+    "case": "gradient_preserves_designed_colors_and_text_contrast",
+    "result": "pass",
+    "detail": "surface endpoints reproduce intended navy/jade colors after Roblox gradient multiplication; score and buttons retain bright readable text; native backdrop remains dark"
+  }
+]

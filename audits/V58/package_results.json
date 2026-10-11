@@ -1,0 +1,12 @@
+{
+  "version": "V58",
+  "base_commit": "b918b7d1baf28448855f97fdc00868e01e4704b2",
+  "items": 27,
+  "replace": 26,
+  "create": 1,
+  "effective_sources": 98,
+  "max_lines": 380,
+  "simulated_cases": 76,
+  "html_bytes": 1391576,
+  "prerequisite": "Complete V57 already installed"
+}

@@ -1,0 +1,52 @@
+[
+  {
+    "case": "native_ascii_probe_and_plain_text_are_not_a_format_failure",
+    "result": "pass",
+    "detail": "minimal English health probe is independent of JSON; accent-free user/instruction transport; valid native plain text remains online with a catalog keyword derived from the style request"
+  },
+  {
+    "case": "native_400_logs_stage_and_does_not_lock_five_minutes",
+    "result": "pass",
+    "detail": "original native HTTP 400 and stage retained in Output; brief cooldown; recovery probe after 12 seconds instead of a 300-second outage cache"
+  },
+  {
+    "case": "unavailable_storage_allows_only_temporary_free_help_and_blocks_paid_grants",
+    "result": "pass",
+    "detail": "storage outage is distinguished from native connection: brief free use remains available, eight requests still enforced, no paid entitlement or successful saved-collection claim"
+  },
+  {
+    "case": "on_demand_request_recovers_when_cached_health_is_false",
+    "result": "pass",
+    "detail": "a stale unavailable snapshot no longer rejects every request before the native service is tried"
+  },
+  {
+    "case": "server_identity_stamp_handles_replicated_history_but_not_broken_clothes",
+    "result": "pass",
+    "detail": "the exact server-confirmed accessory can be verified without local application history; disabled wrapping and wrong asset identity still fail"
+  },
+  {
+    "case": "trying_never_adds_to_cart_and_collapsed_preview_frees_list",
+    "result": "pass",
+    "detail": "trying is independent of the explicit cart action; one tap expands/collapses the cart preview without changing the avatar or selected items"
+  },
+  {
+    "case": "halloween_search_keeps_real_catalog_filters_and_free_prices",
+    "result": "pass",
+    "detail": "seasonal category queries Roblox catalog instead of fabricated IDs; original category indices stay compatible; only confirmed zero prices pass the free filter"
+  },
+  {
+    "case": "music_actual_controller_load_seek_volume_queue_and_saved_search",
+    "result": "pass",
+    "detail": "actual music LocalScript checks and loads IDs, seeks, changes/mutes volume, saves/searches names, queues and skips tracks, and minimizes without a second sound"
+  },
+  {
+    "case": "photo_motion_moves_camera_or_copy_while_all_set_blocks_stay_fixed",
+    "result": "pass",
+    "detail": "real Photo Mode movement actions affect only camera/copy, preserve every fixed scene block and clean up on exit"
+  },
+  {
+    "case": "settings_pages_fit_safe_mobile_rectangles_and_have_accessible_exit",
+    "result": "pass",
+    "detail": "settings uses the full safe rectangle; back/X/categories preserve 44px targets; appearance controls affect theme and reduced motion locally"
+  }
+]

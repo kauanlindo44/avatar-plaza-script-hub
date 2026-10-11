@@ -1,0 +1,37 @@
+[
+  {
+    "case": "timed_products_are_idempotent_and_expire_offline",
+    "result": "pass",
+    "detail": "same receipt/retried transform grants once; repeat purchases extend by 720h; wall-clock expiry survives no online activity; storage outage cannot grant"
+  },
+  {
+    "case": "friends_share_entitlements_with_consent_capacity_and_revocation",
+    "result": "pass",
+    "detail": "three real friends accept before plan applies; fourth excluded; revoke and expired invites enforced; saved collections are private until shared; version chain persisted without chat/password"
+  },
+  {
+    "case": "one_receipt_router_preserves_old_products_and_new_offers",
+    "result": "pass",
+    "detail": "one ProcessReceipt handles legacy cards and timed AI; no disabled Ether product; failure stays retryable; Salem sale closes but earned/paid cosmetic and pending receipts remain valid"
+  },
+  {
+    "case": "native_ai_health_failure_has_no_fake_success_or_memory",
+    "result": "pass",
+    "detail": "actual native adapter calls GenerateTextAsync, exposes its real response, excludes cross-session context, and reports service failure"
+  },
+  {
+    "case": "outfit_builder_uses_real_distinct_ids_with_budget_and_format",
+    "result": "pass",
+    "detail": "five verified catalog combinations; 3D metadata preserved; whole previous native body kept; per-piece/total budget and free-plan server cap enforced; progress follows actual catalog stages"
+  },
+  {
+    "case": "server_paid_plan_is_blocked_until_native_health_and_session_is_brief",
+    "result": "pass",
+    "detail": "paid prompt checks native engine and actual product before purchase; eight independent private session interactions; daily quota and no persisted conversation"
+  },
+  {
+    "case": "music_checks_asset_type_volume_and_storage_failure",
+    "result": "pass",
+    "detail": "default 40%; real audio metadata required; invalid/image IDs rejected; volume clamped; favorites deduplicated; failed storage cannot claim saved"
+  }
+]
