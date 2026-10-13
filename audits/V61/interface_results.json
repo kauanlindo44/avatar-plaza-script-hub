@@ -1,0 +1,62 @@
+[
+  {
+    "case": "hud_and_row_settings_geometry_in_six_sizes",
+    "result": "pass",
+    "detail": "HUD controls do not overlap and settings categories keep touch targets across six viewport/safe-area geometries"
+  },
+  {
+    "case": "music_discovery_list_and_id_are_both_visible_without_fullscreen",
+    "result": "pass",
+    "detail": "initial music discovery and ID/link input coexist in a compact panel with readable list and 44px controls in portrait/landscape"
+  },
+  {
+    "case": "temporary_sponsor_examples_rows_and_live_replacement",
+    "result": "pass",
+    "detail": "native temporary examples are labelled, adapt to multiple horizontal rows, disappear on a real publication notification and keep favorites/IA routing separate"
+  },
+  {
+    "case": "sponsor_name_search_has_examples_before_typing",
+    "result": "pass",
+    "detail": "opening publish starts a native name/filter picker with immediate examples; selecting a result still requires server confirmation before free publication"
+  },
+  {
+    "case": "community_two_modes_metadata_loading_and_price_fields",
+    "result": "pass",
+    "detail": "Todos/Grátis are the only modes, pending player thumbnails display without waiting for every 3D body, and explicit prices are sent to the real combined endpoint"
+  },
+  {
+    "case": "catalog_price_validation_and_defaults_are_understandable",
+    "result": "pass",
+    "detail": "negative/reversed prices cannot close or execute a filter; default catalog includes free items; active-filter count and explicit 2D/3D clothing labels match native parameters"
+  },
+  {
+    "case": "rich_local_scenes_and_ground_pool_remain_bounded",
+    "result": "pass",
+    "detail": "five distinct original scene motifs exist and a reusable 25-part local floor follows long-distance movement; no collisions/query changes and cleanup restores the world"
+  },
+  {
+    "case": "photo_catalog_scene_centers_avatar_and_rejects_invalid_replacement",
+    "result": "pass",
+    "detail": "official store thumbnail/raw-image backgrounds remain behind the exact copied model; asymmetric sidebars no longer shift the avatar horizontally; invalid replacement preserves the prior scene"
+  },
+  {
+    "case": "post_match_summary_review_and_replay_controls_are_safe",
+    "result": "pass",
+    "detail": "result keeps the board available, displays session score, uses explicit review/replay/next actions and avoids the Roblox topbar in every tested geometry"
+  },
+  {
+    "case": "real_music_controller_seeds_queue_and_autoplays_verified_default",
+    "result": "pass",
+    "detail": "actual music LocalScript retrieves native defaults, starts the verified background audio at 40%, populates a queue before manual input and advances to the next track"
+  },
+  {
+    "case": "real_game_controller_retains_board_after_server_close_and_review",
+    "result": "pass",
+    "detail": "the actual game LocalScript holds the last board/result through room closure; review hides the summary while keeping the final board available"
+  },
+  {
+    "case": "photo_side_catalog_tests_emote_on_copy_and_offers_native_purchase",
+    "result": "pass",
+    "detail": "small native emote sidebar directs testing to the copied-avatar callback and opens only Roblox purchase for an available catalog item"
+  }
+]

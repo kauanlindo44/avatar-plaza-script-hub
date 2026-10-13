@@ -1,0 +1,97 @@
+[
+  {
+    "case": "one_free_slot_idempotent_expiry_and_restart",
+    "result": "pass",
+    "detail": "same submission does not extend time; other item blocked across module/server restart; expiry releases the slot; no purchase or currency"
+  },
+  {
+    "case": "global_dedup_and_withdraw_keep_original_deadline",
+    "result": "pass",
+    "detail": "duplicate asset refused globally without consuming another player slot; withdrawal releases asset but not the owner cooldown"
+  },
+  {
+    "case": "storage_and_listing_failures_are_explicit_and_recoverable",
+    "result": "pass",
+    "detail": "no false publication/success on DataStore or MemoryStore failure; same draft repairs listing; interrupted withdrawal repairs on status reload"
+  },
+  {
+    "case": "favorites_persist_after_expiry_and_never_change_visibility_rank",
+    "result": "pass",
+    "detail": "favorites are persistent independent bookmarks, including expired highlights; unavailable items stay marked and can be removed; ranking and payments unchanged"
+  },
+  {
+    "case": "native_validation_purchase_and_live_off_sale_check",
+    "result": "pass",
+    "detail": "only real avatar catalog items accepted, invalid numbers/products rejected; current availability and price checked before native asset/bundle purchase"
+  },
+  {
+    "case": "bounded_global_pages_wrap_without_duplicates_or_paid_priority",
+    "result": "pass",
+    "detail": "137 global items traversed through bounded pages and circular native index; different viewers get different starts; no favoriting or spend rank"
+  },
+  {
+    "case": "audio_library_initial_results_pagination_cache_and_failure",
+    "result": "pass",
+    "detail": "native music subtype search populates the initial library; cached first page still advances; transport failure reports recovery, not invented songs"
+  },
+  {
+    "case": "global_friend_registry_merges_two_people_and_survives_reload",
+    "result": "pass",
+    "detail": "200 plus 500 discovered accounts persist globally, are deduplicated across entrants and remain pageable after a module/server reload; no 700-card client allocation"
+  },
+  {
+    "case": "archive_snapshot_code_dedup_and_write_failure",
+    "result": "pass",
+    "detail": "verified look snapshots have stable searchable codes; identical looks share one record; visual changes get a new code; failed writes retain prior data"
+  },
+  {
+    "case": "archive_background_job_retries_and_checkpoints_progress",
+    "result": "pass",
+    "detail": "background appearance work retries storage failure and only advances the durable checkpoint after actual snapshots are written"
+  },
+  {
+    "case": "archive_queue_reaches_seed_owners_beyond_first_global_page",
+    "result": "pass",
+    "detail": "durable appearance work processes 70 seed owners across global index pages after a restart; cache eviction preserves completed snapshot metadata and browsing"
+  },
+  {
+    "case": "unowned_store_background_type_sale_and_image_are_checked",
+    "result": "pass",
+    "detail": "a real on-sale profile background can be tested without owning it; other asset types/off-sale assets and unavailable raw/thumbnail images are rejected"
+  },
+  {
+    "case": "look_planner_filters_text_and_never_claims_general_ai",
+    "result": "pass",
+    "detail": "the catalog planner recognizes style/color/free intent in Portuguese and identifies its limited help scope without claiming a language-model response"
+  },
+  {
+    "case": "builder_requires_fresh_price_and_a_valid_avatar_before_results",
+    "result": "pass",
+    "detail": "real catalog selections are repriced and passed to avatar validation; unavailable appearance or price above budget yields no look and does not apply anything"
+  },
+  {
+    "case": "real_chat_commands_are_personal_and_competition_safe",
+    "result": "pass",
+    "detail": "real TextChatCommand aliases operate on the originating player, clamp arguments and restore/block movement during games"
+  },
+  {
+    "case": "real_shop_routes_mix_publications_and_player_discovery",
+    "result": "pass",
+    "detail": "actual ShopRPC combines manual published looks with public-player discovery, validates price filters and resolves immutable LK archive codes"
+  },
+  {
+    "case": "free_assistant_route_no_text_generator_and_preserves_legacy_quota",
+    "result": "pass",
+    "detail": "the real free route opens and answers supported game help without HTTP text generation, retains session/quota limits, blocks new sales and stores no conversation or credentials"
+  },
+  {
+    "case": "board_room_rematch_requires_both_players_and_keeps_session_score",
+    "result": "pass",
+    "detail": "the actual board-room server preserves session result and launches a new room only after both original participants consent; unrelated/stale tokens cannot start it"
+  },
+  {
+    "case": "physical_floor_moves_without_unbounded_parts_or_horizontal_teleport",
+    "result": "pass",
+    "detail": "the real world script retains only spawn/player physical chunk neighbourhoods and no longer teleports a walking avatar back at the old 385-stud edge"
+  }
+]
