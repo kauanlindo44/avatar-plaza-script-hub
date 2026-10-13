@@ -1,0 +1,57 @@
+[
+  {
+    "case": "audio_shared_cache_warm_returns_without_waiting_for_native_search",
+    "result": "pass",
+    "detail": "music RPC returns pending immediately, native searches are coalesced across players and verified native metadata/pagination are cached"
+  },
+  {
+    "case": "audio_failure_backoff_keeps_manual_id_route_independent",
+    "result": "pass",
+    "detail": "search failure/backoff does not serialize or block a simultaneous manual audio lookup; API failure is shown instead of indefinite loading"
+  },
+  {
+    "case": "sponsor_rejects_free_and_unknown_prices_without_consuming_slot",
+    "result": "pass",
+    "detail": "only confirmed paid items may be sponsored; publication remains free; invalid/free items do not consume the 24-hour slot"
+  },
+  {
+    "case": "sponsor_classic_and_layered_categories_filter_server_index",
+    "result": "pass",
+    "detail": "server filters use real classic/layered/accessory categories and name search; no free record leaks into the feed"
+  },
+  {
+    "case": "real_2d_chess_sends_64_dense_cells_and_preserves_both_piece_sets",
+    "result": "pass",
+    "detail": "actual server chess preserves all 32 pieces across alternating moves and sends a dense false-for-empty 8x8 board to both players, with no character movement"
+  },
+  {
+    "case": "real_2d_damas_stale_moves_and_resignation_are_authoritative",
+    "result": "pass",
+    "detail": "damas alternates only legal moves, rejects stale board revisions and finalizes a resignation once; completed matches cannot still mutate"
+  },
+  {
+    "case": "rooms_pair_and_rematch_without_assents_or_teleports",
+    "result": "pass",
+    "detail": "actual room server starts two-player UI sessions and consented rematch with no seats, physical room creation or teleport"
+  },
+  {
+    "case": "old_ai_engine_is_identified_before_any_daily_reservation",
+    "result": "pass",
+    "detail": "mixed V59/V62 AI installation reports the exact old module before making HTTP calls or reserving/refunding any daily request"
+  },
+  {
+    "case": "current_ai_planner_has_protocol_and_no_http_generator",
+    "result": "pass",
+    "detail": "current look planner identifies V62/protocol 2 and searches styles without a text-generator HTTP dependency"
+  },
+  {
+    "case": "old_free_sponsor_can_be_replaced_by_a_paid_item",
+    "result": "pass",
+    "detail": "a legacy free-item publication is removed from the paid-only index and can be replaced without trapping the owner in the obsolete cooldown"
+  },
+  {
+    "case": "store_background_version_type_image_and_failure_are_confirmed",
+    "result": "pass",
+    "detail": "an on-sale native store background can be confirmed without inventory/ownership; an old resolver is diagnosed by exact module before changing the studio image"
+  }
+]
