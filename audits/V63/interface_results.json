@@ -1,0 +1,47 @@
+[
+  {
+    "case": "paid_sponsor_grid_scrolls_down_and_keeps_category_controls_safe",
+    "result": "pass",
+    "detail": "paid cards scroll horizontally and vertically; filters work; one real submission preserves the other temporary examples; six safe geometries keep controls clickable"
+  },
+  {
+    "case": "sponsor_picker_works_with_native_readonly_catalog_arrays",
+    "result": "pass",
+    "detail": "name examples and category construction work with readonly AssetTypes/BundleTypes, omit free rows and still require server confirmation"
+  },
+  {
+    "case": "catalog_paid_default_and_free_continuation_preserve_filters",
+    "result": "pass",
+    "detail": "default catalog starts with paid items and an explicit free continuation, retaining the native query/filter and invalid-price protection"
+  },
+  {
+    "case": "detailed_worlds_have_distinct_skies_bounded_parts_and_restore",
+    "result": "pass",
+    "detail": "six outdoor themes each own their sky/atmosphere and more than 100 bounded noncolliding parts; 25 ground parts are reused and original lighting is restored"
+  },
+  {
+    "case": "video_motion_is_smooth_pauses_and_restores_the_same_avatar_scene",
+    "result": "pass",
+    "detail": "all nine continuous video paths operate on the actual camera/avatar callbacks, ease in, pause without jumping, restore their anchor and disconnect when the studio closes"
+  },
+  {
+    "case": "photo_store_and_emote_sidebar_use_catalog_not_inventory",
+    "result": "pass",
+    "detail": "backgrounds and emotes open their native storefront types immediately, never call inventory and route testing to the studio copy"
+  },
+  {
+    "case": "real_music_client_starts_from_warm_library_without_waiting_on_preferences",
+    "result": "pass",
+    "detail": "actual music controller obtains warm verified native results, autoplays at 40% and advances the queue using independent request channels"
+  },
+  {
+    "case": "assistant_surface_and_safe_controls_remain_readable",
+    "result": "pass",
+    "detail": "the themed assistant keeps header, return-to-sponsor, composer and mode controls within six safe screen geometries"
+  },
+  {
+    "case": "real_game_ui_renders_dense_online_board_without_losing_pieces",
+    "result": "pass",
+    "detail": "actual online LocalScript hides the lobby and renders all 32 piece icons before/after a dense-board move, removing only the moved source icon"
+  }
+]

@@ -1,0 +1,17 @@
+[
+  {
+    "case": "music_all_named_actions_fit_safe_popup_and_library",
+    "result": "pass",
+    "detail": "six safe geometries keep every transport, save, queue, search and library control clickable without fullscreen, overlaps or an empty library pane"
+  },
+  {
+    "case": "destinations_only_own_seed_publish_preview_join_and_saved_preferences",
+    "result": "pass",
+    "detail": "actual browser previews native data, requires a second explicit game entry click, opens the native group prompt and validates a link before publishing; no temporary destinations are fabricated"
+  },
+  {
+    "case": "assistant_keyboard_retry_and_menu_keep_composer_clear",
+    "result": "pass",
+    "detail": "connection recovery, sidebar, message composer and chat reset stay usable across portrait/landscape/desktop without version-label gates or input overlap"
+  }
+]

@@ -1,0 +1,13 @@
+{
+  "syntax": "pass",
+  "effective_sources": 117,
+  "delta_items": 25,
+  "replace": 20,
+  "create": 5,
+  "max_lines": 277,
+  "receipt_owner": [
+    "07K10_CARD_COMMERCE"
+  ],
+  "historical_manifest_hashes_dependencies": "pass",
+  "previous_effective_sources_checked": 112
+}
