@@ -1,0 +1,47 @@
+[
+  {
+    "case": "assistant_full_safe_chat_and_form_fit_six_geometries",
+    "result": "pass",
+    "detail": "conversation width uses the safe surface; seven/nine form choices, close and confirmation remain visible and clickable on six portrait/landscape/desktop sizes"
+  },
+  {
+    "case": "chat_reset_keeps_form_alive_and_disposes_inline_previews",
+    "result": "pass",
+    "detail": "three full create/result/reset cycles preserve the actual form instance and remove model controllers/inline view references before destroying chat rows"
+  },
+  {
+    "case": "saved_looks_reload_is_visible_and_pending_keeps_current_cards",
+    "result": "pass",
+    "detail": "a pending read preserves the existing saved card; its independent reload button fits six safe layouts and does not overlap search"
+  },
+  {
+    "case": "compact_player_popup_has_immediate_preview_four_actions_and_safe_close",
+    "result": "pass",
+    "detail": "the actual visible character is cloned immediately into a bounded small popup with four actions, a working like counter and a reachable close button"
+  },
+  {
+    "case": "world_finish_uses_native_materials_bounded_geometry_and_restores_sky",
+    "result": "pass",
+    "detail": "all six worlds have 150–780 authored parts, selective shadows and at most eight lights, retain the outdoor structure, and restore sky/material lighting when closed"
+  },
+  {
+    "case": "truco_cards_teams_timeline_and_actions_fit_without_overlay",
+    "result": "pass",
+    "detail": "private hand, smaller table cards, explicit team score, real vaza timeline and bottom controls fit six devices, with nonblocking feedback for a won vaza"
+  },
+  {
+    "case": "catalog_keeps_equipped_strip_two_rows_and_readable_prices",
+    "result": "pass",
+    "detail": "catalog retains the useful equipped-item strip, five landscape columns and two visible rows; artwork takes the card body and compact Robux labels stay inside"
+  },
+  {
+    "case": "actual_ia_client_reopens_questionnaire_after_new_conversation",
+    "result": "pass",
+    "detail": "the real LocalScript sends three guided requests and resets between them; each new conversation preserves the reusable form and discards stale inline cards"
+  },
+  {
+    "case": "repeated_truco_snapshot_preserves_collect_animation",
+    "result": "pass",
+    "detail": "identical server snapshots do not rebuild visible cards or cancel the vaza collection timer; the same cards are collected after their readable pause"
+  }
+]
