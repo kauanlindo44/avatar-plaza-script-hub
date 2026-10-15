@@ -1,0 +1,12 @@
+{
+  "version": "V65",
+  "base_commit": "b1d6048498ad5c7b73b00051b7033f2258cdda02",
+  "items": 20,
+  "replace": 18,
+  "create": 2,
+  "effective_sources": 122,
+  "max_lines": 244,
+  "simulated_cases": 48,
+  "html_bytes": 3036119,
+  "prerequisite": "Complete V64 already installed"
+}
