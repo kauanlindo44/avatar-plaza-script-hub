@@ -1,0 +1,12 @@
+{
+  "version": "V66",
+  "base_commit": "b07af6cac3395f3f893d4855ce3a3e625a7054b2",
+  "items": 24,
+  "replace": 19,
+  "create": 5,
+  "effective_sources": 127,
+  "max_lines": 385,
+  "simulated_cases": 65,
+  "html_bytes": 3272110,
+  "prerequisite": "Complete V65 already installed"
+}
