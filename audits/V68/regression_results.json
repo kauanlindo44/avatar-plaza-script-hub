@@ -1,0 +1,47 @@
+[
+  {
+    "case": "builder_readonly_arrays_complete_real_selections_and_validation",
+    "result": "pass",
+    "detail": "strict native readonly params still produce four real selections, fresh price confirmation and appearance validation, with original skin preserved"
+  },
+  {
+    "case": "exact_one_for_one_sponsor_replacement_expiration_and_dedup",
+    "result": "pass",
+    "detail": "one and two publications replace exactly one and two temporary cards; duplicate keys do not consume cards and expired publications restore the examples"
+  },
+  {
+    "case": "destination_seed_lists_native_metadata_only_no_temporary_games",
+    "result": "pass",
+    "detail": "only the two supplied permanent seeds are present in their own categories, name/description/image come from mocked native metadata and no filler game/community is generated"
+  },
+  {
+    "case": "destination_slots_validation_repair_favorites_and_expiration",
+    "result": "pass",
+    "detail": "non-place IDs cannot consume slots; pending index saves can be repaired without extending the deadline; own likes/favorites persist and expired submissions leave only the seed"
+  },
+  {
+    "case": "destination_pagination_keeps_unconsumed_rows_between_pages",
+    "result": "pass",
+    "detail": "150 real publications and the own seed are paginated without losing the remaining rows in a 100-entry native index page"
+  },
+  {
+    "case": "virtual_truco_pool_has_no_district_seats_or_character_movement",
+    "result": "pass",
+    "detail": "Truco allocates 24 virtual rooms directly under the hub, can assign/release a player and creates neither physical seats nor a removed district dependency"
+  },
+  {
+    "case": "gameplay_goals_count_legal_changes_and_dont_reward_enemy_moves",
+    "result": "pass",
+    "detail": "goals use actual legal chess board changes, count only own moves and captures once, and accept the real numeric team-win representation used by Truco rules"
+  },
+  {
+    "case": "ai_server_request_finishes_with_verified_look_and_protocol",
+    "result": "pass",
+    "detail": "actual IA RemoteFunction accepts a protocol-2 request and the real readonly-safe builder completes native catalog selection, fresh price/appearance verification and result delivery without an HTTP generator"
+  },
+  {
+    "case": "hub_respawn_uses_explicit_spawn_and_restores_a_fallen_character",
+    "result": "pass",
+    "detail": "actual hub script sets RespawnLocation explicitly, builds the physical origin floor and places a newly spawned/fallen character above it"
+  }
+]

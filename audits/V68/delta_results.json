@@ -1,0 +1,87 @@
+[
+  {
+    "case": "different_body_height_preserves_floor_and_discards_tilt_and_momentum",
+    "result": "pass",
+    "detail": "native support height adapts to a taller body, a huge suit is not mistaken for a leg, old pitch/roll/velocity are discarded and invalid native height is rejected"
+  },
+  {
+    "case": "airborne_swap_keeps_foot_height_and_settle_repairs_only_penetration",
+    "result": "pass",
+    "detail": "an airborne swap does not snap to a floor; delayed checks lift penetration once and ignore a superseded character"
+  },
+  {
+    "case": "runtime_rebuild_confirms_native_appearance_and_rolls_back_failed_geometry",
+    "result": "pass",
+    "detail": "actual runtime uses placement in a verified body rebuild; an incomplete later native rig is rejected without replacing the last good character"
+  },
+  {
+    "case": "pose_playback_keeps_modern_joints_kinematic_and_leaves_animator_transform",
+    "result": "pass",
+    "detail": "pose and emote playback use native kinematic constraints; playback stops editor writes so the Animator can move the same copy"
+  },
+  {
+    "case": "studio_can_enter_before_editor_and_emote_reuse_does_not_rebuild",
+    "result": "pass",
+    "detail": "Photo Mode can use the actual map avatar before the catalog is opened; a loaded emote replays on the same model and closing restores the camera"
+  },
+  {
+    "case": "emote_rejection_and_zero_length_keep_current_copy_and_pose",
+    "result": "pass",
+    "detail": "native refusal and a track which never loads cannot produce a false success or destroy the previous avatar/pose; track loading has a bounded deadline"
+  },
+  {
+    "case": "fallback_starts_with_broken_animate_then_yields_to_native_tracks",
+    "result": "pass",
+    "detail": "presence of a broken Animate script no longer blocks fallback; playback rate is bounded and real native animation takes over without competing tracks"
+  },
+  {
+    "case": "outfit_budget_prioritizes_both_garments_and_rejects_hair_only",
+    "result": "pass",
+    "detail": "a 100-Robux search buys shirt and pants before a 70-Robux optional piece; an unavailable lower garment cannot be presented as a complete outfit"
+  },
+  {
+    "case": "destination_xy_two_rows_mouse_drag_does_not_activate_and_close_fits",
+    "result": "pass",
+    "detail": "80 real destination fixtures have a true two-axis canvas and two visible rows; mouse dragging scrolls without opening a card and the details close stays reachable"
+  },
+  {
+    "case": "game_lobby_modes_and_all_bot_profiles_fit_six_safe_geometries",
+    "result": "pass",
+    "detail": "all three game tabs, four clear entry actions and each selected bot profile retain reachable touch targets in portrait, landscape and desktop"
+  },
+  {
+    "case": "compact_settings_home_world_close_and_gear_touch_targets_fit",
+    "result": "pass",
+    "detail": "settings remains compact with a reachable close, readable categories and eight world choices without shrinking touch areas below 44px"
+  },
+  {
+    "case": "music_default_queue_skips_blocked_track_and_stops_after_bounded_failures",
+    "result": "pass",
+    "detail": "the real client does not stall forever on a blocked first recommendation; it tries the second suggested track and starts only after actual content readiness"
+  },
+  {
+    "case": "music_all_recommendations_fail_without_false_playback_or_retry_loop",
+    "result": "pass",
+    "detail": "eight blocked default suggestions make exactly eight attempts, leave no audio playing and expose the reload/failure state instead of an endless loading loop"
+  },
+  {
+    "case": "music_floating_controls_and_library_fit_six_safe_geometries",
+    "result": "pass",
+    "detail": "floating player keeps title, volume, library, close and minimization reachable; an actual library row remains visible even in phone landscape"
+  },
+  {
+    "case": "destination_search_and_details_fit_actual_safe_store_surface",
+    "result": "pass",
+    "detail": "destination search reuses the existing topbar space in landscape, preserves touch targets in the actual shop area and keeps details close on all six sizes"
+  },
+  {
+    "case": "hud_removes_cryptic_restore_shortcut_and_retains_editor_launcher",
+    "result": "pass",
+    "detail": "the ambiguous reset icon is absent from the HUD; editor remains accessible and a smaller real gear retains a 44px touch target on six sizes"
+  },
+  {
+    "case": "paid_sponsor_grid_scrolls_down_and_keeps_category_controls_safe",
+    "result": "pass",
+    "detail": "paid cards scroll horizontally and vertically; filters work; one real submission preserves the other temporary examples; six safe geometries keep controls clickable"
+  }
+]

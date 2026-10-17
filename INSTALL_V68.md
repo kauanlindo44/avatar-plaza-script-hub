@@ -1,0 +1,97 @@
+# Instalação V68 — 5 novos + 32 substituições
+
+Requer V67 completa. V68: 5 ModuleScripts NOVOS + 32 SUBSTITUIÇÕES. Pare Play. Crie primeiro os módulos da tabela; depois substitua as fontes completas e reinicie. NOVO/SUBSTITUIR não fazem parte do nome. Nenhum passe, produto, chave externa ou asset para enviar ao Roblox novo. Guia: INSTALL_V68.md.
+
+## Criar primeiro — NOVOS
+
+| Nome exato | Tipo | Local | Linhas |
+|---|---|---|---:|
+| `08B8_ACCESSORY_REFINEMENT` | ModuleScript | ReplicatedStorage | 54 |
+| `09C15_AVATAR_TOOLS` | ModuleScript | ReplicatedStorage | 71 |
+| `09C16_CATALOG_HOME` | ModuleScript | ReplicatedStorage | 48 |
+| `09I12_REQUEST_PLAN` | ModuleScript | ReplicatedStorage | 51 |
+| `09I13_OUTFIT_SEARCH` | ModuleScript | ServerScriptService | 55 |
+
+## Substituir nas instâncias existentes
+
+| Nome exato | Tipo | Local | Linhas |
+|---|---|---|---:|
+| `07G1_HUB_SETTINGS` | ModuleScript | ReplicatedStorage | 112 |
+| `07G2_LOCAL_WORLDS` | ModuleScript | ReplicatedStorage | 69 |
+| `07G4_WORLD_SCENERY` | ModuleScript | ReplicatedStorage | 71 |
+| `07K15_TRUCO_TABLE` | ModuleScript | ReplicatedStorage | 112 |
+| `07K5_TRUCO_UI` | ModuleScript | ReplicatedStorage | 173 |
+| `07P2_STUDIO_AVATAR` | ModuleScript | ReplicatedStorage | 234 |
+| `07P4_STUDIO_UI` | ModuleScript | ReplicatedStorage | 124 |
+| `07P9_STUDIO_CATALOG` | ModuleScript | ReplicatedStorage | 53 |
+| `08B2_BODY_DESCRIPTION` | ModuleScript | ReplicatedStorage | 97 |
+| `08B6_AVATAR_MOVEMENT` | ModuleScript | ReplicatedStorage | 95 |
+| `08B_AVATAR_DATA` | ModuleScript | ReplicatedStorage | 361 |
+| `09A1_SHOP_LAYOUT` | ModuleScript | ReplicatedStorage | 193 |
+| `09B12_PRIVATE_LOOKS` | ModuleScript | ServerScriptService | 45 |
+| `09B5_AVATAR_RUNTIME` | ModuleScript | ServerScriptService | 217 |
+| `09C12_DESTINATION_BROWSER` | ModuleScript | ReplicatedStorage | 149 |
+| `09C2_SHOP_CATALOG` | ModuleScript | ReplicatedStorage | 273 |
+| `09C5_UGC_STORES` | ModuleScript | ReplicatedStorage | 183 |
+| `09C6_AVATAR_PREVIEW` | ModuleScript | ReplicatedStorage | 133 |
+| `09I10_CHAT_NAV` | ModuleScript | ReplicatedStorage | 84 |
+| `09I1_ASSISTANT_ACCOUNTS` | ModuleScript | ServerScriptService | 137 |
+| `09I2_ASSISTANT_ENGINE` | ModuleScript | ServerScriptService | 27 |
+| `09I3_OUTFIT_BUILDER` | ModuleScript | ServerScriptService | 118 |
+| `09I4_ASSISTANT_UI` | ModuleScript | ReplicatedStorage | 137 |
+| `09I5_ASSISTANT_QUESTIONNAIRE` | ModuleScript | ReplicatedStorage | 92 |
+| `09I6_ASSISTANT_RESULTS` | ModuleScript | ReplicatedStorage | 131 |
+| `07G_HUB_UI` | LocalScript | StarterPlayer > StarterPlayerScripts | 98 |
+| `07P_PHOTO_MODE` | LocalScript | StarterPlayer > StarterPlayerScripts | 169 |
+| `09B_SHOP_SERVER` | Script | ServerScriptService | 261 |
+| `09C11_AVATAR_CHARACTER` | LocalScript | StarterPlayer > StarterPlayerScripts | 71 |
+| `09C_SHOP_CLIENT` | LocalScript | StarterPlayer > StarterPlayerScripts | 386 |
+| `09I_ASSISTANT_CLIENT` | LocalScript | StarterPlayer > StarterPlayerScripts | 106 |
+| `09I_ASSISTANT_SERVER` | Script | ServerScriptService | 132 |
+
+## Instalar
+
+1. Pare Play. A V68 precisa da **V67 completa**, que você confirmou estar usando.
+2. Crie primeiro os **cinco ModuleScripts NOVOS** da primeira tabela. Quatro ficam em ReplicatedStorage e um em ServerScriptService.
+3. Substitua a fonte inteira dos **32 scripts existentes**. Mantenha uma instância de cada nome, no local indicado. Só reinicie Play depois de terminar o conjunto.
+
+O `09A_SHOP_UI` continua nas quatro partes anteriores: não há uma nova substituição dele nesta versão. Os nomes reais não recebem `(NOVO)` ou `(SUBSTITUIR)`. O HTML mostra nome, tipo, local, última linha e botão **Copiar script inteiro**; há duas partes opcionais. Nenhum passe, Developer Product, chave OpenAI ou textura nova precisa ser criado. Produtos e recibos anteriores foram preservados.
+
+## O que mudou
+
+- **Pedido da IA:** o texto novo passa na frente do estilo de uma conversa anterior. A confirmação pode alterar estilo, cor, orçamento, quantidade, formato, peças preservadas e exclusões. Um pedido novo recria o formulário; ele não herda silenciosamente a seleção anterior. A edição confirmada do formulário tem prioridade. Há listas para escolher os valores e opções avançadas separadas.
+- **Looks completos:** começa pela roupa de cima e de baixo, reserva orçamento e só depois escolhe cabelo/acessórios. Pesquisa até três páginas nas categorias necessárias. Em 3D aceita camisetas, camisas, jaquetas, suéteres, calças, shorts e saias compatíveis. Se uma peça não puder ser adicionada, um preço mudar ou a criação nativa recusar a combinação, tenta alternativas dentro do prazo. Não apresenta roupa faltando como look completo. Pedidos de somente cabelo/roupas/acessórios preservam as outras peças e mostram o custo das alterações. O corpo atual permanece até você escolher pesquisar outro.
+- **Orçamento e variedade:** o limite vale para **cada look**, não para o lote todo. Peças preservadas que você já usa não são cobradas de novo pelo montador. As últimas 48 combinações por jogador ficam na memória e são gravadas em lote no perfil existente, no máximo a cada 30 segundos. Uma nova consulta do perfil não apaga novidades ainda não gravadas. Peças individuais podem reaparecer em combinações diferentes. Se as opções se esgotarem, o assistente avisa, em vez de repetir como novidade. Continuam valendo os limites dos planos já existentes.
+- **Conversa:** menu lateral realmente recolhível no computador, sobreposição no celular, quatro entradas iniciais menores, compositor compacto, histórico/busca, renomear/arquivar/excluir, configurações e compartilhamento. Compartilhar cria a cópia textual filtrada já existente; nunca compartilha credenciais nem a conta Roblox. O orçamento tem uma apresentação compacta quando o teclado deixa pouco espaço.
+- **Catálogo:** abre numa página de categorias antes dos produtos. Cabelos, roupas, corpos, destaques, emotes e favoritos têm entrada direta. A pesquisa e o atalho de emotes continuam disponíveis. A grade mantém o objetivo de cinco cards na horizontal e duas linhas em paisagem quando há espaço. **Os itens equipados continuam abaixo da prévia, com X para retirar.**
+- **Prévia:** avatar 3D em cenário próprio grafite, com chão e blocos fixos. Arrastar gira o modelo; não faz o fundo orbitar. O enquadramento continua calculado pelo corpo completo, com zoom, nova tentativa e contraste para roupas claras/escuras. Os thumbnails de produtos e fundos usam 420px quando oferecidos pelo Roblox; isso não transforma uma imagem original pequena em alta resolução.
+- **Ferramentas do avatar:** o botão de ferramentas ao lado da prévia reúne desfazer/refazer, comparar com o original sem aplicar outro avatar, favoritos, carregar item por ID/link ou look por código e um **teste opcional de altura +10%**, reversível por Desfazer. O teste não é imposto a todos os corpos nem apresentado como correção universal.
+- **Acessórios:** escolher uma peça rígida compatível e ajustar posição, rotação ou tamanho pelos valores permitidos por `GetAvatarRulesAsync`. Usa `AccessoryDescription`, preserva os ajustes ao salvar/aplicar, verifica se o Roblox os confirmou e inclui alterações reais na identificação da aparência. Ajustes neutros mantêm as assinaturas antigas. Roupas em camadas continuam usando as regras de camadas, sem esses offsets.
+- **Favoritos de itens:** peças favoritas ficam no armazenamento privado já existente e sobrevivem a alterações de looks. Em Seus favoritos é possível reabrir o item e retirar o coração. A opção de carrinho continua sendo uma ação separada nos detalhes.
+- **Truco:** composição refeita a partir da foto aprovada: mesa oval de feltro com borda escura, retratos circulares próprios para bots e headshots de jogadores, parceiro em cima, rivais nas laterais, três cartas em leque abaixo, cartas jogadas menores com identificação e placar compacto no canto. Chat e Sair ficam nas extremidades; Truco e o menu … substituem a fileira grande de seis botões. Respostas de aceitar/aumentar/correr continuam contextuais, com dez segundos. Regras, variantes, equipes, sessão/revanche e visuais comprados foram mantidos.
+- **Photo Mode:** corrige a largura livre descontada duas vezes. O avatar ocupa a área disponível entre as ferramentas; sem interface volta ao centro da imagem. O menu pode ser recolhido, Vídeo tem um acesso próprio e Câmera usa escolhas mais simples. Emotes continuam na mesma cópia; agora há Pausar/Continuar e velocidade na lista lateral. Uma busca de catálogo que falha preserva a lista anterior. O resolvedor de fundos da V67 e sua prova renderizável continuam ativos: uma recusa real mantém o fundo anterior e mostra a etapa da falha.
+- **Mundos e HUD:** praça clássica com quadriculado suave, árvores em blocos mais próximas e centro livre. Novo Estúdio aberto com chão neutro. Cerejeiras, bosque, costa, outono, jardim e aventura permanecem cenários locais separados. Os mundos comuns têm limite de 300 partes decorativas, além dos pisos; a aventura mantém seu limite de 620 e área central livre. Chão visual reutilizado e cena sem colisão decorativa. Câmera inicial fica mais próxima, uma vez por entrada; os limites de zoom são devolvidos depois do ajuste inicial. HUD e configurações têm dimensões mais contidas, preservando alvos básicos de 44px.
+- **Movimento:** preserva o apoio pelos pés e os reparos limitados da V67. Reativa estados de caminhada/recuperação quando necessário. Uma animação verificada que chega depois substitui o fallback já carregado; uma animação apenas facial não bloqueia indefinidamente a caminhada. O Animate nativo de locomoção continua tendo prioridade. Não se substitui a malha/cage do autor do corpo.
+- **Patrocinar + assistente:** acabamento e contraste das vitrines atualizados. A navegação de itens/jogos/comunidades, rolagem em dois eixos, filtros e favoritos continuam funcionais. Jogos/comunidades continuam por **24 horas**. Itens temporários continuam sendo substituídos um a um por publicações reais. Nenhuma prioridade paga foi introduzida.
+- **Música e Halloween:** a faixa inicial, volume pessoal de 40%, biblioteca/fila e fallback da V67 foram preservados e cobertos pelas regressões. O tema continua opcional; Automático termina em **01/11/2026 às 00h de Brasília**, e a escolha manual pode desligar antes ou manter depois.
+
+## Referências e escopo
+
+A pesquisa reuniu **20 referências do Catalog Avatar Creator e 20 do Meu Avatar**. No segundo conjunto há screenshots/promos e dez quadros do trailer oficial; não são quarenta capturas inéditas de todas as telas atuais. Foram usados os jogos corretos: [Catalog Avatar Creator](https://www.roblox.com/games/7041939546/) e [Meu Avatar, THINK DIFFERENT](https://www.roblox.com/games/75387700043737/). As formas, interface e cenários foram escritos para este projeto; não se extraíram scripts, mapas ou arte dos outros jogos. O registro de pesquisa está em `audits/V68/reference_manifest.json`.
+
+Documentação primária consultada:
+
+- [AccessoryDescription: posição, rotação e escala de acessórios rígidos](https://create.roblox.com/docs/reference/engine/classes/AccessoryDescription)
+- [API nativa de ajustes e limites por tipo](https://devforum.roblox.com/t/accessory-adjustment-apis-for-experiences/3235766)
+- [Expansão de ajustes para pescoço, ombro, frente e costas](https://devforum.roblox.com/t/accessory-adjustment-apis-for-neck-shoulder-front-and-back/3569059)
+- [AvatarEditorService: pesquisa, regras e confirmação de avatar](https://create.roblox.com/docs/reference/engine/classes/AvatarEditorService)
+- [Configurações de avatar e possíveis overrides da experiência](https://create.roblox.com/docs/studio/avatar-settings)
+- [Humanoid: apoio e escalonamento](https://create.roblox.com/docs/reference/engine/classes/Humanoid)
+- [Animação adaptativa](https://create.roblox.com/docs/characters/adaptive-animation)
+- [ImageLabel: carregamento e limites de imagem](https://create.roblox.com/docs/reference/engine/classes/ImageLabel)
+
+## Conferência depois de instalar
+
+Teste um pedido novo e outro de estilo diferente; confira o resumo antes de buscar. No catálogo, abra uma categoria, gire a prévia e retire uma peça no X; experimente um ajuste rígido e Desfazer. No Photo Mode, teste um emote, Pause e feche o estúdio. No Truco, confirme posição da sua dupla, cartas públicas e resposta a Truco. Teste também entrar novamente com o avatar salvo.
+
+**106 cenários simulados em Lua 5.4 e 136 fontes efetivas compiladas**, mais hashes, dependências, históricos e JavaScript real do instalador. Não há Roblox Studio/Player nativo neste ambiente. Renderização, FPS, física, serviços, moderação e permissão de cada asset real ainda precisam ser conferidos no jogo publicado. Nomes de cor/estilo são usados como sinais do catálogo, não como reconhecimento visual infalível. A IA é um montador/guia específico do jogo, sem chave externa; não recebeu a capacidade geral de conversação do ChatGPT. Os avisos de CorePackages/UIBlox pertencem à interface interna do Roblox e não são apresentados como corrigidos por estes scripts.
