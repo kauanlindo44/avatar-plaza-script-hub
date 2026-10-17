@@ -1,8 +1,8 @@
 {
   "schema": 2,
   "project": "Avatar Plaza Script Hub",
-  "latest": "V66",
-  "updated_at": "2026-10-16T00:35:55+00:00",
+  "latest": "V67",
+  "updated_at": "2026-10-17T01:00:13+00:00",
   "poll_seconds": 5,
   "versions": [
     {
@@ -7749,6 +7749,376 @@
           "path": "scripts/V66/09I_ASSISTANT_SERVER.lua",
           "sha256": "bc13c74eff16e78c80fcb6ed4c864de4f7d05b2b23a153cebc02c123a9367014",
           "lines": 128,
+          "parts": 2
+        }
+      ]
+    },
+    {
+      "id": "V67",
+      "title": "FUNDOS, CONVERSAS, AVATARES E TRUCO — 4 NOVOS / 32 SUBSTITUIÇÕES",
+      "date": "2026-10-16",
+      "summary": "Corrige a prova de imagem fora da tela/transparente que rejeitava fundos válidos. Apoio medido pelos pés do rig e protegido contra recálculo tardio; resolve clips equipados, atualiza Animate e repete consultas quando Apply está ocupado. Emotes testáveis na prévia do catálogo pelo Animator. IA com barra lateral, histórico privado, busca, renomear/arquivar/excluir, configurações e cópia textual compartilhável filtrada. Conversa contextual, saudações e ajuda sem gastar busca de look. Truco recomposto a partir da foto 4: mesa oval, jogadores nas bordas, mão em leque e cartas públicas menores. Mapas simples e um vale detalhado separado; spawn com emblema clássico. Halloween opcional até 31/10 no modo automático. Música inicial de piano e fallback; patrocínio de destinos mantém 24 horas; atualizações repetidas do feed usam cache.",
+      "install_note": "Requer V66 completa. V67: 4 módulos NOVOS + 32 SUBSTITUIÇÕES. Pare Play. Crie 07G7_ADVENTURE_WORLD e 09I10_CHAT_NAV como ModuleScript em ReplicatedStorage; 08B7_AVATAR_ANIMATIONS e 09I11_CONVERSATIONS como ModuleScript em ServerScriptService. Depois substitua as 32 fontes completas e reinicie. Não acrescente NOVO/SUBSTITUIR aos nomes. Nenhum passe, produto ou chave externa novo. Guia: INSTALL_V67.md.",
+      "validation": "84 cenários simulados em Lua 5.4, incluindo reprodução da falha V66 no carregamento invisível, apoio dos pés, animações equipadas/retry, histórico privado e cópia pública filtrada, sete mundos, tema/data e geometria do novo truco. 131 fontes efetivas, hashes/dependências e JavaScript real do instalador. Motor Roblox, imagens, áudio/animações, física, renderização e FPS reais continuam exigindo teste publicado.",
+      "scripts": [
+        {
+          "name": "07G7_ADVENTURE_WORLD",
+          "type": "ModuleScript",
+          "location": "ReplicatedStorage",
+          "action": "CRIAR",
+          "path": "scripts/V67/07G7_ADVENTURE_WORLD.lua",
+          "sha256": "7910c695e64d900764e4db05363047260f203d4b491e68320277b473c3d6611d",
+          "lines": 40,
+          "parts": 2
+        },
+        {
+          "name": "08B7_AVATAR_ANIMATIONS",
+          "type": "ModuleScript",
+          "location": "ServerScriptService",
+          "action": "CRIAR",
+          "path": "scripts/V67/08B7_AVATAR_ANIMATIONS.lua",
+          "sha256": "c18a0c906bff8bbed97bc5580196ac380c292fcf2c859f1c63e0a4c506a7313d",
+          "lines": 36,
+          "parts": 2
+        },
+        {
+          "name": "09I10_CHAT_NAV",
+          "type": "ModuleScript",
+          "location": "ReplicatedStorage",
+          "action": "CRIAR",
+          "path": "scripts/V67/09I10_CHAT_NAV.lua",
+          "sha256": "f4185aafa43d67cc860fb6868a55971cf98bae08b5be962edec6d2cf947bbb83",
+          "lines": 84,
+          "parts": 2
+        },
+        {
+          "name": "09I11_CONVERSATIONS",
+          "type": "ModuleScript",
+          "location": "ServerScriptService",
+          "action": "CRIAR",
+          "path": "scripts/V67/09I11_CONVERSATIONS.lua",
+          "sha256": "359ef66482f99de1b3ce8f7c5aae3c0c2be4469b09c4dd2a1d03fc8d82d2a029",
+          "lines": 66,
+          "parts": 2
+        },
+        {
+          "name": "07G1_HUB_SETTINGS",
+          "type": "ModuleScript",
+          "location": "ReplicatedStorage",
+          "action": "SUBSTITUIR",
+          "lines": 112,
+          "sha256": "8c31546de67bf22a4188a527b090f90c3e6888c0ea6552a560c57efe2938ddb1",
+          "path": "scripts/V67/07G1_HUB_SETTINGS.lua",
+          "parts": 2
+        },
+        {
+          "name": "07G2_LOCAL_WORLDS",
+          "type": "ModuleScript",
+          "location": "ReplicatedStorage",
+          "action": "SUBSTITUIR",
+          "lines": 68,
+          "sha256": "5076b461f0bacf8bbb7cce6fe1c49df28311830d2629084537df9d285ce3a57a",
+          "path": "scripts/V67/07G2_LOCAL_WORLDS.lua",
+          "parts": 2
+        },
+        {
+          "name": "07G4_WORLD_SCENERY",
+          "type": "ModuleScript",
+          "location": "ReplicatedStorage",
+          "action": "SUBSTITUIR",
+          "path": "scripts/V67/07G4_WORLD_SCENERY.lua",
+          "sha256": "a229ced6820186f80293a63e2475ff45616220f7e870c8b781ea51bcc1970870",
+          "lines": 68,
+          "parts": 2
+        },
+        {
+          "name": "07G6_WORLD_DETAILS",
+          "type": "ModuleScript",
+          "location": "ReplicatedStorage",
+          "action": "SUBSTITUIR",
+          "path": "scripts/V67/07G6_WORLD_DETAILS.lua",
+          "sha256": "9f1cc8312d72c02cfd23102c7c5beb881208d65c8c3147506f63585c6f49f49b",
+          "lines": 37,
+          "parts": 2
+        },
+        {
+          "name": "07K15_TRUCO_TABLE",
+          "type": "ModuleScript",
+          "location": "ReplicatedStorage",
+          "action": "SUBSTITUIR",
+          "path": "scripts/V67/07K15_TRUCO_TABLE.lua",
+          "sha256": "dc9bb26c89de9cd5409e0615c1be46c52ba85905e9b2d8a25c8c1bb1de5cd51b",
+          "lines": 106,
+          "parts": 2
+        },
+        {
+          "name": "07K5_TRUCO_UI",
+          "type": "ModuleScript",
+          "location": "ReplicatedStorage",
+          "action": "SUBSTITUIR",
+          "lines": 167,
+          "sha256": "56dbb428b644d3bd0b06075015a07f5f1c7106db7e240becec4c6f434fecf289",
+          "path": "scripts/V67/07K5_TRUCO_UI.lua",
+          "parts": 2
+        },
+        {
+          "name": "07M2_AUDIO_LIBRARY",
+          "type": "ModuleScript",
+          "location": "ServerScriptService",
+          "action": "SUBSTITUIR",
+          "path": "scripts/V67/07M2_AUDIO_LIBRARY.lua",
+          "sha256": "94711e2bdfdbf47ed327cb03939c183ce913d1cdff93055199218ed86b0ef1b6",
+          "lines": 62,
+          "parts": 2
+        },
+        {
+          "name": "07P2_STUDIO_AVATAR",
+          "type": "ModuleScript",
+          "location": "ReplicatedStorage",
+          "action": "SUBSTITUIR",
+          "lines": 230,
+          "sha256": "8dcc5d6f52634d856ad8e4d0478b04a84881d45f66dc6e0eeaf21275a41abb88",
+          "path": "scripts/V67/07P2_STUDIO_AVATAR.lua",
+          "parts": 2
+        },
+        {
+          "name": "07P7_ROBLOX_BACKGROUNDS",
+          "type": "ModuleScript",
+          "location": "ReplicatedStorage",
+          "action": "SUBSTITUIR",
+          "path": "scripts/V67/07P7_ROBLOX_BACKGROUNDS.lua",
+          "sha256": "a460a72e75bbc2c9bc0ca6b61e4b42ef767de5841d9be5d7989eb923673ffcb7",
+          "lines": 41,
+          "parts": 2
+        },
+        {
+          "name": "07P8_BACKGROUND_RESOLVER",
+          "type": "ModuleScript",
+          "location": "ServerScriptService",
+          "action": "SUBSTITUIR",
+          "path": "scripts/V67/07P8_BACKGROUND_RESOLVER.lua",
+          "sha256": "95f8b30d8566263637aeaf658b4718474d711fc7ee3572c3d632fd250d41f15e",
+          "lines": 61,
+          "parts": 2
+        },
+        {
+          "name": "07UI_DESIGN_SYSTEM",
+          "type": "ModuleScript",
+          "location": "ReplicatedStorage",
+          "action": "SUBSTITUIR",
+          "lines": 165,
+          "sha256": "f2305d3122df46d27f3b721da6a573284cb22c8bf1eeefd36b18d3cb7f1fd5d8",
+          "path": "scripts/V67/07UI_DESIGN_SYSTEM.lua",
+          "parts": 2
+        },
+        {
+          "name": "07UI_HALLOWEEN_THEME",
+          "type": "ModuleScript",
+          "location": "ReplicatedStorage",
+          "action": "SUBSTITUIR",
+          "path": "scripts/V67/07UI_HALLOWEEN_THEME.lua",
+          "sha256": "1929301b6b948cbd222519825677142a062874b815b6bd64ee53e89622af90af",
+          "lines": 137,
+          "parts": 2
+        },
+        {
+          "name": "08B6_AVATAR_MOVEMENT",
+          "type": "ModuleScript",
+          "location": "ReplicatedStorage",
+          "action": "SUBSTITUIR",
+          "path": "scripts/V67/08B6_AVATAR_MOVEMENT.lua",
+          "sha256": "0aad96eafc138db2467f31821f1b1031ab01e824546128ad779ec46b309df70d",
+          "lines": 94,
+          "parts": 2
+        },
+        {
+          "name": "09B5_AVATAR_RUNTIME",
+          "type": "ModuleScript",
+          "location": "ServerScriptService",
+          "action": "SUBSTITUIR",
+          "path": "scripts/V67/09B5_AVATAR_RUNTIME.lua",
+          "lines": 217,
+          "sha256": "c3a9a7a6850edaad54258be155f9916c057ff40030872018dfaa357c36edcd9b",
+          "parts": 2
+        },
+        {
+          "name": "09B8_FREE_HIGHLIGHTS",
+          "type": "ModuleScript",
+          "location": "ServerScriptService",
+          "action": "SUBSTITUIR",
+          "path": "scripts/V67/09B8_FREE_HIGHLIGHTS.lua",
+          "sha256": "774c1aaf60fba12c74532e68319c47169fe343af5d5bfd3b538bd2cad9b64c24",
+          "lines": 168,
+          "parts": 2
+        },
+        {
+          "name": "09C12_DESTINATION_BROWSER",
+          "type": "ModuleScript",
+          "location": "ReplicatedStorage",
+          "action": "SUBSTITUIR",
+          "path": "scripts/V67/09C12_DESTINATION_BROWSER.lua",
+          "sha256": "c9c6c634548cd3f90dbac321064fc23209bb9cbb6779181ab01991aa9fd1a81e",
+          "lines": 149,
+          "parts": 2
+        },
+        {
+          "name": "09C2_SHOP_CATALOG",
+          "type": "ModuleScript",
+          "location": "ReplicatedStorage",
+          "action": "SUBSTITUIR",
+          "lines": 262,
+          "sha256": "c3054b9b8932e060a6ec7fb8381b9013ca8dca33895c357218ae8928319e1964",
+          "path": "scripts/V67/09C2_SHOP_CATALOG.lua",
+          "parts": 2
+        },
+        {
+          "name": "09C9_PLAYER_INSPECT",
+          "type": "ModuleScript",
+          "location": "ReplicatedStorage",
+          "action": "SUBSTITUIR",
+          "lines": 70,
+          "sha256": "cdbc10b30401d2e4dd67586f2b35c180a06d438434986381400a075195179653",
+          "path": "scripts/V67/09C9_PLAYER_INSPECT.lua",
+          "parts": 2
+        },
+        {
+          "name": "09I1_ASSISTANT_ACCOUNTS",
+          "type": "ModuleScript",
+          "location": "ServerScriptService",
+          "action": "SUBSTITUIR",
+          "path": "scripts/V67/09I1_ASSISTANT_ACCOUNTS.lua",
+          "sha256": "213a892e5fcc1ca5b3c6785165a7ffe2db5106d09acaf657d308cf0617cb3347",
+          "lines": 121,
+          "parts": 2
+        },
+        {
+          "name": "09I2_ASSISTANT_ENGINE",
+          "type": "ModuleScript",
+          "location": "ServerScriptService",
+          "action": "SUBSTITUIR",
+          "path": "scripts/V67/09I2_ASSISTANT_ENGINE.lua",
+          "sha256": "e5fd5f32c78ce811f0d2b5540d481ddd15f972df7f2617c9c63d840c5b8eca4c",
+          "lines": 42,
+          "parts": 2
+        },
+        {
+          "name": "09I4_ASSISTANT_UI",
+          "type": "ModuleScript",
+          "location": "ReplicatedStorage",
+          "action": "SUBSTITUIR",
+          "path": "scripts/V67/09I4_ASSISTANT_UI.lua",
+          "sha256": "a27b22db73f19d96389db08b81972b59ed59685a1615083769b09f9eaf055fa6",
+          "lines": 137,
+          "parts": 2
+        },
+        {
+          "name": "09I7_ASSISTANT_PROFILE",
+          "type": "ModuleScript",
+          "location": "ReplicatedStorage",
+          "action": "SUBSTITUIR",
+          "path": "scripts/V67/09I7_ASSISTANT_PROFILE.lua",
+          "sha256": "00e240b4c1712d223b98fdf02ff6ba72b3ddb478cbc810d1d86d194d387c8f25",
+          "lines": 55,
+          "parts": 2
+        },
+        {
+          "name": "09I9_GAME_GUIDE",
+          "type": "ModuleScript",
+          "location": "ReplicatedStorage",
+          "action": "SUBSTITUIR",
+          "path": "scripts/V67/09I9_GAME_GUIDE.lua",
+          "sha256": "228e76bbdb21458f2115a2bbd504a6293e806842186a250b0c9a6c9b62398870",
+          "lines": 68,
+          "parts": 2
+        },
+        {
+          "name": "01A_HUB_CORE_ENV",
+          "type": "Script",
+          "location": "ServerScriptService",
+          "action": "SUBSTITUIR",
+          "lines": 101,
+          "sha256": "896aacaf4434332df0bdab2bbcf0880f9eaf6c098ace3aa1b7517dfea9db447b",
+          "path": "scripts/V67/01A_HUB_CORE_ENV.lua",
+          "parts": 2
+        },
+        {
+          "name": "01B_HUB_WORLD",
+          "type": "Script",
+          "location": "ServerScriptService",
+          "action": "SUBSTITUIR",
+          "lines": 145,
+          "sha256": "ffb9edd2ba711ad6eb209e8c10aa54123ff23a86023bbd6b735f6457e9e383ee",
+          "path": "scripts/V67/01B_HUB_WORLD.lua",
+          "parts": 2
+        },
+        {
+          "name": "07G_HUB_UI",
+          "type": "LocalScript",
+          "location": "StarterPlayer > StarterPlayerScripts",
+          "action": "SUBSTITUIR",
+          "lines": 98,
+          "sha256": "c28d875f64eb1177ebc11fe135cef21a72646904d4e337add31c5952cc90317b",
+          "path": "scripts/V67/07G_HUB_UI.lua",
+          "parts": 2
+        },
+        {
+          "name": "07M_MUSIC_CLIENT",
+          "type": "LocalScript",
+          "location": "StarterPlayer > StarterPlayerScripts",
+          "action": "SUBSTITUIR",
+          "path": "scripts/V67/07M_MUSIC_CLIENT.lua",
+          "sha256": "3c8792f40600506a08c1f3a929b40d559a043a13fe32d50b83695405f2d8a3ce",
+          "lines": 168,
+          "parts": 2
+        },
+        {
+          "name": "09B_SHOP_SERVER",
+          "type": "Script",
+          "location": "ServerScriptService",
+          "action": "SUBSTITUIR",
+          "lines": 253,
+          "sha256": "61a2d9137a989b28f6e69568a2c3b6517404c85fcf51ce486e20536dacb1a647",
+          "path": "scripts/V67/09B_SHOP_SERVER.lua",
+          "parts": 2
+        },
+        {
+          "name": "09C11_AVATAR_CHARACTER",
+          "type": "LocalScript",
+          "location": "StarterPlayer > StarterPlayerScripts",
+          "action": "SUBSTITUIR",
+          "path": "scripts/V67/09C11_AVATAR_CHARACTER.lua",
+          "lines": 66,
+          "sha256": "a1fd878307ba95089914a475d44951aaea8ef61b45b3b0bdf682634ca0141443",
+          "parts": 2
+        },
+        {
+          "name": "09C_SHOP_CLIENT",
+          "type": "LocalScript",
+          "location": "StarterPlayer > StarterPlayerScripts",
+          "action": "SUBSTITUIR",
+          "lines": 384,
+          "sha256": "f0d5334b671648e9bab10ac8a435a9c0bc494ad426324e6fb49d53d318ebe50c",
+          "path": "scripts/V67/09C_SHOP_CLIENT.lua",
+          "parts": 2
+        },
+        {
+          "name": "09I_ASSISTANT_CLIENT",
+          "type": "LocalScript",
+          "location": "StarterPlayer > StarterPlayerScripts",
+          "action": "SUBSTITUIR",
+          "path": "scripts/V67/09I_ASSISTANT_CLIENT.lua",
+          "sha256": "bce539c898551d01bc6fe4f0f15d16c3e3d69def8ff6f2e95b9c2a8187dc455a",
+          "lines": 106,
+          "parts": 2
+        },
+        {
+          "name": "09I_ASSISTANT_SERVER",
+          "type": "Script",
+          "location": "ServerScriptService",
+          "action": "SUBSTITUIR",
+          "path": "scripts/V67/09I_ASSISTANT_SERVER.lua",
+          "sha256": "6e2e21505cf17c60ad2cef6ef6c1fc5e6546bc84c2a4d4f48950966e27c29377",
+          "lines": 131,
           "parts": 2
         }
       ]

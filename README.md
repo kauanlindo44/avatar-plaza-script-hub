@@ -1,17 +1,17 @@
-# Avatar Creator Plaza — V66
+# Avatar Creator Plaza — V67
 
-Atualização sobre a V65 publicada (`b07af6cac3395f3f893d4855ce3a3e625a7054b2`): **5 ModuleScripts novos + 19 substituições**. Requer V65 completa. [Nomes, tipos, locais e verificação](INSTALL_V66.md).
+Delta sobre a V66 publicada (`f67f6ff374677908967b3e1408485d6ab595c433`): **4 ModuleScripts novos + 32 substituições**, todas as fontes até 400 linhas. [Guia com nomes, tipos e locais](INSTALL_V67.md).
 
-Abra [AVATAR_PLAZA_V66.html](AVATAR_PLAZA_V66.html) ou o [instalador permanente](AVATAR_PLAZA_SCRIPT_HUB_PERMANENTE.html). Código recolhido, nome/local, última linha e botão de copiar a fonte completa. Pacote offline V44/V55–V66 e sincronização com GitHub. `09A_SHOP_UI` permanece nas quatro partes anteriores.
+Abra [AVATAR_PLAZA_V67.html](AVATAR_PLAZA_V67.html) ou o [instalador permanente](AVATAR_PLAZA_SCRIPT_HUB_PERMANENTE.html). Código recolhido, botão de copiar fonte inteira, última linha e duas partes opcionais. `09A_SHOP_UI` permanece nas quatro partes anteriores. Requer a **V66 completa**; o HTML também inclui as versões anteriores necessárias.
 
-Crie primeiro `07P11_EMOTE_RESOLVER` como **ModuleScript em ServerScriptService**. Crie `07UI_CHOICE_LIST`, `09C14_NEW_AVATAR`, `09I8_AVATAR_STYLES` e `09I9_GAME_GUIDE` como **ModuleScript em ReplicatedStorage**. Os demais substituem fontes existentes. Não acrescente NOVO/SUBSTITUIR aos nomes. Nenhum passe, Developer Product ou chave externa novo.
+Crie primeiro `07G7_ADVENTURE_WORLD` e `09I10_CHAT_NAV` como **ModuleScript em ReplicatedStorage**; `08B7_AVATAR_ANIMATIONS` e `09I11_CONVERSATIONS` como **ModuleScript em ServerScriptService**. Depois substitua as 32 fontes indicadas e reinicie Play. Nenhum passe/produto/chave externa novo.
 
-Fundos agora leem a imagem e cor reais de AvatarBackground via InsertService no servidor, incluindo `ImageId.Value` e `Color.Value`. Emotes resolvem o AnimationId e usam Animator na mesma cópia do estúdio, corrigindo a chamada restrita ao LocalPlayer fotografada. Permissão negada preserva o estado anterior e gera diagnóstico específico.
+A V67 corrige a prova de fundos invisível e fora da tela que rejeitava imagens válidas na V66. Usa uma prova renderizável temporária, preservando a seleção anterior em recusas reais. Apoio dos corpos é comparado aos pés do rig, sem medir acessórios; animações equipadas são resolvidas e atualizam Animate/fallback. Emotes do catálogo usam o clip confirmado no Animator da prévia.
 
-Catálogo gira o avatar mantendo câmera e cenário parados. Meus looks tem quatro ações principais, menu, confirmação de exclusão e estilo mais discreto, preservando os itens com X embaixo da prévia. **Do zero** oferece base R6/R15/cor e prévia antes de confirmar, sem apagar looks salvos.
+IA com navegação desktop, busca/histórico privado, renomear/arquivar/excluir, configurações e compartilhamento confirmado de uma cópia textual filtrada. Há saudações, contexto de ajuda e refinamentos de cor/peça, além dos 90 estilos. Até 20 conversas/16 mensagens por conversa; gravações agrupadas. A IA é um planejador/guia específico, sem chave OpenAI nem promessa de conversação generativa geral.
 
-IA com **90 estilos**, lista pesquisável com descrição, escolhas de orçamento e **35 assuntos** de ajuda sobre o jogo. Perguntas reconhecidas recebem ajuda sem gastar uma busca de look; nova conversa continua utilizável. O assistente busca peças reais e é um planejador/guia específico, sem chave OpenAI e sem prometer conversação generativa geral ou pesquisa web em cada mensagem.
+Truco recomposto pela foto 4: mesa oval verde com borda escura, avatares circulares, identificação das duplas, mão em leque, cartas públicas menores e controles compactos. Regras e comércio existentes preservados. HUD/painel de jogador menores, catálogo com contraste maior para emotes.
 
-Música tenta outra faixa após falha também em IDs manuais ou na última faixa salva. Leitura de preferências antecede a primeira sugestão; tentativas são limitadas e sucesso exige conteúdo carregado. Mundos ficam mais discretos e claros, com até 300 partes de cenário e sem duplicar nuvens ao trocar de tema.
+Seis mundos mais simples e um Vale da aventura detalhado separado, com árvores variadas, lago, caminhos e morros decorativos. Spawn com emblema clássico. Música inicial Pastel Afternoon Piano para entradas sem última faixa salva, sujeita à permissão e com fallback. Patrocínio de jogos/comunidades dura 24 h. Halloween opcional: o modo automático termina em **01/11/2026, 00h de Brasília**; é possível desligar antes ou manter ligado manualmente.
 
-**65 cenários simulados**, **127 fontes efetivas** compiladas, seis geometrias numéricas e JavaScript real do instalador. [Auditoria e limites](audits/V66/README.md). Motor Roblox, aparência visual, FPS e permissões reais precisam de teste publicado. Os avisos de CorePackages/UIBlox nas fotos são internos do Roblox; não são modificados pelo projeto.
+**84 cenários simulados**, **131 fontes efetivas**, seis geometrias e JavaScript real do instalador. [Auditoria](audits/V67/README.md). Sem motor Roblox nativo: renderização, física, FPS e permissões reais ainda exigem teste publicado. As mudanças não afirmam corrigir módulos internos de CorePackages/UIBlox.

@@ -1,0 +1,87 @@
+[
+  {
+    "case": "background_uses_native_imageid_value_color_and_never_catalog_asset_as_image",
+    "result": "pass",
+    "detail": "actual AvatarBackground/ImageId.Value and Color.Value contract resolves the internal image, preserves color, destroys the unparented container and caches the result"
+  },
+  {
+    "case": "background_missing_reference_and_denied_insert_never_return_fake_success",
+    "result": "pass",
+    "detail": "malformed image references, inaccessible containers and non-background assets cannot be reported as decoded backgrounds"
+  },
+  {
+    "case": "background_server_client_pair_decodes_image_and_preserves_on_refusal",
+    "result": "pass",
+    "detail": "real resolver/client pair uses the internal image, attaches and removes its invisible loading probe and leaves the previous selection intact when permission is refused"
+  },
+  {
+    "case": "emote_resolver_extracts_clip_without_executing_or_parenting_container",
+    "result": "pass",
+    "detail": "server validates EmoteAnimation and returns the contained AnimationId; nested script never enters the DataModel, repeated selections use cache and other asset types are rejected"
+  },
+  {
+    "case": "photo_emote_works_with_native_localplayer_restriction_and_same_copy",
+    "result": "pass",
+    "detail": "the exact LocalPlayer-only restriction is enforced by the double; Photo Mode still loads the verified clip onto the same local copy through Animator, with stop/speed/loop working"
+  },
+  {
+    "case": "preview_drag_rotates_model_with_camera_and_floor_stationary",
+    "result": "pass",
+    "detail": "rotating the controller changes avatar orientation while the camera transform and studio floor remain fixed; reverse rotation restores the original orientation"
+  },
+  {
+    "case": "many_styles_are_unique_searchable_accent_aware_and_use_real_queries",
+    "result": "pass",
+    "detail": "over 80 distinct options have human descriptions and real catalog search terms; accents, long aliases, Japanese fashion and selected styles work rather than collapsing to emo"
+  },
+  {
+    "case": "guide_answers_catalogue_and_all_major_game_topics_without_hallucinated_lookup",
+    "result": "pass",
+    "detail": "knowledge is feature-specific across more than 30 topics; normal questions are distinguished from outfit requests and concrete steps match the actual game"
+  },
+  {
+    "case": "game_help_bypasses_look_quota_and_catalog_generation",
+    "result": "pass",
+    "detail": "twelve automatic help questions complete without entering the eight-look interaction limit, reserving a generation slot or querying catalog assets"
+  },
+  {
+    "case": "style_and_budget_radio_lists_select_without_sending_and_fit_six_screens",
+    "result": "pass",
+    "detail": "style and total budget use searchable described radio choices, preserve an explicit confirmation and keep fields/close reachable in six portrait and landscape sizes"
+  },
+  {
+    "case": "saved_looks_deletion_requires_confirmation_and_four_primary_actions_fit",
+    "result": "pass",
+    "detail": "saved-look shelf has four primary actions and a separate menu; Delete never calls the server before confirmation and cancelling preserves the stored look"
+  },
+  {
+    "case": "blank_avatar_bases_colors_cancel_and_confirmation_preserve_saved_state",
+    "result": "pass",
+    "detail": "new R6 base and chosen color are previewed without mutation; cancel preserves the current avatar, confirmation creates a clean editable base and Undo restores the prior look"
+  },
+  {
+    "case": "new_avatar_controls_safe_preview_and_entry_fit_six_screens",
+    "result": "pass",
+    "detail": "clean-avatar dialog has a visible preview, independent scrollable options, safe entry/close/confirmation and nonoverlapping content on six screens"
+  },
+  {
+    "case": "world_switch_restores_clouds_only_after_removing_owned_clouds",
+    "result": "pass",
+    "detail": "switching all six themes and restoring the original never has two Cloud instances parented to Terrain at once"
+  },
+  {
+    "case": "manual_music_permission_and_content_failures_automatically_change_track",
+    "result": "pass",
+    "detail": "manual ID permission refusal and content failure both advance to another real library/queue item; failure never leaves the player stuck on the rejected track"
+  },
+  {
+    "case": "saved_last_music_failure_also_falls_back_without_repeating_rejected_id",
+    "result": "pass",
+    "detail": "an inaccessible persisted last track falls back through the library, skips an unavailable suggestion and reaches a loaded track without repeating the denied saved ID"
+  },
+  {
+    "case": "actual_client_routes_game_questions_to_help_without_outfit_form",
+    "result": "pass",
+    "detail": "the real LocalScript recognizes catalogue, truco and music questions even in make-look mode, skips the outfit questionnaire and remains usable after each new chat"
+  }
+]
