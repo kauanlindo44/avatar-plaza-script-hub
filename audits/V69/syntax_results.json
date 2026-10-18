@@ -1,0 +1,14 @@
+{
+  "syntax": "pass",
+  "effective_sources": 146,
+  "delta_items": 45,
+  "replace": 35,
+  "create": 10,
+  "max_lines": 279,
+  "receipt_owner": [
+    "07K10_CARD_COMMERCE"
+  ],
+  "historical_manifest_hashes_dependencies": "pass",
+  "match_authority_only_chat_hooks": "pass",
+  "previous_effective_sources_checked": 136
+}
