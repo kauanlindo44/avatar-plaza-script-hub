@@ -6,6 +6,8 @@
 
 Pare Play. Crie `09I20_ASSISTANT_APPEARANCE` como ModuleScript em ReplicatedStorage; substitua as 31 fontes indicadas e reinicie depois de terminar. Cada fonte tem até 400 linhas. O HTML mantém o código recolhido, nome/tipo/local, última linha e botão de cópia integral. `09A_SHOP_UI` continua nas quatro partes anteriores.
 
+Ao lado de cada nome, o HTML mostra a posição na lista de novos ou de substituições, com contagens separadas por versão: na V71, `1/1 (NOVO)` e `1/31 (SUBSTITUIR)` até `31/31 (SUBSTITUIR)`.
+
 - Catálogo/HUD grafite, mosaico colorido de categorias, prévia fixa e itens equipados preservados.
 - Xadrez verde/creme e damas com aparência tradicional, vermelhas/escuras; regras, bots e tempos preservados.
 - Assistente claro, conversa ampla, menu estreito/recolhível e pedido de look em três etapas.

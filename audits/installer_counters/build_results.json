@@ -1,0 +1,9 @@
+{
+  "result": "pass",
+  "latest": "V71",
+  "separate_counters": "per version: CRIAR / SUBSTITUIR",
+  "embedded_package_unchanged": true,
+  "manifest_sha256": "686b7d23ca217ceb95094a172b0d1ddb0243e3898459392f76a196a005c7bd7e",
+  "html_bytes": 5192571,
+  "html_sha256": "d2db295d21a2b53d7ea096de62c0964c027a0e79c4cf6f7b8333d3c5a5330315"
+}

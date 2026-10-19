@@ -34,6 +34,8 @@ details{margin-top:8px;background:#0a1420;border:1px solid #23445a;border-radius
 /* COMPACT_INSTALLER */
 .scriptplace{display:flex;gap:12px;flex-wrap:wrap;margin:10px 0}.scriptplace>span{background:#122437;border:1px solid #315371;border-radius:9px;padding:8px 11px}.scriptplace small{display:block;color:#94b3cc;font-size:10px;font-weight:800;letter-spacing:.7px}.scriptplace b{display:block;font-size:14px;color:#edf8ff}.copyblock{margin-top:10px}.lastline{background:#081320;border:1px solid #24415b;border-radius:8px;padding:8px 10px;margin-bottom:8px}.lastline span{display:block;font-size:10px;font-weight:800;color:#85a7bd;letter-spacing:.7px}.lastline code{display:block;margin-top:3px;font:12px/1.5 Consolas,monospace;color:#c9efff;white-space:pre-wrap;overflow-wrap:anywhere}.copyblock>.btn{min-height:44px;min-width:180px}.partsgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.partblock{background:#101c2a;border:1px solid #28435d;border-radius:10px;padding:10px;min-width:0}.partblock>b{font-size:12px;color:#e2e9ff}.optionalparts{margin-top:12px}.optionalparts summary{font-size:12px;color:#98b8ce}.partnote{color:#b8ccd9;font-size:12px}textarea[hidden]{display:none}.status.online{font-weight:800}
 @media(max-width:620px){.partsgrid{grid-template-columns:1fr}.copyblock>.btn{width:100%}.scriptplace{gap:7px}.scriptplace>span{max-width:100%;overflow-wrap:anywhere}}
+/* SCRIPT_ACTION_COUNTERS */
+.script h3{display:flex;align-items:center;flex-wrap:wrap;gap:6px 10px}.scriptname{min-width:0;overflow-wrap:anywhere}.scriptprogress{flex:none;white-space:nowrap;margin:0;font-variant-numeric:tabular-nums}
 </style>
 </head>
 <body>
@@ -162,15 +164,18 @@ async function openVersion(id){
  $("overlay").style.display="block";document.body.style.overflow="hidden";
  const out=$("versionContent");out.innerHTML=`<div class="card"><b>${esc(v.summary||"")}</b><p>${esc(v.install_note||"")}</p>${v.validation?`<p class="meta">${esc(v.validation)}</p>`:""}<div class="meta">Os botões de cópia preservam as quebras de linha. Cole cada parte após a anterior, sem apagar o que já colou.</div></div><div id="scriptsLoad" class="empty">Carregando scripts…</div>`;
  try{
-  for(const s of v.scripts||[]){
+  const scripts=v.scripts||[],totals={new:0,replace:0},positions={new:0,replace:0};
+  for(const s of scripts)totals[s.action==="CRIAR"?"new":"replace"]++;
+  for(const s of scripts){
    const result=await getText(s);if(mine!==viewToken)return;const code=result.code;
    const special=s.name==="09A_SHOP_UI",count=special?4:Math.max(1,Math.min(4,Number(s.parts||2))),hideFull=special||s.hide_full===true;
    const {lines,parts}=splitCode(code,count);const sec=document.createElement("section");sec.className="script";sec.dataset.name=s.name;
    let partControls="";
    for(let i=0;i<count;i++)partControls+=`<div class="partblock"><b>PARTE ${i+1}/${count}</b>${copyBlock(parts[i],`COPIAR PARTE ${i+1}`,"part",i)}</div>`;
    let controls=hideFull?`<p class="partnote">Cole as 4 partes em ordem no mesmo ModuleScript.</p><div class="partsgrid">${partControls}</div>`:copyBlock(code,"COPIAR SCRIPT","all")+`<details class="optionalparts"><summary>Copiar em ${count} partes</summary><div class="partsgrid">${partControls}</div></details>`;
-   const isNew=s.action==="CRIAR",label=isNew?"(NOVO)":"(SUBSTITUIR)";
-   sec.innerHTML=`<h3>${esc(s.name)} <span class="tag ${isNew?"newtag":""}">${label}</span></h3><div class="scriptplace"><span><small>TIPO</small><b>${esc(s.type||"Script")}</b></span><span><small>LOCAL NO STUDIO</small><b>${esc(s.location||"")}</b></span></div><div class="meta">${isNew?"Crie uma instância com este nome.":"Substitua o código da instância existente."} • ${lines.length} linhas</div>${controls}`;
+   const isNew=s.action==="CRIAR",label=isNew?"(NOVO)":"(SUBSTITUIR)",group=isNew?"new":"replace";
+   const progress=`${++positions[group]}/${totals[group]} ${label}`;
+   sec.innerHTML=`<h3><span class="scriptname">${esc(s.name)}</span><span class="tag ${isNew?"newtag":""} scriptprogress">${progress}</span></h3><div class="scriptplace"><span><small>TIPO</small><b>${esc(s.type||"Script")}</b></span><span><small>LOCAL NO STUDIO</small><b>${esc(s.location||"")}</b></span></div><div class="meta">${isNew?"Crie uma instância com este nome.":"Substitua o código da instância existente."} • ${lines.length} linhas</div>${controls}`;
    const copyTo=async(text,msg,area)=>{if(!await copyText(text,msg))selectArea(area)};
    if(!hideFull){sec.querySelector(".allcode").value=code;sec.querySelector(".all").onclick=()=>copyTo(code,"SCRIPT COPIADO",sec.querySelector(".allcode"))}
    sec.querySelectorAll(".partarea").forEach((a,i)=>a.value=parts[i]);
