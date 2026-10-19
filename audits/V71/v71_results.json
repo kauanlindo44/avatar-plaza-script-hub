@@ -1,0 +1,42 @@
+[
+  {
+    "case": "assistant_reference_layout_has_real_rail_clear_canvas_and_working_composer",
+    "result": "pass",
+    "detail": "white conversation with a bounded centered column, real rail/history controls, independent plus/help/send targets and reset-to-centered-composer on seven geometries"
+  },
+  {
+    "case": "guided_steps_keep_confirmed_request_exact_and_preserve_native_limits",
+    "result": "pass",
+    "detail": "three interactive stages send only explicit confirmed settings, preserve count/price/exclusions and start a subsequent request without carrying the prior style"
+  },
+  {
+    "case": "catalog_mosaic_uses_native_media_preserves_equipped_strip_and_starts_no_query",
+    "result": "pass",
+    "detail": "nine reachable category routes use a six-tile mosaic and three utility entries, make no initial search and preserve the equipped strip"
+  },
+  {
+    "case": "outfit_coordination_prefers_shared_collection_without_weakening_color_or_price",
+    "result": "pass",
+    "detail": "textual collection/style matching ranks the coordinated lower garment ahead of an unrelated cheaper one and never admits a mismatched explicit color"
+  },
+  {
+    "case": "sponsored_media_renews_after_fifteen_minutes_without_new_publication_or_expiry",
+    "result": "pass",
+    "detail": "native group metadata and supported game thumbnail sizes are refreshed after 900 seconds; no new publication or altered 24-hour duration; unknown/non-displayed IDs excluded"
+  },
+  {
+    "case": "destination_client_timer_preserves_search_favorites_and_scroll_position",
+    "result": "pass",
+    "detail": "a real 900-second Heartbeat schedule refreshes media only, retaining the selected filter, user favorites and XY position"
+  },
+  {
+    "case": "music_default_is_compact_and_library_id_and_mini_controls_stay_reachable",
+    "result": "pass",
+    "detail": "a 420x254 maximum default player expands only on request; library rows and a working mini play button fit seven safe layouts"
+  },
+  {
+    "case": "classic_board_palette_and_piece_identity_do_not_change_chess_or_checkers_state",
+    "result": "pass",
+    "detail": "classic green/cream chess and red/wood-colored checkers use beveled shapes and shadows, preserve stable piece instances and leave authoritative state untouched"
+  }
+]

@@ -1,0 +1,38 @@
+[
+  {
+    "suite": "test_fixes.py",
+    "exit_code": 0
+  },
+  {
+    "suite": "test_interface.py",
+    "exit_code": 0
+  },
+  {
+    "suite": "test_regressions.py",
+    "exit_code": 0
+  },
+  {
+    "suite": "test_delta.py",
+    "exit_code": 0
+  },
+  {
+    "suite": "test_features.py",
+    "exit_code": 0
+  },
+  {
+    "suite": "test_v67.py",
+    "exit_code": 0
+  },
+  {
+    "suite": "test_v68.py",
+    "exit_code": 0
+  },
+  {
+    "suite": "test_v69.py",
+    "exit_code": 0
+  },
+  {
+    "suite": "test_v71.py",
+    "exit_code": 0
+  }
+]

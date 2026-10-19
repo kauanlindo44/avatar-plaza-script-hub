@@ -1,0 +1,90 @@
+{
+  "installation_base": "V69",
+  "publication_parent": "V70",
+  "references": [
+    {
+      "file": "8c91e584-a968-4c0a-98e3-4e582664328a.jpg",
+      "role": "current game"
+    },
+    {
+      "file": "1a2684d5-7249-466f-9800-6eace81f6910.jpg",
+      "role": "current game"
+    },
+    {
+      "file": "791b639c-ff22-4c08-945b-41b95f9b9885.jpg",
+      "role": "current game"
+    },
+    {
+      "file": "b5441f40-72ab-4a8b-ad6d-a85b8e2ee9a3.jpg",
+      "role": "current game"
+    },
+    {
+      "file": "b4a14e5a-49e3-4d6c-bbc6-8dac680542e4.jpg",
+      "role": "current game"
+    },
+    {
+      "file": "bc410eb0-df5d-4511-b87d-87c723f360ff.jpg",
+      "role": "current game"
+    },
+    {
+      "file": "2b9af774-adc7-4857-befb-77f433920a58.jpg",
+      "role": "current game"
+    },
+    {
+      "file": "b470e43c-6830-43cf-bbab-3706a20aa78e.jpg",
+      "role": "current game"
+    },
+    {
+      "file": "7f6f67a6-9889-4c56-9445-9570ae411b6e.jpg",
+      "role": "current game"
+    },
+    {
+      "file": "31150966-1016-49c7-a77e-d590ba408258.jpg",
+      "role": "catalog reference"
+    },
+    {
+      "file": "1cdfd3ba-d078-439e-8940-6f3f23ed5062.jpg",
+      "role": "catalog reference"
+    },
+    {
+      "file": "10cee67c-5bdb-4707-822b-96a89d25c30e.jpg",
+      "role": "catalog reference"
+    },
+    {
+      "file": "9895ea97-daaf-45d1-97b2-81309fd08245.jpg",
+      "role": "catalog reference"
+    },
+    {
+      "file": "c8d6dba1-310e-420d-aeee-aca5daae2cbf.jpg",
+      "role": "catalog reference"
+    },
+    {
+      "file": "418c2518-3c48-4e0e-848c-189f6f0b3a6b.jpg",
+      "role": "catalog reference"
+    },
+    {
+      "file": "images.png",
+      "role": "chess reference"
+    },
+    {
+      "file": "images(20261019-174911).jpg",
+      "role": "checkers reference"
+    },
+    {
+      "file": "image(20261019-175102).png",
+      "role": "assistant layout reference"
+    }
+  ],
+  "audio_sources": [
+    "https://create.roblox.com/store/asset/1837379560/Fall-in-Love",
+    "https://create.roblox.com/store/asset/1840917953",
+    "https://create.roblox.com/store/asset/1845756152/Mellow"
+  ],
+  "native_documentation": [
+    "https://create.roblox.com/docs/projects/assets",
+    "https://create.roblox.com/docs/reference/engine/classes/GroupService",
+    "https://create.roblox.com/docs/reference/engine/classes/MarketplaceService",
+    "https://create.roblox.com/docs/audio/assets"
+  ],
+  "note": "Sources inspected on 2026-10-19; original attachments not published. Layout images are illustrative, not native Roblox captures."
+}

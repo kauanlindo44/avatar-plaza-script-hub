@@ -1,35 +1,18 @@
-# Avatar Catalog & Games — V70
+# Avatar Creator Plaza — V71, baseada na V69
 
-**Atualização visual: interface preto/grafite e cores adequadas a cada categoria.**
+**1 ModuleScript novo + 31 substituições. A V70 não é necessária.** Esta atualização parte diretamente da [V69](https://github.com/kauanlindo44/avatar-plaza-script-hub/commit/16e26bac39034c899869f61fc641d036e1269721), conforme solicitado; a V70 permanece apenas no histórico.
 
-A V70 substitui **20 ModuleScripts de interface** sobre a V69. O catálogo, assistente, comunidade, patrocinados, música, truco, xadrez e damas recebem fundos escuros, contraste melhor e destaques próprios sem alterar regras e funcionalidades.
+[Instalador V71](AVATAR_PLAZA_V71.html) · [Instalador permanente](AVATAR_PLAZA_SCRIPT_HUB_PERMANENTE.html) · [Lista exata e instruções](INSTALL_V71.md)
 
-- [Abrir instalador V70 com botões de cópia](AVATAR_PLAZA_V70.html)
-- [Guia e lista completa de 20 substituições](INSTALL_V70.md)
-- [Scripts V70](scripts/V70/)
-- [Versão V69 preservada](INSTALL_V69.md)
+Pare Play. Crie `09I20_ASSISTANT_APPEARANCE` como ModuleScript em ReplicatedStorage; substitua as 31 fontes indicadas e reinicie depois de terminar. Cada fonte tem até 400 linhas. O HTML mantém o código recolhido, nome/tipo/local, última linha e botão de cópia integral. `09A_SHOP_UI` continua nas quatro partes anteriores.
 
-**Instalação:** é necessário ter a V69 completa; substitua as 20 fontes indicadas em `ReplicatedStorage` e reinicie o Play. O HTML V70 busca os scripts online quando o botão é clicado. Nenhum Script/LocalScript adicional é criado nesta atualização.
+- Catálogo/HUD grafite, mosaico colorido de categorias, prévia fixa e itens equipados preservados.
+- Xadrez verde/creme e damas com aparência tradicional, vermelhas/escuras; regras, bots e tempos preservados.
+- Assistente claro, conversa ampla, menu estreito/recolhível e pedido de look em três etapas.
+- Combinação entre peças por sinais de estilo/coleção, sem abandonar roupas completas, orçamento e validação.
+- Vitrines renovam mídia a cada 15 minutos, preservando filtros/rolagem e publicações de 24 horas.
+- Música compacta, biblioteca expansível, nova trilha bossa/lounge e fallback.
 
-**Verificações:** arquivos e hashes SHA-256 catalogados; teste visual/funcional real no Roblox Studio/Player continua pendente.
+Atividades da V69, chats oficiais, consentimento de remix, dados, produtos e recibos preservados. Nenhum serviço pago, passe, produto, chave ou upload novo.
 
----
-
-## Registro da versão anterior (V69)
-
-
-**10 scripts novos + 35 substituições** sobre a [V68 publicada](https://github.com/kauanlindo44/avatar-plaza-script-hub/commit/04e8d334850200827fe3a7e64a8db9ae6f6f4e71). Instale a V68 completa antes deste delta. Todas as fontes V69 têm até 400 linhas.
-
-Abra [AVATAR_PLAZA_V69.html](AVATAR_PLAZA_V69.html) ou o [instalador permanente](AVATAR_PLAZA_SCRIPT_HUB_PERMANENTE.html). O código fica recolhido, com nome, tipo, local, última linha e **Copiar script inteiro**. [Lista exata e instruções](INSTALL_V69.md). Pare Play, crie os oito ModuleScripts novos, o Script e o LocalScript novos; substitua as 35 fontes indicadas e reinicie após terminar. `09A_SHOP_UI` permanece nas quatro partes anteriores.
-
-**BUSCAR O EQUILÍBRIO ENTRE EXCESSO E FALTA.** As definições de “legal” e “lindo” foram registradas nas [diretrizes do projeto](DIRETRIZES_VISUAIS.md).
-
-- Interface clara e coerente em HUD, catálogo, looks, comunidade, patrocínio, assistente, música, configurações e ferramentas de foto. Avatar em destaque, seleção explícita e Halloween opcional contido.
-- Truco com feltro verde e madeira clara; xadrez/damas em creme e verde, peças persistentes e animação visual independente dos relógios. Regras, bots, turnos e pontuação preservados.
-- Árvores em agrupamentos planejados, clareiras, silhuetas e materiais nativos variados. Decoração local com limites de partes.
-- Conversas próprias por partida via TextChatService, participantes definidos pelo servidor, permissões oficiais e nenhuma alternativa sem filtro.
-- Look em colaboração, duplas com personalidade, ensaio temático e remix autorizado, com convites, ações explícitas, créditos e autorização persistente/revogável.
-
-As atividades usam o montador por regras e busca de catálogo existente. **Nenhuma chave externa, serviço pago, produto ou passe novo.** Produtos e recibos anteriores permanecem intactos. Jogos/comunidades patrocinados continuam por 24 horas.
-
-**126 cenários simulados**, **146 fontes efetivas** compiladas, sete geometrias de tela/teclado, inspeção geométrica de layouts e JavaScript real do instalador. [Auditoria reproduzível](audits/V69/README.md). Sem motor Roblox neste ambiente: renderização no computador/celular, filtragem e permissões reais, assets, FPS e física ainda exigem teste no Roblox publicado.
+**134 cenários simulados**, **147 fontes compiladas**, sete geometrias de tela/teclado e JavaScript real do instalador. [Auditoria](audits/V71/README.md). Renderização em computador/celular, áudio, propagação/permissões de assets, FPS e física ainda precisam de teste no Roblox publicado. As imagens de auditoria são reconstruções geométricas, não capturas nativas.

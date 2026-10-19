@@ -1,0 +1,14 @@
+{
+  "version": "V71",
+  "base_version": "V69",
+  "base_commit": "16e26bac39034c899869f61fc641d036e1269721",
+  "published_parent": "1425aaae231906c222ce3d0fc2d119a9c76e74fe",
+  "items": 32,
+  "replace": 31,
+  "create": 1,
+  "effective_sources": 147,
+  "max_lines": 280,
+  "simulated_cases": 134,
+  "html_bytes": 5192040,
+  "prerequisite": "Complete V69; V70 not required"
+}

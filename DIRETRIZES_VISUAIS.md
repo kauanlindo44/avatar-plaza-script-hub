@@ -10,7 +10,7 @@ Essas definições foram dadas pelo responsável pelo projeto e devem orientar a
 ## Aplicação
 
 1. O avatar e a partida recebem o destaque. Decoração, mapa e animações os acompanham.
-2. Usar uma base clara, contraste legível, uma cor principal e poucos destaques por tela. Preto e grafite têm função, sem predominar; cores também não devem predominar sem propósito.
+2. Usar contraste legível, uma cor principal e poucos destaques por tela. A referência atual pede catálogo/HUD em grafite com categorias coloridas e assistente claro com conversa ampla. Preto, branco e cores têm função; nenhum deve predominar sem propósito.
 3. Títulos, espaçamentos, ícones e estados seguem o mesmo sistema. Estado selecionado deve ser reconhecível por mais do que a cor.
 4. O fundo pode cobrir a tela; controles respeitam recortes, barra do Roblox e teclado. Verificar computador, celular em pé e deitado. Alvos de toque: pelo menos 44 × 44 quando forem controles isolados.
 5. Preferir interações curtas e pontuais. Respeitar movimento reduzido. Animações não atrasam relógios, turnos, envio de jogadas ou atualizações.
@@ -25,3 +25,7 @@ Essas definições foram dadas pelo responsável pelo projeto e devem orientar a
 ## Verificação e entrega
 
 Separar verificações simuladas de testes no motor Roblox. Não afirmar teste no aparelho, filtragem real, FPS ou permissões reais quando isso não foi executado. Entregar a lista exata de novos scripts e substituições, mantendo fontes históricas imutáveis e cada fonte de instalação com até 400 linhas.
+
+## Referências V71
+
+Partir da V69 por pedido explícito do responsável. V70 fica preservada no histórico. Seguir as imagens fornecidas: catálogo com mosaico de categorias e prévia à esquerda; xadrez verde/creme; damas clássicas vermelhas/escuras; assistente com menu lateral estreito, mensagem central e campo de envio amplo. Atualizar mídia das vitrines a cada quinze minutos sem alterar o prazo de 24 horas das publicações.
