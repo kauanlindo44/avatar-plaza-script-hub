@@ -1,4 +1,22 @@
-# Avatar Creator Plaza — V69
+# Avatar Catalog & Games — V70
+
+**Atualização visual: interface preto/grafite e cores adequadas a cada categoria.**
+
+A V70 substitui **20 ModuleScripts de interface** sobre a V69. O catálogo, assistente, comunidade, patrocinados, música, truco, xadrez e damas recebem fundos escuros, contraste melhor e destaques próprios sem alterar regras e funcionalidades.
+
+- [Abrir instalador V70 com botões de cópia](AVATAR_PLAZA_V70.html)
+- [Guia e lista completa de 20 substituições](INSTALL_V70.md)
+- [Scripts V70](scripts/V70/)
+- [Versão V69 preservada](INSTALL_V69.md)
+
+**Instalação:** é necessário ter a V69 completa; substitua as 20 fontes indicadas em `ReplicatedStorage` e reinicie o Play. O HTML V70 busca os scripts online quando o botão é clicado. Nenhum Script/LocalScript adicional é criado nesta atualização.
+
+**Verificações:** arquivos e hashes SHA-256 catalogados; teste visual/funcional real no Roblox Studio/Player continua pendente.
+
+---
+
+## Registro da versão anterior (V69)
+
 
 **10 scripts novos + 35 substituições** sobre a [V68 publicada](https://github.com/kauanlindo44/avatar-plaza-script-hub/commit/04e8d334850200827fe3a7e64a8db9ae6f6f4e71). Instale a V68 completa antes deste delta. Todas as fontes V69 têm até 400 linhas.
 
