@@ -7,7 +7,7 @@ function M.Build(ctx)
  H.Root=D.New('Frame',{Name='CatalogHome',BackgroundTransparency=1,Visible=false},U.Main);U.CatalogHome=H.Root
  local title=D.Text(H.Root,'Seu próximo estilo começa aqui',{TextSize=22,Font=Enum.Font.GothamBold,TextXAlignment=Enum.TextXAlignment.Left})
  local back=D.Button(H.Root,'Categorias',{Name='BackToCatalogCategories',TextSize=12,Visible=false})
- local definitions={{'Destaques','Featured','catalog',Color3.fromRGB(65,49,85)},{'Cabelos','Hair','avatar',Color3.fromRGB(91,58,43)},{'Roupas','Clothing','catalog',Color3.fromRGB(39,76,64)},{'Corpos','Body','avatar',Color3.fromRGB(65,49,85)},{'Emotes e animações','Emotes','emote',Color3.fromRGB(245,248,248)},{'Seus favoritos','Favorites','save',Color3.fromRGB(245,248,248)}}
+ local definitions={{'Destaques','Featured','catalog',Color3.fromRGB(65,49,85)},{'Cabelos','Hair','avatar',Color3.fromRGB(91,58,43)},{'Roupas','Clothing','catalog',Color3.fromRGB(39,76,64)},{'Corpos','Body','avatar',Color3.fromRGB(65,49,85)},{'Emotes e animações','Emotes','emote',Color3.fromRGB(52,57,96)},{'Seus favoritos','Favorites','save',Color3.fromRGB(61,51,86)}}
  for i,v in ipairs(definitions)do
   local b=D.Button(H.Root,v[1],{Name='Home'..v[2],Font=Enum.Font.GothamBold,TextSize=16,BackgroundColor3=v[4],TextYAlignment=Enum.TextYAlignment.Bottom});Fx.Button(b,v[4]:Lerp(C.white,.5))
   local icon=D.Icon(b,v[3],{AnchorPoint=Vector2.new(.5,.5),Position=UDim2.fromScale(.5,.37),Size=UDim2.fromOffset(34,34),IconColor=v[4]:Lerp(C.white,.75)})
