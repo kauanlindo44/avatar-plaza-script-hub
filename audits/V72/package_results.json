@@ -1,0 +1,12 @@
+{
+  "version": "V72",
+  "base_version": "V71",
+  "base_commit": "798f63e5327c831cca02e664a00f75f852e25633",
+  "items": 45,
+  "create": 8,
+  "replace": 37,
+  "effective_sources": 155,
+  "max_lines": 388,
+  "simulated_cases": 139,
+  "html_bytes": 5696351
+}

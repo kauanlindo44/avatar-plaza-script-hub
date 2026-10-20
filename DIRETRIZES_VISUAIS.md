@@ -29,3 +29,11 @@ Separar verificações simuladas de testes no motor Roblox. Não afirmar teste n
 ## Referências V71
 
 Partir da V69 por pedido explícito do responsável. V70 fica preservada no histórico. Seguir as imagens fornecidas: catálogo com mosaico de categorias e prévia à esquerda; xadrez verde/creme; damas clássicas vermelhas/escuras; assistente com menu lateral estreito, mensagem central e campo de envio amplo. Atualizar mídia das vitrines a cada quinze minutos sem alterar o prazo de 24 horas das publicações.
+
+## Continuidade V72
+
+- Partir da V71 publicada no GitHub (`798f63e5327c831cca02e664a00f75f852e25633`); manter o histórico e as regras dos jogos.
+- Usar a referência de patrocinar fornecida em 20/10: prévia à esquerda, pesquisa e prateleiras à direita. Adaptar as fileiras à altura e manter os itens equipados com remoção abaixo da prévia.
+- Assistente em branco suave, histórico recolhível e acesso a conta/planos no rodapé. Corpo confirmado por ID é obrigatório; tipos exatos, orçamento e exclusões não podem ser trocados para preencher resultados.
+- Esforço significa profundidade de pesquisa/validação nativa, sem alegar um modelo generativo externo. Não conceder planos por conclusão do prompt de compra; manter o recibo oficial.
+- Recursos e imagens nativas podem depender de permissões/moderação do Roblox. Uma simulação de layout não comprova execução no aparelho.
