@@ -1,8 +1,8 @@
 {
   "schema": 2,
   "project": "Avatar Plaza Script Hub",
-  "latest": "V72",
-  "updated_at": "2026-10-20T01:09:38+00:00",
+  "latest": "V73",
+  "updated_at": "2026-10-21T17:22:13+00:00",
   "poll_seconds": 5,
   "versions": [
     {
@@ -9961,6 +9961,97 @@
           "path": "scripts/V72/09I_ASSISTANT_SERVER.lua",
           "sha256": "62ce1f9cc6d80b48fb68a0ff19034e64af72daf9d533a7ac9653d27978acf75a",
           "lines": 149,
+          "parts": 2
+        }
+      ]
+    },
+    {
+      "id": "V73",
+      "base_version": "V72",
+      "title": "CORREÇÕES DO CATÁLOGO E ASSISTENTE · PATROCINAR 6 × 4",
+      "date": "2026-10-21",
+      "summary": "Patrocinar com seis itens por linha e quatro linhas visíveis, cards menores em cores suaves e miniaturas originais sem gradiente/tinta escura. Prévia lateral mais estreita no celular deitado/computador e painel de avatar opcional no celular em pé. Catálogo informa módulo ausente/duplicado, fonte incorreta ou erro de inicialização com diagnóstico no Output. Assistente ignora callbacks da tela destruída e impede cliente duplicado/fonte instalada com nome errado. Fonte própria das atividades incluída para restauração. Áudio com fallback espaçado e limitado; permissões nativas permanecem respeitadas. Backend de patrocínios, planos, compras e jogos preservados.",
+      "install_note": "Base: V72 completa. V73: 8 SUBSTITUIÇÕES e NENHUM script novo. Pare Play e substitua as oito fontes inteiras nas instâncias existentes. Atenção: 09I_ASSISTANT_CLIENT e 09I_ACTIVITIES_CLIENT são scripts diferentes; não cole a mesma fonte nos dois. Reinicie Play depois de concluir tudo. Guia: INSTALL_V73.md.",
+      "validation": "150 cenários simulados em dez suítes Lua, sete geometrias com 24 cards completos, reprodução da falha Parent locked da V72, instalação completa/incompleta e clientes duplicados. Sintaxe, hashes e JavaScript do instalador conferidos. Sem execução nativa no Roblox: conferir toque/recortes, áudio, permissões e a instalação efetiva no jogo publicado.",
+      "scripts": [
+        {
+          "name": "09A1_SHOP_LAYOUT",
+          "type": "ModuleScript",
+          "location": "ReplicatedStorage",
+          "action": "SUBSTITUIR",
+          "lines": 204,
+          "sha256": "8b19840543da3450f236200775efef43a5735ace288c302a82c13934a13e1474",
+          "path": "scripts/V73/09A1_SHOP_LAYOUT.lua",
+          "parts": 2
+        },
+        {
+          "name": "09C2_SHOP_CATALOG",
+          "type": "ModuleScript",
+          "location": "ReplicatedStorage",
+          "action": "SUBSTITUIR",
+          "lines": 283,
+          "sha256": "390374a090ad29ebf0d1ac6c331b6913c7caba74d9966a3211f749a6fd15c84c",
+          "path": "scripts/V73/09C2_SHOP_CATALOG.lua",
+          "parts": 2
+        },
+        {
+          "name": "09C5_UGC_STORES",
+          "type": "ModuleScript",
+          "location": "ReplicatedStorage",
+          "action": "SUBSTITUIR",
+          "lines": 188,
+          "sha256": "2ed60f7fef267e54c85f7dc078a7bd41934e0105413af11c0ce48eeca7945892",
+          "path": "scripts/V73/09C5_UGC_STORES.lua",
+          "parts": 2
+        },
+        {
+          "name": "09I4_ASSISTANT_UI",
+          "type": "ModuleScript",
+          "location": "ReplicatedStorage",
+          "action": "SUBSTITUIR",
+          "path": "scripts/V73/09I4_ASSISTANT_UI.lua",
+          "sha256": "a28229da690912d6b20c17cb25097c2563ed424d65f6ab1c0d7ce137e195f1a8",
+          "lines": 140,
+          "parts": 2
+        },
+        {
+          "name": "07M_MUSIC_CLIENT",
+          "type": "LocalScript",
+          "location": "StarterPlayer > StarterPlayerScripts",
+          "action": "SUBSTITUIR",
+          "path": "scripts/V73/07M_MUSIC_CLIENT.lua",
+          "sha256": "3dd3773e0a0e11b9233b3f9a853174c999566ffcb8b716846ba00f32ae8696ac",
+          "lines": 172,
+          "parts": 2
+        },
+        {
+          "name": "09C_SHOP_CLIENT",
+          "type": "LocalScript",
+          "location": "StarterPlayer > StarterPlayerScripts",
+          "action": "SUBSTITUIR",
+          "lines": 396,
+          "sha256": "33afe817b2f1a0ff8e1444431dcd03dc0e93641a6a64923a5b0e754720e828d5",
+          "path": "scripts/V73/09C_SHOP_CLIENT.lua",
+          "parts": 2
+        },
+        {
+          "name": "09I_ACTIVITIES_CLIENT",
+          "type": "LocalScript",
+          "location": "StarterPlayer > StarterPlayerScripts",
+          "action": "SUBSTITUIR",
+          "path": "scripts/V73/09I_ACTIVITIES_CLIENT.lua",
+          "sha256": "a8c25999ec9cf17ef8dfe7a1dc6e521f8d332e27fb10833633a995f110a3a548",
+          "lines": 48,
+          "parts": 2
+        },
+        {
+          "name": "09I_ASSISTANT_CLIENT",
+          "type": "LocalScript",
+          "location": "StarterPlayer > StarterPlayerScripts",
+          "action": "SUBSTITUIR",
+          "path": "scripts/V73/09I_ASSISTANT_CLIENT.lua",
+          "sha256": "693e8bb2c118fb0ba4fa754ca5f9313e83eab2dfcb900e8b260382ec36da021f",
+          "lines": 122,
           "parts": 2
         }
       ]

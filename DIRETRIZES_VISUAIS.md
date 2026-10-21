@@ -37,3 +37,10 @@ Partir da V69 por pedido explícito do responsável. V70 fica preservada no hist
 - Assistente em branco suave, histórico recolhível e acesso a conta/planos no rodapé. Corpo confirmado por ID é obrigatório; tipos exatos, orçamento e exclusões não podem ser trocados para preencher resultados.
 - Esforço significa profundidade de pesquisa/validação nativa, sem alegar um modelo generativo externo. Não conceder planos por conclusão do prompt de compra; manter o recibo oficial.
 - Recursos e imagens nativas podem depender de permissões/moderação do Roblox. Uma simulação de layout não comprova execução no aparelho.
+
+## Continuidade V73
+
+- Patrocinar usa seis itens por linha e quatro linhas completas, com cards menores, miniaturas sem filtro escuro e cores suaves. Priorizar imagem/preço; título completo nos detalhes em células compactas.
+- Usar prévia lateral menor em modo deitado/computador e prévia opcional com X em pé. Respeitar barra nativa/recortes, mantendo alvos de 44 px nas geometrias suportadas.
+- Ao investigar falhas, separar o que foi reproduzido no código dos indícios de instalação. Não atribuir culpa ao usuário sem conferir a fonte instalada. Evitar mensagens genéricas que afirmam abrir uma função que falhou.
+- Callbacks não devem reutilizar instâncias destruídas. Clientes duplicados ou fontes copiadas no nome errado precisam de diagnóstico explícito.
