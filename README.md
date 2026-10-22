@@ -1,17 +1,15 @@
-# Avatar Creator Plaza — V73
+# Avatar Creator Plaza — V74
 
-**8 substituições, nenhum script novo, sobre a V72 completa.**
+**16 scripts novos + 12 substituições sobre a V73 completa.**
 
-[Instalador V73](AVATAR_PLAZA_V73.html) · [Instalador permanente](AVATAR_PLAZA_SCRIPT_HUB_PERMANENTE.html) · [Nomes, locais e ordem](INSTALL_V73.md) · [Diagnóstico e testes](audits/V73/README.md)
+[Instalador V74](AVATAR_PLAZA_V74.html) · [Instalador permanente](AVATAR_PLAZA_SCRIPT_HUB_PERMANENTE.html) · [Nomes, tipos, locais e ordem](INSTALL_V74.md) · [Auditoria](audits/V74/README.md)
 
-Pare Play, substitua as oito fontes inteiras nas instâncias existentes e reinicie. Não duplique scripts nem acrescente os rótulos ao nome. **09I_ASSISTANT_CLIENT e 09I_ACTIVITIES_CLIENT são diferentes.** A fonte própria das atividades está incluída para restaurar uma possível cópia no destino errado. 09A_SHOP_UI permanece nas quatro partes anteriores.
+A biblioteca **Nossos jogos** reúne Botão do Caos, Truco, Xadrez e Damas, identificando as implementações do Avatar Catalog & Games. O computador tem seleção lateral; o celular tem navegação com retorno. O HUD ganha nomes legíveis, grafite suave e atalhos agrupados. Patrocinar mantém **6 itens por linha × 4 linhas**, com cards neutros, miniaturas sem escurecimento e preços mais fortes.
 
-- Patrocinar: seis itens por linha e quatro linhas completas (24 cards), fundos suaves, miniatura sem gradiente escuro, busca/favoritos e preços compactos. Rolagem vertical para os próximos resultados.
-- Prévia lateral mais estreita no computador/celular deitado. Em pé, o botão Avatar abre a prévia com X, liberando toda a largura da grade.
-- Assistente: proteção de interface destruída, cliente duplicado e nome incorreto de instalação. Erro NewConversation da foto reproduzido e corrigido no código.
-- Catálogo: diagnóstico específico de módulo ausente/duplicado, tipo/fonte incorreta e erro de inicialização, preservando a causa no Output. A mensagem antiga “modo seguro” não identificava o motivo.
-- Música: troca de faixa espaçada e limitada, validação de carregamento e proteção contra cópias do cliente. Permissões/moderação continuam a cargo do Roblox.
+**Botão do Caos V1:** uma arena 96 × 96, distante e oculta para quem está no catálogo, recebe o mesmo avatar. Fila FIFO de 2–8; preparação de 12 s; contagem de 5 s; disputa de 150 s; resultados de 10 s; treino individual de 90 s. Há os 12 efeitos do GDD, ferramentas temporárias com mira, escudo, bomba nuclear com alvo único, sorteio/dano/pontuação no servidor, espectador e retorno que preserva o catálogo. Não há economia, compras, apostas, ranking ou múltiplas arenas. Rodovia 061 permanece fora desta versão.
 
-**150 cenários simulados**, 155 fontes compiladas, sete geometrias de tela e JavaScript real do instalador. Fontes históricas, regras, bots, tempos, chats, atividades, servidores, planos, recibos e persistência preservados. Nenhum produto/passe, upload, chave ou serviço pago novo.
+Plus/Pro mantêm os produtos existentes e só concedem acesso por recibo. A disponibilidade tem diagnóstico por etapa e consulta oficial de produto; esta entrega não comprova o estado dos IDs na conta do criador. O assistente conhece o novo minijogo.
 
-As imagens da auditoria são reconstruções geométricas com mídia ilustrativa. Instalação efetiva, renderização, toque, áudio e permissões precisam ser conferidos no Roblox publicado. Não é possível atribuir a causa anterior do catálogo a uma omissão de instalação ou a um script apenas pelas fotos disponíveis.
+**180 cenários simulados**, 171 fontes conferidas, sete geometrias, 21 reconstruções visuais e testes do JavaScript real do instalador. Fontes históricas, regras/bots/relógios/pontuação de Truco/Xadrez/Damas e recibos preservados. Nenhum novo passe/produto, chave externa ou serviço pago é necessário.
+
+**PENDENTE DE TESTE NATIVO:** a V1 não está aprovada para lançamento pelo GDD. Conferir no Roblox publicado com 2–8 usuários, duas rodadas completas, celular/PC, corpos R6/R15 e personalizados, toque, streaming, áudio, permissões e FPS. Atualizar o questionário de maturidade com o conteúdo efetivo. As imagens de auditoria usam geometria reconstruída e mídia ilustrativa; não são capturas do motor. Publicar no GitHub não instala automaticamente os scripts no Roblox.

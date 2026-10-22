@@ -1,0 +1,13 @@
+{
+  "version": "V74",
+  "base_version": "V73",
+  "base_commit": "144dcc4d8168536b87d8e046b117a965714c5312",
+  "items": 28,
+  "create": 16,
+  "replace": 12,
+  "effective_sources": 171,
+  "max_lines": 280,
+  "simulated_cases": 180,
+  "html_bytes": 6104987,
+  "native_roblox_tests": "PENDENTE DE TESTE"
+}

@@ -1,8 +1,8 @@
 {
   "schema": 2,
   "project": "Avatar Plaza Script Hub",
-  "latest": "V73",
-  "updated_at": "2026-10-21T17:22:13+00:00",
+  "latest": "V74",
+  "updated_at": "2026-10-22T02:47:28+00:00",
   "poll_seconds": 5,
   "versions": [
     {
@@ -10052,6 +10052,297 @@
           "path": "scripts/V73/09I_ASSISTANT_CLIENT.lua",
           "sha256": "693e8bb2c118fb0ba4fa754ca5f9313e83eab2dfcb900e8b260382ec36da021f",
           "lines": 122,
+          "parts": 2
+        }
+      ]
+    },
+    {
+      "id": "V74",
+      "base_version": "V73",
+      "title": "BOTÃO DO CAOS V1 · NOSSOS JOGOS · HUD E PATROCINAR",
+      "date": "2026-10-22",
+      "summary": "Biblioteca dos nossos quatro jogos com cards próprios, seleção lateral no computador e navegação separada no celular. HUD com nomes legíveis, grafite suave e atalhos agrupados. Patrocinar conserva seis itens por linha e quatro linhas com cards neutros e preços mais fortes. Botão do Caos V1: arena 96×96 distante da praça, fila FIFO de 2–8, preparação 12 s, contagem 5 s, disputa 150 s, treino individual 90 s, 12 efeitos, combate e sorteio no servidor, espectador, resultados e retorno preservando avatar/ferramentas/configurações. Verificação de obstáculos e recuperação de erro. Plus/Pro identificam falhas de produto/preço/venda e consultam a lista oficial quando necessário; concessão continua somente por recibo. Sem novos produtos pagos, economia ou implementação de Rodovia 061.",
+      "install_note": "Base: V73 completa. V74: 16 scripts NOVOS + 12 SUBSTITUIÇÕES. Pare Play; crie os 16 novos com nome/tipo/local exatos; substitua as 12 fontes inteiras em suas instâncias existentes. Não coloque (NOVO), contagem ou V74 no nome das instâncias. Reinicie Play só depois de concluir tudo. Os grupos são numerados separadamente: 1/16 NOVO e 1/12 SUBSTITUIR. Guia: INSTALL_V74.md. Não é necessário criar nenhum produto ou passe para Botão do Caos.",
+      "validation": "180 cenários simulados em doze suítes Lua; sete geometrias, 21 reconstruções visuais, sintaxe/hashes de 171 fontes e JavaScript real do instalador. Nenhum teste físico ou servidor multiplayer publicado foi executado. Botão do Caos está PENDENTE DE TESTE NATIVO com 2–8 usuários, recortes/toque, ferramentas com corpos personalizados, streaming, áudio e FPS. Regras, bots, relógios e pontuação de Truco/Xadrez/Damas preservados.",
+      "scripts": [
+        {
+          "name": "07H11_GAME_LIBRARY",
+          "type": "ModuleScript",
+          "location": "ReplicatedStorage",
+          "action": "CRIAR",
+          "path": "scripts/V74/07H11_GAME_LIBRARY.lua",
+          "sha256": "1581ba3ecfbc8e07a39cb6e22814d3f51bb380a203f15a66b440faad64187394",
+          "lines": 89,
+          "parts": 2
+        },
+        {
+          "name": "09I25_PLAN_PRODUCTS",
+          "type": "ModuleScript",
+          "location": "ReplicatedStorage",
+          "action": "CRIAR",
+          "path": "scripts/V74/09I25_PLAN_PRODUCTS.lua",
+          "sha256": "3751d1513c1f5cc3116c96f1b9a13527b9b55c94306dc3c2259b017eaf78966c",
+          "lines": 51,
+          "parts": 2
+        },
+        {
+          "name": "BC_ArenaBuilder",
+          "type": "ModuleScript",
+          "location": "ServerScriptService",
+          "action": "CRIAR",
+          "path": "scripts/V74/BC_ArenaBuilder.lua",
+          "sha256": "296d76c98d4f8ab30061671397771a381f34fb812c753e55871cf7b7550485c9",
+          "lines": 67,
+          "parts": 2
+        },
+        {
+          "name": "BC_ButtonController",
+          "type": "ModuleScript",
+          "location": "ServerScriptService",
+          "action": "CRIAR",
+          "path": "scripts/V74/BC_ButtonController.lua",
+          "sha256": "e83b0853d519806e5b2cb406cd5967f2620ebd136d409ed9b1b65fbd92281041",
+          "lines": 59,
+          "parts": 2
+        },
+        {
+          "name": "BC_Combat",
+          "type": "ModuleScript",
+          "location": "ServerScriptService",
+          "action": "CRIAR",
+          "path": "scripts/V74/BC_Combat.lua",
+          "sha256": "1e15aa10bce7550c836d97fd98105187760347d04eb48fb35301fbe2338861b8",
+          "lines": 78,
+          "parts": 2
+        },
+        {
+          "name": "BC_Config",
+          "type": "ModuleScript",
+          "location": "ReplicatedStorage",
+          "action": "CRIAR",
+          "path": "scripts/V74/BC_Config.lua",
+          "sha256": "7f79c5b5c71e016d791c6258dfd57026579edbfb8e47c5825e49384a9c8a61dd",
+          "lines": 24,
+          "parts": 2
+        },
+        {
+          "name": "BC_EffectExecutor",
+          "type": "ModuleScript",
+          "location": "ServerScriptService",
+          "action": "CRIAR",
+          "path": "scripts/V74/BC_EffectExecutor.lua",
+          "sha256": "e73807f4ce003ed60477355b3ee4de12a2998536d83198c6d7cff8eda84bc0ab",
+          "lines": 57,
+          "parts": 2
+        },
+        {
+          "name": "BC_EffectRegistry",
+          "type": "ModuleScript",
+          "location": "ServerScriptService",
+          "action": "CRIAR",
+          "path": "scripts/V74/BC_EffectRegistry.lua",
+          "sha256": "ccc6e85b77d01f025563afc3e7610f685adfa9023116da9c805e9e18e623842c",
+          "lines": 18,
+          "parts": 2
+        },
+        {
+          "name": "BC_HUD",
+          "type": "ModuleScript",
+          "location": "ReplicatedStorage",
+          "action": "CRIAR",
+          "path": "scripts/V74/BC_HUD.lua",
+          "sha256": "5a15f703badab868dc52e9977a9b1e4bc929cb40bda7f829232b09d1f34d4cc7",
+          "lines": 131,
+          "parts": 2
+        },
+        {
+          "name": "BC_Integration",
+          "type": "ModuleScript",
+          "location": "ServerScriptService",
+          "action": "CRIAR",
+          "path": "scripts/V74/BC_Integration.lua",
+          "sha256": "c3d1485135a8ca1f354c0c6ba23ab1ad5dae7aded0c635e262b8815571dac0be",
+          "lines": 57,
+          "parts": 2
+        },
+        {
+          "name": "BC_PlayerState",
+          "type": "ModuleScript",
+          "location": "ServerScriptService",
+          "action": "CRIAR",
+          "path": "scripts/V74/BC_PlayerState.lua",
+          "sha256": "2dd4113b0ebb724c74b7839d58ed489949989d8073f1cb8ef1965914a6350054",
+          "lines": 52,
+          "parts": 2
+        },
+        {
+          "name": "BC_Queue",
+          "type": "ModuleScript",
+          "location": "ServerScriptService",
+          "action": "CRIAR",
+          "path": "scripts/V74/BC_Queue.lua",
+          "sha256": "dd40c6cfc83a994ab600f1dd9d3659f7fdd9badd540e33d683a7d47e2b749d0c",
+          "lines": 22,
+          "parts": 2
+        },
+        {
+          "name": "BC_RoundManager",
+          "type": "ModuleScript",
+          "location": "ServerScriptService",
+          "action": "CRIAR",
+          "path": "scripts/V74/BC_RoundManager.lua",
+          "sha256": "5467dbda53abfe7590b4e52871e5d1a39f978b431bd868cadfb4e74917dbccc2",
+          "lines": 175,
+          "parts": 2
+        },
+        {
+          "name": "BC_VisualEffects",
+          "type": "ModuleScript",
+          "location": "ReplicatedStorage",
+          "action": "CRIAR",
+          "path": "scripts/V74/BC_VisualEffects.lua",
+          "sha256": "145207632179e49d288829e1575f378dfc36cab285702f035b255d31c99e57bf",
+          "lines": 77,
+          "parts": 2
+        },
+        {
+          "name": "BC_Server",
+          "type": "Script",
+          "location": "ServerScriptService",
+          "action": "CRIAR",
+          "path": "scripts/V74/BC_Server.lua",
+          "sha256": "f96eed22dcb4e90dec037bb494a366ebca1d25086a11b6623386edbf592cf988",
+          "lines": 50,
+          "parts": 2
+        },
+        {
+          "name": "BC_Client",
+          "type": "LocalScript",
+          "location": "StarterPlayer > StarterPlayerScripts",
+          "action": "CRIAR",
+          "path": "scripts/V74/BC_Client.lua",
+          "sha256": "14b356ad92f656f71442f906ca7b05cb7360577829335ecae2da654468442e8b",
+          "lines": 124,
+          "parts": 2
+        },
+        {
+          "name": "07G3_PERSONAL_TOOLS",
+          "type": "ModuleScript",
+          "location": "ReplicatedStorage",
+          "action": "SUBSTITUIR",
+          "path": "scripts/V74/07G3_PERSONAL_TOOLS.lua",
+          "sha256": "8e021e258beded0fcc9a155dc796929539a22cb404d2b51181550b1b9f2db0f1",
+          "lines": 56,
+          "parts": 2
+        },
+        {
+          "name": "07H1_GAME_LOBBY",
+          "type": "ModuleScript",
+          "location": "ReplicatedStorage",
+          "action": "SUBSTITUIR",
+          "path": "scripts/V74/07H1_GAME_LOBBY.lua",
+          "sha256": "1db3c95a9f9b8dc68c51793fa02651c111c39d584a15eefa8c506cdd6043b696",
+          "lines": 209,
+          "parts": 2
+        },
+        {
+          "name": "09B5_AVATAR_RUNTIME",
+          "type": "ModuleScript",
+          "location": "ServerScriptService",
+          "action": "SUBSTITUIR",
+          "path": "scripts/V74/09B5_AVATAR_RUNTIME.lua",
+          "sha256": "d6c0344a9b1b947d3cdc84305ca795c597c9c42e39b7e1efcef1d819c4474c72",
+          "lines": 218,
+          "parts": 2
+        },
+        {
+          "name": "09C5_UGC_STORES",
+          "type": "ModuleScript",
+          "location": "ReplicatedStorage",
+          "action": "SUBSTITUIR",
+          "path": "scripts/V74/09C5_UGC_STORES.lua",
+          "sha256": "5cb7c43f33262f49ea14a504c47e313773a7a4e72a5706f23aba49001bea2ac2",
+          "lines": 188,
+          "parts": 2
+        },
+        {
+          "name": "09I7_ASSISTANT_PROFILE",
+          "type": "ModuleScript",
+          "location": "ReplicatedStorage",
+          "action": "SUBSTITUIR",
+          "path": "scripts/V74/09I7_ASSISTANT_PROFILE.lua",
+          "sha256": "54e44ed012c2371c6995acf588f503d5cf529d2cd2104df5c67cbbd2c86feaaf",
+          "lines": 68,
+          "parts": 2
+        },
+        {
+          "name": "09I9_GAME_GUIDE",
+          "type": "ModuleScript",
+          "location": "ReplicatedStorage",
+          "action": "SUBSTITUIR",
+          "path": "scripts/V74/09I9_GAME_GUIDE.lua",
+          "sha256": "e55e4ce56a97acfbbefb055eb4a7bc42394693f7f7fa448b766dd5d1c5fca4dc",
+          "lines": 77,
+          "parts": 2
+        },
+        {
+          "name": "01C_HUB_CHALLENGES",
+          "type": "Script",
+          "location": "ServerScriptService",
+          "action": "SUBSTITUIR",
+          "path": "scripts/V74/01C_HUB_CHALLENGES.lua",
+          "sha256": "c5f8c4b088a1aee62ca4dcc17a2360e1f99dc98c95d940e5ea282c18105f7fd4",
+          "lines": 96,
+          "parts": 2
+        },
+        {
+          "name": "07G_SETTINGS_SERVER",
+          "type": "Script",
+          "location": "ServerScriptService",
+          "action": "SUBSTITUIR",
+          "path": "scripts/V74/07G_SETTINGS_SERVER.lua",
+          "sha256": "c63d003dd0c44a242b7b511c552f11a884a612647ed74e1b0487296c9dd61f33",
+          "lines": 56,
+          "parts": 2
+        },
+        {
+          "name": "07K_TRUCO_SERVER",
+          "type": "Script",
+          "location": "ServerScriptService",
+          "action": "SUBSTITUIR",
+          "path": "scripts/V74/07K_TRUCO_SERVER.lua",
+          "sha256": "e9f0a0601c572e569d6c83ec1af0f09f84f128246744f5da8895722fbf6ac00a",
+          "lines": 280,
+          "parts": 2
+        },
+        {
+          "name": "09I_ASSISTANT_SERVER",
+          "type": "Script",
+          "location": "ServerScriptService",
+          "action": "SUBSTITUIR",
+          "path": "scripts/V74/09I_ASSISTANT_SERVER.lua",
+          "sha256": "88b781434aa37a7c11642211937e16347c0b254c8633ff1a44dc9212a942cd9d",
+          "lines": 151,
+          "parts": 2
+        },
+        {
+          "name": "07G_HUB_UI",
+          "type": "LocalScript",
+          "location": "StarterPlayer > StarterPlayerScripts",
+          "action": "SUBSTITUIR",
+          "path": "scripts/V74/07G_HUB_UI.lua",
+          "sha256": "61c07b4d171a3c0514babf246aeafead3224ad89206404ec7d8ba19b548f75e4",
+          "lines": 100,
+          "parts": 2
+        },
+        {
+          "name": "07H_GAME_UI",
+          "type": "LocalScript",
+          "location": "StarterPlayer > StarterPlayerScripts",
+          "action": "SUBSTITUIR",
+          "path": "scripts/V74/07H_GAME_UI.lua",
+          "sha256": "c236f5f0f04551a3601e66c1842e2a655b32f9e7818ae81d17b09e0263baa582",
+          "lines": 257,
           "parts": 2
         }
       ]

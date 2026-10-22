@@ -1,0 +1,583 @@
+[
+  {
+    "path": "manifest.json",
+    "bytes": 420565,
+    "chars": 419034,
+    "git_sha": "6997968772f41d0f986d28fc35622bd2e000a345",
+    "encoding": "utf-8"
+  },
+  {
+    "path": "README.md",
+    "bytes": 2279,
+    "chars": 2213,
+    "git_sha": "eed8a6ad0c887149b8495c9e4ed6243de6036589",
+    "encoding": "utf-8"
+  },
+  {
+    "path": "DIRETRIZES_VISUAIS.md",
+    "bytes": 6174,
+    "chars": 5989,
+    "git_sha": "f1778596c12a52a096846e46da2a17849702f16b",
+    "encoding": "utf-8"
+  },
+  {
+    "path": "INSTALL_V74.md",
+    "bytes": 11511,
+    "chars": 11262,
+    "git_sha": "a38eceed3bb85a0dc84467eb98f42bd5d4e10a6f",
+    "encoding": "utf-8"
+  },
+  {
+    "path": "AVATAR_PLAZA_SCRIPT_HUB_PERMANENTE.html",
+    "bytes": 6104987,
+    "chars": 6085869,
+    "git_sha": "e5ce37bf3643d8bff064dd73adee60d9876a0702",
+    "encoding": "utf-8"
+  },
+  {
+    "path": "AVATAR_PLAZA_V74.html",
+    "bytes": 6104987,
+    "chars": 6085869,
+    "git_sha": "e5ce37bf3643d8bff064dd73adee60d9876a0702",
+    "encoding": "utf-8"
+  },
+  {
+    "path": "scripts/V74/01C_HUB_CHALLENGES.lua",
+    "bytes": 8707,
+    "chars": 8678,
+    "git_sha": "cb4c7a927db1a24e0093ac2e15f875c10074e8c1",
+    "encoding": "utf-8"
+  },
+  {
+    "path": "scripts/V74/07G3_PERSONAL_TOOLS.lua",
+    "bytes": 4399,
+    "chars": 4388,
+    "git_sha": "76d3cc364d559dceb551d0ff2ada2878bab31200",
+    "encoding": "utf-8"
+  },
+  {
+    "path": "scripts/V74/07G_HUB_UI.lua",
+    "bytes": 8673,
+    "chars": 8663,
+    "git_sha": "1a62fac1e6b1f75c13cbddd9e5b5452c214f3b75",
+    "encoding": "utf-8"
+  },
+  {
+    "path": "scripts/V74/07G_SETTINGS_SERVER.lua",
+    "bytes": 4257,
+    "chars": 4247,
+    "git_sha": "a92c1476725c933c99b23e7426aa12bcab86caa5",
+    "encoding": "utf-8"
+  },
+  {
+    "path": "scripts/V74/07H11_GAME_LIBRARY.lua",
+    "bytes": 6961,
+    "chars": 6940,
+    "git_sha": "a81dc987c0de4d45fa1413509b3c62740f155207",
+    "encoding": "utf-8"
+  },
+  {
+    "path": "scripts/V74/07H1_GAME_LOBBY.lua",
+    "bytes": 20299,
+    "chars": 20235,
+    "git_sha": "783f556bafc8b2824868cb0159b4045ca57f98ab",
+    "encoding": "utf-8"
+  },
+  {
+    "path": "scripts/V74/07H_GAME_UI.lua",
+    "bytes": 20792,
+    "chars": 20740,
+    "git_sha": "aeb3a835bf43950e58168977d7e1bb01539eb1aa",
+    "encoding": "utf-8"
+  },
+  {
+    "path": "scripts/V74/07K_TRUCO_SERVER.lua",
+    "bytes": 21550,
+    "chars": 21502,
+    "git_sha": "3db54bb62eadebe8e6b4ed07bdf2864a83503ba3",
+    "encoding": "utf-8"
+  },
+  {
+    "path": "scripts/V74/09B5_AVATAR_RUNTIME.lua",
+    "bytes": 14367,
+    "chars": 14340,
+    "git_sha": "5f3af3ff182868f0da6316ef71fe5b14063adc8d",
+    "encoding": "utf-8"
+  },
+  {
+    "path": "scripts/V74/09C5_UGC_STORES.lua",
+    "bytes": 21351,
+    "chars": 21299,
+    "git_sha": "f514595b880c56e8b5278efa3f4f44f381e53de9",
+    "encoding": "utf-8"
+  },
+  {
+    "path": "scripts/V74/09I25_PLAN_PRODUCTS.lua",
+    "bytes": 3478,
+    "chars": 3459,
+    "git_sha": "c024fa8859545f4cc5d3193a856e260de38ba2e8",
+    "encoding": "utf-8"
+  },
+  {
+    "path": "scripts/V74/09I7_ASSISTANT_PROFILE.lua",
+    "bytes": 7341,
+    "chars": 7285,
+    "git_sha": "79f0369f8ad8f0209a92a57663ef2c985da16d01",
+    "encoding": "utf-8"
+  },
+  {
+    "path": "scripts/V74/09I9_GAME_GUIDE.lua",
+    "bytes": 23396,
+    "chars": 22857,
+    "git_sha": "522017726cd81bfd081dfa9e41365c16a8dc9ec4",
+    "encoding": "utf-8"
+  },
+  {
+    "path": "scripts/V74/09I_ASSISTANT_SERVER.lua",
+    "bytes": 14046,
+    "chars": 13996,
+    "git_sha": "4ce79f7bcc27ac809bb8601d27558b13b19657ca",
+    "encoding": "utf-8"
+  },
+  {
+    "path": "scripts/V74/BC_ArenaBuilder.lua",
+    "bytes": 4571,
+    "chars": 4562,
+    "git_sha": "822f0189c1f0ffd663fab12d22b3594e3f460d54",
+    "encoding": "utf-8"
+  },
+  {
+    "path": "scripts/V74/BC_ButtonController.lua",
+    "bytes": 4207,
+    "chars": 4182,
+    "git_sha": "287a513a17e3fb285e6fc134e0da77e53792deb6",
+    "encoding": "utf-8"
+  },
+  {
+    "path": "scripts/V74/BC_Client.lua",
+    "bytes": 8969,
+    "chars": 8953,
+    "git_sha": "b0ad2037ecf95c2d4c2f8ed6521f6ea1969502c6",
+    "encoding": "utf-8"
+  },
+  {
+    "path": "scripts/V74/BC_Combat.lua",
+    "bytes": 5143,
+    "chars": 5129,
+    "git_sha": "736fa66e42513e6c8896e5360bcab3a3d589a07c",
+    "encoding": "utf-8"
+  },
+  {
+    "path": "scripts/V74/BC_Config.lua",
+    "bytes": 2231,
+    "chars": 2198,
+    "git_sha": "c6b6ef842b449a6901d639e7d9030cfa96558100",
+    "encoding": "utf-8"
+  },
+  {
+    "path": "scripts/V74/BC_EffectExecutor.lua",
+    "bytes": 3759,
+    "chars": 3753,
+    "git_sha": "69ca46e78e600307721486672f14ac1c6f45513f",
+    "encoding": "utf-8"
+  },
+  {
+    "path": "scripts/V74/BC_EffectRegistry.lua",
+    "bytes": 806,
+    "chars": 806,
+    "git_sha": "69496737674e60ec431c5cc095f1cfcaa6e4e9a4",
+    "encoding": "utf-8"
+  },
+  {
+    "path": "scripts/V74/BC_HUD.lua",
+    "bytes": 13586,
+    "chars": 13507,
+    "git_sha": "2f6a06010e7dab1b467cdd13676ea1aeda5e657a",
+    "encoding": "utf-8"
+  },
+  {
+    "path": "scripts/V74/BC_Integration.lua",
+    "bytes": 3370,
+    "chars": 3366,
+    "git_sha": "6c39605b649a7f0ea2cdc341384ff09a998fcb38",
+    "encoding": "utf-8"
+  },
+  {
+    "path": "scripts/V74/BC_PlayerState.lua",
+    "bytes": 3492,
+    "chars": 3484,
+    "git_sha": "4d909ac0eb6a9fb9314dd1e3d54d66a3f1009c8b",
+    "encoding": "utf-8"
+  },
+  {
+    "path": "scripts/V74/BC_Queue.lua",
+    "bytes": 856,
+    "chars": 851,
+    "git_sha": "6018c667962d4e9c2b3b325cebf0299043166ac9",
+    "encoding": "utf-8"
+  },
+  {
+    "path": "scripts/V74/BC_RoundManager.lua",
+    "bytes": 10806,
+    "chars": 10787,
+    "git_sha": "0230d123589abcfeabd6a964c4de5aabcfa090b1",
+    "encoding": "utf-8"
+  },
+  {
+    "path": "scripts/V74/BC_Server.lua",
+    "bytes": 3853,
+    "chars": 3841,
+    "git_sha": "969f5a8a4d3e54e177b9e5da3c2de3ab86ff05ee",
+    "encoding": "utf-8"
+  },
+  {
+    "path": "scripts/V74/BC_VisualEffects.lua",
+    "bytes": 5642,
+    "chars": 5639,
+    "git_sha": "c439f39b6e3cf981558bc165ff4f6b1351fc9625",
+    "encoding": "utf-8"
+  },
+  {
+    "path": "audits/V74/README.md",
+    "bytes": 9665,
+    "chars": 9380,
+    "git_sha": "a111985f8d83d4f51dc1f843a5cc7a3b114bacfe",
+    "encoding": "utf-8"
+  },
+  {
+    "path": "audits/V74/INSTALL_DETAILS.md",
+    "bytes": 8770,
+    "chars": 8540,
+    "git_sha": "50be9bcaa5e1ff020ed82dd51030c3cbb6a8095c",
+    "encoding": "utf-8"
+  },
+  {
+    "path": "audits/V74/base_manifest.json",
+    "bytes": 408722,
+    "chars": 407245,
+    "git_sha": "842d8cf1b67b88325eb0b94a077700b916a375e2",
+    "encoding": "utf-8"
+  },
+  {
+    "path": "audits/V74/base_commit.txt",
+    "bytes": 41,
+    "chars": 41,
+    "git_sha": "2312c0eccc80818c1f47eb1308436371d365d78c",
+    "encoding": "utf-8"
+  },
+  {
+    "path": "audits/V74/build_installer.py",
+    "bytes": 6395,
+    "chars": 6324,
+    "git_sha": "4237764268c38603700929bc3fe1a2094a5ad233",
+    "encoding": "utf-8"
+  },
+  {
+    "path": "audits/V74/bc_doubles.lua",
+    "bytes": 4161,
+    "chars": 4161,
+    "git_sha": "1495b7a172c8c1ad806821bdb4531e77326a5fe6",
+    "encoding": "utf-8"
+  },
+  {
+    "path": "audits/V74/run_checks.py",
+    "bytes": 908,
+    "chars": 908,
+    "git_sha": "6fb073b7996e06214ec330bb43100c9766f52310",
+    "encoding": "utf-8"
+  },
+  {
+    "path": "audits/V74/export_layouts.py",
+    "bytes": 6468,
+    "chars": 6466,
+    "git_sha": "ba5e8eb43b923c1c475566f51796dd36fbf428e7",
+    "encoding": "utf-8"
+  },
+  {
+    "path": "audits/V74/render_layouts.py",
+    "bytes": 4867,
+    "chars": 4853,
+    "git_sha": "f9444f6aaad8c5e650dff691ff4481bcab69997d",
+    "encoding": "utf-8"
+  },
+  {
+    "path": "audits/V74/test_installer_logic.cjs",
+    "bytes": 8854,
+    "chars": 8848,
+    "git_sha": "f454babda6b059d6a6da3087958a1698ee4088d4",
+    "encoding": "utf-8"
+  },
+  {
+    "path": "audits/V74/test_counters.cjs",
+    "bytes": 5272,
+    "chars": 5272,
+    "git_sha": "18198ac49dd0d7d84c14d50658ff546ddd9c043b",
+    "encoding": "utf-8"
+  },
+  {
+    "path": "audits/V74/test_chaos.py",
+    "bytes": 20449,
+    "chars": 20443,
+    "git_sha": "83aee9d06952f9da05b42768240a372ac62779d4",
+    "encoding": "utf-8"
+  },
+  {
+    "path": "audits/V74/test_delta.py",
+    "bytes": 20468,
+    "chars": 20467,
+    "git_sha": "bd7cee7a6be08f3a0115aef1b50243bb5a7571b5",
+    "encoding": "utf-8"
+  },
+  {
+    "path": "audits/V74/test_features.py",
+    "bytes": 19798,
+    "chars": 19786,
+    "git_sha": "057f472a9ac5c0c0f35722d0ddd57fd62f5147f8",
+    "encoding": "utf-8"
+  },
+  {
+    "path": "audits/V74/test_fixes.py",
+    "bytes": 10454,
+    "chars": 10453,
+    "git_sha": "65cb623c640bfc45448b131dc2cb40b024901051",
+    "encoding": "utf-8"
+  },
+  {
+    "path": "audits/V74/test_interface.py",
+    "bytes": 13457,
+    "chars": 13451,
+    "git_sha": "6ce23f2b446f2f8934fa57c91e5e07637c0f960d",
+    "encoding": "utf-8"
+  },
+  {
+    "path": "audits/V74/test_package.py",
+    "bytes": 3259,
+    "chars": 3259,
+    "git_sha": "0f3a1d35cd16935ffea085a46560536f834a81e6",
+    "encoding": "utf-8"
+  },
+  {
+    "path": "audits/V74/test_regressions.py",
+    "bytes": 9910,
+    "chars": 9910,
+    "git_sha": "302cb336b896760183ff31af3e58c6b98f3be3aa",
+    "encoding": "utf-8"
+  },
+  {
+    "path": "audits/V74/test_support.py",
+    "bytes": 4804,
+    "chars": 4804,
+    "git_sha": "1a4bf1fff9e99458cfdb478db66caa7bd8461636",
+    "encoding": "utf-8"
+  },
+  {
+    "path": "audits/V74/test_v67.py",
+    "bytes": 18950,
+    "chars": 18942,
+    "git_sha": "0f156333087689f05888f2334c00a740f9911932",
+    "encoding": "utf-8"
+  },
+  {
+    "path": "audits/V74/test_v68.py",
+    "bytes": 21612,
+    "chars": 21605,
+    "git_sha": "8b34cb9031190c12ec7c016691529c061464fced",
+    "encoding": "utf-8"
+  },
+  {
+    "path": "audits/V74/test_v69.py",
+    "bytes": 23015,
+    "chars": 23012,
+    "git_sha": "0e3d945d49d9d1ff182d0cdb329926935b8152a6",
+    "encoding": "utf-8"
+  },
+  {
+    "path": "audits/V74/test_v72.py",
+    "bytes": 18037,
+    "chars": 18029,
+    "git_sha": "d03bbcb91b9a28fa780cd7a6631d564ad5a6cfdd",
+    "encoding": "utf-8"
+  },
+  {
+    "path": "audits/V74/test_v73.py",
+    "bytes": 11008,
+    "chars": 11000,
+    "git_sha": "7a120a5260710cc9ce2bdc8e74cbc7f869e3662b",
+    "encoding": "utf-8"
+  },
+  {
+    "path": "audits/V74/test_v74_ui.py",
+    "bytes": 10928,
+    "chars": 10927,
+    "git_sha": "9b70d1442d94d72972cd07468a1f01ab3bf367f5",
+    "encoding": "utf-8"
+  },
+  {
+    "path": "audits/V74/chaos_results.json",
+    "bytes": 6255,
+    "chars": 6255,
+    "git_sha": "7419f518785189f565b175db1aa553bf2aa2cbb8",
+    "encoding": "utf-8"
+  },
+  {
+    "path": "audits/V74/counter_results.json",
+    "bytes": 484,
+    "chars": 484,
+    "git_sha": "b0b78fa291ae5812381f269f4c7fd78ad65063d8",
+    "encoding": "utf-8"
+  },
+  {
+    "path": "audits/V74/delta_results.json",
+    "bytes": 4680,
+    "chars": 4680,
+    "git_sha": "b6b6331883b183b72bd8dbeeb03e6849d13c078f",
+    "encoding": "utf-8"
+  },
+  {
+    "path": "audits/V74/feature_results.json",
+    "bytes": 4899,
+    "chars": 4899,
+    "git_sha": "8f61c6e68f9d917444e6009373329249facc0a02",
+    "encoding": "utf-8"
+  },
+  {
+    "path": "audits/V74/fix_results.json",
+    "bytes": 3176,
+    "chars": 3176,
+    "git_sha": "a58bada9806201796d95ba6654eda871a4b50838",
+    "encoding": "utf-8"
+  },
+  {
+    "path": "audits/V74/installer_logic_results.json",
+    "bytes": 878,
+    "chars": 878,
+    "git_sha": "b3102dea65753a4a590633c88e73014eef6f412a",
+    "encoding": "utf-8"
+  },
+  {
+    "path": "audits/V74/interface_results.json",
+    "bytes": 2476,
+    "chars": 2474,
+    "git_sha": "742b27835249d4651f48dfa9468d96381e0b7272",
+    "encoding": "utf-8"
+  },
+  {
+    "path": "audits/V74/package_results.json",
+    "bytes": 302,
+    "chars": 302,
+    "git_sha": "22cc50c99d1e9b0f88ec05cf12e798e921124597",
+    "encoding": "utf-8"
+  },
+  {
+    "path": "audits/V74/regression_results.json",
+    "bytes": 2538,
+    "chars": 2538,
+    "git_sha": "5605024fa61e29653c9ef81ee4ee73f662d1d27a",
+    "encoding": "utf-8"
+  },
+  {
+    "path": "audits/V74/suite_results.json",
+    "bytes": 904,
+    "chars": 904,
+    "git_sha": "4b133e940c070539dde59413cfa249e3b1dfbdd5",
+    "encoding": "utf-8"
+  },
+  {
+    "path": "audits/V74/syntax_results.json",
+    "bytes": 302,
+    "chars": 302,
+    "git_sha": "d1b9ec6f9953c27b48b5f0f3f66f4fff86c76760",
+    "encoding": "utf-8"
+  },
+  {
+    "path": "audits/V74/v67_results.json",
+    "bytes": 5404,
+    "chars": 5404,
+    "git_sha": "3b81dce91708895613a8cb6889904de1f060e79b",
+    "encoding": "utf-8"
+  },
+  {
+    "path": "audits/V74/v68_results.json",
+    "bytes": 5397,
+    "chars": 5397,
+    "git_sha": "8d9c4bd9c48ae788c6d54ecefe17221ede6d37c9",
+    "encoding": "utf-8"
+  },
+  {
+    "path": "audits/V74/v69_results.json",
+    "bytes": 5326,
+    "chars": 5326,
+    "git_sha": "07ff78b8df9cb79c97b5a9ce31191f7b41e58a14",
+    "encoding": "utf-8"
+  },
+  {
+    "path": "audits/V74/v72_results.json",
+    "bytes": 4497,
+    "chars": 4495,
+    "git_sha": "1e228a1cbb998ac7c3d3e2a9f9db823cd7893e32",
+    "encoding": "utf-8"
+  },
+  {
+    "path": "audits/V74/v73_results.json",
+    "bytes": 3124,
+    "chars": 3124,
+    "git_sha": "fda822b1f4a12d511ff855613e4fabaa7b44a8fb",
+    "encoding": "utf-8"
+  },
+  {
+    "path": "audits/V74/v74_ui_results.json",
+    "bytes": 2120,
+    "chars": 2120,
+    "git_sha": "4d93d98d4e46ef8801f8a50ddd2c429a6734e6ef",
+    "encoding": "utf-8"
+  },
+  {
+    "path": "audits/V74/sponsor_landscape.jpg",
+    "bytes": 83212,
+    "chars": 110952,
+    "git_sha": "896cdec3fc20fdda807aae455a1e42f04daa517a",
+    "encoding": "base64"
+  },
+  {
+    "path": "audits/V74/hud_phone.jpg",
+    "bytes": 30993,
+    "chars": 41324,
+    "git_sha": "964af9af85e590be42db2d57505a32dd2634f055",
+    "encoding": "base64"
+  },
+  {
+    "path": "audits/V74/library_desktop.jpg",
+    "bytes": 108288,
+    "chars": 144384,
+    "git_sha": "47da7ba4d9cc99fe36e0106267bf9759e0455181",
+    "encoding": "base64"
+  },
+  {
+    "path": "audits/V74/library_phone.jpg",
+    "bytes": 67475,
+    "chars": 89968,
+    "git_sha": "0743290dadf4f05a0e2d6ed82de43f32e8801b5e",
+    "encoding": "base64"
+  },
+  {
+    "path": "audits/V74/chaos_queue_landscape.jpg",
+    "bytes": 49197,
+    "chars": 65596,
+    "git_sha": "a2e907c9843ac9f1e1df68b9d1a20c769dc86d52",
+    "encoding": "base64"
+  },
+  {
+    "path": "audits/V74/chaos_match_phone.jpg",
+    "bytes": 25775,
+    "chars": 34368,
+    "git_sha": "4d35d0b3c8718f94d93eb4bf88b2e76db109d9ad",
+    "encoding": "base64"
+  },
+  {
+    "path": "audits/V74/chaos_results_landscape.jpg",
+    "bytes": 38038,
+    "chars": 50720,
+    "git_sha": "3d3289bbd74f36609e411484c28ba0dfda70ba1a",
+    "encoding": "base64"
+  }
+]

@@ -1,0 +1,77 @@
+[
+  {
+    "case": "plans_effort_and_mandatory_body_contract_cannot_be_bypassed",
+    "result": "pass",
+    "detail": "server sanitizes each plan, restricts paid effort, rejects unconfirmed bodies and incompatible R6/layers or contradictory required pieces; existing products and 30-day duration retained"
+  },
+  {
+    "case": "exact_body_is_required_reserved_in_budget_and_never_silently_replaced",
+    "result": "pass",
+    "detail": "the confirmed bundle is resolved before garments, retains its body parts, consumes its real 60-Robux cost and fails explicitly when missing or over budget; absent optional hair is never marked complete"
+  },
+  {
+    "case": "exact_clothing_id_type_and_piece_query_do_not_fall_back_to_another_request",
+    "result": "pass",
+    "detail": "a required classic tee is a GraphicTShirt rather than a Shirt; a wrong exact type or missing specific per-piece subject fails instead of filling with an unrelated garment"
+  },
+  {
+    "case": "four_step_form_confirms_body_and_advanced_type_without_automatic_send",
+    "result": "pass",
+    "detail": "visual body selection and advanced exact clothing IDs survive confirmation of all four stages; no catalog generation starts before the explicit confirmation"
+  },
+  {
+    "case": "pro_continues_requested_quantity_in_five_five_two_without_extra_daily_charge",
+    "result": "pass",
+    "detail": "the actual remote server creates 5 + 5 + 2, charges one request, never reverts the last batch to five and gives each result a session-bound key"
+  },
+  {
+    "case": "pro_continuation_rejects_expired_access_or_cancelled_job_and_prompt_does_not_grant",
+    "result": "pass",
+    "detail": "a batch belongs to a live Pro entitlement and current conversation; cancellation invalidates it; an upgrade uses the existing product and cannot grant access from the prompt callback"
+  },
+  {
+    "case": "new_avatar_wizard_is_preview_only_until_final_step_and_hair_is_real_accessory",
+    "result": "pass",
+    "detail": "body/tone/hair/scale form keeps drafts separate, only the fourth-step confirmation calls skin state, Undo restores the previous look and hair uses the native accessory schema"
+  },
+  {
+    "case": "save_outfit_and_account_prompts_report_only_native_completed_result",
+    "result": "pass",
+    "detail": "outfit creation and saving the Roblox account avatar are distinct native prompts; denied/cancelled requests never say saved, while only Success confirms completion"
+  },
+  {
+    "case": "catalog_purchase_history_requires_native_completion_and_ownership_and_batches_writes",
+    "result": "pass",
+    "detail": "server records only a completed and ownership-confirmed native catalog purchase, isolates users and batches persistence instead of writing on each UI open"
+  },
+  {
+    "case": "animation_pack_resolves_specific_native_clip_and_reuses_copied_avatar",
+    "result": "pass",
+    "detail": "a real bundle is validated as Animations, idle/walk use separate cache keys and tracks change on the same photo clone instead of rebuilding the avatar"
+  },
+  {
+    "case": "photo_background_selection_survives_reopen_and_visual_effects_are_local",
+    "result": "pass",
+    "detail": "the selected approved Roblox background is restored next time; head/body effects and clones live only in the disposable photo scene and never change the map avatar"
+  },
+  {
+    "case": "photo_catalog_is_real_grid_and_click_targets_test_copy_or_prompt_purchase",
+    "result": "pass",
+    "detail": "catalog data comes from native search, item cards use a grid, tapping tests the copied avatar and the separate price target opens the official purchase"
+  },
+  {
+    "case": "preview_width_and_two_row_shelves_fit_seven_safe_geometries",
+    "result": "pass",
+    "detail": "preview no longer sacrifices a 48–96-pixel rail; the full-width avatar, five actions and equipped strip remain inside the safe layout on seven sizes"
+  },
+  {
+    "case": "assistant_progress_stop_and_sidebar_upgrade_remain_reachable",
+    "result": "pass",
+    "detail": "stage success reflects an explicit done event, stop dispatches cancellation and Plus/Pro is reachable at the sidebar footer without covering the account button"
+  },
+  {
+    "case": "request_novelty_survives_batches_without_unbounded_signature_storage",
+    "result": "pass",
+    "detail": "two batches cannot repeat the same outfit even if the recent-account history is absent; the request uses bounded duplicate filters rather than an unlimited array of all results"
+  }
+]

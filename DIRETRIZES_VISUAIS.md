@@ -44,3 +44,11 @@ Partir da V69 por pedido explícito do responsável. V70 fica preservada no hist
 - Usar prévia lateral menor em modo deitado/computador e prévia opcional com X em pé. Respeitar barra nativa/recortes, mantendo alvos de 44 px nas geometrias suportadas.
 - Ao investigar falhas, separar o que foi reproduzido no código dos indícios de instalação. Não atribuir culpa ao usuário sem conferir a fonte instalada. Evitar mensagens genéricas que afirmam abrir uma função que falhou.
 - Callbacks não devem reutilizar instâncias destruídas. Clientes duplicados ou fontes copiadas no nome errado precisam de diagnóstico explícito.
+
+## Continuidade V74
+
+- Partir da V73 publicada (`144dcc4d8168536b87d8e046b117a965714c5312`). A biblioteca se chama **Nossos jogos** e identifica as implementações do Avatar Catalog & Games, com cards e caminhos claros para jogar. Truco/Xadrez/Damas mantêm regras, bots, relógios, pontuação e conversas; novas travas apenas impedem salas simultâneas.
+- HUD maior e legível com grafite suave, poucos acentos e nomes visíveis. Agrupar os atalhos de avatar sem eliminar funções. Patrocinar conserva 6 × 4 e usa cards neutros; imagem e preço recebem o destaque.
+- Botão do Caos V1 segue o GDD aprovado: uma arena isolada da praça; mesmo avatar; 2–8 pessoas; fila FIFO; 12/5/150/10 segundos de preparação/contagem/disputa/resultados; treino separado de 90 segundos; 12 efeitos gratuitos e autoridade do servidor. Não implementar Rodovia 061 nesta versão.
+- Nunca alterar o inventário do catálogo para criar poderes. Ferramentas antigas são guardadas e devolvidas; a espera pela mochila nativa não autoriza apagá-las. Limpar câmera, foco de streaming, efeitos e ferramentas temporárias na saída.
+- O desenvolvimento da V1 permanece **PENDENTE DE TESTE NATIVO** até a validação com usuários reais, celulares, corpos personalizados e desempenho medido. Simulações não aprovam FPS ou o lançamento no Roblox.

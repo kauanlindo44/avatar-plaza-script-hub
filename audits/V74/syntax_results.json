@@ -1,0 +1,14 @@
+{
+  "syntax": "pass",
+  "effective_sources": 171,
+  "delta_items": 28,
+  "replace": 12,
+  "create": 16,
+  "max_lines": 280,
+  "receipt_owner": [
+    "07K10_CARD_COMMERCE"
+  ],
+  "history_unchanged": true,
+  "existing_game_rules_bots_and_clocks_unchanged": true,
+  "native_tests": "PENDENTE DE TESTE"
+}
