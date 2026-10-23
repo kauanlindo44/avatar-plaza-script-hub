@@ -1,0 +1,11 @@
+PASS our_game_library_owns_four_cards_and_keeps_existing_game_options four clearly identified games; each existing card still opens its original modes/bots, while Chaos calls a separate integration callback and Back restores the library
+PASS desktop_game_selection_keeps_library_beside_the_original_actions desktop keeps our four games in a separate selector beside the original play actions; setup retains its existing independent layout
+PASS library_and_chaos_touch_controls_fit_safe_phone_and_desktop_bounds seven safe geometries preserve queue, exit, reduced-effects, firing and confirmation controls; scalable library cards retain readable titles/artwork and scroll vertically when needed
+[V75] HUD compacto: centro livre, IA direta e atalhos por função
+PASS hud_primary_labels_and_every_avatar_shortcut_are_accessible primary actions use visible labels and separate touch targets; all existing avatar/load/emote/save/reset/Plus actions remain available through the identified Avatar menu
+AVATAR PLAZA V41: 08D_SKIN_STATE corpo/R6/R15 pronto
+[V75][BC] Interface, mira e espectador conectados
+PASS actual_chaos_client_keeps_touch_controls_and_restores_catalog_on_exit actual new LocalScript opens the queue, hides only our interfaces, keeps native touch/foreign editor UIs enabled, confirms exits and restores the catalog on the server return event
+PASS plan_products_diagnose_native_offsale_incomplete_wrong_game_and_official_fallback missing sale flag can be verified by the official current-experience product list; explicit false is preserved, no price is invented and wrong-game/service failures have distinct stages
+AVATAR PLAZA V41: 08D_SKIN_STATE corpo/R6/R15 pronto
+PASS local_chaos_effects_cannot_change_global_lighting_or_leave_objects real effect functions create only bounded local objects, darkness belongs to the local camera, global environment remains unchanged and clear/destroy remove all owned visual/audio objects

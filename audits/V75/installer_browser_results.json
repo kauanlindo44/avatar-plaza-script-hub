@@ -1,0 +1,6 @@
+{
+  "result": "not_run",
+  "reason": "Chromium executable is not installed in this runtime",
+  "otherChecks": "Actual JavaScript, source copies, hashes and DOM double tests are recorded separately",
+  "nativeRoblox": false
+}

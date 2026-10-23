@@ -1,0 +1,47 @@
+AVATAR PLAZA V41: 08D_SKIN_STATE corpo/R6/R15 pronto
+PASS T01_one_player_waits_then_explicit_training_ends_at_90_seconds one player never auto-starts competitive play; explicit solo training runs exactly 90 seconds with no victory bonus
+AVATAR PLAZA V41: 08D_SKIN_STATE corpo/R6/R15 pronto
+PASS T02_two_players_timing_button_and_original_avatar_are_preserved 12-second FIFO preparation, 5-second freeze, 150-second clock, first button after 4 seconds and next after 8; entry never recreates the selected avatar
+AVATAR PLAZA V41: 08D_SKIN_STATE corpo/R6/R15 pronto
+PASS T03_T04_eight_slots_and_ninth_waits_in_fifo_order exactly eight distinct spawns and participants; the ninth keeps first position for the following round
+AVATAR PLAZA V41: 08D_SKIN_STATE corpo/R6/R15 pronto
+PASS T05_T06_first_valid_prompt_wins_dead_far_outsider_and_late_presses_fail atomic server claim gives only one point; outsiders, eliminated players, distant characters and packets at the expired deadline cannot press
+AVATAR PLAZA V41: 08D_SKIN_STATE corpo/R6/R15 pronto
+PASS button_timeout_moves_without_points_and_never_repeats_position untouched button relocates after 15 seconds without drawing an effect or awarding a point
+AVATAR PLAZA V41: 08D_SKIN_STATE corpo/R6/R15 pronto
+PASS T07_T08_damage_cadence_ammo_raycast_roster_and_shield_are_server_owned NaN/forged token/cadence rejected; only same-round ray hits damage, shield consumes one event, ammo is exactly three and the server deletes the spent tool
+AVATAR PLAZA V41: 08D_SKIN_STATE corpo/R6/R15 pronto
+PASS T09_nuke_single_target_four_seconds_shield_and_no_reselection one fixed marked target, four-second warning, shield blocks the targeted elimination; departure cancels rather than selecting a different victim
+AVATAR PLAZA V41: 08D_SKIN_STATE corpo/R6/R15 pronto
+PASS effect_draw_has_exact_weights_filters_targets_and_avoids_repeats all cumulative weight intervals map to the documented 100%; consecutive repeat and reused nuke excluded, solo target effects removed with proportional remaining weights
+AVATAR PLAZA V41: 08D_SKIN_STATE corpo/R6/R15 pronto
+PASS freeze_slow_speed_jump_heal_and_timers_recalculate_and_restore freeze > slow > speed compose and expire correctly; heal caps at 100, superjump respects both native jump systems and is fully temporary
+AVATAR PLAZA V41: 08D_SKIN_STATE corpo/R6/R15 pronto
+PASS swap_checks_safety_and_grants_only_short_damage_immunity safe destinations swap exact character transforms with 0.75-second immunity; unsafe outside destination cancels without replacement effect
+AVATAR PLAZA V41: 08D_SKIN_STATE corpo/R6/R15 pronto
+PASS foam_detonates_in_1_8_seconds_can_hit_self_and_zero_survivors_has_no_winner foam is not immediate, uses the server 1.8-second fuse and nine-stud radius, includes self; all victims resolve before zero-survivor winner calculation
+AVATAR PLAZA V41: 08D_SKIN_STATE corpo/R6/R15 pronto
+PASS T10_T11_disconnect_reset_eliminated_spectator_cannot_rejoin_same_round reset and leave eliminate, spectator remains ineligible, chosen avatar runtime may respawn without arena reentry; last connected survivor wins
+AVATAR PLAZA V41: 08D_SKIN_STATE corpo/R6/R15 pronto
+PASS T12_clock_winners_use_survivor_score_before_plus_five_and_no_auto_queue expired clock chooses tied surviving leaders before +5 bonus, ignores a dead higher score; only explicit Continue opts into the next FIFO queue
+AVATAR PLAZA V41: 08D_SKIN_STATE corpo/R6/R15 pronto
+PASS T13_T14_T15_return_cleanup_two_rounds_gear_and_r6_r15_identity R6/R15 keep the same character and body, stashed catalog tool returns, effects/camera focus/attributes clear and the second round has a fresh identifier and no prior powers
+AVATAR PLAZA V41: 08D_SKIN_STATE corpo/R6/R15 pronto
+PASS T16_effect_exception_cannot_deadlock_button_or_reverse_earned_point injected execution error is logged, the accepted press retains +1 and the next button becomes available after eight seconds
+AVATAR PLAZA V41: 08D_SKIN_STATE corpo/R6/R15 pronto
+PASS T17_other_room_members_are_exclusive_and_open_edges_allow_falling cross-game membership is exclusive; open sides never teleport the player back; falling below the platform eliminates before reaching the catalog
+AVATAR PLAZA V41: 08D_SKIN_STATE corpo/R6/R15 pronto
+PASS wave_heal_blackout_and_weapon_expiry_have_bounded_effects wave applies a bounded physical impulse with zero direct damage; blackout is a five-second per-match state and unused weapons expire after 12/10 seconds
+AVATAR PLAZA V41: 08D_SKIN_STATE corpo/R6/R15 pronto
+PASS nuke_kill_points_and_environmental_death_do_not_leak_rewards nuke awards exactly +2 for its one enemy; unrelated environmental death gives no kill points and survivor bonus is calculated only at the end
+AVATAR PLAZA V41: 08D_SKIN_STATE corpo/R6/R15 pronto
+PASS leaving_preparation_cancels_start_and_queue_never_overwrites_catalog_inventory queue and cancelled preparation do not move the avatar, stash gear, alter health, or persist any minigame score
+AVATAR PLAZA V41: 08D_SKIN_STATE corpo/R6/R15 pronto
+PASS inaccessible_button_is_logged_disabled_and_relocated_to_a_clear_site a new collidable obstacle disables the old button, reports its precise location and selects a different reachable location without awarding points
+AVATAR PLAZA V41: 08D_SKIN_STATE corpo/R6/R15 pronto
+PASS native_avatar_must_finish_loading_before_queue_or_round_entry queue entry waits for native avatar confirmation; an in-flight body edit at transport time cancels that entry without replacing or stranding either avatar
+AVATAR PLAZA V41: 08D_SKIN_STATE corpo/R6/R15 pronto
+PASS catalog_tools_survive_a_missing_native_backpack_during_respawn an absent respawn backpack never deletes original catalog tools; a native backpack/character event completes the pending return and releases the entry lock
+AVATAR PLAZA V41: 08D_SKIN_STATE corpo/R6/R15 pronto
+[V74][BC] V1 pronta para testes nativos · arena isolada · 12 efeitos · servidor autoritativo
+PASS actual_server_endpoints_rate_limits_duplicate_guard_and_recovery_reconnect_button actual bootstrap wires native prompt/RPC/event contracts, rate-limits requests, ignores forged damage, rejects duplicate servers and rebuilds a connected working button after an injected tick failure

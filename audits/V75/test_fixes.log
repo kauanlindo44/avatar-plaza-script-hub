@@ -1,0 +1,24 @@
+PASS budget_preserves_private_requests_and_pauses_discovery background work stops before entering the native queue while a small remaining budget still serves a private request
+AVATAR PLAZA V41: 08D_SKIN_STATE corpo/R6/R15 pronto
+PASS saved_looks_cache_reads_once_and_survives_reopening ten reopens need no additional DataStore read; the returned snapshot cannot mutate the cached saved list
+AVATAR PLAZA V41: 08D_SKIN_STATE corpo/R6/R15 pronto
+PASS failed_saved_load_cannot_overwrite_existing_data_and_recovers a missing read budget is shown as pending and blocks destructive saving; recovery returns the actual existing look
+AVATAR PLAZA V41: 08D_SKIN_STATE corpo/R6/R15 pronto
+PASS malformed_saved_record_keeps_store_and_blocks_edits a damaged historical record does not crash the entire list or silently vanish from the saved store; editing is blocked with a diagnostic
+AVATAR PLAZA V41: 08D_SKIN_STATE corpo/R6/R15 pronto
+PASS community_empty_index_does_not_poll_every_three_seconds four minutes on an empty registry produce at most one ordered list request instead of continuously filling its queue
+AVATAR PLAZA V41: 08D_SKIN_STATE corpo/R6/R15 pronto
+PASS community_reuses_global_index_across_players_and_pages shared discovery serves two players from one index and paginates all 120 IDs without duplicate or dropped entries
+AVATAR PLAZA V41: 08D_SKIN_STATE corpo/R6/R15 pronto
+PASS community_same_outfit_is_written_once_and_price_filter_waits_for_verified_total identical avatar signatures share a single confirmed archive write and code in the server cache
+AVATAR PLAZA V41: 08D_SKIN_STATE corpo/R6/R15 pronto
+[IA V75] servidor=V75 motor=V75 protocolo=2
+PASS new_conversation_cancels_inflight_request_and_can_send_again an unfinished conversation can be cancelled; its stale result is not delivered, its quota is refunded once, and the next actual server request completes
+PASS planner_retains_style_for_refinement_and_answers_game_help refinements keep the confirmed style, update color and scope, and concrete saved-look and Truco help uses no external text generator
+AVATAR PLAZA V41: 08D_SKIN_STATE corpo/R6/R15 pronto
+PASS builder_reserves_budget_for_later_garments hair cannot spend the budget needed for shirt/pants/accessory; all four selected real pieces fit the confirmed total
+PASS capture_uses_native_object_and_true_save_share_outcomes current native screenshot object is passed to gallery/share; concurrent captures are rejected and cancelled saving never reports success
+PASS capture_timeout_and_start_failure_release_lock a hung native callback and an unsupported capture call both release the busy lock and allow a later capture
+AVATAR PLAZA V41: 08D_SKIN_STATE corpo/R6/R15 pronto
+[Player V64] TRANSFER_CONFIRMED RobuxTransferSender request=native
+PASS player_copy_permission_is_checked_again_and_transfer_is_native copy permission is rechecked on use/application; ineligible or invalid transfers cannot prompt, and valid transfers use native receipt handling separately from product commerce

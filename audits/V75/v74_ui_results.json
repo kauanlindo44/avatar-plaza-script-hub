@@ -1,0 +1,37 @@
+[
+  {
+    "case": "our_game_library_owns_four_cards_and_keeps_existing_game_options",
+    "result": "pass",
+    "detail": "four clearly identified games; each existing card still opens its original modes/bots, while Chaos calls a separate integration callback and Back restores the library"
+  },
+  {
+    "case": "desktop_game_selection_keeps_library_beside_the_original_actions",
+    "result": "pass",
+    "detail": "desktop keeps our four games in a separate selector beside the original play actions; setup retains its existing independent layout"
+  },
+  {
+    "case": "library_and_chaos_touch_controls_fit_safe_phone_and_desktop_bounds",
+    "result": "pass",
+    "detail": "seven safe geometries preserve queue, exit, reduced-effects, firing and confirmation controls; scalable library cards retain readable titles/artwork and scroll vertically when needed"
+  },
+  {
+    "case": "hud_primary_labels_and_every_avatar_shortcut_are_accessible",
+    "result": "pass",
+    "detail": "primary actions use visible labels and separate touch targets; all existing avatar/load/emote/save/reset/Plus actions remain available through the identified Avatar menu"
+  },
+  {
+    "case": "actual_chaos_client_keeps_touch_controls_and_restores_catalog_on_exit",
+    "result": "pass",
+    "detail": "actual new LocalScript opens the queue, hides only our interfaces, keeps native touch/foreign editor UIs enabled, confirms exits and restores the catalog on the server return event"
+  },
+  {
+    "case": "plan_products_diagnose_native_offsale_incomplete_wrong_game_and_official_fallback",
+    "result": "pass",
+    "detail": "missing sale flag can be verified by the official current-experience product list; explicit false is preserved, no price is invented and wrong-game/service failures have distinct stages"
+  },
+  {
+    "case": "local_chaos_effects_cannot_change_global_lighting_or_leave_objects",
+    "result": "pass",
+    "detail": "real effect functions create only bounded local objects, darkness belongs to the local camera, global environment remains unchanged and clear/destroy remove all owned visual/audio objects"
+  }
+]

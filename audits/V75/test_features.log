@@ -1,0 +1,37 @@
+AVATAR PLAZA V41: 08D_SKIN_STATE corpo/R6/R15 pronto
+PASS background_uses_native_imageid_value_color_and_never_catalog_asset_as_image actual AvatarBackground/ImageId.Value and Color.Value contract resolves the internal image, preserves color, destroys the unparented container and caches the result
+AVATAR PLAZA V41: 08D_SKIN_STATE corpo/R6/R15 pronto
+PASS background_missing_reference_and_denied_insert_never_return_fake_success malformed image references, inaccessible containers and non-background assets cannot be reported as decoded backgrounds
+AVATAR PLAZA V41: 08D_SKIN_STATE corpo/R6/R15 pronto
+PASS background_server_client_pair_decodes_image_and_preserves_on_refusal real resolver/client pair uses the internal image, attaches and removes its invisible loading probe and leaves the previous selection intact when permission is refused
+AVATAR PLAZA V41: 08D_SKIN_STATE corpo/R6/R15 pronto
+PASS emote_resolver_extracts_clip_without_executing_or_parenting_container server validates EmoteAnimation and returns the contained AnimationId; nested script never enters the DataModel, repeated selections use cache and other asset types are rejected
+AVATAR PLAZA V41: 08D_SKIN_STATE corpo/R6/R15 pronto
+PASS photo_emote_works_with_native_localplayer_restriction_and_same_copy the exact LocalPlayer-only restriction is enforced by the double; Photo Mode still loads the verified clip onto the same local copy through Animator, with stop/speed/loop working
+AVATAR PLAZA V41: 08D_SKIN_STATE corpo/R6/R15 pronto
+PASS preview_drag_rotates_model_with_camera_and_floor_stationary rotating the controller changes avatar orientation while the camera transform and studio floor remain fixed; reverse rotation restores the original orientation
+PASS many_styles_are_unique_searchable_accent_aware_and_use_real_queries over 80 distinct options have human descriptions and real catalog search terms; accents, long aliases, Japanese fashion and selected styles work rather than collapsing to emo
+PASS guide_answers_catalogue_and_all_major_game_topics_without_hallucinated_lookup knowledge is feature-specific across more than 30 topics; normal questions are distinguished from outfit requests and concrete steps match the actual game
+AVATAR PLAZA V41: 08D_SKIN_STATE corpo/R6/R15 pronto
+[IA V75] servidor=V75 motor=V75 protocolo=2
+PASS game_help_bypasses_look_quota_and_catalog_generation twelve automatic help questions complete without entering the eight-look interaction limit, reserving a generation slot or querying catalog assets
+AVATAR PLAZA V41: 08D_SKIN_STATE corpo/R6/R15 pronto
+PASS style_and_budget_radio_lists_select_without_sending_and_fit_six_screens style and total budget use searchable described radio choices, preserve an explicit confirmation and keep fields/close reachable in six portrait and landscape sizes
+[V44] 09A_SHOP_UI carregado de Folder
+AVATAR PLAZA V41: 08D_SKIN_STATE corpo/R6/R15 pronto
+AVATAR PLAZA V66: Community/Looks carregado
+PASS saved_looks_deletion_requires_confirmation_and_four_primary_actions_fit saved-look shelf has four primary actions and a separate menu; Delete never calls the server before confirmation and cancelling preserves the stored look
+[V44] 09A_SHOP_UI carregado de Folder
+AVATAR PLAZA V41: 08D_SKIN_STATE corpo/R6/R15 pronto
+PASS blank_avatar_bases_colors_cancel_and_confirmation_preserve_saved_state new R6 base and chosen color are previewed without mutation; cancel preserves the current avatar, confirmation creates a clean editable base and Undo restores the prior look
+[V44] 09A_SHOP_UI carregado de Folder
+AVATAR PLAZA V41: 08D_SKIN_STATE corpo/R6/R15 pronto
+PASS new_avatar_controls_safe_preview_and_entry_fit_six_screens clean-avatar dialog has a visible preview, independent scrollable options, safe entry/close/confirmation and nonoverlapping content on six screens
+AVATAR PLAZA V41: 08D_SKIN_STATE corpo/R6/R15 pronto
+PASS world_switch_restores_clouds_only_after_removing_owned_clouds switching all six themes and restoring the original never has two Cloud instances parented to Terrain at once
+PASS manual_music_permission_and_content_failures_automatically_change_track manual ID permission refusal and content failure both advance to another real library/queue item; failure never leaves the player stuck on the rejected track
+PASS saved_last_music_failure_also_falls_back_without_repeating_rejected_id an inaccessible persisted last track falls back through the library, skips an unavailable suggestion and reaches a loaded track without repeating the denied saved ID
+PASS game_focus_ducks_actual_music_output_without_changing_saved_volume the real music LocalScript ducks .4 to .128, honors a new .6 preference during play, and restores .6 on exit
+AVATAR PLAZA V41: 08D_SKIN_STATE corpo/R6/R15 pronto
+AVATAR PLAZA V41: 08D_SKIN_STATE corpo/R6/R15 pronto
+PASS actual_client_routes_game_questions_to_help_without_outfit_form the real LocalScript recognizes catalogue, truco and music questions even in make-look mode, skips the outfit questionnaire and remains usable after each new chat

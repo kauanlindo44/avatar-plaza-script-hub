@@ -1,15 +1,17 @@
-# Avatar Creator Plaza — V74
+# Avatar Catalog & Games — V75
 
-**16 scripts novos + 12 substituições sobre a V73 completa.**
+**2 scripts novos + 35 substituições sobre a V74 completa.**
 
-[Instalador V74](AVATAR_PLAZA_V74.html) · [Instalador permanente](AVATAR_PLAZA_SCRIPT_HUB_PERMANENTE.html) · [Nomes, tipos, locais e ordem](INSTALL_V74.md) · [Auditoria](audits/V74/README.md)
+[Instalador V75](AVATAR_PLAZA_V75.html) · [Pacote para baixar](AVATAR_PLAZA_V75.zip) · [Nomes, tipos, locais e ordem](INSTALL_V75.md) · [Auditoria](audits/V75/README.md) · [Pesquisa](audits/V75/RESEARCH.md)
 
-A biblioteca **Nossos jogos** reúne Botão do Caos, Truco, Xadrez e Damas, identificando as implementações do Avatar Catalog & Games. O computador tem seleção lateral; o celular tem navegação com retorno. O HUD ganha nomes legíveis, grafite suave e atalhos agrupados. Patrocinar mantém **6 itens por linha × 4 linhas**, com cards neutros, miniaturas sem escurecimento e preços mais fortes.
+O HUD fica nas bordas e dá acesso direto à IA. Comandos têm uma janela móvel. Carregar, Vestindo agora e Restaurar usam cores próprias. A consulta opcional de planos deixa de bloquear a abertura da assistente; looks aparecem em prévias menores, até cinco por coluna, e a busca trata melhor palavras e cores excluídas.
 
-**Botão do Caos V1:** uma arena 96 × 96, distante e oculta para quem está no catálogo, recebe o mesmo avatar. Fila FIFO de 2–8; preparação de 12 s; contagem de 5 s; disputa de 150 s; resultados de 10 s; treino individual de 90 s. Há os 12 efeitos do GDD, ferramentas temporárias com mira, escudo, bomba nuclear com alvo único, sorteio/dano/pontuação no servidor, espectador e retorno que preserva o catálogo. Não há economia, compras, apostas, ranking ou múltiplas arenas. Rodovia 061 permanece fora desta versão.
+O Photo Mode mantém o centro da câmera ao abrir painéis. Emotes usam cinco colunas e até quatro linhas, com paginação e compra separada de experimentar. O Vale da aventura é o cenário inicial e a vegetação usa menos peças.
 
-Plus/Pro mantêm os produtos existentes e só concedem acesso por recibo. A disponibilidade tem diagnóstico por etapa e consulta oficial de produto; esta entrega não comprova o estado dos IDs na conta do criador. O assistente conhece o novo minijogo.
+Truco tem cartas públicas distribuídas por assento e placar compacto. Xadrez/Damas ganham composição, marcação do último lance, material e áudio. Regras, bots, relógios e recibos dos jogos anteriores continuam na base publicada.
 
-**180 cenários simulados**, 171 fontes conferidas, sete geometrias, 21 reconstruções visuais e testes do JavaScript real do instalador. Fontes históricas, regras/bots/relógios/pontuação de Truco/Xadrez/Damas e recibos preservados. Nenhum novo passe/produto, chave externa ou serviço pago é necessário.
+O Botão do Caos usa um piso verde finito **128 × 88**, sem paredes ou retorno invisível. Cair elimina. Empurrar exige proximidade/direção, tem intervalo de 3 segundos e é validado no servidor. A bomba desce, explode no chão e atinge somente o alvo marcado. Efeitos sonoros usam referências da Creator Store; música fica mais baixa durante partidas e volta ao volume escolhido depois.
 
-**PENDENTE DE TESTE NATIVO:** a V1 não está aprovada para lançamento pelo GDD. Conferir no Roblox publicado com 2–8 usuários, duas rodadas completas, celular/PC, corpos R6/R15 e personalizados, toque, streaming, áudio, permissões e FPS. Atualizar o questionário de maturidade com o conteúdo efetivo. As imagens de auditoria usam geometria reconstruída e mídia ilustrativa; não são capturas do motor. Publicar no GitHub não instala automaticamente os scripts no Roblox.
+**178 cenários simulados passaram.** Foram compiladas 173 fontes efetivas, preservados os 966 caminhos históricos, verificados os hashes declarados atuais e testado o JavaScript do instalador com DOM simulado. Há sete geometrias verificadas e 42 reconstruções visuais. O processo Lua bloqueia rede e execução de comandos. O navegador Chromium não pôde ser executado por falta do binário.
+
+**Pendente de teste nativo:** multiplayer, física do empurrão, corpos personalizados, streaming, captura, áudio/permissões, toque e desempenho no celular. Esta publicação não instala scripts nem publica automaticamente no Roblox. A análise audiovisual dos quinze vídeos identificados ficou limitada pelo bloqueio do YouTube; o relatório distingue índices, descrições e conteúdo efetivamente acessível.

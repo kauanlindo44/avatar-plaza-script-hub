@@ -52,3 +52,12 @@ Partir da V69 por pedido explícito do responsável. V70 fica preservada no hist
 - Botão do Caos V1 segue o GDD aprovado: uma arena isolada da praça; mesmo avatar; 2–8 pessoas; fila FIFO; 12/5/150/10 segundos de preparação/contagem/disputa/resultados; treino separado de 90 segundos; 12 efeitos gratuitos e autoridade do servidor. Não implementar Rodovia 061 nesta versão.
 - Nunca alterar o inventário do catálogo para criar poderes. Ferramentas antigas são guardadas e devolvidas; a espera pela mochila nativa não autoriza apagá-las. Limpar câmera, foco de streaming, efeitos e ferramentas temporárias na saída.
 - O desenvolvimento da V1 permanece **PENDENTE DE TESTE NATIVO** até a validação com usuários reais, celulares, corpos personalizados e desempenho medido. Simulações não aprovam FPS ou o lançamento no Roblox.
+
+## Continuidade V75
+
+- Base V74 publicada (`d1518e49cfb6962a7ed854d659cbe0fe3816cf2f`). Pedido atual autoriza HUD compacto nas bordas, acesso direto à IA, janela de comandos, emotes em cinco colunas e até quatro linhas e câmera sem deslocamento ao abrir menus.
+- Carregar, Vestindo agora e Restaurar recebem superfícies coloridas; assistente usa azul/lilás suaves e prévias pequenas, até cinco por coluna. Nenhuma compra ou aplicação automática é adicionada.
+- Vale da aventura inicia por padrão; cenários recebem menos peças. Não alegar FPS sem medição física.
+- Mudanças de regras autorizadas no Botão do Caos: plataforma verde finita 128×88 sem paredes/retorno invisível; queda eliminatória; empurrão próximo com intervalo e validação no servidor. A onda usa impulso limitado. A bomba continua com uma única vítima e recebe descida/som de explosão.
+- Regras, bots, relógios e recibos de Truco/Xadrez/Damas permanecem intactos. Áudio/visual não comandam a partida. Som da explosão não deve ser interrompido pela transição imediata ao resultado; sair encerra o áudio restante.
+- Testes locais são simulados, ainda que o processo tenha bloqueios reais de rede/comandos. Chromium não foi executado neste ambiente; multiplayer, áudio, controles físicos e desempenho continuam pendentes no Roblox. A pesquisa registra o bloqueio de vídeos sem inventar análise audiovisual.

@@ -1,0 +1,36 @@
+AVATAR PLAZA V41: 08D_SKIN_STATE corpo/R6/R15 pronto
+PASS visible_probe_reproduces_v66_false_failure_and_v67_loads_same_asset with actual culling conditions enforced, the old offscreen transparent probe rejects a valid image while V67 renders and accepts the same internal image; the temporary GUI is removed
+AVATAR PLAZA V41: 08D_SKIN_STATE corpo/R6/R15 pronto
+PASS background_real_refusal_keeps_previous_and_native_texture_uri_is_supported native texture references resolve without inventing an image ID; a real fetch/render refusal still preserves the prior selected background and cleans its probe
+AVATAR PLAZA V41: 08D_SKIN_STATE corpo/R6/R15 pronto
+PASS support_height_uses_rig_feet_and_survives_late_native_recalculation a low native HipHeight is corrected from the two actual feet, a huge accessory is excluded and later automatic scaling cannot immediately reset the saved support height
+AVATAR PLAZA V41: 08D_SKIN_STATE corpo/R6/R15 pronto
+PASS avatar_animation_resolver_reads_owned_description_and_normalizes_actual_clips movement items are read from the server character description, not a client-selected ID; HTTP and rbxassetid clip references work and repeat reads use cache
+AVATAR PLAZA V41: 08D_SKIN_STATE corpo/R6/R15 pronto
+PASS fallback_refreshes_animate_configuration_and_uses_equipped_walk_clip the real character controller updates a copied Animate configuration and its fallback uses the actual equipped walk clip instead of forcing the generic cycle
+AVATAR PLAZA V41: 08D_SKIN_STATE corpo/R6/R15 pronto
+PASS animation_config_retries_when_apply_rpc_is_still_busy the movement request retries two Apply-in-progress refusals and then installs the verified walk clip instead of silently remaining on the fallback
+AVATAR PLAZA V41: 08D_SKIN_STATE corpo/R6/R15 pronto
+PASS catalogue_emote_test_uses_verified_clip_on_current_preview the actual catalog function succeeds despite the LocalPlayer-only emote restriction, plays the verified animation on the existing preview and explains R6 incompatibility
+AVATAR PLAZA V41: 08D_SKIN_STATE corpo/R6/R15 pronto
+PASS eight_worlds_include_stylized_adventure_with_bounded_detail all eight worlds use coherent native materials; the separate adventure scene adds composed varied trees, a lake and distant hills with a clear central area and a fixed 80-part budget
+PASS halloween_automatic_brasilia_end_manual_override_and_off automatic decoration ends exactly on 1 November 2026 at 00:00 Sao Paulo; disabling works before that date and an explicit manual choice can keep it enabled afterward
+AVATAR PLAZA V41: 08D_SKIN_STATE corpo/R6/R15 pronto
+PASS chat_history_private_bounded_and_writes_batched history belongs to the requesting Roblox user, ten edits produce one delayed profile write and only the last sixteen messages are persisted per conversation
+AVATAR PLAZA V41: 08D_SKIN_STATE corpo/R6/R15 pronto
+PASS chat_share_requires_confirmation_and_broadcast_filter_before_public_code no share is created without confirmation; only a filtered textual snapshot is readable by code, the original remains private and repeated sharing is rate limited
+AVATAR PLAZA V41: 08D_SKIN_STATE corpo/R6/R15 pronto
+PASS chat_share_filter_failure_cannot_publish_unfiltered_text filter service failure refuses public sharing and leaves the private conversation intact
+AVATAR PLAZA V41: 08D_SKIN_STATE corpo/R6/R15 pronto
+AVATAR PLAZA V41: 08D_SKIN_STATE corpo/R6/R15 pronto
+PASS assistant_sidebar_settings_share_and_guided_form_fit_six_sizes desktop/sidebar navigation, settings modal, explicit sharing dialog and guided creation keep safe reachable closes and 44px header targets in six screen sizes; real navigation saves a two-message private chat
+AVATAR PLAZA V41: 08D_SKIN_STATE corpo/R6/R15 pronto
+PASS reference_truco_composition_keeps_avatars_private_hand_and_public_cards_separate the oval dark-rimmed green table surrounds four avatar badges; three fanned private cards, separate smaller public cards, team labels and compact bottom controls remain distinct on six screens
+PASS sponsored_game_and_community_duration_stays_exactly_one_day both destination categories retain the authoritative 86400-second expiry; a view or reload cannot extend it
+PASS assistant_conversation_routes_greetings_and_remembers_help_topic greetings and questions avoid outfit generation; a short follow-up retains the help subject and a hair/color refinement preserves the original style
+AVATAR PLAZA V41: 08D_SKIN_STATE corpo/R6/R15 pronto
+PASS chat_archive_rename_delete_survive_a_batched_flush renaming and archiving persist as separate history metadata and a confirmed deletion remains deleted after the delayed storage write
+AVATAR PLAZA V41: 08D_SKIN_STATE corpo/R6/R15 pronto
+PASS highlight_feed_repeated_refresh_reuses_result_and_change_invalidates_it the duplicated feed refresh shown in the server photo is served from the short cache, while a real publication/withdrawal invalidates it immediately
+AVATAR PLAZA V41: 08D_SKIN_STATE corpo/R6/R15 pronto
+PASS direct_animation_asset_is_not_misread_as_catalogue_container a description which already contains a verified Animation asset uses it directly; it is not sent through InsertService as if it were a catalog animation package
