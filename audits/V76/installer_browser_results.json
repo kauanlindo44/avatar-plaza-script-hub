@@ -1,0 +1,6 @@
+{
+  "result": "not_run",
+  "reason": "Chromium executable unavailable; installation download returned an invalid archive",
+  "otherChecks": "Actual JavaScript, source copies, hashes and DOM double tests are recorded separately",
+  "nativeRoblox": false
+}

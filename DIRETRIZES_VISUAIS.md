@@ -61,3 +61,12 @@ Partir da V69 por pedido explícito do responsável. V70 fica preservada no hist
 - Mudanças de regras autorizadas no Botão do Caos: plataforma verde finita 128×88 sem paredes/retorno invisível; queda eliminatória; empurrão próximo com intervalo e validação no servidor. A onda usa impulso limitado. A bomba continua com uma única vítima e recebe descida/som de explosão.
 - Regras, bots, relógios e recibos de Truco/Xadrez/Damas permanecem intactos. Áudio/visual não comandam a partida. Som da explosão não deve ser interrompido pela transição imediata ao resultado; sair encerra o áudio restante.
 - Testes locais são simulados, ainda que o processo tenha bloqueios reais de rede/comandos. Chromium não foi executado neste ambiente; multiplayer, áudio, controles físicos e desempenho continuam pendentes no Roblox. A pesquisa registra o bloqueio de vídeos sem inventar análise audiovisual.
+
+## Continuidade V76
+
+- Base V75 publicada (`b7bfbea37b52765f608e4384c2699193c4e53daf`). Adaptar a foto: catálogo/lojas no alto, pares laterais, utilidades nos cantos e +. Preservar IA/patrocinar/funções; toque com pouca altura recolhe atalhos no + e reserva controles nativos.
+- Fundos: 3 colunas × até 3 cards por coluna; emotes: 5×4. Câmera/cópia não mudam ao abrir menus. Captura direta com trava contra repetição.
+- Plus: Developer Product `3717699383`, chave interna `Studio`; Pro: `3717699454`. Confirmar listagem de produtos da experiência antes do prompt. Benefícios somente pelo recibo oficial idempotente.
+- Validar payload, números finitos, frequência conjunta e concorrência antes dos handlers da IA/catálogo. Ataques simulados localmente contra nossas fontes; não alegar segurança absoluta.
+- Vinte referências de vídeos selecionadas, revisão audiovisual integral pendente. Não afirmar que os vídeos foram assistidos ou que todas as telas do Photo Studio foram copiadas exatamente sem evidência acessível.
+- Separar simulação, reconstrução de layout, navegador e Roblox nativo. `08L_COMMUNITY`, legado das bases anteriores fora do manifesto, permanece no place existente.

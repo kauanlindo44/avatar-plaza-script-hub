@@ -1,0 +1,12 @@
+[V76] HUD: catálogo, pares laterais, ferramentas e menu +
+PASS hud_reference_positions_fit_seven_sizes_with_and_without_native_touch 15 actions adapt across 14 geometries, with 44px targets, named roles, no mutual overlap and a reserved touch jump region
+[V76] HUD: catálogo, pares laterais, ferramentas e menu +
+PASS hud_exact_destinations_and_body_shortcut_keep_existing_functions real BindableEvents receive every intended action; IA remains the first + action, repeat taps cannot toggle it 50 times, and commands close cleanly
+PASS photo_background_is_three_by_three_with_pagination_and_no_automatic_purchase the actual background search renders exactly 9 cards in 3 columns × 3 rows; page 2 starts at item 10; selecting only previews
+PASS photo_seven_layouts_keep_frame_margins_zero_and_shutter_reachable photo panels never introduce camera margins; shutter remains reachable and separate from the catalog in all seven safe geometries
+[V44] 09A_SHOP_UI carregado de Folder
+AVATAR PLAZA V41: 08D_SKIN_STATE corpo/R6/R15 pronto
+PASS body_hud_route_opens_real_body_dialog_without_applying_or_purchasing the HUD body shortcut reaches the existing proportion controls and leaves avatar state and purchasing unchanged
+AVATAR PLAZA V41: 08D_SKIN_STATE corpo/R6/R15 pronto
+[V76] Photo Mode: fundos 3x3, captura direta e centro fixo
+PASS real_photo_controller_preserves_camera_and_clone_and_rejects_capture_spam the actual Photo Mode LocalScript survives 50 menu changes with identical camera position/direction and clone pivot; 100 capture taps start one native request, timeout recovers and exit restores the prior HUD/camera

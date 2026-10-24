@@ -1,0 +1,32 @@
+[
+  {
+    "case": "hud_reference_positions_fit_seven_sizes_with_and_without_native_touch",
+    "result": "pass",
+    "detail": "15 actions adapt across 14 geometries, with 44px targets, named roles, no mutual overlap and a reserved touch jump region"
+  },
+  {
+    "case": "hud_exact_destinations_and_body_shortcut_keep_existing_functions",
+    "result": "pass",
+    "detail": "real BindableEvents receive every intended action; IA remains the first + action, repeat taps cannot toggle it 50 times, and commands close cleanly"
+  },
+  {
+    "case": "photo_background_is_three_by_three_with_pagination_and_no_automatic_purchase",
+    "result": "pass",
+    "detail": "the actual background search renders exactly 9 cards in 3 columns × 3 rows; page 2 starts at item 10; selecting only previews"
+  },
+  {
+    "case": "photo_seven_layouts_keep_frame_margins_zero_and_shutter_reachable",
+    "result": "pass",
+    "detail": "photo panels never introduce camera margins; shutter remains reachable and separate from the catalog in all seven safe geometries"
+  },
+  {
+    "case": "body_hud_route_opens_real_body_dialog_without_applying_or_purchasing",
+    "result": "pass",
+    "detail": "the HUD body shortcut reaches the existing proportion controls and leaves avatar state and purchasing unchanged"
+  },
+  {
+    "case": "real_photo_controller_preserves_camera_and_clone_and_rejects_capture_spam",
+    "result": "pass",
+    "detail": "the actual Photo Mode LocalScript survives 50 menu changes with identical camera position/direction and clone pivot; 100 capture taps start one native request, timeout recovers and exit restores the prior HUD/camera"
+  }
+]

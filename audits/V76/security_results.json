@@ -1,0 +1,47 @@
+[
+  {
+    "case": "payload_rejects_nan_infinity_cycles_objects_deep_and_oversized_tables",
+    "result": "pass",
+    "detail": "10 malformed payload families are rejected before handlers; valid 16-message history, 100-item cart and ordinary text remain accepted"
+  },
+  {
+    "case": "one_thousand_rotating_actions_have_shared_rate_limit_and_recover",
+    "result": "pass",
+    "detail": "rotating 15 action names cannot bypass the 12-token burst; cancellation still works, refill restores access and leaving clears state"
+  },
+  {
+    "case": "concurrent_calls_have_global_limit_and_idempotent_release",
+    "result": "pass",
+    "detail": "the 25th concurrent callback is rejected; releasing twice cannot corrupt capacity and player removal does not leak a slot"
+  },
+  {
+    "case": "plus_pro_ids_are_exact_and_one_hundred_duplicate_receipts_grant_once",
+    "result": "pass",
+    "detail": "Plus and Pro match the supplied IDs; 100 duplicate deliveries cannot extend the plan twice, and malformed or cross-plan receipts do not grant benefits"
+  },
+  {
+    "case": "official_price_does_not_authorize_product_from_another_experience",
+    "result": "pass",
+    "detail": "a valid public product price is insufficient to open a purchase; ownership by this experience is required and unconfigured IDs never trigger native queries"
+  },
+  {
+    "case": "purchase_lookup_reuses_bounded_official_product_list",
+    "result": "pass",
+    "detail": "200 purchase preflights use two detail queries and a single official current-experience listing; no preflight grants or charges anything"
+  },
+  {
+    "case": "real_ai_rpc_prompt_spam_and_forged_product_cannot_grant_plan",
+    "result": "pass",
+    "detail": "the real remote ignores a forged product/price, throttles 1,000 repeated prompts, has no receipt action and keeps the user free until an official receipt arrives"
+  },
+  {
+    "case": "real_ai_rpc_rejects_nested_attack_without_storage_or_handler_work",
+    "result": "pass",
+    "detail": "cycles, NaN and oversized data are rejected without a write; spoofing owner/plan on a status request cannot cross the account boundary"
+  },
+  {
+    "case": "real_shop_rpc_throttles_feed_refresh_and_rejects_invalid_sponsor_payload",
+    "result": "pass",
+    "detail": "the real shop server performs one feed call for 1,001 repeated requests; cyclic sponsorship data never reaches storage and normal use resumes after cooldown"
+  }
+]

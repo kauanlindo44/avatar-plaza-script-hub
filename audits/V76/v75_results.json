@@ -1,0 +1,62 @@
+[
+  {
+    "case": "missing_plan_module_does_not_block_assistant_profile_or_chat",
+    "result": "pass",
+    "detail": "the exact dependency absent in photo 2 disables only price/purchase buttons; profile and conversation remain usable"
+  },
+  {
+    "case": "assistant_look_tiles_are_small_and_never_exceed_five_per_column",
+    "result": "pass",
+    "detail": "1–50 generated looks use 148×192 tiles with compact previews, column-first order, at most five rows and horizontal overflow"
+  },
+  {
+    "case": "emote_catalog_has_five_columns_four_rows_and_separate_purchase",
+    "result": "pass",
+    "detail": "851×392 safe landscape shows exactly 5×4 emotes with ≥44px targets, a second page and explicit independent purchase"
+  },
+  {
+    "case": "photo_panels_keep_zero_scene_margins_on_every_size",
+    "result": "pass",
+    "detail": "opening emotes/background/pose panels never reallocates the camera viewport or moves its optical center"
+  },
+  {
+    "case": "negative_colors_do_not_become_requested_colors_or_substring_matches",
+    "result": "pass",
+    "detail": "negative colors and word boundaries are respected, and a catalog failure is not misdiagnosed as an IA failure"
+  },
+  {
+    "case": "chaos_arena_is_one_finite_green_rectangle_and_two_button_parts",
+    "result": "pass",
+    "detail": "exactly three parts; 128×88 green floor, open sides and no invisible rollback; a real fall eliminates"
+  },
+  {
+    "case": "push_selects_near_opponent_and_cannot_be_forged_or_spammed",
+    "result": "pass",
+    "detail": "the server chooses the real nearby opponent, ignores client target/force, enforces 3 seconds, 6 studs and membership"
+  },
+  {
+    "case": "push_rejects_behind_obstacle_frozen_and_shielded_targets",
+    "result": "pass",
+    "detail": "line of sight, frozen actor, facing direction and shield all prevent illegal impulses"
+  },
+  {
+    "case": "chaos_controls_leave_jump_and_the_middle_view_free",
+    "result": "pass",
+    "detail": "four touch controls and a 44px header fit seven sizes; the push/fire row ends above the native jump fallback region"
+  },
+  {
+    "case": "nuclear_effect_explodes_at_floor_and_eliminates_exactly_one_target",
+    "result": "pass",
+    "detail": "no premature detonation; explosion position is the ground under the fixed target, with exactly one elimination"
+  },
+  {
+    "case": "sound_and_music_focus_are_local_and_reversible",
+    "result": "pass",
+    "detail": "game focus restores music preference, SFX can be muted, repeated/unknown sounds are rejected and no physical Explosion is created"
+  },
+  {
+    "case": "explosion_audio_survives_result_transition_but_stops_on_leave",
+    "result": "pass",
+    "detail": "the last elimination cannot cut off its own explosion sound when results open; explicit return still cancels trailing audio"
+  }
+]

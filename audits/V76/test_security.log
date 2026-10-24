@@ -1,0 +1,30 @@
+PASS payload_rejects_nan_infinity_cycles_objects_deep_and_oversized_tables 10 malformed payload families are rejected before handlers; valid 16-message history, 100-item cart and ordinary text remain accepted
+PASS one_thousand_rotating_actions_have_shared_rate_limit_and_recover rotating 15 action names cannot bypass the 12-token burst; cancellation still works, refill restores access and leaving clears state
+AVATAR PLAZA V41: 08D_SKIN_STATE corpo/R6/R15 pronto
+PASS concurrent_calls_have_global_limit_and_idempotent_release the 25th concurrent callback is rejected; releasing twice cannot corrupt capacity and player removal does not leak a slot
+PASS plus_pro_ids_are_exact_and_one_hundred_duplicate_receipts_grant_once Plus and Pro match the supplied IDs; 100 duplicate deliveries cannot extend the plan twice, and malformed or cross-plan receipts do not grant benefits
+PASS official_price_does_not_authorize_product_from_another_experience a valid public product price is insufficient to open a purchase; ownership by this experience is required and unconfigured IDs never trigger native queries
+PASS purchase_lookup_reuses_bounded_official_product_list 200 purchase preflights use two detail queries and a single official current-experience listing; no preflight grants or charges anything
+AVATAR PLAZA V41: 08D_SKIN_STATE corpo/R6/R15 pronto
+[IA V76] servidor=V76 motor=V75 protocolo=2
+PASS real_ai_rpc_prompt_spam_and_forged_product_cannot_grant_plan the real remote ignores a forged product/price, throttles 1,000 repeated prompts, has no receipt action and keeps the user free until an official receipt arrives
+AVATAR PLAZA V41: 08D_SKIN_STATE corpo/R6/R15 pronto
+[IA V76] servidor=V76 motor=V75 protocolo=2
+PASS real_ai_rpc_rejects_nested_attack_without_storage_or_handler_work cycles, NaN and oversized data are rejected without a write; spoofing owner/plan on a status request cannot cross the account boundary
+AVATAR PLAZA V41: 08D_SKIN_STATE corpo/R6/R15 pronto
+AVATAR PLAZA V76: aplicação com diagnóstico e guarda de pedidos pronta
+[Shop V76] patrocinar=fixture fundos=fixture
+[Avatar V57] 00000000000000000000000000000002 | DESCRIPTION | Humanoid.GetAppliedDescription
+[Avatar V57] 00000000000000000000000000000002 | CREATE | Players.CreateHumanoidModelFromDescriptionAsync
+[Avatar V57] 00000000000000000000000000000002 | STRUCTURE | 08B4_AVATAR_LOAD.Check
+[Avatar V57] 00000000000000000000000000000002 | CONTENT | 08B4_AVATAR_LOAD.Content
+[Avatar V57] 00000000000000000000000000000002 | LAYERS | 08B3_AVATAR_VERIFY.Check
+[Avatar V57] 00000000000000000000000000000002 | MAP | 09B5_AVATAR_RUNTIME.rebuild
+[Avatar V57] 00000000000000000000000000000002 | STRUCTURE | 08B4_AVATAR_LOAD.Check
+[Avatar V57] 00000000000000000000000000000002 | CONTENT | 08B4_AVATAR_LOAD.Content
+[Avatar V57] 00000000000000000000000000000002 | LAYERS | 08B3_AVATAR_VERIFY.Check
+[Avatar V57] 00000000000000000000000000000002 | CONFIRM | 09B5_AVATAR_RUNTIME.confirm
+[Avatar V57] 00000000000000000000000000000002 | STRUCTURE | 08B4_AVATAR_LOAD.Check
+[Avatar V57] 00000000000000000000000000000002 | CONTENT | 08B4_AVATAR_LOAD.Content
+[Avatar V57] 00000000000000000000000000000002 | LAYERS | 08B3_AVATAR_VERIFY.Check
+PASS real_shop_rpc_throttles_feed_refresh_and_rejects_invalid_sponsor_payload the real shop server performs one feed call for 1,001 repeated requests; cyclic sponsorship data never reaches storage and normal use resumes after cooldown

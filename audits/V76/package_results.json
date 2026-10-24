@@ -1,0 +1,14 @@
+{
+  "version": "V76",
+  "base": "V75",
+  "base_commit": "b7bfbea37b52765f608e4384c2699193c4e53daf",
+  "items": 14,
+  "create": 2,
+  "replace": 12,
+  "effective_sources": 175,
+  "max_lines": 397,
+  "simulated_cases": 190,
+  "html_bytes": 6608727,
+  "native_roblox": "PENDENTE",
+  "audiovisual_minutes_reviewed": 0
+}

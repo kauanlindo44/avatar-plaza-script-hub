@@ -1,17 +1,17 @@
-# Avatar Catalog & Games — V75
+# Avatar Catalog & Games — V76
 
-**2 scripts novos + 35 substituições sobre a V74 completa.**
+**2 scripts novos + 12 substituições sobre a V75 completa.**
 
-[Instalador V75](AVATAR_PLAZA_V75.html) · [Pacote para baixar](AVATAR_PLAZA_V75.zip) · [Nomes, tipos, locais e ordem](INSTALL_V75.md) · [Auditoria](audits/V75/README.md) · [Pesquisa](audits/V75/RESEARCH.md)
+[Instalador V76](AVATAR_PLAZA_V76.html) · [Pacote para baixar](AVATAR_PLAZA_V76.zip) · [Ordem, nomes, tipos e locais](INSTALL_V76.md) · [Auditoria](audits/V76/README.md) · [Conferência do pedido](audits/V76/PROMPT_REVIEW.md)
 
-O HUD fica nas bordas e dá acesso direto à IA. Comandos têm uma janela móvel. Carregar, Vestindo agora e Restaurar usam cores próprias. A consulta opcional de planos deixa de bloquear a abertura da assistente; looks aparecem em prévias menores, até cinco por coluna, e a busca trata melhor palavras e cores excluídas.
+HUD com Catálogo/Patrocinar no alto, Comunidade/Emotes à esquerda, Looks/Carregar à direita e utilidades nas bordas. O + abre IA e demais ferramentas. Telas de toque baixas usam o menu para preservar os controles nativos. Corpo abre os controles existentes; Carregar, Vestindo e Restaurar conservam cores.
 
-O Photo Mode mantém o centro da câmera ao abrir painéis. Emotes usam cinco colunas e até quatro linhas, com paginação e compra separada de experimentar. O Vale da aventura é o cenário inicial e a vegetação usa menos peças.
+Photo Mode com captura direta, fundos em três colunas e até três cards por coluna, emotes 5×4 e paginação. Cinquenta mudanças de painel mantiveram câmera/cópia na simulação do controlador real; cem toques iniciaram uma captura. Corrigida a sobreposição de cartas públicas/mão no Truco em telas baixas; regras, bots e relógios permanecem na base.
 
-Truco tem cartas públicas distribuídas por assento e placar compacto. Xadrez/Damas ganham composição, marcação do último lance, material e áudio. Regras, bots, relógios e recibos dos jogos anteriores continuam na base publicada.
+IA Plus: `3717699383`; Pro: `3717699454`. O servidor exige produto da própria experiência antes do prompt; somente recibo oficial concede benefícios. RPCs da IA/catálogo validam payload, frequência/concorrência. Testes incluem 1.000 ações repetidas, dados inválidos e 100 recibos duplicados.
 
-O Botão do Caos usa um piso verde finito **128 × 88**, sem paredes ou retorno invisível. Cair elimina. Empurrar exige proximidade/direção, tem intervalo de 3 segundos e é validado no servidor. A bomba desce, explode no chão e atinge somente o alvo marcado. Efeitos sonoros usam referências da Creator Store; música fica mais baixa durante partidas e volta ao volume escolhido depois.
+**190 cenários simulados passaram; 175 fontes compiladas e 1.003 caminhos históricos preservados.** Instalador testado com JavaScript real/DOM simulado; 21 reconstruções de layout identificadas como ilustrações. O processo Lua bloqueia sockets/execução de comandos. Chromium não executou: download do binário devolveu arquivos inválidos.
 
-**178 cenários simulados passaram.** Foram compiladas 173 fontes efetivas, preservados os 966 caminhos históricos, verificados os hashes declarados atuais e testado o JavaScript do instalador com DOM simulado. Há sete geometrias verificadas e 42 reconstruções visuais. O processo Lua bloqueia rede e execução de comandos. O navegador Chromium não pôde ser executado por falta do binário.
+**Pesquisa parcialmente concluída:** vinte referências de 2026 selecionadas após consulta de trinta páginas. Mídia/legendas inacessíveis; vídeos não assistidos integralmente. Cópia exata de todas as telas do Photo Studio não certificada. [Pesquisa e links](audits/V76/RESEARCH.md).
 
-**Pendente de teste nativo:** multiplayer, física do empurrão, corpos personalizados, streaming, captura, áudio/permissões, toque e desempenho no celular. Esta publicação não instala scripts nem publica automaticamente no Roblox. A análise audiovisual dos quinze vídeos identificados ficou limitada pelo bloqueio do YouTube; o relatório distingue índices, descrições e conteúdo efetivamente acessível.
+**Pendente no Roblox:** renderização/toque, corpos, captura, produtos/preços/recibos reais, multiplayer, física, streaming, áudio e desempenho. O pacote publica arquivos no GitHub e exige instalação no Studio Lite; não publica o place. A base conserva o legado `08L_COMMUNITY`, cuja fonte original não está arquivada neste repositório.

@@ -1,0 +1,15 @@
+{
+  "result": "pass",
+  "runtime": "actual installer JavaScript + DOM doubles",
+  "embedded_versions": 23,
+  "script_cards_checked": 738,
+  "checks": [
+    "Separate new/replacement denominators",
+    "Mixed installation actions keep their own sequence",
+    "Version changes and reopen reset counters",
+    "Online and offline V76 use identical counters",
+    "All embedded historical versions numbered",
+    "Canonical names unchanged",
+    "Permanent/current HTML identical"
+  ]
+}
