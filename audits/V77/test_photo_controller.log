@@ -1,0 +1,3 @@
+AVATAR PLAZA V41: 08D_SKIN_STATE corpo/R6/R15 pronto
+[V77] Photo Mode: barra de cinco ações, três colunas e centro fixo
+PASS real_photo_controller_preserves_camera_and_clone_and_rejects_capture_spam the actual Photo Mode LocalScript survives 50 menu changes with identical camera position/direction and clone pivot; 100 capture taps start one native request, timeout recovers and exit restores the prior HUD/camera

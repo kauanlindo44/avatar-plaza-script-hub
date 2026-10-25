@@ -1,0 +1,35 @@
+PASS plans_effort_and_mandatory_body_contract_cannot_be_bypassed server sanitizes each plan, restricts paid effort, rejects unconfirmed bodies and incompatible R6/layers or contradictory required pieces; existing products and 30-day duration retained
+AVATAR PLAZA V41: 08D_SKIN_STATE corpo/R6/R15 pronto
+PASS exact_body_is_required_reserved_in_budget_and_never_silently_replaced the confirmed bundle is resolved before garments, retains its body parts, consumes its real 60-Robux cost and fails explicitly when missing or over budget; absent optional hair is never marked complete
+AVATAR PLAZA V41: 08D_SKIN_STATE corpo/R6/R15 pronto
+PASS exact_clothing_id_type_and_piece_query_do_not_fall_back_to_another_request a required classic tee is a GraphicTShirt rather than a Shirt; a wrong exact type or missing specific per-piece subject fails instead of filling with an unrelated garment
+AVATAR PLAZA V41: 08D_SKIN_STATE corpo/R6/R15 pronto
+AVATAR PLAZA V41: 08D_SKIN_STATE corpo/R6/R15 pronto
+PASS four_step_form_confirms_body_and_advanced_type_without_automatic_send visual body selection and advanced exact clothing IDs survive confirmation of all four stages; no catalog generation starts before the explicit confirmation
+AVATAR PLAZA V41: 08D_SKIN_STATE corpo/R6/R15 pronto
+[IA V76] servidor=V76 motor=V75 protocolo=2
+PASS pro_continues_requested_quantity_in_five_five_two_without_extra_daily_charge the actual remote server creates 5 + 5 + 2, charges one request, never reverts the last batch to five and gives each result a session-bound key
+AVATAR PLAZA V41: 08D_SKIN_STATE corpo/R6/R15 pronto
+[IA V76] servidor=V76 motor=V75 protocolo=2
+PASS pro_continuation_rejects_expired_access_or_cancelled_job_and_prompt_does_not_grant a batch belongs to a live Pro entitlement and current conversation; cancellation invalidates it; an upgrade uses the existing product and cannot grant access from the prompt callback
+[V44] 09A_SHOP_UI carregado de Folder
+AVATAR PLAZA V41: 08D_SKIN_STATE corpo/R6/R15 pronto
+PASS new_avatar_wizard_is_preview_only_until_final_step_and_hair_is_real_accessory body/tone/hair/scale form keeps drafts separate, only the fourth-step confirmation calls skin state, Undo restores the previous look and hair uses the native accessory schema
+[V44] 09A_SHOP_UI carregado de Folder
+AVATAR PLAZA V41: 08D_SKIN_STATE corpo/R6/R15 pronto
+PASS save_outfit_and_account_prompts_report_only_native_completed_result outfit creation and saving the Roblox account avatar are distinct native prompts; denied/cancelled requests never say saved, while only Success confirms completion
+AVATAR PLAZA V41: 08D_SKIN_STATE corpo/R6/R15 pronto
+PASS catalog_purchase_history_requires_native_completion_and_ownership_and_batches_writes server records only a completed and ownership-confirmed native catalog purchase, isolates users and batches persistence instead of writing on each UI open
+AVATAR PLAZA V41: 08D_SKIN_STATE corpo/R6/R15 pronto
+PASS animation_pack_resolves_specific_native_clip_and_reuses_copied_avatar a real bundle is validated as Animations, idle/walk use separate cache keys and tracks change on the same photo clone instead of rebuilding the avatar
+AVATAR PLAZA V41: 08D_SKIN_STATE corpo/R6/R15 pronto
+PASS photo_background_selection_survives_reopen_and_visual_effects_are_local the selected approved Roblox background is restored next time; head/body effects and clones live only in the disposable photo scene and never change the map avatar
+AVATAR PLAZA V41: 08D_SKIN_STATE corpo/R6/R15 pronto
+PASS photo_catalog_is_real_grid_and_click_targets_test_copy_or_prompt_purchase catalog data comes from native search, five-column cards test the copied avatar; the independent selected-item purchase opens the official prompt
+[V44] 09A_SHOP_UI carregado de Folder
+AVATAR PLAZA V41: 08D_SKIN_STATE corpo/R6/R15 pronto
+PASS preview_width_and_two_row_shelves_fit_seven_safe_geometries preview no longer sacrifices a 48–96-pixel rail; the full-width avatar, five actions and equipped strip remain inside the safe layout on seven sizes
+AVATAR PLAZA V41: 08D_SKIN_STATE corpo/R6/R15 pronto
+PASS assistant_progress_stop_and_sidebar_upgrade_remain_reachable stage success reflects an explicit done event, stop dispatches cancellation and Plus/Pro is reachable at the sidebar footer without covering the account button
+AVATAR PLAZA V41: 08D_SKIN_STATE corpo/R6/R15 pronto
+PASS request_novelty_survives_batches_without_unbounded_signature_storage two batches cannot repeat the same outfit even if the recent-account history is absent; the request uses bounded duplicate filters rather than an unlimited array of all results

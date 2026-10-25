@@ -1,0 +1,8 @@
+{
+  "network": "denied_by_seccomp",
+  "host_exec": "denied_by_seccomp",
+  "lua_host_access": "denied",
+  "memory_limit_bytes": 1073741824,
+  "cpu_limit_seconds": 60,
+  "scope": "simulated Lua suites; not Roblox physics or a published multiplayer server"
+}

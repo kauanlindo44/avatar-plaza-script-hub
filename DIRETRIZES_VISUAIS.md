@@ -70,3 +70,13 @@ Partir da V69 por pedido explícito do responsável. V70 fica preservada no hist
 - Validar payload, números finitos, frequência conjunta e concorrência antes dos handlers da IA/catálogo. Ataques simulados localmente contra nossas fontes; não alegar segurança absoluta.
 - Vinte referências de vídeos selecionadas, revisão audiovisual integral pendente. Não afirmar que os vídeos foram assistidos ou que todas as telas do Photo Studio foram copiadas exatamente sem evidência acessível.
 - Separar simulação, reconstrução de layout, navegador e Roblox nativo. `08L_COMMUNITY`, legado das bases anteriores fora do manifesto, permanece no place existente.
+
+## V77 — referência fornecida e mesas clássicas
+
+A orientação mais recente de seguir a gravação prevalece sobre a grade antiga de emotes 5×4: o modo foto usa três colunas e até três linhas, com barra primária de cinco ações e ferramentas adicionais em menu separado. Nenhum reflow de painel muda as margens da câmera. HUD preserva o centro; no toque, acessos que colidiriam com controles nativos recolhem para o menu.
+
+Configurações usam seis categorias coloridas. Remoção tem prévia e confirmação; salvar/restaurar/vestindo conservam cores. Compras são ações explícitas e dependem do fluxo oficial existente. A IA usa janela lateral no computador e resultados pequenos; sua biblioteca editorial não equivale a pesquisa de looks reais nem a treinamento de um modelo.
+
+Xadrez e damas usam tabuleiro clássico de duas cores, jogadores/relógios acima e abaixo e lances separados das casas. O histórico não muda regras, relógio ou autoridade do servidor. As composições novas dos mapas usam primitivas simples e orçamento explícito; Vale da aventura continua inicial.
+
+Pesquisa pública desta etapa restrita ao Chess.com. Documentação/interface atual observadas; gameplay integral quadro a quadro e fidelidade pixel a pixel não certificadas. Reconstruções de layout são ilustrativas. Testes nativos de Roblox permanecem pendentes.

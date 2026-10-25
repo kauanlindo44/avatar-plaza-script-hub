@@ -1,0 +1,7 @@
+[
+  {
+    "case": "real_photo_controller_preserves_camera_and_clone_and_rejects_capture_spam",
+    "result": "pass",
+    "detail": "the actual Photo Mode LocalScript survives 50 menu changes with identical camera position/direction and clone pivot; 100 capture taps start one native request, timeout recovers and exit restores the prior HUD/camera"
+  }
+]

@@ -1,0 +1,4 @@
+PASS v77_board_player_strips_moves_and_safe_layout six screen sizes, two games and two orientations; clocks adjacent to players, board unobstructed; coordinate log resets
+PASS v77_score_sheet_bounds_and_invalid_moves 500 appends bounded to 120; out-of-range/fractional/missing coordinates rejected
+AVATAR PLAZA V41: 08D_SKIN_STATE corpo/R6/R15 pronto
+PASS v77_server_move_log_only_records_accepted_authoritative_moves legal accepted moves produce one history entry; spectators, old revisions and 100 repeated taps cannot forge entries

@@ -1,0 +1,31 @@
+PASS old_destroyed_assistant_reproduces_photo_error_new_ui_ignores_stale_layout the V72 source reproduces the photographed Parent-lock error when a second client recreates the GUI; V73 marks the former UI dead and never reparents its destroyed buttons
+PASS wrong_installation_name_is_reported_09I_ASSISTANT_CLIENT a source pasted into a different named LocalScript is rejected before constructing a conflicting UI and prints its actual path
+PASS wrong_installation_name_is_reported_09I_ACTIVITIES_CLIENT a source pasted into a different named LocalScript is rejected before constructing a conflicting UI and prints its actual path
+PASS wrong_installation_name_is_reported_09C_SHOP_CLIENT a source pasted into a different named LocalScript is rejected before constructing a conflicting UI and prints its actual path
+PASS wrong_installation_name_is_reported_07M_MUSIC_CLIENT a source pasted into a different named LocalScript is rejected before constructing a conflicting UI and prints its actual path
+AVATAR PLAZA V41: 08D_SKIN_STATE corpo/R6/R15 pronto
+AVATAR PLAZA V41: 08D_SKIN_STATE corpo/R6/R15 pronto
+PASS a_second_assistant_client_does_not_destroy_or_duplicate_the_first two valid-named client instances cannot recreate the GUI or attach a second set of handlers; the first remains functional
+[V44] 09A_SHOP_UI carregado de Folder
+AVATAR PLAZA V41: 08D_SKIN_STATE corpo/R6/R15 pronto
+PASS six_columns_four_rows_are_inside_safe_grid_on_phone_and_computer adaptive complete cards fit seven safe layouts with 44-pixel minimum card and favorite targets; portrait uses a dismissible avatar panel, landscape retains a narrower side preview
+[V44] 09A_SHOP_UI carregado de Folder
+AVATAR PLAZA V41: 08D_SKIN_STATE corpo/R6/R15 pronto
+PASS sponsor_artwork_has_no_tint_and_favorites_and_scroll_still_work native thumbnail RGB remains white with no image gradient; pastel cards keep labels/prices readable, examples stay disclosed, real favorites send the official server action and later rows can be scrolled
+[V44] 09A_SHOP_UI carregado de Folder
+AVATAR PLAZA V41: 08D_SKIN_STATE corpo/R6/R15 pronto
+[ACP V73] Catálogo inicializado.
+[V44] 09C1 Init OK
+PASS complete_catalog_initializes_and_initial_open_has_no_remote_search the complete declared base initializes the real LocalScript without safe mode; catalog opens its category home
+[V44] 09A_SHOP_UI carregado de Folder
+AVATAR PLAZA V41: 08D_SKIN_STATE corpo/R6/R15 pronto
+[V44] 09C1 Init OK
+PASS catalog_missing_dependency_is_named_in_ui_and_output missing filter module gives its exact name and ReplicatedStorage destination instead of claiming that the catalog opened safely
+[V44] 09A_SHOP_UI carregado de Folder
+AVATAR PLAZA V41: 08D_SKIN_STATE corpo/R6/R15 pronto
+[V44] 09C1 Init OK
+PASS catalog_source_failure_reports_exact_stage_and_original_exception a script exception stays distinguishable from an omitted module and preserves the original line/traceback in Output
+[V44] 09A_SHOP_UI carregado de Folder
+AVATAR PLAZA V41: 08D_SKIN_STATE corpo/R6/R15 pronto
+[V44] 09C1 Init OK
+PASS catalog_duplicate_dependency_is_distinguished_from_missing_source multiple same-name modules are an installation conflict and no arbitrary first instance is selected

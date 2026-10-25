@@ -1,0 +1,14 @@
+{
+  "version": "V77",
+  "base": "V76",
+  "base_commit": "9594b931ae57a7ec1cc3ca4ee3bce31340bfdd46",
+  "items": 29,
+  "create": 5,
+  "replace": 24,
+  "effective_sources": 180,
+  "max_lines": 399,
+  "simulated_cases": 198,
+  "html_bytes": 6956624,
+  "native_roblox": "PENDENTE",
+  "complete_chess_gameplay_review": "NOT_COMPLETED"
+}

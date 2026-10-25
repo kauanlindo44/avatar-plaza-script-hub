@@ -1,0 +1,62 @@
+[
+  {
+    "case": "old_destroyed_assistant_reproduces_photo_error_new_ui_ignores_stale_layout",
+    "result": "pass",
+    "detail": "the V72 source reproduces the photographed Parent-lock error when a second client recreates the GUI; V73 marks the former UI dead and never reparents its destroyed buttons"
+  },
+  {
+    "case": "wrong_installation_name_is_reported_09I_ASSISTANT_CLIENT",
+    "result": "pass",
+    "detail": "a source pasted into a different named LocalScript is rejected before constructing a conflicting UI and prints its actual path"
+  },
+  {
+    "case": "wrong_installation_name_is_reported_09I_ACTIVITIES_CLIENT",
+    "result": "pass",
+    "detail": "a source pasted into a different named LocalScript is rejected before constructing a conflicting UI and prints its actual path"
+  },
+  {
+    "case": "wrong_installation_name_is_reported_09C_SHOP_CLIENT",
+    "result": "pass",
+    "detail": "a source pasted into a different named LocalScript is rejected before constructing a conflicting UI and prints its actual path"
+  },
+  {
+    "case": "wrong_installation_name_is_reported_07M_MUSIC_CLIENT",
+    "result": "pass",
+    "detail": "a source pasted into a different named LocalScript is rejected before constructing a conflicting UI and prints its actual path"
+  },
+  {
+    "case": "a_second_assistant_client_does_not_destroy_or_duplicate_the_first",
+    "result": "pass",
+    "detail": "two valid-named client instances cannot recreate the GUI or attach a second set of handlers; the first remains functional"
+  },
+  {
+    "case": "six_columns_four_rows_are_inside_safe_grid_on_phone_and_computer",
+    "result": "pass",
+    "detail": "adaptive complete cards fit seven safe layouts with 44-pixel minimum card and favorite targets; portrait uses a dismissible avatar panel, landscape retains a narrower side preview"
+  },
+  {
+    "case": "sponsor_artwork_has_no_tint_and_favorites_and_scroll_still_work",
+    "result": "pass",
+    "detail": "native thumbnail RGB remains white with no image gradient; pastel cards keep labels/prices readable, examples stay disclosed, real favorites send the official server action and later rows can be scrolled"
+  },
+  {
+    "case": "complete_catalog_initializes_and_initial_open_has_no_remote_search",
+    "result": "pass",
+    "detail": "the complete declared base initializes the real LocalScript without safe mode; catalog opens its category home"
+  },
+  {
+    "case": "catalog_missing_dependency_is_named_in_ui_and_output",
+    "result": "pass",
+    "detail": "missing filter module gives its exact name and ReplicatedStorage destination instead of claiming that the catalog opened safely"
+  },
+  {
+    "case": "catalog_source_failure_reports_exact_stage_and_original_exception",
+    "result": "pass",
+    "detail": "a script exception stays distinguishable from an omitted module and preserves the original line/traceback in Output"
+  },
+  {
+    "case": "catalog_duplicate_dependency_is_distinguished_from_missing_source",
+    "result": "pass",
+    "detail": "multiple same-name modules are an installation conflict and no arbitrary first instance is selected"
+  }
+]

@@ -1,0 +1,51 @@
+{
+  "legacy_hash_mismatches_in_base": [
+    {
+      "version": "V37",
+      "path": "scripts/V37/01A_HUB_CORE_ENV.lua"
+    },
+    {
+      "version": "V37",
+      "path": "scripts/V37/01B_HUB_WORLD.lua"
+    },
+    {
+      "version": "V37",
+      "path": "scripts/V37/07G_HUB_UI.lua"
+    },
+    {
+      "version": "V37",
+      "path": "scripts/V37/07H_GAME_UI.lua"
+    },
+    {
+      "version": "V37",
+      "path": "scripts/V37/08D_SKIN_STATE.lua"
+    },
+    {
+      "version": "V37",
+      "path": "scripts/V37/09A_SHOP_UI.lua"
+    },
+    {
+      "version": "V37",
+      "path": "scripts/V37/09B_SHOP_SERVER.lua"
+    },
+    {
+      "version": "V37",
+      "path": "scripts/V37/09C_SHOP_CLIENT.lua"
+    },
+    {
+      "version": "V37",
+      "path": "scripts/V37/09C1_SHOP_LOOKS.lua"
+    },
+    {
+      "version": "V37",
+      "path": "scripts/V37/09C2_SHOP_CATALOG.lua"
+    },
+    {
+      "version": "V37",
+      "path": "scripts/V37/09C4_OUTFIT_LIBRARY.lua"
+    }
+  ],
+  "effective_hash_mismatches": [],
+  "effective": 175,
+  "versions": 46
+}

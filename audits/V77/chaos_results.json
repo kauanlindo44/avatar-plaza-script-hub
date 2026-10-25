@@ -1,0 +1,117 @@
+[
+  {
+    "case": "T01_one_player_waits_then_explicit_training_ends_at_90_seconds",
+    "result": "pass",
+    "detail": "one player never auto-starts competitive play; explicit solo training runs exactly 90 seconds with no victory bonus"
+  },
+  {
+    "case": "T02_two_players_timing_button_and_original_avatar_are_preserved",
+    "result": "pass",
+    "detail": "12-second FIFO preparation, 5-second freeze, 150-second clock, first button after 4 seconds and next after 8; entry never recreates the selected avatar"
+  },
+  {
+    "case": "T03_T04_eight_slots_and_ninth_waits_in_fifo_order",
+    "result": "pass",
+    "detail": "exactly eight distinct spawns and participants; the ninth keeps first position for the following round"
+  },
+  {
+    "case": "T05_T06_first_valid_prompt_wins_dead_far_outsider_and_late_presses_fail",
+    "result": "pass",
+    "detail": "atomic server claim gives only one point; outsiders, eliminated players, distant characters and packets at the expired deadline cannot press"
+  },
+  {
+    "case": "button_timeout_moves_without_points_and_never_repeats_position",
+    "result": "pass",
+    "detail": "untouched button relocates after 15 seconds without drawing an effect or awarding a point"
+  },
+  {
+    "case": "T07_T08_damage_cadence_ammo_raycast_roster_and_shield_are_server_owned",
+    "result": "pass",
+    "detail": "NaN/forged token/cadence rejected; only same-round ray hits damage, shield consumes one event, ammo is exactly three and the server deletes the spent tool"
+  },
+  {
+    "case": "T09_nuke_single_target_four_seconds_shield_and_no_reselection",
+    "result": "pass",
+    "detail": "one fixed marked target, four-second warning, shield blocks the targeted elimination; departure cancels rather than selecting a different victim"
+  },
+  {
+    "case": "effect_draw_has_exact_weights_filters_targets_and_avoids_repeats",
+    "result": "pass",
+    "detail": "all cumulative weight intervals map to the documented 100%; consecutive repeat and reused nuke excluded, solo target effects removed with proportional remaining weights"
+  },
+  {
+    "case": "freeze_slow_speed_jump_heal_and_timers_recalculate_and_restore",
+    "result": "pass",
+    "detail": "freeze > slow > speed compose and expire correctly; heal caps at 100, superjump respects both native jump systems and is fully temporary"
+  },
+  {
+    "case": "swap_checks_safety_and_grants_only_short_damage_immunity",
+    "result": "pass",
+    "detail": "safe destinations swap exact character transforms with 0.75-second immunity; unsafe outside destination cancels without replacement effect"
+  },
+  {
+    "case": "foam_detonates_in_1_8_seconds_can_hit_self_and_zero_survivors_has_no_winner",
+    "result": "pass",
+    "detail": "foam is not immediate, uses the server 1.8-second fuse and nine-stud radius, includes self; all victims resolve before zero-survivor winner calculation"
+  },
+  {
+    "case": "T10_T11_disconnect_reset_eliminated_spectator_cannot_rejoin_same_round",
+    "result": "pass",
+    "detail": "reset and leave eliminate, spectator remains ineligible, chosen avatar runtime may respawn without arena reentry; last connected survivor wins"
+  },
+  {
+    "case": "T12_clock_winners_use_survivor_score_before_plus_five_and_no_auto_queue",
+    "result": "pass",
+    "detail": "expired clock chooses tied surviving leaders before +5 bonus, ignores a dead higher score; only explicit Continue opts into the next FIFO queue"
+  },
+  {
+    "case": "T13_T14_T15_return_cleanup_two_rounds_gear_and_r6_r15_identity",
+    "result": "pass",
+    "detail": "R6/R15 keep the same character and body, stashed catalog tool returns, effects/camera focus/attributes clear and the second round has a fresh identifier and no prior powers"
+  },
+  {
+    "case": "T16_effect_exception_cannot_deadlock_button_or_reverse_earned_point",
+    "result": "pass",
+    "detail": "injected execution error is logged, the accepted press retains +1 and the next button becomes available after eight seconds"
+  },
+  {
+    "case": "T17_other_room_members_are_exclusive_and_open_edges_allow_falling",
+    "result": "pass",
+    "detail": "cross-game membership is exclusive; open sides never teleport the player back; falling below the platform eliminates before reaching the catalog"
+  },
+  {
+    "case": "wave_heal_blackout_and_weapon_expiry_have_bounded_effects",
+    "result": "pass",
+    "detail": "wave applies a bounded physical impulse with zero direct damage; blackout is a five-second per-match state and unused weapons expire after 12/10 seconds"
+  },
+  {
+    "case": "nuke_kill_points_and_environmental_death_do_not_leak_rewards",
+    "result": "pass",
+    "detail": "nuke awards exactly +2 for its one enemy; unrelated environmental death gives no kill points and survivor bonus is calculated only at the end"
+  },
+  {
+    "case": "leaving_preparation_cancels_start_and_queue_never_overwrites_catalog_inventory",
+    "result": "pass",
+    "detail": "queue and cancelled preparation do not move the avatar, stash gear, alter health, or persist any minigame score"
+  },
+  {
+    "case": "inaccessible_button_is_logged_disabled_and_relocated_to_a_clear_site",
+    "result": "pass",
+    "detail": "a new collidable obstacle disables the old button, reports its precise location and selects a different reachable location without awarding points"
+  },
+  {
+    "case": "native_avatar_must_finish_loading_before_queue_or_round_entry",
+    "result": "pass",
+    "detail": "queue entry waits for native avatar confirmation; an in-flight body edit at transport time cancels that entry without replacing or stranding either avatar"
+  },
+  {
+    "case": "catalog_tools_survive_a_missing_native_backpack_during_respawn",
+    "result": "pass",
+    "detail": "an absent respawn backpack never deletes original catalog tools; a native backpack/character event completes the pending return and releases the entry lock"
+  },
+  {
+    "case": "actual_server_endpoints_rate_limits_duplicate_guard_and_recovery_reconnect_button",
+    "result": "pass",
+    "detail": "actual bootstrap wires native prompt/RPC/event contracts, rate-limits requests, ignores forged damage, rejects duplicate servers and rebuilds a connected working button after an injected tick failure"
+  }
+]
