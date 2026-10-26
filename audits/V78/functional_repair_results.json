@@ -1,0 +1,67 @@
+[
+  {
+    "case": "library_current_export_passes_api_contract_that_v77_rejected",
+    "result": "pass",
+    "detail": "actual V78 library initializes and opens body/cart; supported exports are accepted independently of version text"
+  },
+  {
+    "case": "real_shop_guard_factory_starts_and_snapshot_yields_a_mountable_avatar",
+    "result": "pass",
+    "detail": "real New/Check/Enter factory protects the actual server RPC; its snapshot builds the preview through the real load/verify pipeline (native asset service simulated)"
+  },
+  {
+    "case": "shop_guard_missing_New_fails_closed_with_diagnostic",
+    "result": "pass",
+    "detail": "invalid/missing factory does not execute unguarded handlers and the client receives the exact missing module/location instead of a nil-call exception"
+  },
+  {
+    "case": "shop_guard_invalid_guard_instance_fails_closed_with_diagnostic",
+    "result": "pass",
+    "detail": "invalid/missing factory does not execute unguarded handlers and the client receives the exact missing module/location instead of a nil-call exception"
+  },
+  {
+    "case": "real_assistant_guard_factory_starts_and_services_status_and_help",
+    "result": "pass",
+    "detail": "actual protected IA starts with compatible engine and builder and accepts a help request; existing plan/receipt authority is retained"
+  },
+  {
+    "case": "assistant_incompatible_factory_reports_repair_without_unprotected_requests",
+    "result": "pass",
+    "detail": "IA remains fail-closed when a wrong module is installed and returns an actionable guarded bootstrap error"
+  },
+  {
+    "case": "switching_every_world_preserves_character_and_camera_and_fixed_scene_origin",
+    "result": "pass",
+    "detail": "19 theme switches send no HubTeleport and preserve the avatar/camera; walking away cannot translate the scene floor"
+  },
+  {
+    "case": "world_details_have_native_materials_and_continuations_with_mobile_caps",
+    "result": "pass",
+    "detail": "13 themes include paths beyond Z=-400, multiple native surface materials and bounded primitive counts; peak desktop/mobile=133/121"
+  },
+  {
+    "case": "live_camera_wasd_moves_camera_only_and_restores_input_on_exit",
+    "result": "pass",
+    "detail": "120 WASD render steps move only camera coordinates, suppress avatar Move, then restore exact camera and native controls; no root anchoring/pivot/speed write"
+  },
+  {
+    "case": "live_camera_touch_joystick_and_exit_fit_portrait_landscape_and_pc",
+    "result": "pass",
+    "detail": "actual joystick InputBegan/InputEnded and exit click work at six geometries, with unchanged character position"
+  },
+  {
+    "case": "live_camera_stops_on_respawn_game_entry_and_photo_mode",
+    "result": "pass",
+    "detail": "respawn, room entry and photo mode release the camera and restore input; game membership prevents a concurrent free-camera session"
+  },
+  {
+    "case": "compact_catalog_filters_sort_and_categories_remain_reachable",
+    "result": "pass",
+    "detail": "six real layout/click paths reach filters, sort and categories; compact controls share a popover, leaving card area and equipped strip visible"
+  },
+  {
+    "case": "assistant_history_cannot_cover_saved_profile_or_new_chat_controls",
+    "result": "pass",
+    "detail": "actual ChatNav and menu layout compose without overlapping targets; history follows navigation in a scrollable area and plan access has a separate fixed footer"
+  }
+]

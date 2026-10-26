@@ -1,0 +1,15 @@
+AVATAR PLAZA V41: 08D_SKIN_STATE corpo/R6/R15 pronto
+PASS builder_readonly_arrays_complete_real_selections_and_validation strict native readonly params still produce four real selections, fresh price confirmation and appearance validation, with original skin preserved
+PASS exact_one_for_one_sponsor_replacement_expiration_and_dedup one and two publications replace exactly one and two temporary cards; duplicate keys do not consume cards and expired publications restore the examples
+PASS destination_seed_lists_native_metadata_only_no_temporary_games only the two supplied permanent seeds are present in their own categories, name/description/image come from mocked native metadata and no filler game/community is generated
+PASS destination_slots_validation_repair_favorites_and_expiration non-place IDs cannot consume slots; pending index saves can be repaired without extending the deadline; own likes/favorites persist and expired submissions leave only the seed
+PASS destination_pagination_keeps_unconsumed_rows_between_pages 150 real publications and the own seed are paginated without losing the remaining rows in a 100-entry native index page
+AVATAR PLAZA V41: 08D_SKIN_STATE corpo/R6/R15 pronto
+PASS virtual_truco_pool_has_no_district_seats_or_character_movement Truco allocates 24 virtual rooms directly under the hub, can assign/release a player and creates neither physical seats nor a removed district dependency
+PASS gameplay_goals_count_legal_changes_and_dont_reward_enemy_moves goals use actual legal chess board changes, count only own moves and captures once, and accept the real numeric team-win representation used by Truco rules
+AVATAR PLAZA V41: 08D_SKIN_STATE corpo/R6/R15 pronto
+[IA V78] servidor=V78 motor=V75 protocolo=2
+PASS ai_server_request_finishes_with_verified_look_and_protocol actual IA RemoteFunction accepts a protocol-2 request and the real readonly-safe builder completes native catalog selection, fresh price/appearance verification and result delivery without an HTTP generator
+AVATAR PLAZA V41: 08D_SKIN_STATE corpo/R6/R15 pronto
+[V63 Hub] reaparecimento no SpawnCentral + piso reutilizado
+PASS hub_respawn_uses_explicit_spawn_and_restores_a_fallen_character actual hub script sets RespawnLocation explicitly, builds the physical origin floor and places a newly spawned/fallen character above it

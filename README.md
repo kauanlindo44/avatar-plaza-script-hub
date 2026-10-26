@@ -1,17 +1,15 @@
-# Avatar Catalog & Games — V77
+# Avatar Catalog & Games — V78
 
-**5 módulos novos + 24 substituições sobre a V76 completa.**
+**3 módulos novos + 26 substituições sobre a V77 completa.**
 
-[Instalador V77](AVATAR_PLAZA_V77.html) · [Pacote para baixar](AVATAR_PLAZA_V77.zip) · [Nomes, tipos, locais e ordem](INSTALL_V77.md) · [Auditoria](audits/V77/README.md) · [Conferência do pedido](audits/V77/PROMPT_REVIEW.md)
+[Instalador V78](AVATAR_PLAZA_V78.html) · [Pacote ZIP](AVATAR_PLAZA_V78.zip) · [Nomes, tipos, locais e instalação](INSTALL_V78.md) · [Auditoria](audits/V78/README.md) · [Conferência do pedido](audits/V78/PROMPT_REVIEW.md)
 
-HUD baseado na referência fornecida: Catálogo/Lojas no alto, roupas nas laterais, utilidades nos cantos e IA/jogos/comandos no menu Mais. Catálogo com seis categorias; experimentar/comprar explícitos no card selecionado quando há espaço. Configurações com seis categorias coloridas. Remoção de itens tem prévia, confirmação e desfazer; janelas de avatar menores conservam cores.
+Corrige a checagem que rejeitava a biblioteca atual de carrinho/corpo, inclui a fábrica correta de proteção de pedidos e apresenta um diagnóstico caso a dependência instalada seja incompatível. Prévia do avatar recuperável, conexão redescoberta e fila limitada. Estados de visibilidade agora são booleanos explícitos no catálogo, atividades da IA e HUD do Caos.
 
-Modo foto com cinco ações primárias, ferramentas adicionais em menu, busca visível e três colunas para fundos e emotes. A disposição da gravação, solicitada mais recentemente, substitui os emotes 5×4. A câmera mantém margens zero ao abrir painéis. Treze cenários simples foram adaptados a partir dos trechos visíveis; Vale da aventura continua inicial, com 19 mundos acessíveis ao todo.
+HUD com controles maiores e acesso lateral a IA/jogos quando há espaço. PC e celular usam a mesma navegação com reflow e menu para telas curtas. Catálogo com cards proporcionais, título/preço separados, duas a oito colunas e filtros acessíveis em Categorias no espaço compacto. Assistente em janela lateral, histórico separado dos botões de navegação e looks pequenos com até cinco por coluna. Modo foto conserva três colunas e o centro da câmera ao abrir painéis.
 
-IA em janela lateral no computador, miniaturas compactas e até cinco looks por coluna. Biblioteca editorial local com 20 conceitos por estilo auxilia a ordenação; não representa looks pesquisados ou IDs inventados. Plus mantém `3717699383`; Pro, `3717699454`. Preços/produto da experiência e recibos continuam dependendo da confirmação oficial do Roblox.
+Câmera livre usa WASD/arrasto no PC e joystick próprio/setas no celular. Os comandos movem só a câmera; sair, reaparecer ou entrar em outro modo restaura o estado. Mudar mapa não chama mais o teleporte para o spawn. Os cenários têm origem fixa, materiais nativos, detalhes arquitetônicos e trilhas de continuação; Vale da aventura segue inicial.
 
-Xadrez e damas usam aparência clássica, jogadores e relógios nas bordas do tabuleiro e lista limitada de lances aceitos. Motores, bots e tempo permanecem iguais. Truco e Botão do Caos conservam regras e recebem ajustes visuais. A arena do Caos continua um retângulo verde finito, com empurrão e explosão nuclear validados no servidor.
+**212 cenários simulados passaram em 18 suítes; 183 fontes compiladas, até 394 linhas por fonte nova.** Histórico, regras, bots, relógios e recibos preservados. Plus `3717699383` e Pro `3717699454` permanecem os mesmos, com preço/produto e concessão dependentes da validação oficial do Roblox.
 
-**198 cenários simulados passaram em 17 suítes.** As 180 fontes efetivas compilam em Lua 5.4; 179 hashes declarados conferem e uma fonte legada não declara hash. Os 1.017 caminhos históricos foram preservados. Processo de teste bloqueia sockets e execução de comandos. Instalador usa JavaScript real com DOM simulado; o Chromium local não está disponível. Imagens de layout são reconstruções ilustrativas, não capturas do Roblox.
-
-**Limites:** pesquisa pública desta etapa ficou restrita ao Chess.com. Documentação e interface atual foram inspecionadas; a gameplay completa quadro a quadro não foi concluída. Não se certifica cópia pixel a pixel de todas as telas. Renderização, celular físico, captura, áudio, física, FPS, compras reais e multiplayer precisam de validação no Roblox. Publicar este pacote no GitHub não instala nem publica o place. A base conserva a dependência legada `08L_COMMUNITY`, cuja fonte não está arquivada no repositório.
+**Validação nativa pendente:** as simulações e reconstruções de layout não certificam funcionamento 100% no Roblox ou em celulares físicos. Áudio, captura, materiais, FPS, compras reais e multiplayer exigem execução no motor. Os IDs/arquivos das texturas originais não podem ser recuperados da gravação; a continuação além da câmera é composição própria. Publicar no GitHub não instala nem publica o place Roblox. A base conserva o módulo legado `08L_COMMUNITY` já existente no place, sem fonte arquivada neste repositório.

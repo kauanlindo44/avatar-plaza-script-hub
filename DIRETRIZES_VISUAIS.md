@@ -80,3 +80,11 @@ Configurações usam seis categorias coloridas. Remoção tem prévia e confirma
 Xadrez e damas usam tabuleiro clássico de duas cores, jogadores/relógios acima e abaixo e lances separados das casas. O histórico não muda regras, relógio ou autoridade do servidor. As composições novas dos mapas usam primitivas simples e orçamento explícito; Vale da aventura continua inicial.
 
 Pesquisa pública desta etapa restrita ao Chess.com. Documentação/interface atual observadas; gameplay integral quadro a quadro e fidelidade pixel a pixel não certificadas. Reconstruções de layout são ilustrativas. Testes nativos de Roblox permanecem pendentes.
+
+## V78 — correção funcional e adaptação PC/celular
+
+A solicitação de 26/10 autoriza aumentar controles, organizar cards/colunas e adaptar a geometria para cada tela. Conferir contratos por funções exportadas: uma etiqueta de versão antiga não pode desativar uma biblioteca compatível. Uma guarda indisponível deve recusar pedidos com diagnóstico claro; nunca liberar handlers sem validação.
+
+Trocar tema não chama HubTeleport nem escreve a posição do avatar/câmera. Cenário e piso visual têm origem fixa. Materiais nativos e detalhes arquitetônicos ampliam os trechos fornecidos; a continuação fora da câmera é própria. Câmera livre move apenas a câmera, suspende controles do personagem e restaura o estado ao sair.
+
+Testar a composição real de módulos de interface, inclusive navegação + histórico da IA. Listas roláveis não podem cobrir seus próprios botões. Telas curtas preservam todos os destinos pelo menu. Distinguir novamente simulação, reconstrução visual e execução nativa; não prometer 100% de funcionamento sem teste no motor e no aparelho.

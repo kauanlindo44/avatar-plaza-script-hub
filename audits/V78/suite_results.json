@@ -1,0 +1,92 @@
+[
+  {
+    "suite": "test_fixes.py",
+    "exit_code": 0,
+    "cases": 13
+  },
+  {
+    "suite": "test_interface.py",
+    "exit_code": 0,
+    "cases": 9
+  },
+  {
+    "suite": "test_regressions.py",
+    "exit_code": 0,
+    "cases": 9
+  },
+  {
+    "suite": "test_features.py",
+    "exit_code": 0,
+    "cases": 18
+  },
+  {
+    "suite": "test_v67.py",
+    "exit_code": 0,
+    "cases": 19
+  },
+  {
+    "suite": "test_v68.py",
+    "exit_code": 0,
+    "cases": 19
+  },
+  {
+    "suite": "test_v69.py",
+    "exit_code": 0,
+    "cases": 20
+  },
+  {
+    "suite": "test_v72.py",
+    "exit_code": 0,
+    "cases": 15
+  },
+  {
+    "suite": "test_v73.py",
+    "exit_code": 0,
+    "cases": 12
+  },
+  {
+    "suite": "test_chaos.py",
+    "exit_code": 0,
+    "cases": 23
+  },
+  {
+    "suite": "test_v74_ui.py",
+    "exit_code": 0,
+    "cases": 6
+  },
+  {
+    "suite": "test_v75.py",
+    "exit_code": 0,
+    "cases": 12
+  },
+  {
+    "suite": "test_photo_controller.py",
+    "exit_code": 0,
+    "cases": 2
+  },
+  {
+    "suite": "test_reference_ui.py",
+    "exit_code": 0,
+    "cases": 7
+  },
+  {
+    "suite": "test_worlds_ai.py",
+    "exit_code": 0,
+    "cases": 3
+  },
+  {
+    "suite": "test_board_ui.py",
+    "exit_code": 0,
+    "cases": 3
+  },
+  {
+    "suite": "test_security.py",
+    "exit_code": 0,
+    "cases": 9
+  },
+  {
+    "suite": "test_functional_repair.py",
+    "exit_code": 0,
+    "cases": 13
+  }
+]

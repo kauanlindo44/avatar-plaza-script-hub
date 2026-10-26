@@ -1,0 +1,36 @@
+{
+  "syntax": "pass",
+  "compiler": "Lua 5.4 compatibility; not native Luau/Roblox",
+  "effective_sources": 183,
+  "delta_sources": 29,
+  "create": 3,
+  "replace": 26,
+  "max_lines": 394,
+  "history_bytes_unchanged": true,
+  "historical_paths": 1048,
+  "versions_inventoried": 47,
+  "inherited_v37_manifest_warnings": [
+    "scripts/V37/01A_HUB_CORE_ENV.lua",
+    "scripts/V37/01B_HUB_WORLD.lua",
+    "scripts/V37/07G_HUB_UI.lua",
+    "scripts/V37/07H_GAME_UI.lua",
+    "scripts/V37/08D_SKIN_STATE.lua",
+    "scripts/V37/09A_SHOP_UI.lua",
+    "scripts/V37/09B_SHOP_SERVER.lua",
+    "scripts/V37/09C_SHOP_CLIENT.lua",
+    "scripts/V37/09C1_SHOP_LOOKS.lua",
+    "scripts/V37/09C2_SHOP_CATALOG.lua",
+    "scripts/V37/09C4_OUTFIT_LIBRARY.lua"
+  ],
+  "current_declared_hashes": "all declared hashes pass",
+  "current_sources_without_declared_hash": 1,
+  "game_rule_and_bot_modules": "unchanged",
+  "board_clock_and_rule_invocations": "unchanged",
+  "receipt_owner": [
+    "07K10_CARD_COMMERCE"
+  ],
+  "legacy_place_dependency": [
+    "08L_COMMUNITY"
+  ],
+  "native_roblox_tests": "PENDENTE"
+}

@@ -1,0 +1,17 @@
+[
+  {
+    "case": "v77_thirteen_low_poly_worlds",
+    "result": "pass",
+    "detail": "1310 primitive parts across 13 worlds; <=176 each (desktop budget), center free, cancellation respected"
+  },
+  {
+    "case": "v77_editorial_catalog_is_not_fake_assets",
+    "result": "pass",
+    "detail": "1800 local editorial concepts; no invented asset IDs or claim of verified looks"
+  },
+  {
+    "case": "v77_assistant_bounded_window",
+    "result": "pass",
+    "detail": "assistant leaves the avatar center clear on desktop; composer and closing control stay inside the window"
+  }
+]

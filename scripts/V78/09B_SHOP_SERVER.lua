@@ -1,0 +1,279 @@
+-- 09B_SHOP_SERVER | Script | ServerScriptService | V78 (SUBSTITUIR)
+-- Aparência confirmada e carrinho oficial com pacotes sem duplicar peças.
+local DS=game:GetService("DataStoreService")
+local TextService=game:GetService("TextService")
+local Http=game:GetService("HttpService")
+local Rep=game:GetService("ReplicatedStorage")
+local Players=game:GetService("Players")
+local Market=game:GetService("MarketplaceService")
+local A=require(Rep:WaitForChild("08B_AVATAR_DATA"))
+local Native=require(Rep:WaitForChild("08B2_BODY_DESCRIPTION"))
+local Diag=require(Rep:WaitForChild('08B5_AVATAR_DIAGNOSTICS'))
+local Runtime=require(script.Parent:WaitForChild("09B5_AVATAR_RUNTIME"));Runtime.Start()
+local CartResolver=require(script.Parent:WaitForChild('09B6_CART_RESOLVER'))
+local Inspect=require(script.Parent:WaitForChild("09B3_PLAYER_INSPECT"))
+local Curated=require(script.Parent:WaitForChild("09B4_CURATED_LOOKS"))
+local Discovery=require(script.Parent:WaitForChild("09B1_AVATAR_DISCOVERY"))
+local Featured=require(script.Parent:WaitForChild('09B8_FREE_HIGHLIGHTS'))
+local Destinations=require(script.Parent:WaitForChild('09B10_SPONSORED_DESTINATIONS'))
+local MovementAnimations=require(script.Parent:WaitForChild('08B7_AVATAR_ANIMATIONS'))
+local PhotoEmote=require(script.Parent:WaitForChild('07P11_EMOTE_RESOLVER'))
+local PhotoBackground=require(script.Parent:WaitForChild('07P8_BACKGROUND_RESOLVER'))
+local Registry=require(script.Parent:WaitForChild('09B9_GLOBAL_LOOKS'));Registry.BindDescribe(Curated.Describe);Registry.Start()
+local Community=require(script.Parent:WaitForChild("08L_COMMUNITY"))
+local Private=require(script.Parent:WaitForChild('09B12_PRIVATE_LOOKS'))
+local PurchaseHistory=require(script.Parent:WaitForChild('09B13_PURCHASE_HISTORY'));PurchaseHistory.Start()
+local busy={};
+local Guard;local guardError
+local guardObject=script.Parent:WaitForChild('09I26_REQUEST_GUARD',10)
+local guardOK,provider=pcall(require,guardObject)
+if guardOK and type(provider)=='table'and type(provider.New)=='function'then
+ local ok,g=pcall(provider.New)
+ if ok and type(g)=='table'and type(g.Check)=='function'and type(g.Enter)=='function'and type(g.Forget)=='function'then Guard=g end
+end
+if not Guard then guardError='Proteção não iniciou. Reinstale 09I26_REQUEST_GUARD como ModuleScript em ServerScriptService e reinicie Play.';warn('[V78][DEPENDÊNCIA] '..guardError..' '..tostring(provider))end
+local remotes=Rep:FindFirstChild("LMShop_Remotes");if remotes then remotes:Destroy()end
+remotes=Instance.new("Folder");remotes.Name="LMShop_Remotes";remotes.Parent=Rep;remotes:SetAttribute('ShopVersion','V78');remotes:SetAttribute('AvatarRuntimeVersion',Runtime.Version or'antigo');remotes:SetAttribute('PhotoResolverVersion',PhotoBackground.Version or'antigo');remotes:SetAttribute('SponsorVersion',Featured.Version or'antigo')
+local rpc=Instance.new("RemoteFunction");rpc.Name="Request";rpc.Parent=remotes
+local highlightChanged=Instance.new('RemoteEvent');highlightChanged.Name='HighlightChanged';highlightChanged.Parent=remotes
+Featured.Changed.Event:Connect(function()highlightChanged:FireAllClients()end)
+Destinations.Changed.Event:Connect(function()highlightChanged:FireAllClients()end)
+local function normRig(v)return tostring(v)=="R6"and"R6"or"R15"end
+local function load(pl)return Private.Load(pl)end
+local function update(pl,fn)return Private.Update(pl,fn)end
+local function filterName(pl,name)
+ name=tostring(name or""):match("^%s*(.-)%s*$");if name==""then name="Meu Look"end;name=name:sub(1,40)
+ local ok,r=pcall(function()return TextService:FilterStringAsync(name,pl.UserId):GetNonChatStringForBroadcastAsync()end);return ok and r or"Meu Look"
+end
+local function findSkin(pl,id)local d=load(pl);for _,s in ipairs(d.skins)do if s.id==id then return s end end end
+Community.SetResolver(findSkin)
+local handlers={}
+handlers.PurchaseHistory=function(pl)return PurchaseHistory.List(pl)end
+handlers.BodyCatalog=function(pl,args)return require(script.Parent:WaitForChild('09B14_AVATAR_BASES')).Catalog(pl,args)end
+handlers.AvatarAnimations=function(pl)return MovementAnimations.Resolve(pl)end
+handlers.PhotoEmote=function(pl,args)return PhotoEmote.Resolve(pl,args)end
+handlers.PhotoBackground=function(pl,args)return PhotoBackground.Resolve(pl,args)end
+handlers.DestinationFeed=function(pl,args)return Destinations.Feed(pl,args)end
+handlers.DestinationCheck=function(pl,args)return Destinations.Check(pl,args)end
+handlers.DestinationSubmit=function(pl,args)return Destinations.Submit(pl,args)end
+handlers.DestinationWithdraw=function(pl,args)return Destinations.Withdraw(pl,args)end
+handlers.DestinationStatus=function(pl,args)return Destinations.Status(pl,args)end
+handlers.DestinationReaction=function(pl,args)return Destinations.Reaction(pl,args)end
+handlers.DestinationPlay=function(pl,args)return Destinations.Play(pl,args)end
+handlers.HighlightStatus=function(pl,args)return Featured.Status(pl)end
+handlers.HighlightCheck=function(pl,args)return Featured.Check(pl,args)end
+handlers.HighlightFeed=function(pl,args)return Featured.Feed(pl,args)end
+handlers.HighlightSubmit=function(pl,args)return Featured.Submit(pl,args)end
+handlers.HighlightWithdraw=function(pl,args)return Featured.Withdraw(pl)end
+handlers.CatalogFavorites=function(pl)local d,p,loading=load(pl);return{items=d.catalogFavorites or{},persistent=p,loading=loading}end
+handlers.CatalogFavorite=function(pl,args)
+ local id=tonumber(args.id);if not id or id<=0 or id%1~=0 then error('ID inválido.')end
+ local kind=args.kind=='Bundle'and'Bundle'or'Asset';local value=args.value~=false;local item
+ if value then local details=game:GetService('AvatarEditorService'):GetItemDetailsAsync(id,kind=='Bundle'and Enum.AvatarItemType.Bundle or Enum.AvatarItemType.Asset);item={Id=id,Name=details.Name,ItemType=kind,AssetType=typeof(details.AssetType)=='EnumItem'and details.AssetType.Name or details.AssetType}end
+ update(pl,function(d)d.catalogFavorites=d.catalogFavorites or{};for i=#d.catalogFavorites,1,-1 do local v=d.catalogFavorites[i];if v.Id==id and v.ItemType==kind then table.remove(d.catalogFavorites,i)end end;if item then if #d.catalogFavorites>=80 then error('Limite de 80 peças favoritas. Remova uma antes.')end;table.insert(d.catalogFavorites,1,item)end;return d end);return{value=value}
+end
+handlers.AccessoryRules=function()local r,e=require(Rep:WaitForChild('08B8_ACCESSORY_REFINEMENT')).LoadRules();return r,e end
+handlers.HighlightFavorite=function(pl,args)return Featured.Favorite(pl,args)end
+handlers.HighlightPurchase=function(pl,args)return Featured.Purchase(pl,args)end
+local publicLast={}
+handlers.InspectAvatar=function(pl,args)return Inspect.Avatar(pl,args)end
+handlers.InspectUse=function(pl,args)return Inspect.Use(pl,args)end
+handlers.InspectLike=function(pl,args)return Inspect.Like(pl,args)end
+handlers.InspectTransfer=function(pl,args)return Inspect.Transfer(pl,args)end
+handlers.ClearInspect=function(pl,args)Inspect.Clear(pl);return true end
+handlers.CuratedPage=function(pl,args)return Curated.Page(pl,args)end
+handlers.DiscoverPage=function(pl,args)return Discovery.Page(pl,args)end
+handlers.DiscoverAvatar=function(pl,args)return Discovery.Load(pl,args)end
+handlers.DiscoverResearch=function(pl,args)return Discovery.Research(pl,args)end
+handlers.PublicPage=function(pl,args)
+ if type(args.codes)~="table"or #args.codes>50 then error("Página inválida.")end
+ if os.clock()-(publicLast[pl]or -100)<1 then error("Aguarde um instante antes de atualizar a página.")end;publicLast[pl]=os.clock()
+ local items={}
+ for _,code in ipairs(args.codes)do
+  if type(code)~="string"or #code>20 then error("Código inválido.")end
+  local ok,r=pcall(function()return Community.ByCode(pl,{code=code})end);if ok and r then table.insert(items,r)end
+ end
+ return{items=items}
+end
+handlers.RobloxPlusStatus=function(pl)
+ local ok,active=pcall(function()return pl.HasRobloxSubscription end)
+ if not ok then error("Não foi possível consultar a assinatura do Roblox.")end
+ return{active=active==true}
+end
+handlers.List=function(pl)local d,p,pending,bad=load(pl);return{skins=d.skins,persistent=p,loading=pending,invalid=bad or 0}end
+handlers.Save=function(pl,args)
+ local allowed,reason=Inspect.CheckApply(pl);if not allowed then error(reason)end
+ local clean,err=A.Clean(args.body);if not clean then error(err)end
+ local skin={id=Http:GenerateGUID(false),name=filterName(pl,args.name),body=clean,rig=A.BodyRequiresR15(clean)and"R15"or normRig(args.rig),updated=os.time()}
+ local d,p=update(pl,function(old)if #old.skins>=A.MaxSaved then error("Limite de "..A.MaxSaved.." skins salvas.")end;table.insert(old.skins,1,skin);return old end)
+ return{skin=skin,skins=d.skins,persistent=p}
+end
+
+handlers.Update=function(pl,args)
+ if args.body then local allowed,reason=Inspect.CheckApply(pl);if not allowed then error(reason)end end
+ local id=tostring(args.id or"");if not findSkin(pl,id)then error("Skin não encontrada.")end
+ local filteredName=args.name and filterName(pl,args.name)or nil
+ local clean=nil;if args.body then local err;clean,err=A.Clean(args.body);if not clean then error(err)end end
+ local d,p=update(pl,function(old)
+  for _,skin in ipairs(old.skins)do if skin.id==id then if clean then skin.body=clean end;if filteredName then skin.name=filteredName end;if args.rig then skin.rig=A.BodyRequiresR15(skin.body)and"R15"or normRig(args.rig)end;skin.updated=os.time()end end;return old
+ end)
+ local skin=findSkin(pl,id);if skin and skin.publicCode then pcall(function()Community.Publish(pl,{id=id})end)end
+ return{skin=skin,skins=d.skins,persistent=p}
+end
+handlers.Delete=function(pl,args)
+ local id=tostring(args.id or"");if not findSkin(pl,id)then error("Skin não encontrada.")end;pcall(function()Community.Unpublish(pl,id)end)
+ local d,p=update(pl,function(old)for i=#old.skins,1,-1 do if old.skins[i].id==id then table.remove(old.skins,i)end end;return old end);return{skins=d.skins,persistent=p}
+end
+local function same(a,b)
+ if type(a)~=type(b)then return false end
+ if type(a)~="table"then return a==b end
+ for k,v in pairs(a)do if not same(v,b[k])then return false end end
+ for k in pairs(b)do if a[k]==nil then return false end end;return true
+end
+local function mergeList(live,before,after,idOf)
+ local old,wanted={},{};for _,v in ipairs(before)do old[idOf(v)]=v end
+ for _,v in ipairs(after)do wanted[idOf(v)]=v end
+ local out,seen={},{}
+ for _,v in ipairs(live)do
+  local id=idOf(v)
+  if not old[id]or wanted[id]then
+   table.insert(out,old[id]and not same(old[id],wanted[id])and (type(wanted[id])=="table"and A.Copy(wanted[id])or wanted[id])or(type(v)=="table"and A.Copy(v)or v));seen[id]=true
+  end
+ end
+ for _,v in ipairs(after)do local id=idOf(v);if not seen[id]and(not old[id]or not same(old[id],v))then table.insert(out,type(v)=="table"and A.Copy(v)or v);seen[id]=true end end
+ return out
+end
+local function mergeEdits(live,before,after)
+ local result=A.Copy(live)
+ for _,section in ipairs({"props","scales","colors"})do
+  for k,v in pairs(after[section])do if not same(v,before[section][k])then result[section][k]=type(v)=="table"and A.Copy(v)or v
+  end end
+ end
+ Native.Merge(live,before,after,result,same,A.Copy)
+ result.accessories=mergeList(live.accessories,before.accessories,after.accessories,function(v)return v.id end)
+ result.emotes=mergeList(live.emotes,before.emotes,after.emotes,function(v)return v end)
+ return A.Clean(result)
+end
+local function avatarDescription(pl)return Runtime.Description(pl)end
+handlers.AvatarSnapshot=function(pl)
+ local hum,desc,epoch=avatarDescription(pl);local body=A.Pack(desc);desc:Destroy()
+ return{body=body,rig=hum.RigType==Enum.HumanoidRigType.R6 and"R6"or"R15",epoch=epoch}
+end
+handlers.Apply=function(pl,args)
+ local ctx=args._diagnostic
+ Diag.Mark(ctx,'DESCRIPTION','09B_SHOP_SERVER.Apply')
+ local allowed,reason=Inspect.CheckApply(pl);if not allowed then error(reason)end
+ local clean,err=A.Clean(args.body);if not clean then error(err)end
+ local before
+ if args.replace~=true then before,err=A.Clean(args.base);if not before then error("Reabra o editor para carregar sua skin atual.")end end
+ local hum,desc=avatarDescription(pl);local live=A.Pack(desc)
+ Diag.Mark(ctx,'MERGE','09B_SHOP_SERVER.mergeEdits')
+ if before then clean,err=mergeEdits(live,before,clean)end
+ if not clean then desc:Destroy();error(err)end
+ local prepared=A.Unpack(clean,desc)
+ if same(live.emotes,clean.emotes)then prepared:SetEmotes(desc:GetEmotes())end
+ desc:Destroy();desc=prepared
+ local ok,result=pcall(Runtime.Apply,pl,desc,normRig(args.rig),ctx);desc:Destroy()
+ if not ok then error(result)end;return result
+end
+handlers.ReportVisual=function(pl,args)
+ local epoch=tonumber(args.epoch);if epoch~=pl:GetAttribute('ACP_AvatarEpoch')then return true end
+ if args.success==true then pl:SetAttribute('ACP_AvatarVisualState','confirmed');return true end
+ if type(args.cause)~='string'or #args.cause>1400 then error('Relatório inválido.')end
+ local hum,desc=avatarDescription(pl);local body=A.Pack(desc);desc:Destroy()
+ local ctx=Diag.New({player=pl,source='09C12_AVATAR_FEEDBACK / '..tostring(args.source or'cliente'):sub(1,80),items=Diag.Items(body)})
+ if type(args.trace)=='string'then ctx.trace=args.trace:sub(1,80)end
+ local stage=({CONTENT=true,LAYERS=true,STRUCTURE=true,CONFIRM=true})[args.stage]and args.stage or'CONFIRM'
+ local proof={kind=Diag.Kinds[args.kind]and args.kind or'validation',check=Diag.Cut(args.check,60),expected=Diag.Cut(args.expected,220),found=Diag.Cut(args.found,220)}
+ local id=tonumber(args.itemId)
+ for _,v in ipairs(body.accessories or{})do if id==v.id then proof.itemId=id;proof.itemType=v.type;break end end
+ ctx.side='Client';pl:SetAttribute('ACP_AvatarVisualState','failed');Diag.Fail(ctx,stage,args.cause,'Avatar visível no cliente',args.found,proof)
+ return true
+end
+handlers.Publish=function(pl,args)
+ local id=tostring(args.id or"");local skin=findSkin(pl,id);if not skin then error("Skin não encontrada.")end;local pub=Community.Publish(pl,{id=id})
+ update(pl,function(old)for _,s in ipairs(old.skins)do if s.id==id then s.publicCode=pub.code;s.publicId=pub.id end end;return old end);return pub
+end
+handlers.Unpublish=function(pl,args)
+ local id=tostring(args.id or"");local ok=Community.Unpublish(pl,id);update(pl,function(old)for _,s in ipairs(old.skins)do if s.id==id then s.publicCode=nil;s.publicId=nil end end;return old end);return ok
+end
+handlers.Favorite=function(pl,args)return Community.Favorite(pl,args)end
+handlers.Feed=function(pl,args)return Community.Feed(pl,args)end
+handlers.CommunityPage=function(pl,args)
+ for _,key in ipairs({'min','max'})do if args[key]~=nil then local n=tonumber(args[key]);if not n or n~=n or n<0 or n%1~=0 or n>1000000 then error('Preço de filtro inválido.')end;args[key]=n end end
+ if args.min and args.max and args.min>args.max then error('O preço máximo precisa ser igual ou maior que o mínimo.')end
+ local data=Discovery.Page(pl,args)
+ if tostring(args.search or''):sub(1,1)~='@'then
+  local ok,published=pcall(function()return Community.Feed(pl,{next=(tonumber(args.page)or 0)>0,search=args.search})end)
+  if ok and published then
+   local existing={};for _,r in ipairs(data.items)do existing[r.code or r.id]=true end
+   for _,r in ipairs(published.items or{})do
+    if r.body then r.signature=Registry.Code(r.body)end
+    local accepts=true
+    if args.budget=='free'or args.min or args.max then local ok,priced=pcall(Curated.Describe,r);if ok then r=priced else accepts=false end;accepts=accepts and(args.budget~='free'or r.total==0)and(not args.min or r.total and r.total>=args.min)and(not args.max or r.total and r.total<=args.max)end
+    if accepts and not existing[r.code or r.id]and #data.items<60 then data.items[#data.items+1]=r end
+   end
+   data.finished=data.finished and published.finished==true
+  end
+ end;return data
+end
+handlers.Code=function(pl,args)
+ if tostring(args.code or''):upper():match('^LK%-')then local r,e=Registry.Get(tostring(args.code):upper());if not r then error(e)end;return r end
+ local id=tostring(args.code or''):upper():match('^AV%-(%d+)$')
+ if id then Discovery.Page(pl,{search=id,page=0});return Discovery.Load(pl,{id=id})end
+ return Community.ByCode(pl,args)
+end
+handlers.PurchaseItem=function(pl,args)
+ local id=tonumber(args.id);if not id or id<=0 then error("Item inválido.")end;local kind=tostring(args.kind or"Asset")
+ local ok=pcall(function()if kind=="Bundle"then Market:PromptBundlePurchase(pl,id)else Market:PromptPurchase(pl,id)end end);if not ok then error("Não foi possível abrir essa compra.")end;return true
+end
+local function validatedItems(items,limit)
+ if type(items)~="table"or #items<1 or #items>limit then error("Seleção inválida de itens.")end
+ local out,seen={},{}
+ for _,v in ipairs(items)do
+  if type(v)~="table"then error("Item inválido.")end
+  local id=tonumber(v.id);local kind=tostring(v.kind or"Asset");local key=kind..":"..tostring(id)
+  if not id or id~=id or id<=0 or id>9007199254740991 or id%1~=0 or(kind~="Asset"and kind~="Bundle")then error("Item inválido no carrinho.")end
+  if not seen[key]then seen[key]=true;out[#out+1]={id=id,kind=kind}end
+ end;return out
+end
+handlers.CartQuote=function(pl,args)return{items=CartResolver.Quote(pl,validatedItems(args.items,20))}end
+handlers.OutfitQuote=function(pl,args)
+ local clean,err=A.Clean(args.body);if not clean then error(err)end
+ return{items=CartResolver.Quote(pl,CartResolver.Outfit(pl,clean))}
+end
+handlers.CartPurchase=function(pl,args)
+ local items=validatedItems(args.items,100);local lines={};local remaining=0
+ for _,item in ipairs(CartResolver.Quote(pl,items))do if not item.owned and not item.unavailable then
+  if #lines<20 then lines[#lines+1]={Type=item.kind=="Bundle"and Enum.MarketplaceProductType.AvatarBundle or Enum.MarketplaceProductType.AvatarAsset,Id=tostring(item.id)}else remaining=remaining+1 end
+ end end
+ if #lines>0 then local ok=pcall(function()Market:PromptBulkPurchase(pl,lines,{})end);if not ok then error("Não foi possível abrir a compra. Tente novamente.")end end
+ return{count=#lines,remaining=remaining}
+end
+handlers.BulkPurchase=function(pl,args)
+ local clean,err=A.Clean(args.body);if not clean then error(err)end;local items={}
+ items=CartResolver.Outfit(pl,clean)
+ return handlers.CartPurchase(pl,{items=items})
+end
+remotes:SetAttribute('GuardReady',Guard~=nil);remotes:SetAttribute('BootError',guardError)
+rpc.OnServerInvoke=function(pl,action,args)
+ if not Guard then return {ok=false,error=guardError} end
+ if type(action)~="string"or not handlers[action]or type(args)~="table"then return{ok=false,error="Pedido inválido."}end;if busy[pl]then return{ok=false,error="Aguarde a operação anterior."}end
+ local allowed,why=Guard.Check(pl,action,args);if not allowed then return{ok=false,error=why}end
+ local release=Guard.Enter(pl)
+ local ctx;busy[pl]=true
+ local ok,result=pcall(function()
+  if action=='Apply'then ctx=Diag.New({player=pl,source='09B_SHOP_SERVER.Apply',items=Diag.Items(type(args.body)=='table'and args.body or{})});args._diagnostic=ctx end
+  return handlers[action](pl,args)
+ end);busy[pl]=nil;release()
+ if not ok then
+  if ctx and not ctx.reported then result=Diag.Fail(ctx,ctx.stage,result)end
+  warn("AVATAR CREATOR PLAZA "..action..": "..tostring(result))
+  local msg=tostring(result);for _=1,6 do local clean,n=msg:gsub("^.-:%d+:%s*","");msg=clean;if n==0 then break end end
+  if msg:find("HTTP")or msg:find("stack traceback",1,true)or #msg>220 then msg="O serviço está ocupado. Tente novamente em instantes."end
+  return{ok=false,error=Diag.Cut(msg,220),diagnostic=ctx and Diag.Public(ctx)}
+ end;return{ok=true,data=result}
+end
+Players.PlayerRemoving:Connect(function(pl)if Guard then Guard.Forget(pl)end;busy[pl]=nil;publicLast[pl]=nil end)
+print('AVATAR PLAZA V78: aplicação com diagnóstico e guarda de pedidos pronta')
+print('[Shop V78] patrocinar='..tostring(Featured.Version or'antigo')..' fundos='..tostring(PhotoBackground.Version or'antigo'))

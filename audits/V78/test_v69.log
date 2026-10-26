@@ -1,0 +1,34 @@
+AVATAR PLAZA V41: 08D_SKIN_STATE corpo/R6/R15 pronto
+PASS private_channels_are_server_rostered_isolated_and_retired two simultaneous matches have distinct native channels; only their server-recorded members pass delivery; closing/rematching retires prior membership
+AVATAR PLAZA V41: 08D_SKIN_STATE corpo/R6/R15 pronto
+PASS chat_permission_failure_fails_closed_and_leaving_cancels_late_add permission query failure or direct-chat denial adds no source; a closed pending room never admits late users and departure immediately blocks delivery
+AVATAR PLAZA V41: 08D_SKIN_STATE corpo/R6/R15 pronto
+PASS custom_chat_only_renders_confirmed_current_channel_and_sends_natively sending/foreign/duplicate messages are excluded; only confirmed native filtered text is rendered without rich text; SendAsync is the sole transport and failures preserve the draft
+PASS private_chat_touch_targets_fit_phone_desktop_and_keyboard seven safe phone/tablet/desktop geometries preserve chat close, composer and send targets; a landscape keyboard is kept clear
+PASS vegetation_plan_is_composed_spaced_varied_and_deterministic 64 trees across eight authored cluster plans keep clear centers, minimum spacing, variant silhouettes and stable rebuilds
+PASS shared_palette_keeps_legible_contrast_and_seasonal_optional shared main text, muted text and primary controls meet 4.5:1 mathematically; legacy pale labels are corrected and Halloween remains optional
+AVATAR PLAZA V41: 08D_SKIN_STATE corpo/R6/R15 pronto
+PASS activity_invites_require_acceptance_capacity_and_membership invites expose no session data before explicit acceptance; only host can invite, duo capacity is enforced and ending removes memberships
+AVATAR PLAZA V41: 08D_SKIN_STATE corpo/R6/R15 pronto
+PASS collaboration_changes_only_chosen_slot_checks_price_and_credit contribution uses server avatar data, preserves unselected clothes, rolls back over-budget changes and requires every collaborator to authorize the exact publishable composition
+AVATAR PLAZA V41: 08D_SKIN_STATE corpo/R6/R15 pronto
+PASS duo_generates_individual_styles_with_shared_palette_and_saves_own each participant keeps an independent style while palette/budget are shared; only their own verified result is saved or applied explicitly
+AVATAR PLAZA V41: 08D_SKIN_STATE corpo/R6/R15 pronto
+PASS failed_and_cancelled_activity_generation_refunds_once catalog failure or an options change cancels the request and refunds its quota exactly once, including the later timeout
+AVATAR PLAZA V41: 08D_SKIN_STATE corpo/R6/R15 pronto
+PASS remix_defaults_private_rechecks_revocation_and_preserves_origin sharing begins blocked; only owner authorizes; generated/saved derivatives retain the original identity; revoking a parent blocks further remix use throughout the chain
+AVATAR PLAZA V41: 08D_SKIN_STATE corpo/R6/R15 pronto
+PASS permission_changed_during_generation_rejects_result_and_refunds consent is checked after search too: an in-flight revocation cannot yield a new approved remix and quota is refunded
+AVATAR PLAZA V41: 08D_SKIN_STATE corpo/R6/R15 pronto
+PASS unavailable_storage_does_not_grant_remix_permission unconfirmed reads/writes cannot authorize a remix, and malformed codes are rejected before storage access
+AVATAR PLAZA V41: 08D_SKIN_STATE corpo/R6/R15 pronto
+PASS all_activity_screens_fit_safe_mobile_desktop_and_keep_explicit_actions seven geometries cover all four activity screens, safe close/navigation/touch targets, compact action menus and a usable preview area
+PASS rehearsal_steps_act_on_studio_copy_and_do_not_apply_map_avatar three explicit steps change only the Studio copy framing/rotation/zoom and show concrete posing advice; no map avatar application or purchase is invoked
+PASS board_redraw_preserves_still_piece_instances_and_native_state stationary pieces retain render instances across clock snapshots and selecting/animating never mutates the rules board or turn
+AVATAR PLAZA V41: 08D_SKIN_STATE corpo/R6/R15 pronto
+PASS board_server_owns_chat_lifecycle_without_waiting_for_permissions the actual board authority opens a private channel asynchronously and retires it on finish; a different game receives a different channel
+AVATAR PLAZA V41: 08D_SKIN_STATE corpo/R6/R15 pronto
+PASS actual_activity_client_opens_creates_and_yields_to_match_without_gui_lock the real activity LocalScript launches from its entry point, creates a server session and closes for a match without rewriting other GUI Enabled states
+AVATAR PLAZA V41: 08D_SKIN_STATE corpo/R6/R15 pronto
+PASS activity_remote_endpoint_rejects_unsupported_text_transport_and_bad_args the actual RPC wrapper accepts structured activity actions and rejects chat messages, malformed arguments and non-member configuration
+PASS new_features_are_explained_by_the_existing_game_assistant all four activities and private match chat are concrete guide topics, reachable through normal help questions without invoking outfit generation

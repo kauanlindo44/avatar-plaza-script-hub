@@ -1,0 +1,74 @@
+[V44] 09A_SHOP_UI carregado de Folder
+AVATAR PLAZA V41: 08D_SKIN_STATE corpo/R6/R15 pronto
+PASS library_current_export_passes_api_contract_that_v77_rejected actual V78 library initializes and opens body/cart; supported exports are accepted independently of version text
+AVATAR PLAZA V41: 08D_SKIN_STATE corpo/R6/R15 pronto
+AVATAR PLAZA V78: aplicação com diagnóstico e guarda de pedidos pronta
+[Shop V78] patrocinar=native fixture fundos=native fixture
+[Avatar V57] 00000000000000000000000000000002 | DESCRIPTION | Humanoid.GetAppliedDescription
+[Avatar V57] 00000000000000000000000000000002 | CREATE | Players.CreateHumanoidModelFromDescriptionAsync
+[Avatar V57] 00000000000000000000000000000002 | STRUCTURE | 08B4_AVATAR_LOAD.Check
+[Avatar V57] 00000000000000000000000000000002 | CONTENT | 08B4_AVATAR_LOAD.Content
+[Avatar V57] 00000000000000000000000000000002 | LAYERS | 08B3_AVATAR_VERIFY.Check
+[Avatar V57] 00000000000000000000000000000002 | MAP | 09B5_AVATAR_RUNTIME.rebuild
+[Avatar V57] 00000000000000000000000000000002 | STRUCTURE | 08B4_AVATAR_LOAD.Check
+[Avatar V57] 00000000000000000000000000000002 | CONTENT | 08B4_AVATAR_LOAD.Content
+[Avatar V57] 00000000000000000000000000000002 | LAYERS | 08B3_AVATAR_VERIFY.Check
+[Avatar V57] 00000000000000000000000000000002 | CONFIRM | 09B5_AVATAR_RUNTIME.confirm
+[Avatar V57] 00000000000000000000000000000002 | STRUCTURE | 08B4_AVATAR_LOAD.Check
+[Avatar V57] 00000000000000000000000000000002 | CONTENT | 08B4_AVATAR_LOAD.Content
+[Avatar V57] 00000000000000000000000000000002 | LAYERS | 08B3_AVATAR_VERIFY.Check
+PASS real_shop_guard_factory_starts_and_snapshot_yields_a_mountable_avatar real New/Check/Enter factory protects the actual server RPC; its snapshot builds the preview through the real load/verify pipeline (native asset service simulated)
+AVATAR PLAZA V41: 08D_SKIN_STATE corpo/R6/R15 pronto
+AVATAR PLAZA V78: aplicação com diagnóstico e guarda de pedidos pronta
+[Shop V78] patrocinar=native fixture fundos=native fixture
+[Avatar V57] 00000000000000000000000000000002 | DESCRIPTION | Humanoid.GetAppliedDescription
+[Avatar V57] 00000000000000000000000000000002 | CREATE | Players.CreateHumanoidModelFromDescriptionAsync
+[Avatar V57] 00000000000000000000000000000002 | STRUCTURE | 08B4_AVATAR_LOAD.Check
+[Avatar V57] 00000000000000000000000000000002 | CONTENT | 08B4_AVATAR_LOAD.Content
+[Avatar V57] 00000000000000000000000000000002 | LAYERS | 08B3_AVATAR_VERIFY.Check
+[Avatar V57] 00000000000000000000000000000002 | MAP | 09B5_AVATAR_RUNTIME.rebuild
+[Avatar V57] 00000000000000000000000000000002 | STRUCTURE | 08B4_AVATAR_LOAD.Check
+[Avatar V57] 00000000000000000000000000000002 | CONTENT | 08B4_AVATAR_LOAD.Content
+[Avatar V57] 00000000000000000000000000000002 | LAYERS | 08B3_AVATAR_VERIFY.Check
+[Avatar V57] 00000000000000000000000000000002 | CONFIRM | 09B5_AVATAR_RUNTIME.confirm
+[Avatar V57] 00000000000000000000000000000002 | STRUCTURE | 08B4_AVATAR_LOAD.Check
+[Avatar V57] 00000000000000000000000000000002 | CONTENT | 08B4_AVATAR_LOAD.Content
+[Avatar V57] 00000000000000000000000000000002 | LAYERS | 08B3_AVATAR_VERIFY.Check
+PASS shop_guard_missing_New_fails_closed_with_diagnostic invalid/missing factory does not execute unguarded handlers and the client receives the exact missing module/location instead of a nil-call exception
+AVATAR PLAZA V41: 08D_SKIN_STATE corpo/R6/R15 pronto
+AVATAR PLAZA V78: aplicação com diagnóstico e guarda de pedidos pronta
+[Shop V78] patrocinar=native fixture fundos=native fixture
+[Avatar V57] 00000000000000000000000000000002 | DESCRIPTION | Humanoid.GetAppliedDescription
+[Avatar V57] 00000000000000000000000000000002 | CREATE | Players.CreateHumanoidModelFromDescriptionAsync
+[Avatar V57] 00000000000000000000000000000002 | STRUCTURE | 08B4_AVATAR_LOAD.Check
+[Avatar V57] 00000000000000000000000000000002 | CONTENT | 08B4_AVATAR_LOAD.Content
+[Avatar V57] 00000000000000000000000000000002 | LAYERS | 08B3_AVATAR_VERIFY.Check
+[Avatar V57] 00000000000000000000000000000002 | MAP | 09B5_AVATAR_RUNTIME.rebuild
+[Avatar V57] 00000000000000000000000000000002 | STRUCTURE | 08B4_AVATAR_LOAD.Check
+[Avatar V57] 00000000000000000000000000000002 | CONTENT | 08B4_AVATAR_LOAD.Content
+[Avatar V57] 00000000000000000000000000000002 | LAYERS | 08B3_AVATAR_VERIFY.Check
+[Avatar V57] 00000000000000000000000000000002 | CONFIRM | 09B5_AVATAR_RUNTIME.confirm
+[Avatar V57] 00000000000000000000000000000002 | STRUCTURE | 08B4_AVATAR_LOAD.Check
+[Avatar V57] 00000000000000000000000000000002 | CONTENT | 08B4_AVATAR_LOAD.Content
+[Avatar V57] 00000000000000000000000000000002 | LAYERS | 08B3_AVATAR_VERIFY.Check
+PASS shop_guard_invalid_guard_instance_fails_closed_with_diagnostic invalid/missing factory does not execute unguarded handlers and the client receives the exact missing module/location instead of a nil-call exception
+AVATAR PLAZA V41: 08D_SKIN_STATE corpo/R6/R15 pronto
+[IA V78] servidor=V78 motor=V75 protocolo=2
+PASS real_assistant_guard_factory_starts_and_services_status_and_help actual protected IA starts with compatible engine and builder and accepts a help request; existing plan/receipt authority is retained
+AVATAR PLAZA V41: 08D_SKIN_STATE corpo/R6/R15 pronto
+[IA V78] servidor=V78 motor=V75 protocolo=2
+PASS assistant_incompatible_factory_reports_repair_without_unprotected_requests IA remains fail-closed when a wrong module is installed and returns an actionable guarded bootstrap error
+AVATAR PLAZA V41: 08D_SKIN_STATE corpo/R6/R15 pronto
+PASS switching_every_world_preserves_character_and_camera_and_fixed_scene_origin 19 theme switches send no HubTeleport and preserve the avatar/camera; walking away cannot translate the scene floor
+PASS world_details_have_native_materials_and_continuations_with_mobile_caps 13 themes include paths beyond Z=-400, multiple native surface materials and bounded primitive counts; peak desktop/mobile=133/121
+AVATAR PLAZA V41: 08D_SKIN_STATE corpo/R6/R15 pronto
+PASS live_camera_wasd_moves_camera_only_and_restores_input_on_exit 120 WASD render steps move only camera coordinates, suppress avatar Move, then restore exact camera and native controls; no root anchoring/pivot/speed write
+AVATAR PLAZA V41: 08D_SKIN_STATE corpo/R6/R15 pronto
+PASS live_camera_touch_joystick_and_exit_fit_portrait_landscape_and_pc actual joystick InputBegan/InputEnded and exit click work at six geometries, with unchanged character position
+AVATAR PLAZA V41: 08D_SKIN_STATE corpo/R6/R15 pronto
+PASS live_camera_stops_on_respawn_game_entry_and_photo_mode respawn, room entry and photo mode release the camera and restore input; game membership prevents a concurrent free-camera session
+[V44] 09A_SHOP_UI carregado de Folder
+AVATAR PLAZA V41: 08D_SKIN_STATE corpo/R6/R15 pronto
+PASS compact_catalog_filters_sort_and_categories_remain_reachable six real layout/click paths reach filters, sort and categories; compact controls share a popover, leaving card area and equipped strip visible
+AVATAR PLAZA V41: 08D_SKIN_STATE corpo/R6/R15 pronto
+PASS assistant_history_cannot_cover_saved_profile_or_new_chat_controls actual ChatNav and menu layout compose without overlapping targets; history follows navigation in a scrollable area and plan access has a separate fixed footer

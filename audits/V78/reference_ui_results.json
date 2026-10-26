@@ -1,0 +1,37 @@
+[
+  {
+    "case": "v77_hud_geometry",
+    "result": "pass",
+    "detail": "24 HUD destinations; 14 safe geometries; no mutual overlap; 44px minimum"
+  },
+  {
+    "case": "v77_photo_reference_bar_and_grid",
+    "result": "pass",
+    "detail": "five primary actions, panels separate from toolbar, three columns, avatar margins zero"
+  },
+  {
+    "case": "v77_catalog_home_six_tiles",
+    "result": "pass",
+    "detail": "six reference categories; bounded preview/catalog; extra destinations retained outside mosaic"
+  },
+  {
+    "case": "v77_removal_preview_and_confirm",
+    "result": "pass",
+    "detail": "selection changes only preview; cancel preserves state; confirmation uses current body and supports undo"
+  },
+  {
+    "case": "v77_hud_actions_and_assistant_menu",
+    "result": "pass",
+    "detail": "all primary destinations route correctly; assistant is accessible from More; 50 repeat taps cannot toggle it repeatedly; six settings categories"
+  },
+  {
+    "case": "v77_catalog_quick_actions_require_explicit_user_choice",
+    "result": "pass",
+    "detail": "selecting reveals TRY/BUY; preview never buys; explicit buy reaches existing server purchase action"
+  },
+  {
+    "case": "v77_avatar_modal_preview_never_overlaps_footer",
+    "result": "pass",
+    "detail": "wearing opens independently of catalog; preview/components and action footer never overlap across seven geometries; another HUD action closes it"
+  }
+]

@@ -1,0 +1,17 @@
+[V78] HUD: referência da gameplay e ações do avatar nas bordas
+PASS v77_hud_geometry 24 HUD destinations; 14 safe geometries; no mutual overlap; 44px minimum
+PASS v77_photo_reference_bar_and_grid five primary actions, panels separate from toolbar, three columns, avatar margins zero
+[V44] 09A_SHOP_UI carregado de Folder
+AVATAR PLAZA V41: 08D_SKIN_STATE corpo/R6/R15 pronto
+PASS v77_catalog_home_six_tiles six reference categories; bounded preview/catalog; extra destinations retained outside mosaic
+[V44] 09A_SHOP_UI carregado de Folder
+AVATAR PLAZA V41: 08D_SKIN_STATE corpo/R6/R15 pronto
+PASS v77_removal_preview_and_confirm selection changes only preview; cancel preserves state; confirmation uses current body and supports undo
+[V78] HUD: referência da gameplay e ações do avatar nas bordas
+PASS v77_hud_actions_and_assistant_menu all primary destinations route correctly; assistant is accessible from More; 50 repeat taps cannot toggle it repeatedly; six settings categories
+[V44] 09A_SHOP_UI carregado de Folder
+AVATAR PLAZA V41: 08D_SKIN_STATE corpo/R6/R15 pronto
+PASS v77_catalog_quick_actions_require_explicit_user_choice selecting reveals TRY/BUY; preview never buys; explicit buy reaches existing server purchase action
+[V44] 09A_SHOP_UI carregado de Folder
+AVATAR PLAZA V41: 08D_SKIN_STATE corpo/R6/R15 pronto
+PASS v77_avatar_modal_preview_never_overlaps_footer wearing opens independently of catalog; preview/components and action footer never overlap across seven geometries; another HUD action closes it
